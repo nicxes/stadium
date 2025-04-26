@@ -10,9 +10,9 @@ module.exports = merge(base, {
     static: path.join(__dirname, 'build'),
     port: 3000,
     https: true,
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-    },
     historyApiFallback: true,
+  },
+  output: {
+    assetModuleFilename: 'assets/[name][ext][query]',
   },
 });

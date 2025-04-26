@@ -1,28 +1,32 @@
 const path = require('path');
 const webpack = require('webpack');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const StylelintPlugin = require('stylelint-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('@soda/friendly-errors-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: {
-    app: ['./src/js/index.js', './src/scss/index.scss'],
+    app: ['./src/js/index.js', './src/scss/app.scss'],
   },
   target: ['web', 'es5'],
   plugins: [
     new webpack.ProgressPlugin(),
-    new StylelintPlugin(),
+    new Dotenv({
+      path: './.env',
+      safe: true,
+      systemvars: true,
+    }),
     new ESLintPlugin({ emitError: true, failOnError: true }),
     new FriendlyErrorsWebpackPlugin(),
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-      },
-    }),
     new MiniCssExtractPlugin({ filename: './css/bundle.css' }),
-    new CopyPlugin({ patterns: [{ from: './public', to: './' }] }),
+    new CopyPlugin({ patterns: [{ from: './public', to: path.resolve(__dirname, 'build') }] }),
+    new CompressionPlugin({
+      algorithm: 'gzip',
+      test: /\.js(\?.*)?$/i,
+    }),
   ],
   output: {
     filename: './js/bundle.js',
@@ -31,6 +35,10 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.(html|png|jpg|jpeg|svg|ttf|otf|webp)$/i,
+        type: 'asset/resource',
+      },
       {
         test: /\.(js|jsx)$/,
         use: ['babel-loader'],

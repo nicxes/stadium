@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/.pnp
+.pnp.js
 package-lock.json
 
 # testing
@@ -16,13 +18,13 @@ package-lock.json
 .env.development.local
 .env.test.local
 .env.production.local
-.vs
 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
+.env
 # Local Netlify folder
 .netlify
+.obsidian
 .idea
 .git

@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import '../scss/index.scss';
+import Blazy from 'blazy';
+import App from './App';
 
-const App = () => <div>App entry point.</div>;
+import '../scss/app.scss';
+
+window.blazy = new Blazy();
 
 ReactDOM.createRoot(document.getElementById('root')).render(<App />);

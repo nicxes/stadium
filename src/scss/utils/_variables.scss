@@ -1,3 +1,58 @@
-$alto: #D5D5D5;
-$lynch: #687196;
-$polo-blue: #8A96C8;
+$color-primary: #3961AE;
+$color-secondary: #abd4d2;
+$color-accent: #073A64;
+$color-background: #1A2133;
+$color-background-1: #142b47;
+$color-background-2: #0ea8c8;
+$color-light: #F1E6DE;
+
+$color-text: #341F1E;
+$color-success: #3DC100;
+$color-warning: #FFD992;
+$color-error: #d74942;
+
+$color-gold: #e4a950;
+$color-yellow: #f5ce58;
+$color-lightest-brown: #E9D7CE;
+$color-lighter-brown: #EED1BE;
+$color-light-brown: #CAA894;
+$color-brown: #B98859;
+$color-black: #091d1b;
+$color-dark-grey: #2c2f2f;
+$color-grey: #545958;
+$color-lighter-grey: #6d7372;
+$color-light-grey: #B5B5B5;
+$color-white: #F8F9FA;
+$color-disabled: #E0E0E0;
+$color-link: $color-primary;
+
+$navigation-background: $color-white;
+$navigation-hover: $color-text;
+$navigation-color: $color-grey;
+
+$font-size-nav-header: 1.5rem;
+$font-size-nav-link: 1.2rem;
+
+$font-size-nav-header-xs: 1.2rem;
+$font-size-nav-link-xs: 1rem;
+
+$drop-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, .25));
+$drop-shadow-blur: drop-shadow(0px 0px 6px rgba(0, 0, 0, .25));
+$drop-shadow-small: drop-shadow(0px 1px 1px rgba(0, 0, 0, .25));
+
+/* bootstrap overrides */
+$navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navigation-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+$dropdown-link-active-bg: $color-secondary;
+$focus-ring-color: $color-background;
+$form-switch-focus-color: $color-secondary;
+$form-switch-color: $color-primary;
+$form-check-input-checked-bg-color: $color-primary;
+$border-color: $color-grey;
+$navbar-light-active-color: $color-text;
+$grid-gutter-width: 16px;
+
+$container-max-widths: (
+  sm: 560px,
+  md: 752px,
+  lg: 960px
+);

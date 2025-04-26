@@ -1,6 +1,28 @@
-@mixin flex($direction: column, $align: center, $just: center) {
+@mixin flex($direction: row, $align: center, $just: center) {
   display: flex;
   flex-direction: $direction;
   align-items: $align;
   justify-content: $just;
+}
+
+@mixin animation($name, $duration: 1s, $timing: ease, $iteration: 1) {
+  animation: #{$name} $duration $timing $iteration;
+  -webkit-animation: #{$name} $duration $timing $iteration;
+  -moz-animation: #{$name} $duration $timing $iteration;
+  -o-animation: #{$name} $duration $timing $iteration;
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-o-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
 }
