@@ -145,7 +145,6 @@ const App = () => {
       if (encoded && armoryData) {
         try {
           const minimalData = JSON.parse(decodeBase64ToString(encoded));
-          console.log('Minimal data:', minimalData);
 
           const findItemInTabs = (itemId) => Object.values(armoryData.tabs).reduce((found, tab) => {
             if (found) return found;
@@ -165,7 +164,6 @@ const App = () => {
             buildCost: 0,
           };
 
-          // Calculate buildCost
           parsed.buildCost = parsed.items.reduce((total, item) => total + (item?.cost || 0), 0);
 
           setData(parsed);
@@ -187,10 +185,26 @@ const App = () => {
       </div>
       <div className="row">
         <section className="col-12">
-          {availableHeroes.map((hero) => (
-            <button type="button" key={hero.name} className="hero-button" onClick={() => handleHeroChange(hero)}>
-              <img src={hero.src} alt={hero.name} />
-            </button>
+          {Object.entries(availableHeroes.reduce((acc, hero) => {
+            if (!acc[hero.type]) {
+              acc[hero.type] = [];
+            }
+            acc[hero.type].push(hero);
+            return acc;
+          }, {})).map(([type, heroes]) => (
+            <React.Fragment key={type}>
+              <span style={{ margin: '16px' }}>{type}:</span>
+              {heroes.map((hero) => (
+                <button
+                  type="button"
+                  key={hero.name}
+                  className={`hero-button ${data.character === hero.name ? 'active' : ''}`}
+                  onClick={() => handleHeroChange(hero)}
+                >
+                  <img src={hero.src} alt={hero.name} />
+                </button>
+              ))}
+            </React.Fragment>
           ))}
         </section>
       </div>

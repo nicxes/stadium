@@ -19,7 +19,7 @@ const ItemShop = ({
       <div className="container">
         <div className="row">
           {items.map((item) => {
-            const { character } = context;
+            const { character, items } = context;
             if (item.character && item.character !== character) return null;
             return (
               <div key={item.name} className={`col-4 buyable-item item-${rarity}`}>
@@ -27,6 +27,7 @@ const ItemShop = ({
                   item={item}
                   src={iconData[item.name] || ''}
                   onClick={() => contextCallback(item, 'items', rarity)}
+                  selected={items.find((i) => i.name === item.name)}
                 />
                 <div className="tooltip-container bordered bordered-side">
                   <div className="tooltip-content">
@@ -49,13 +50,13 @@ const ItemShop = ({
     </div>
   );
 
-  const renderPowerSection = (powers, index) => (
-    <div key={index} className="col-12 power-section px-1">
+  const renderPowerSection = (powers, char) => (
+    <div key={char} className="col-12 power-section px-1">
       <div className="container">
         <div className="row">
           {powers.map((power) => {
             const { character } = context;
-            if (power.character && power.character !== character) return null;
+            if (char && char !== character) return null;
             return (
               <div key={power.name} className="col-12 col-md-4 buyable-item">
                 <PowerCard
@@ -88,8 +89,8 @@ const ItemShop = ({
 
       <div className="container tab-content">
         <div className="row justify-content-center">
-          {Object.entries(data.tabs[activeTab]).map(([rarity, items], index) => {
-            if (activeTab === 'powers') return renderPowerSection(items, index);
+          {Object.entries(data.tabs[activeTab]).map(([rarity, items]) => {
+            if (activeTab === 'powers') return renderPowerSection(items, rarity);
             return renderRaritySection(items, rarity);
           })}
         </div>
@@ -121,9 +122,9 @@ ItemShop.propTypes = {
   iconData: PropTypes.objectOf(PropTypes.string).isRequired,
   context: PropTypes.shape({
     character: PropTypes.string.isRequired,
-    items: PropTypes.shape({
-      append: PropTypes.func.isRequired,
-    }).isRequired,
+    items: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string.isRequired,
+    })).isRequired,
   }).isRequired,
   contextCallback: PropTypes.func.isRequired,
 };

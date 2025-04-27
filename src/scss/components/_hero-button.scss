@@ -2,11 +2,26 @@
   width: 64px;
   height: 64px;
   background-color: transparent;
-  
+
   img {
-    width: 60px;
-    height: 60px;
+    width: 54px;
+    height: 54px;
     object-fit: cover;
     border: 1px solid rgba($color-white, 0.5);
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.1);
+      border: 1px solid rgba($color-white, 1);
+    }
+  }
+  
+  &.active {
+    img {
+      transform: scale(1.1);
+      border: 1px solid rgba($color-white, 1);
+    }
   }
 }
