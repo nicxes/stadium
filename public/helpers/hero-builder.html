@@ -103,7 +103,16 @@
             <div>
                 <label for="heroSrc">Image Source:</label>
                 <input type="text" id="heroSrc" placeholder="Enter image URL or path">
-            </div>            
+            </div>
+
+            <div style="margin-top: 20px;">
+                <label for="heroType">Hero type:</label>
+                <select id="heroType">
+                    <option value="tank">Tank</option>
+                    <option value="dps">DPS</option>
+                    <option value="support">Support</option>
+                </select>
+            </div>
             
             <h3>Base Stats</h3>
             <div class="stat-group">
@@ -258,15 +267,6 @@
 
                 heroCard.innerHTML = `
                     <h3>${hero.name}</h3>
-                    <p>Image Source: ${hero.src || 'No image set'}</p>
-                    <h4>Base Stats:</h4>
-                    <p>Health: ${getStatValue('Health')}</p>
-                    <p>Armor: ${getStatValue('Armor')}</p>
-                    <p>Shields: ${getStatValue('Shields')}</p>
-                    <h4>Attributes:</h4>
-                    ${attributesHtml || '<p>No attributes</p>'}
-                    <h4>Abilities:</h4>
-                    ${abilitiesHtml || '<p>No abilities</p>'}
                     <button onclick="editHero(${index})">Edit</button>
                     <button onclick="deleteHero(${index})">Delete</button>
                 `;
@@ -288,6 +288,7 @@
             const hero = heroes.heroes[index];
             document.getElementById('heroName').value = hero.name;
             document.getElementById('heroSrc').value = hero.src || '';
+            document.getElementById('heroType').value = hero.type || 'Unknown';
             
             // Set base stats
             document.getElementById('health').value = getStatValue(hero.base_stats, 'Health');
@@ -373,6 +374,7 @@
             const hero = {
                 name: document.getElementById('heroName').value,
                 src: document.getElementById('heroSrc').value,
+                type: document.getElementById('heroType').value,
                 base_stats: [
                     { type: "Health", value: parseInt(document.getElementById('health').value) },
                     { type: "Armor", value: parseInt(document.getElementById('armor').value) },
