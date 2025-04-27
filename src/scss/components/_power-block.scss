@@ -1,0 +1,13 @@
+.power-block {
+  border: 1px solid rgba($color-accent, 0.6);
+  border-radius: 8px;
+  width: 60px;
+  height: 60px;
+  background-color: $color-background;
+  
+  &--title {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px;
+  }
+}

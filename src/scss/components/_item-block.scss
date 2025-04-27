@@ -1,0 +1,19 @@
+.item-block {
+  border: 1px solid rgba($color-accent, 0.6);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: $color-background;
+}
+
+.item {
+  &-common .item-block{
+    background-color: $color-common;
+  }
+  &-rare .item-block{
+    background-color: $color-rare;
+  }
+  &-epic .item-block{
+    background-color: $color-epic;
+  }
+}

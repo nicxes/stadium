@@ -1,0 +1,43 @@
+﻿.round {
+  border-radius: 30px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.text-align-center {
+  text-align: center !important;
+}
+
+.text-align-left {
+  text-align: left !important;
+}
+
+.b {
+  &-lazy {
+    opacity: 0;
+    transition: opacity .3s;
+  }
+  
+  &-loaded {
+    opacity:1;
+  }
+}
+
+.under-construction {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.animated-ellipsis::after {
+  content: '...';
+  position: absolute;
+  @include animation($name: ellipsis, $duration: 1.25s, $timing: linear, $iteration: infinite);
+}
+
+.highlight-flash {
+  @include animation($name: highlight-flash, $duration: 1.5s, $timing: ease-out);
+}

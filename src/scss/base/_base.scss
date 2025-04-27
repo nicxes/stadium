@@ -2,7 +2,8 @@
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
+  place-items: center;
+  place-content: center;
 }
 
 input[class*="round"] {
@@ -32,75 +33,4 @@ input[type="radio"] {
     cursor: pointer;
     opacity: .5;
   }
-}
-
-/******** Chrome, Safari, Opera and Edge Chromium styles ********/
-/* slider track */
-input[type="range"]::-webkit-slider-runnable-track {
-  background-color: $color-brown;
-  border-radius: 0.5rem;
-  height: 0.25rem;
-}
-
-/* slider thumb */
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default look */
-  appearance: none;
-  margin-top: -3px; /* Centers thumb on the track */
-  background-color: $color-white;
-  border-color: $color-grey;
-  border-radius: 0.5rem;
-  height: .65rem;
-  width: .65rem;
-}
-
-input[type="range"]:focus::-webkit-slider-thumb {
-  outline: 1px solid $color-brown;
-}
-
-/*********** Firefox styles ***********/
-/* slider track */
-input[type="range"]::-moz-range-track {
-  background-color: $color-brown;
-  border-radius: 0.5rem;
-  height: 0.25rem;
-}
-
-/* slider thumb */
-input[type="range"]::-moz-range-thumb {
-  background-color: #ffffff;
-  border: none; /*Removes extra border that FF applies*/
-  border-radius: 0.5rem;
-  height: .65rem;
-  width: .65rem;
-}
-
-input[type="range"]:focus::-moz-range-thumb{
-  outline: 1px solid $color-brown;
-}
-
-/* ===== Scrollbar CSS ===== */
-/* Firefox */
-* {
-  scrollbar-width: auto;
-  scrollbar-color: $color-brown $color-white;
-}
-
-/* Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-  width: 16px;
-}
-
-*::-webkit-scrollbar-track {
-  background: $color-background;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: $color-brown;
-  border-radius: 10px;
-  border: 3px solid $color-white;
-}
-
-.grecaptcha-badge {
-  visibility: hidden;
 }

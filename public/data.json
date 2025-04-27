@@ -1,0 +1,552 @@
+{
+  "tabs": {
+    "weapon": {
+      "common": [
+        {
+          "name": "COMPENSATOR",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "5%"
+            }
+          ],
+          "cost": 1000
+        },
+        {
+          "name": "PLASMA CONVERTER",
+          "attributes": [
+            {
+              "type": "WPLS",
+              "value": "10%"
+            }
+          ],
+          "cost": 1000
+        },
+        {
+          "name": "WEAPON GREASE",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "5%"
+            }
+          ],
+          "cost": 1000
+        },
+        {
+          "name": "AMMO RESERVES",
+          "attributes": [
+            {
+              "type": "MA",
+              "value": "20%"
+            }
+          ],
+          "cost": 1500
+        },
+        {
+          "name": "FRENZY AMPLIFIER",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "Eliminations grant <b>10%</b> Attack Speed and <b>15%</b> Move Speed for <b>3s</b>."
+            }
+          ],
+          "cost": 1500
+        }
+      ],
+      "rare": [
+        {
+          "name": "AFTERMARKET FIRING PIN",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "10%"
+            },
+            {
+              "type": "MS",
+              "value": "5%"
+            }
+          ],
+          "cost": 3750
+        },
+        {
+          "name": "ADVANCED NANOBIOTICS",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "After healing an ally, gain <b>10%</b> Attack Speed for <b>3s</b>."
+            }
+          ],
+          "cost": 4000
+        },
+        {
+          "name": "SHIELDBUSTER",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "After dealing damage to Shields or Armor, gain <b>15%</b> Attack Speed for <b>1s</b>."
+            }
+          ],
+          "cost": 4000
+        },
+        {
+          "name": "STOCKPILE",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "5%"
+            },
+            {
+              "type": "MA",
+              "value": "25%"
+            }
+          ],
+          "cost": 4000
+        },
+        {
+          "name": "TECHNOLEECH",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "WPLS",
+              "value": "10%"
+            }
+          ],
+          "cost": 4500
+        },
+        {
+          "name": "ICY COOLANT",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "CR",
+              "value": "5%"
+            }
+          ],
+          "cost": 5000
+        },
+        {
+          "name": "TALON MODIFICATION MODULE",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "15%"
+            }
+          ],
+          "cost": 5500
+        },
+        {
+          "name": "GUTPUNCH GAUNTLET",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "While not holding <b>[Jagged Blade]</b>, <b>[Quick Melee]</b> deals <b>75%</b> more damage and knocks back."
+            }
+          ],
+          "cost": 4000,
+          "character": "Junker Queen"
+        },
+        {
+          "name": "MONARCH'S DECREE",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Commanding Shout]</b> grants you <b>15%</b> Attack Speed."
+            }
+          ],
+          "cost": 4000,
+          "character": "Junker Queen"
+        },
+        {
+          "name": "ELECTRO LIGHTS",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Recover from being <b>[Overheated] 25%</b> faster."
+            }
+          ],
+          "cost": 4000,
+          "character": "Orisa"
+        },
+        {
+          "name": "ENHANCED TARGET SENSORS",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "Deal <b>25%</b> more damage to enemies farther than <b>12m</b> away."
+            }
+          ],
+          "cost": 4000,
+          "character": "Orisa"
+        },
+        {
+          "name": "OPTIMIZED ENERGY",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Critical hits reduce your <b>[Heat]</b> by <b>5%</b>."
+            }
+          ],
+          "cost": 5000,
+          "character": "Orisa"
+        },
+        {
+          "name": "IRONCLAD CLEATS",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "25"
+            },
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "Knockback Resist",
+              "value": "40%"
+            }
+          ],
+          "cost": 3750,
+          "character": "Reinhardt"
+        },
+        {
+          "name": "HYBRID BATTERY",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Energy]</b> cannot be reduced below <b>20</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Zarya"
+        }
+      ],
+      "epic": [
+        {
+          "name": "CODEBREAKER",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Ignore <b>50%</b> of Armor's damage reduction."
+            }
+          ],
+          "cost": 9000
+        },
+        {
+          "name": "SALVAGED SLUGS",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "10%"
+            },
+            {
+              "type": "Increased Damage to Barriers",
+              "value": "30%"
+            },
+            {
+              "type": "description",
+              "value": "Dealing Weapon Damage to Barriers has a <b>50%</b> chance to restore <b>1</b> ammo."
+            }
+          ],
+          "cost": 9500
+        },
+        {
+          "name": "VOLSKAYA ORDNANCE",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Deal <b>5%</b> increased Weapon Damage for every <b>100</b> Max Life the target has more than you, up to <b>20%</b>."
+            }
+          ],
+          "cost": 9500
+        },
+        {
+          "name": "COMMANDER'S CLIP",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "10%"
+            },
+            {
+              "type": "MA",
+              "value": "40%"
+            },
+            {
+              "type": "description",
+              "value": "When you use an ability, restore <b>10%</b> of your Max Ammo."
+            }
+          ],
+          "cost": 10000
+        },
+        {
+          "name": "WEAPON JAMMER",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "25"
+            },
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Dealing Weapon Damage negates <b>10%</b> of the target's bonus Attack Speed and increase your Attack speed by <b>10%</b> for <b>2s</b>."
+            }
+          ],
+          "cost": 10000
+        },
+        {
+          "name": "AMARI'S ANTIDOTE",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "WP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "While healing an ally below <b>50%</b> Life with your weapon, deal <b>15%</b> increased Weapon Healing"
+            }
+          ],
+          "cost": 11000
+        },
+        {
+          "name": "BOOSTER JETS",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "20%"
+            },
+            {
+              "type": "description",
+              "value": "When you use an ability, gain <b>20%</b> Move Speed for <b>2s</b>."
+            }
+          ],
+          "cost": 11000
+        },
+        {
+          "name": "EL-SA'KA SUPPRESOR",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Critical Hits apply <b>30% Healing Reduction</b> to the target for <b>2s</b>."
+            }
+          ],
+          "cost": 11000
+        },
+        {
+          "name": "HARDLIGHT ACCELERATOR",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "CR",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "When you use an ability, gain <b>5%</b> Weapon Power for <b>3s</b>, stacking up to <b>3</b> times."
+            }
+          ],
+          "cost": 11000
+        },
+        {
+          "name": "THE CLOSER",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "20%"
+            },
+            {
+              "type": "CD",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Critical Hits reveal the target for <b>3s</b>."
+            }
+          ],
+          "cost": 13000
+        },
+        {
+          "name": "EYE OF THE SPIDER",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "25%"
+            },
+            {
+              "type": "description",
+              "value": "Deal <b>10%</b> increased damage to enemies below <b>30%</b> Life."
+            }
+          ],
+          "cost": 13500
+        },
+        {
+          "name": "MULTI-TASK MOD",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Fusion Cannons]</b> can now be fired while using <b>[Defense Matrix]</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "D.VA"
+        },
+        {
+          "name": "SHRED AND LEAD",
+          "attributes": [
+            {
+              "type": "MA",
+              "value": "33%"
+            },
+            {
+              "type": "WPLS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "When you <b>[Wound</b> an enemy, gain <b>10%</b> Attack Speed for <b>4s</b>, stacking up to <b>3 times</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Junker Queen"
+        },
+        {
+          "name": "BLOODHOUND MASK",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Gain <b>5%</b> Weapon Power for each enemy with a <b>[Wound]</b> within <b>12m</b>."
+            }
+          ],
+          "cost": 12000,
+          "character": "Junker Queen"
+        },
+        {
+          "name": "DAMPENER GRIP",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "AS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "When you deal more damage with <b>[Rocket Hammer]</b>, reduce the cooldown of your abilities by <b>1s</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Reinhardt"
+        },
+        {
+          "name": "PLAN Z",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Gain <b>3%</b> Attack Speed every <b>100</b> missing Life, up to <b>30%</b>."
+            }
+          ],
+          "cost": 11000,
+          "character": "Reinhardt"
+        },
+        {
+          "name": "LIGHT LAUNCHER",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Consecutive <b>[Particle Cannon]</b> secondary fire shots consume <b>20%</b> less Ammo, up to <b>60%</b>, for your current magazine."
+            }
+          ],
+          "cost": 10000,
+          "character": "Zarya"
+        },
+        {
+          "name": "BIGGER BEAM",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Particle Cannon]</b>'s primary fire range is increased by <b>20%</b>"
+            }
+          ],
+          "cost": 11000,
+          "character": "Zarya"
+        }
+      ]
+    }
+  }
+}
