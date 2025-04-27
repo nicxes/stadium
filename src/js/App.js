@@ -44,11 +44,22 @@ const App = () => {
   };
 
   const updateUrl = (data) => {
-    const encodedData = encodeStringToBase64(JSON.stringify(data));
+    const minimalData = {
+      h: data.character,
+      p: data.powers.map((p) => p.id || p.name),
+      i: data.items.map((i) => ({
+        id: i.id || i.name,
+        r: i.rarity || '',
+      })),
+    };
+
+    // Convert to JSON and encode to base64
+    const encoded = encodeStringToBase64(JSON.stringify(minimalData));
+
     window.history.replaceState(
       null,
       '',
-      `${window.location.pathname}?build=${encodedData}`,
+      `${window.location.pathname}?b=${encoded}`,
     );
   };
 
@@ -105,22 +116,6 @@ const App = () => {
       setAvailableHeroes(data.heroes);
     };
     getHeroes();
-
-    const loadBuildFromUrl = () => {
-      const searchParams = new URLSearchParams(window.location.search);
-      const encodedBuild = searchParams.get('build');
-
-      if (encodedBuild) {
-        try {
-          const decodedData = JSON.parse(decodeBase64ToString(encodedBuild));
-          setData(decodedData);
-        } catch (error) {
-          console.error('Failed to decode build data:', error);
-        }
-      }
-    };
-
-    loadBuildFromUrl();
   }, []);
 
   useEffect(() => {
@@ -142,6 +137,45 @@ const App = () => {
     };
 
     loadIcons();
+
+    const loadBuildFromUrl = () => {
+      const searchParams = new URLSearchParams(window.location.search);
+      const encoded = searchParams.get('b');
+
+      if (encoded && armoryData) {
+        try {
+          const minimalData = JSON.parse(decodeBase64ToString(encoded));
+          console.log('Minimal data:', minimalData);
+
+          const findItemInTabs = (itemId) => Object.values(armoryData.tabs).reduce((found, tab) => {
+            if (found) return found;
+            return Object.values(tab).reduce((innerFound, items) => {
+              if (innerFound) return innerFound;
+              return items.find((item) => item.id === itemId || item.name === itemId) || null;
+            }, null);
+          }, null);
+
+          const parsed = {
+            character: minimalData.h,
+            powers: minimalData.p.map((pId) => findItemInTabs(pId)).filter(Boolean),
+            items: minimalData.i.map((item) => {
+              const fullItem = findItemInTabs(item.id);
+              return fullItem ? { ...fullItem, rarity: item.r } : null;
+            }).filter(Boolean),
+            buildCost: 0,
+          };
+
+          // Calculate buildCost
+          parsed.buildCost = parsed.items.reduce((total, item) => total + (item?.cost || 0), 0);
+
+          setData(parsed);
+        } catch (error) {
+          console.error('Failed to decode build data:', error);
+        }
+      }
+    };
+
+    loadBuildFromUrl();
   }, [armoryData]);
 
   return armoryData && availableHeroes && (
