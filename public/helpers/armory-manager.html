@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Data Editor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #attributesList {
+            margin-bottom: 15px;
+        }
+        .attribute-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        #jsonDisplay {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 4px;
+            white-space: pre-wrap;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>JSON Data Editor</h1>
+
+    <div class="form-group">
+        <label for="jsonFile">Load Existing JSON:</label>
+        <input type="file" id="jsonFile" accept=".json">
+    </div>
+
+    <div class="form-group">
+        <label for="tabSelect">Tab:</label>
+        <select id="tabSelect" onchange="handleTabChange()">
+            <option value="weapon">Weapon</option>
+            <option value="ability">Ability</option>
+            <option value="survival">Survival</option>
+            <option value="powers">Powers</option>
+        </select>
+    </div>
+
+    <!-- Standard format fields (weapon, ability, survival) -->
+    <div id="standardFormat">
+        <div class="form-group">
+            <label for="raritySelect">Rarity:</label>
+            <select id="raritySelect">
+                <option value="common">Common</option>
+                <option value="rare">Rare</option>
+                <option value="epic">Epic</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="character">Character (optional):</label>
+            <input type="text" id="character" placeholder="Enter character name (i.e. D.VA)">
+        </div>
+
+        <div class="form-group">
+            <label for="itemName">Item Name:</label>
+            <input type="text" id="itemName" placeholder="Enter item name">
+        </div>
+
+        <div class="form-group">
+            <label for="cost">Cost:</label>
+            <input type="number" id="cost" placeholder="Enter cost">
+        </div>
+
+        <div class="form-group">
+            <label>Attributes:</label>
+            <div id="attributesList"></div>
+            <button onclick="addAttributeField()">Add Attribute</button>
+        </div>
+    </div>
+
+    <!-- Powers format fields -->
+    <div id="powersFormat" class="hidden">
+        <div class="form-group">
+            <label for="powerCharacter">Character:</label>
+            <select id="powerCharacter">
+                <!-- Will be populated from JSON -->
+            </select>
+            <button onclick="addNewCharacter()">Add New Character</button>
+        </div>
+
+        <div class="form-group">
+            <label for="powerName">Power Name:</label>
+            <input type="text" id="powerName" placeholder="Enter power name">
+        </div>
+
+        <div class="form-group">
+          <label for="powerDescription">Description:</label>
+          <textarea 
+              id="powerDescription" 
+              placeholder="Enter power description"
+              onkeydown="handleBoldHotkey(event)"
+          ></textarea>
+      </div>      
+    </div>
+
+    <button onclick="generateJSON()">Add to JSON</button>
+    <button onclick="downloadJSON()">Download JSON</button>
+
+    <h2>Current JSON:</h2>
+    <div id="jsonDisplay"></div>
+
+    <script>
+        let data = {
+            tabs: {
+                weapon: {
+                    common: [],
+                    rare: [],
+                    epic: []
+                },
+                ability: {
+                    common: [],
+                    rare: [],
+                    epic: []
+                },
+                survival: {
+                    common: [],
+                    rare: [],
+                    epic: []
+                },
+                powers: {}
+            }
+        };
+
+        document.getElementById('jsonFile').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    data = JSON.parse(e.target.result);
+                    updateDisplay();
+                    updatePowerCharacters();
+                } catch (error) {
+                    alert('Invalid JSON file');
+                }
+            };
+            reader.readAsText(file);
+        });
+
+        function autoSave() {
+            const indicator = document.createElement('div');
+            indicator.id = 'saveIndicator';
+            indicator.style.cssText = `
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                padding: 10px;
+                background: #4CAF50;
+                color: white;
+                border-radius: 5px;
+                opacity: 0;
+                transition: opacity 0.3s;
+            `;
+            document.body.appendChild(indicator);
+            indicator.textContent = 'Saved!';
+            indicator.style.opacity = '1';
+            setTimeout(() => {
+                indicator.style.opacity = '0';
+            }, 2000);
+
+            localStorage.setItem('itemsData', JSON.stringify(data));
+            console.log('Auto-saved at:', new Date().toLocaleTimeString());
+        }
+
+        function loadSavedData() {
+            const savedData = localStorage.getItem('itemsData');
+            if (savedData) {
+                data = JSON.parse(savedData);
+                updateDisplay();
+                console.log('Loaded saved data from:', new Date().toLocaleTimeString());
+            }
+        }
+
+        function handleTabChange() {
+            const tab = document.getElementById('tabSelect').value;
+            const standardFormat = document.getElementById('standardFormat');
+            const powersFormat = document.getElementById('powersFormat');
+
+            if (tab === 'powers') {
+                standardFormat.classList.add('hidden');
+                powersFormat.classList.remove('hidden');
+                updatePowerCharacters();
+            } else {
+                standardFormat.classList.remove('hidden');
+                powersFormat.classList.add('hidden');
+            }
+        }
+
+        function updatePowerCharacters() {
+            const select = document.getElementById('powerCharacter');
+            select.innerHTML = '';
+            
+            const characters = Object.keys(data.tabs.powers || {});
+            characters.forEach(char => {
+                const option = document.createElement('option');
+                option.value = char;
+                option.textContent = char;
+                select.appendChild(option);
+            });
+        }
+
+        function addNewCharacter() {
+            const char = prompt('Enter new character name:');
+            if (char) {
+                if (!data.tabs.powers[char]) {
+                    data.tabs.powers[char] = [];
+                    updatePowerCharacters();
+                }
+            }
+        }
+
+        function formatPowersDescription(text) {
+            text = text.replace(/\[(.*?)\]/g, '<b>[$1]</b>');
+            text = text.replace(/(\d+)s\b/g, '<b>$1s</b>');
+            text = text.replace(/(\d+)%/g, '<b>$1%</b>');
+            return text;
+        }
+
+        function addAttributeField() {
+            const attributesList = document.getElementById('attributesList');
+            const attributeRow = document.createElement('div');
+            attributeRow.className = 'attribute-row';
+    
+            attributeRow.innerHTML = `
+                <input type="text" placeholder="Type (e.g., WP, AS)" class="attribute-type">
+                <input type="text" 
+                      placeholder="Value (e.g., 5%, description)" 
+                      class="attribute-value" 
+                      onkeydown="handleBoldHotkey(event)">
+                <button onclick="this.parentElement.remove()">Remove</button>
+            `;
+
+            attributesList.appendChild(attributeRow);
+            attributeRow.querySelector('.attribute-type').focus();
+            attributeRow.querySelector('.attribute-value').addEventListener('keydown', (event) => {
+                if (event.key === 'Enter') {
+                    event.preventDefault();
+                    const nextInput = attributeRow.nextElementSibling?.querySelector('.attribute-type');
+                    if (nextInput) {
+                        nextInput.focus();
+                    } else {
+                        addAttributeField();
+                    }
+                }
+            });
+        }
+
+        function handleBoldHotkey(event) {
+            if ((event.ctrlKey || event.metaKey) && event.key === 'g') {
+                event.preventDefault();
+                const textarea = event.target;
+                const start = textarea.selectionStart;
+                const end = textarea.selectionEnd;
+                const text = textarea.value;
+                
+                if (start !== end) {
+                    const selectedText = text.substring(start, end);
+                    const newText = text.substring(0, start) + 
+                                  `<b class=\"stat-ap\">${selectedText}</b>` + 
+                                  text.substring(end);
+                    textarea.value = newText;
+                  
+                    textarea.selectionStart = end + 23;
+                    textarea.selectionEnd = end + 23;
+                } else {
+                    const newText = text.substring(0, start) + 
+                                  '<b class=\"stat-ap\"></b>' + 
+                                  text.substring(end);
+                    textarea.value = newText;
+                    textarea.selectionStart = start + 19;
+                    textarea.selectionEnd = start + 19;
+                }
+            }
+            if ((event.ctrlKey || event.metaKey) && event.key === 'b') {
+                event.preventDefault();
+                const textarea = event.target;
+                const start = textarea.selectionStart;
+                const end = textarea.selectionEnd;
+                const text = textarea.value;
+                
+                if (start !== end) {
+                    const selectedText = text.substring(start, end);
+                    const newText = text.substring(0, start) + 
+                                  `<b>${selectedText}</b>` + 
+                                  text.substring(end);
+                    textarea.value = newText;
+                  
+                    textarea.selectionStart = end + 7;
+                    textarea.selectionEnd = end + 7;
+                } else {
+                    const newText = text.substring(0, start) + 
+                                  '<b></b>' + 
+                                  text.substring(end);
+                    textarea.value = newText;
+                    textarea.selectionStart = start + 3;
+                    textarea.selectionEnd = start + 3;
+                }
+            }
+        }
+
+        function addLivePreview() {
+            const descriptionArea = document.getElementById('powerDescription');
+            const previewDiv = document.createElement('div');
+            previewDiv.id = 'descriptionPreview';
+            previewDiv.style.cssText = `
+                margin-top: 10px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                background: #f9f9f9;
+            `;
+            
+            // Insert preview after the textarea
+            descriptionArea.parentNode.insertBefore(previewDiv, descriptionArea.nextSibling);
+
+            // Update preview as user types
+            descriptionArea.addEventListener('input', function() {
+                const formattedText = formatPowersDescription(this.value);
+                previewDiv.innerHTML = '<strong>Preview:</strong><br>' + formattedText;
+            });
+        }
+
+        function generateJSON() {
+            const tab = document.getElementById('tabSelect').value;
+
+            if (tab === 'powers') {
+                const character = document.getElementById('powerCharacter').value;
+                const name = document.getElementById('powerName').value.toUpperCase();
+                let description = document.getElementById('powerDescription').value;
+
+                description = formatPowersDescription(description);
+
+                if (!data.tabs.powers[character]) {
+                    data.tabs.powers[character] = [];
+                }
+
+                data.tabs.powers[character].push({
+                    name,
+                    description
+                });
+
+                document.getElementById('powerName').value = '';
+                document.getElementById('powerDescription').value = '';
+                document.getElementById('powerName').focus();
+            } else {
+                const rarity = document.getElementById('raritySelect').value;
+                const name = document.getElementById('itemName').value.toUpperCase();
+                const cost = parseInt(document.getElementById('cost').value);
+                const character = document.getElementById('character').value;
+
+                const attributes = [];
+                document.querySelectorAll('.attribute-row').forEach(row => {
+                    const type = row.querySelector('.attribute-type').value;
+                    let value = row.querySelector('.attribute-value').value;
+                    if (type && value) {
+                        if (type === 'description') {
+                            value = formatPowersDescription(value);
+                        }
+                        attributes.push({ type, value });
+                    }
+                });
+
+                const newItem = {
+                    name: name.toUpperCase(),
+                    attributes,
+                    cost
+                };
+
+                if (character) {
+                    newItem.character = character;
+                }
+
+                if (!data.tabs[tab][rarity]) {
+                    data.tabs[tab][rarity] = [];
+                }
+                data.tabs[tab][rarity].push(newItem);
+
+                document.getElementById('itemName').value = '';
+                document.getElementById('cost').value = '';
+                document.getElementById('character').value = '';
+                
+                const attributesList = document.getElementById('attributesList');
+                while (attributesList.children.length > 1) {
+                    attributesList.removeChild(attributesList.lastChild);
+                }
+                
+                const firstAttribute = attributesList.firstChild;
+                if (firstAttribute) {
+                    firstAttribute.querySelector('.attribute-type').value = '';
+                    firstAttribute.querySelector('.attribute-value').value = '';
+                }
+                document.getElementById('itemName').focus();
+            }
+
+            updateDisplay();
+            autoSave();
+        }
+
+        function updateDisplay() {
+            document.getElementById('jsonDisplay').textContent = 
+                JSON.stringify(data, null, 2);
+        }
+
+        function downloadJSON() {
+            const dataStr = JSON.stringify(data, null, 2);
+            const blob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'data.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // Add initial attribute field
+        addAttributeField();
+        document.addEventListener('DOMContentLoaded', function() {
+            loadSavedData();
+            addLivePreview();
+        });
+
+        window.addEventListener('beforeunload', function() {
+            autoSave();
+        });
+    </script>
+</body>
+</html>

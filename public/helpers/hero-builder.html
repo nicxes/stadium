@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hero Editor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .hero-form {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .stat-group {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .stat-input {
+            display: flex;
+            flex-direction: column;
+        }
+        .hero-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .hero-card {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        button {
+            padding: 8px 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .ability-section {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .file-controls {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #f0f0f0;
+            border-radius: 8px;
+        }
+        .json-preview {
+            background: #2b2b2b;
+            color: #fff;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 10px;
+            max-height: 200px;
+            overflow: auto;
+            font-family: monospace;
+        }
+        .ability {
+            margin-bottom: 10px;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 4px;
+        }
+        input, select {
+            padding: 5px;
+            margin: 2px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hero Editor</h1>
+
+    <div class="file-controls">
+        <h2>JSON File Controls</h2>
+        <input type="file" id="jsonFileInput" accept=".json">
+        <button onclick="downloadJSON()">Save to File</button>
+        <div class="json-preview" id="jsonPreview"></div>
+    </div>
+    
+    <div class="hero-form">
+        <h2>Add/Edit Hero</h2>
+        <form id="heroForm">
+            <div>
+                <label for="heroName">Hero Name:</label>
+                <input type="text" id="heroName" required>
+            </div>
+            <br />
+            <div>
+                <label for="heroSrc">Image Source:</label>
+                <input type="text" id="heroSrc" placeholder="Enter image URL or path">
+            </div>            
+            
+            <h3>Base Stats</h3>
+            <div class="stat-group">
+                <div class="stat-input">
+                    <label for="health">Health:</label>
+                    <input type="number" id="health" required>
+                </div>
+                <div class="stat-input">
+                    <label for="armor">Armor:</label>
+                    <input type="number" id="armor" required>
+                </div>
+                <div class="stat-input">
+                    <label for="shields">Shields:</label>
+                    <input type="number" id="shields" required>
+                </div>
+            </div>
+
+            <h3>Attributes</h3>
+            <div class="stat-group">
+                <div class="stat-input">
+                    <label for="wp">Weapon Power (%):</label>
+                    <input type="text" id="wp" placeholder="20%">
+                </div>
+                <div class="stat-input">
+                    <label for="wpls">Weapon Lifesteal (%):</label>
+                    <input type="text" id="wpls" placeholder="20%">
+                </div>
+                <div class="stat-input">
+                    <label for="ap">Ability Power (%):</label>
+                    <input type="text" id="ap" placeholder="20%">
+                </div>
+                <div class="stat-input">
+                    <label for="als">Ability Lifesteal (%):</label>
+                    <input type="text" id="als" placeholder="20%">
+                </div>
+                <div class="stat-input">
+                    <label for="as">Attack Speed (%):</label>
+                    <input type="text" id="as" placeholder="20%">
+                </div>
+                <div class="stat-input">
+                    <label for="rs">Reload Speed (%):</label>
+                    <input type="text" id="rs" placeholder="20%">
+                </div>
+                <div class="stat-input">
+                    <label for="ms">Movement Speed (%):</label>
+                    <input type="text" id="ms" placeholder="20%">
+                </div>
+                <div class="stat-input">
+                    <label for="cr">Cooldown Reduction (%):</label>
+                    <input type="text" id="cr" placeholder="20%">
+                </div>
+                <div class="stat-input">
+                    <label for="cd">Critical Damage (%):</label>
+                    <input type="text" id="cd" placeholder="20%">
+                </div>
+                <div class="stat-input">
+                    <label for="ma">Max Ammo (%):</label>
+                    <input type="text" id="ma" placeholder="20%">
+                </div>
+                <div class="stat-input">
+                    <label for="md">Melee Damage (%):</label>
+                    <input type="text" id="md" placeholder="20%">
+                </div>
+            </div>
+
+            <div class="ability-section">
+                <h3>Abilities</h3>
+                <div id="abilities">
+                    <div class="ability">
+                        <input type="text" placeholder="Ability Name" class="ability-name">
+                        <select class="damage-type">
+                            <option value="WP">Weapon Power</option>
+                            <option value="AP">Ability Power</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="button" onclick="addAbility()">Add Ability</button>
+            </div>
+
+            <button type="submit">Save Hero</button>
+        </form>
+    </div>
+
+    <div id="heroList" class="hero-list"></div>
+
+    <script>
+        let heroes = { heroes: [] };
+
+        document.getElementById('jsonFileInput').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    try {
+                        heroes = JSON.parse(e.target.result);
+                        displayHeroes();
+                        updateJSONPreview();
+                        console.log('JSON file loaded successfully');
+                    } catch (error) {
+                        console.error('Error parsing JSON file:', error);
+                        alert('Error loading JSON file. Please ensure it\'s a valid JSON file.');
+                    }
+                };
+                reader.readAsText(file);
+            }
+        });
+
+        function updateJSONPreview() {
+            const preview = document.getElementById('jsonPreview');
+            preview.textContent = JSON.stringify(heroes, null, 2);
+        }
+
+        function downloadJSON() {
+            const jsonString = JSON.stringify(heroes, null, 2);
+            const blob = new Blob([jsonString], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'heroes.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function displayHeroes() {
+            const heroList = document.getElementById('heroList');
+            heroList.innerHTML = '';
+
+            heroes.heroes.forEach((hero, index) => {
+                const heroCard = document.createElement('div');
+                heroCard.className = 'hero-card';
+                
+                let attributesHtml = '';
+                if (hero.attributes && hero.attributes.length > 0) {
+                    hero.attributes.forEach(attr => {
+                        attributesHtml += `<p>${attr.type}: ${attr.value}</p>`;
+                    });
+                }
+
+                let abilitiesHtml = '';
+                if (hero.abilities && hero.abilities.length > 0) {
+                    hero.abilities.forEach(ability => {
+                        abilitiesHtml += `<p>${ability.name} (${ability.damageType})</p>`;
+                    });
+                }
+
+                const getStatValue = (statType) => {
+                    const stat = hero.base_stats.find(s => s.type === statType);
+                    return stat ? stat.value : 0;
+                };
+
+                heroCard.innerHTML = `
+                    <h3>${hero.name}</h3>
+                    <p>Image Source: ${hero.src || 'No image set'}</p>
+                    <h4>Base Stats:</h4>
+                    <p>Health: ${getStatValue('Health')}</p>
+                    <p>Armor: ${getStatValue('Armor')}</p>
+                    <p>Shields: ${getStatValue('Shields')}</p>
+                    <h4>Attributes:</h4>
+                    ${attributesHtml || '<p>No attributes</p>'}
+                    <h4>Abilities:</h4>
+                    ${abilitiesHtml || '<p>No abilities</p>'}
+                    <button onclick="editHero(${index})">Edit</button>
+                    <button onclick="deleteHero(${index})">Delete</button>
+                `;
+
+                heroList.appendChild(heroCard);
+            });
+            
+            updateJSONPreview();
+        }
+
+        function deleteHero(index) {
+            if (confirm('Are you sure you want to delete this hero?')) {
+                heroes.heroes.splice(index, 1);
+                displayHeroes();
+            }
+        }
+
+        function editHero(index) {
+            const hero = heroes.heroes[index];
+            document.getElementById('heroName').value = hero.name;
+            document.getElementById('heroSrc').value = hero.src || '';
+            
+            // Set base stats
+            document.getElementById('health').value = getStatValue(hero.base_stats, 'Health');
+            document.getElementById('armor').value = getStatValue(hero.base_stats, 'Armor');
+            document.getElementById('shields').value = getStatValue(hero.base_stats, 'Shields');
+
+            // Clear existing attributes inputs
+            clearAttributeInputs();
+
+            // Set attributes
+            if (hero.attributes) {
+                hero.attributes.forEach(attr => {
+                    const inputId = getAttributeInputId(attr.type);
+                    if (inputId) {
+                        document.getElementById(inputId).value = attr.value;
+                    }
+                });
+            }
+
+            // Handle abilities
+            const abilitiesContainer = document.getElementById('abilities');
+            abilitiesContainer.innerHTML = ''; // Clear existing abilities
+
+            if (hero.abilities && hero.abilities.length > 0) {
+                hero.abilities.forEach(ability => {
+                    addAbility(ability.name, ability.damageType);
+                });
+            } else {
+                addAbility(); // Add empty ability form
+            }
+
+            // Store the index being edited
+            document.getElementById('heroForm').dataset.editIndex = index;
+        }
+
+        function getAttributeInputId(attrType) {
+            const attributeMap = {
+                'Weapon Power': 'wp',
+                'Weapon Lifesteal': 'wpls',
+                'Ability Power': 'ap',
+                'Ability Lifesteal': 'als',
+                'Attack Speed': 'as',
+                'Reload Speed': 'rs',
+                'Movement Speed': 'ms',
+                'Cooldown Reduction': 'cr',
+                'Critical Damage': 'cd',
+                'Max Ammo': 'ma',
+                'Melee Damage': 'md'
+            };
+            return attributeMap[attrType];
+        }
+
+        function clearAttributeInputs() {
+            const attributeIds = ['wp', 'wpls', 'ap', 'als', 'as', 'rs', 'ms', 'cr', 'cd', 'ma', 'md'];
+            attributeIds.forEach(id => {
+                document.getElementById(id).value = '';
+            });
+        }
+
+        function getStatValue(stats, type) {
+            const stat = stats.find(s => s.type === type);
+            return stat ? stat.value : 0;
+        }
+
+        function addAbility(name = '', damageType = 'WP') {
+            const abilitiesDiv = document.getElementById('abilities');
+            const newAbility = document.createElement('div');
+            newAbility.className = 'ability';
+            newAbility.innerHTML = `
+                <input type="text" placeholder="Ability Name" class="ability-name" value="${name}">
+                <select class="damage-type">
+                    <option value="WP" ${damageType === 'WP' ? 'selected' : ''}>Weapon Power</option>
+                    <option value="AP" ${damageType === 'AP' ? 'selected' : ''}>Ability Power</option>
+                </select>
+                <button type="button" onclick="this.parentElement.remove()">Remove</button>
+            `;
+            abilitiesDiv.appendChild(newAbility);
+        }
+
+        document.getElementById('heroForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const hero = {
+                name: document.getElementById('heroName').value,
+                src: document.getElementById('heroSrc').value,
+                base_stats: [
+                    { type: "Health", value: parseInt(document.getElementById('health').value) },
+                    { type: "Armor", value: parseInt(document.getElementById('armor').value) },
+                    { type: "Shields", value: parseInt(document.getElementById('shields').value) }
+                ],
+                attributes: [],
+                abilities: []
+            };
+
+            // Collect attributes
+            const attributes = [
+                { id: 'wp', name: 'Weapon Power' },
+                { id: 'ap', name: 'Ability Power' },
+                { id: 'as', name: 'Attack Speed' },
+                { id: 'cr', name: 'Cooldown Reduction' },
+                { id: 'ma', name: 'Max Ammo' },
+                { id: 'wpls', name: 'Weapon Lifesteal' },
+                { id: 'als', name: 'Ability Lifesteal' },
+                { id: 'ms', name: 'Movement Speed' },
+                { id: 'rs', name: 'Reload Speed' },
+                { id: 'md', name: 'Melee Damage'},
+                { id: 'cd', name: 'Critical Damage' },
+            ];
+
+            attributes.forEach(attr => {
+                const value = document.getElementById(attr.id).value;
+                if (value) {
+                    hero.attributes.push({
+                        type: attr.name,
+                        value: value.endsWith('%') ? value : value + '%'
+                    });
+                } else {
+                  hero.attributes.push({
+                    type: attr.name,
+                    value: '0%'
+                  });
+                }
+            });
+
+            // Collect abilities
+            document.querySelectorAll('.ability').forEach(abilityElement => {
+                const abilityName = abilityElement.querySelector('.ability-name').value;
+                const damageType = abilityElement.querySelector('.damage-type').value;
+                if (abilityName) {
+                    hero.abilities.push({
+                        name: abilityName,
+                        damageType: damageType
+                    });
+                }
+            });
+
+            const editIndex = this.dataset.editIndex;
+            if (editIndex !== undefined) {
+                // Editing existing hero
+                heroes.heroes[editIndex] = hero;
+                delete this.dataset.editIndex;
+            } else {
+                // Adding new hero
+                heroes.heroes.push(hero);
+            }
+
+            displayHeroes();
+            this.reset();
+            document.getElementById('abilities').innerHTML = `
+                <div class="ability">
+                    <input type="text" placeholder="Ability Name" class="ability-name">
+                    <select class="damage-type">
+                        <option value="WP">Weapon Power</option>
+                        <option value="AP">Ability Power</option>
+                    </select>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>

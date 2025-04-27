@@ -1,6 +1,6 @@
 export const initialValues = {
   buildCost: 0,
-  selectedChar: 'D.VA',
+  character: 'D.VA',
   powers: [],
   items: [],
 };

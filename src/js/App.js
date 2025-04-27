@@ -7,11 +7,13 @@ import ItemShop from './components/ItemShop';
 import { decodeBase64ToString, encodeStringToBase64 } from './helpers/base64Helper';
 import renderAttributeString from './helpers/renderAttributeString';
 import formatCurrency from './helpers/formatCurrency';
+import HeroStats from './components/HeroStats';
 
 const App = () => {
   const [data, setData] = useState(initialValues);
   const [armoryData, setArmoryData] = useState(null);
   const [itemIcons, setItemIcons] = useState({});
+  const [availableHeroes, setAvailableHeroes] = useState([]);
 
   const POWER_SLOTS = [
     { round: 'Round 1' },
@@ -21,14 +23,6 @@ const App = () => {
   ];
 
   const ITEM_SLOTS = Array(6).fill(null);
-
-  const AVAILABLE_HEROES = [
-    { name: 'D.VA', src: '/static/heroes/dva.png' },
-    { name: 'Junker Queen', src: '/static/heroes/jq.png', alt: 'JQ' },
-    { name: 'Orisa', src: '/static/heroes/orisa.png' },
-    { name: 'Reinhardt', src: '/static/heroes/reinhardt.png' },
-    { name: 'Zarya', src: '/static/heroes/zarya.png' },
-  ];
 
   const getItemIcon = (item) => {
     if (!item) return '';
@@ -65,6 +59,7 @@ const App = () => {
     const index = currentArray.findIndex((i) => i?.name === item.name);
 
     if (index > -1) {
+      if (type === 'items') newData.buildCost -= item.cost;
       currentArray.splice(index, 1);
       setData(newData);
       updateUrl(newData);
@@ -79,6 +74,19 @@ const App = () => {
       : item;
 
     newData[type] = [...currentArray, newItem];
+    if (type === 'items') newData.buildCost += item.cost;
+    setData(newData);
+    updateUrl(newData);
+  };
+
+  const handleHeroChange = (hero) => {
+    const newData = { ...data };
+    newData.character = hero.name;
+    newData.powers = [];
+    newData.items = newData.items.filter((item) => {
+      if (!item.character) return true;
+      return item.character === hero.name;
+    });
     setData(newData);
     updateUrl(newData);
   };
@@ -90,6 +98,13 @@ const App = () => {
       setArmoryData(data);
     };
     getData();
+
+    const getHeroes = async () => {
+      const response = await fetch('heroes.json');
+      const data = await response.json();
+      setAvailableHeroes(data.heroes);
+    };
+    getHeroes();
 
     const loadBuildFromUrl = () => {
       const searchParams = new URLSearchParams(window.location.search);
@@ -129,7 +144,7 @@ const App = () => {
     loadIcons();
   }, [armoryData]);
 
-  return armoryData && (
+  return armoryData && availableHeroes && (
     <div className="container">
       <div className="row">
         <div className="col-12 mb-3">
@@ -138,16 +153,16 @@ const App = () => {
       </div>
       <div className="row">
         <section className="col-12">
-          {AVAILABLE_HEROES.map((hero) => (
-            <button type="button" key={hero.name} className="hero-button">
-              <img src={hero.src} alt={hero.alt || hero.name} />
+          {availableHeroes.map((hero) => (
+            <button type="button" key={hero.name} className="hero-button" onClick={() => handleHeroChange(hero)}>
+              <img src={hero.src} alt={hero.name} />
             </button>
           ))}
         </section>
       </div>
       <div className="row armory">
-        <div className="col-12 col-md-4 bordered build-section">
-          <p className="build-section--title">Build Cost: ${data.buildCost}</p>
+        <div className="col-12 col-md-4 col-xl-3 bordered build-section">
+          <p className="build-section--title">Build Cost: ${formatCurrency(data.buildCost)}</p>
           <section className="container">
             <section className="row">
               <p className="col-12 col-md text-align-center"><b>Powers</b></p>
@@ -209,6 +224,10 @@ const App = () => {
                   </section>
                 );
               })}
+            </section>
+            <section className="row mt-3">
+              <p className="col text-align-center"><b>Stats</b></p>
+              <HeroStats data={data} heroes={availableHeroes} />
             </section>
           </section>
         </div>

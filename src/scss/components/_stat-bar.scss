@@ -1,0 +1,49 @@
+.stat-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+
+  .stat-bar {
+    flex: 1;
+    height: 20px;
+    background: #2d2d2d;
+    border-radius: 4px;
+    overflow: hidden;
+
+    &.combined-bar {
+      display: flex;
+
+      .bar-segment {
+        height: 100%;
+        transition: width 0.3s ease;
+
+        &.health {
+          background-color: $color-health;
+        }
+
+        &.armor {
+          background-color: $color-armor;
+        }
+
+        &.shields {
+          background-color: $color-shield;
+        }
+      }
+    }
+
+    &.percentage-bar {
+      .bar-segment {
+        height: 100%;
+        background-color: $color-health;
+        transition: width 0.3s ease;
+      }
+    }
+  }
+
+  .stat-value {
+    min-width: 60px;
+    text-align: center;
+    font-weight: bold;
+  }
+}
