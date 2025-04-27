@@ -1,11 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import parse from 'html-react-parser';
 
 export const PowerCard = ({ name, description, src = '' }) => (
   <div className="power-card">
-    {src !== '' && <img src={src} alt={name} />}
-    <h6>{name}</h6>
-    <p>{description}</p>
+    <section className="row power-card--title">
+      {src !== '' && <img src={src} alt={name} />}
+      <p>{name}</p>
+    </section>
+    <section className="row power-card--description">
+      <p>{parse(description)}</p>
+    </section>
   </div>
 );
 

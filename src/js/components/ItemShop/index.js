@@ -55,7 +55,7 @@ const ItemShop = ({ data, character = 'D.VA' }) => {
           {items.map((item) => {
             if (item.character && item.character !== character) return null;
             return (
-              <div key={item.name} className="col-4 buyable-item">
+              <div key={item.name} className="col-12 col-md-4 buyable-item">
                 <PowerCard name={item.name} description={item.description} />
               </div>
             );
