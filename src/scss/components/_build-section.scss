@@ -7,14 +7,40 @@
   }
   
   &--items {
+    position: relative;
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
+    
+    .item-block:hover ~ .tooltip-container {
+      opacity: 1;
+      visibility: visible;
+    }
   }
   
   &--powers {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+    .tooltip-container {
+      top: 70%;
+    }
+
+    .power-block:hover ~ .tooltip-container {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    &.power-active {
+      .power-block {
+        border: 1px solid rgba($color-warning, 1);
+        
+        &:hover {
+          border: 1px solid rgba($color-white, 1);
+        }
+      }
+    }
   }
 }

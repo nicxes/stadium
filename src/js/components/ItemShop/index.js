@@ -3,19 +3,13 @@ import PropTypes from 'prop-types';
 import parse from 'html-react-parser';
 import Item from '../Item';
 import { PowerCard } from './components/PowerCard';
-import { statDescriptions } from './data/statDescriptions';
 import formatCurrency from '../../helpers/formatCurrency';
+import renderAttributeString from '../../helpers/renderAttributeString';
 
 const ItemShop = ({
   data, iconData, context, contextCallback,
 }) => {
   const [activeTab, setActiveTab] = useState('weapon');
-
-  const renderAttributeString = (attr) => {
-    if (attr.type === 'description') return attr.value;
-    const attrString = statDescriptions[attr.type];
-    return `<b>${attr.value}</b> ${attrString ?? attr.type}`;
-  };
 
   const renderRaritySection = (items, rarity) => (
     <div key={rarity} className="col-12 col-md-4 rarity-section px-1">

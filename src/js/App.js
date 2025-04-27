@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import parse from 'html-react-parser';
 import Power from './components/Power';
 import Item from './components/Item';
 import { initialValues } from './initialValues';
 import ItemShop from './components/ItemShop';
 import { decodeBase64ToString, encodeStringToBase64 } from './helpers/base64Helper';
+import renderAttributeString from './helpers/renderAttributeString';
+import formatCurrency from './helpers/formatCurrency';
 
 const App = () => {
   const [data, setData] = useState(initialValues);
@@ -56,6 +59,7 @@ const App = () => {
   };
 
   const handleClick = (item, type, rarity = '') => {
+    if (!item) return;
     const newData = { ...data };
     const currentArray = newData[type];
     const index = currentArray.findIndex((i) => i?.name === item.name);
@@ -149,16 +153,28 @@ const App = () => {
               <p className="col-12 col-md text-align-center"><b>Powers</b></p>
             </section>
             <section className="row">
-              {POWER_SLOTS.map((slot, index) => (
-                <section key={slot.round} className="col-3 build-section--powers">
-                  <Power
-                    name={data.powers[index]?.name}
-                    src={getItemIcon(data.powers[index])}
-                    onClick={() => handleClick(data.powers[index], 'powers')}
-                  />
-                  <p className="power-block--title">{slot.round}</p>
-                </section>
-              ))}
+              {POWER_SLOTS.map((slot, index) => {
+                const power = data.powers[index];
+                const powerClass = power?.name ? 'power-active' : '';
+                return (
+                  <section key={slot.round} className={`col-3 build-section--powers ${powerClass}`}>
+                    <Power
+                      name={power?.name}
+                      src={getItemIcon(power)}
+                      onClick={() => handleClick(power, 'powers')}
+                    />
+                    {power && (
+                      <div className="tooltip-container bordered bordered-side">
+                        <div className="tooltip-content">
+                          <p className="tooltip-content--title">{power.name}</p>
+                          <p>{parse(power.description)}</p>
+                        </div>
+                      </div>
+                    )}
+                    <p className="power-block--title">{slot.round}</p>
+                  </section>
+                );
+              })}
             </section>
 
             <section className="row mt-3">
@@ -166,14 +182,30 @@ const App = () => {
             </section>
             <section className="row justify-content-center">
               {ITEM_SLOTS.map((_, index) => {
-                const rarityClass = data.items[index]?.rarity ? `item-${data.items[index].rarity}` : '';
+                const item = data.items[index];
+                const rarityClass = item?.rarity ? `item-${item.rarity}` : '';
                 return (
                   <section key={`item-${index.toString()}`} className={`col-4 build-section--items ${rarityClass}`}>
                     <Item
-                      name={data.items[index]?.name}
-                      src={getItemIcon(data.items[index])}
-                      onClick={() => handleClick(data.items[index], 'items')}
+                      name={item?.name}
+                      src={getItemIcon(item)}
+                      onClick={() => handleClick(item, 'items')}
                     />
+                    {item && (
+                      <div className="tooltip-container bordered bordered-side">
+                        <div className="tooltip-content">
+                          <p className="tooltip-content--title">{item.name}</p>
+                          <ul>
+                            {item.attributes.map((attr, index) => (
+                              <li key={`${attr.type}_${index.toString()}`}>
+                                {parse(renderAttributeString(attr))}
+                              </li>
+                            ))}
+                          </ul>
+                          <p>Cost: ${formatCurrency(item.cost)}</p>
+                        </div>
+                      </div>
+                    )}
                   </section>
                 );
               })}
