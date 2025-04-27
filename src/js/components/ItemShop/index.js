@@ -1,13 +1,23 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import parse from 'html-react-parser';
 import Item from '../Item';
+import { PowerCard } from './components/PowerCard';
+import { statDescriptions } from './data/statDescriptions';
 
 const ItemShop = ({ data, character = 'D.VA' }) => {
-  const [activeTab, setActiveTab] = useState('weapon');
+  const [activeTab, setActiveTab] = useState('powers');
 
+  const renderAttributeString = (attr) => {
+    if (attr.type === 'description') return attr.value;
+    const attrString = statDescriptions[attr.type];
+    return `${attr.value} ${attrString ?? attr.type}`;
+  };
   const renderRaritySection = (items, rarity) => (
     <div key={rarity} className="col-4 rarity-section px-1">
-      <h5 className="rarity-section--title ps-2">{rarity.charAt(0).toUpperCase() + rarity.slice(1)}</h5>
+      <h5 className="rarity-section--title ps-2">
+        {rarity.toUpperCase()}
+      </h5>
       <div className="container">
         <div className="row">
           {items.map((item) => {
@@ -15,6 +25,36 @@ const ItemShop = ({ data, character = 'D.VA' }) => {
             return (
               <div key={item.name} className={`col-4 buyable-item item-${rarity}`}>
                 <Item item={item} />
+                <div className="tooltip-container bordered bordered-side">
+                  <div className="tooltip-content">
+                    <p className="tooltip-content--title">{item.name}</p>
+                    <ul>
+                      {item.attributes.map((attr, index) => (
+                        <li key={`${attr.type}_${index.toString()}`}>
+                          {parse(renderAttributeString(attr))}
+                        </li>
+                      ))}
+                    </ul>
+                    <p>Cost: {item.cost}</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderPowerSection = (items, index) => (
+    <div key={index} className="col-12 power-section px-1">
+      <div className="container">
+        <div className="row">
+          {items.map((item) => {
+            if (item.character && item.character !== character) return null;
+            return (
+              <div key={item.name} className="col-4 buyable-item">
+                <PowerCard name={item.name} description={item.description} />
               </div>
             );
           })}
@@ -40,7 +80,10 @@ const ItemShop = ({ data, character = 'D.VA' }) => {
 
       <div className="container tab-content">
         <div className="row">
-          {Object.entries(data.tabs[activeTab]).map(([rarity, items]) => renderRaritySection(items, rarity))}
+          {Object.entries(data.tabs[activeTab]).map(([rarity, items], index) => {
+            if (activeTab === 'powers') return renderPowerSection(items, index);
+            return renderRaritySection(items, rarity);
+          })}
         </div>
       </div>
     </div>

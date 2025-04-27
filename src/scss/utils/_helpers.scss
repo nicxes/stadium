@@ -1,8 +1,4 @@
-﻿.round {
-  border-radius: 30px;
-}
-
-.hidden {
+﻿.hidden {
   display: none !important;
 }
 
@@ -12,6 +8,21 @@
 
 .text-align-left {
   text-align: left !important;
+}
+
+.bordered {
+  border-radius: 8px;
+  border: 2px solid rgba($color-white, 0.2);
+  
+  &:not(.bordered-side) {
+    background-color: rgba($color-background, 0.2);
+    border-bottom: 150px solid transparent;
+  }
+  
+  &-side {
+    border-left: 24px solid transparent;
+    border-right: 24px solid transparent;
+  }
 }
 
 .b {
@@ -25,19 +36,8 @@
   }
 }
 
-.under-construction {
-  display: grid;
-  align-content: center;
-  justify-content: center;
-  height: 100vh;
-}
-
 .animated-ellipsis::after {
   content: '...';
   position: absolute;
   @include animation($name: ellipsis, $duration: 1.25s, $timing: linear, $iteration: infinite);
-}
-
-.highlight-flash {
-  @include animation($name: highlight-flash, $duration: 1.5s, $timing: ease-out);
 }

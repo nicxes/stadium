@@ -547,6 +547,91 @@
           "character": "Zarya"
         }
       ]
+    },
+    "ability": {
+      "common": [
+        {
+          "name": "Ability 1",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "5%"
+            }
+          ],
+          "cost": 1000
+        }
+      ],
+      "rare": [
+        {
+          "name": "Ability 2",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "5%"
+            }
+          ],
+          "cost": 1000
+        }
+      ],
+      "epic": [
+        {
+          "name": "Ability 3",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "5%"
+            }
+          ],
+          "cost": 1000
+        }
+      ]
+    },
+    "survival": {
+      "common": [
+        {
+          "name": "Ability 1",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "5%"
+            }
+          ],
+          "cost": 1000
+        }
+      ],
+      "rare": [
+        {
+          "name": "Ability 2",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "5%"
+            }
+          ],
+          "cost": 1000
+        }
+      ],
+      "epic": [
+        {
+          "name": "Ability 3",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "5%"
+            }
+          ],
+          "cost": 1000
+        }
+      ]
+    },
+    "powers": {
+      "D.VA": [
+        {
+          "name": "Power 1",
+          "description": "Power description",
+          "cost": 1000
+        }
+      ]
     }
   }
 }

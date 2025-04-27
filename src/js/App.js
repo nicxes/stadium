@@ -78,7 +78,7 @@ const App = () => {
             </section>
           </section>
         </div>
-        <div className="col-8 bordered px-0">
+        <div className="ms-4 col bordered px-0">
           {armoryData && <ItemShop data={armoryData} />}
         </div>
       </div>
