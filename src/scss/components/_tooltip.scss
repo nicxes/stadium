@@ -8,8 +8,8 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   white-space: normal;
   text-transform: none;
-  max-width: 300px;
-  width: 300px;
+  width: max-content;
+  max-width: 270px;
   word-wrap: break-word;
   opacity: 0;
   visibility: hidden;
@@ -37,7 +37,30 @@
   }
 }
 
-.buyable-item:hover .tooltip-container {
-  opacity: 1;
-  visibility: visible;
+.buyable-item {
+  position: relative;
+
+  // For items near the right edge
+  &:nth-child(3n) .tooltip-container {
+    right: 0;
+    left: auto;
+    transform: none;
+  }
+
+  // For middle items
+  &:nth-child(3n-1) .tooltip-container {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  // For items near the left edge
+  &:nth-child(3n-2) .tooltip-container {
+    left: 0;
+    transform: none;
+  }
+  
+  .item-block:hover ~ .tooltip-container {
+    opacity: 1;
+    visibility: visible;
+  }
 }

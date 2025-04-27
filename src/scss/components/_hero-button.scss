@@ -1,0 +1,12 @@
+.hero-button {
+  width: 64px;
+  height: 64px;
+  background-color: transparent;
+  
+  img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 1px solid rgba($color-white, 0.5);
+  }
+}
