@@ -62,6 +62,7 @@ const ItemShop = ({
                 <PowerCard
                   name={power.name}
                   description={power.description}
+                  src={iconData[power.name] || ''}
                   onClick={() => contextCallback(power, 'powers')}
                   selected={powers.find((p) => p.name === power.name)}
                 />

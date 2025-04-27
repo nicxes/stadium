@@ -35,10 +35,10 @@
     
     &.power-active {
       .power-block {
-        border: 1px solid rgba($color-warning, 1);
+        border: 1px solid transparent;
         
         &:hover {
-          border: 1px solid rgba($color-white, 1);
+          border: 1px solid rgba($color-warning, 1);
         }
       }
     }

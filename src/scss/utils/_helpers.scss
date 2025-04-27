@@ -41,3 +41,12 @@
   position: absolute;
   @include animation($name: ellipsis, $duration: 1.25s, $timing: linear, $iteration: infinite);
 }
+
+.stat {
+  &-wp {
+    color: $color-error !important;
+  }
+  &-ap {
+    color: $color-ap !important;
+  }
+}

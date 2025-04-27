@@ -24,11 +24,11 @@ const App = () => {
 
   const ITEM_SLOTS = Array(6).fill(null);
 
-  const getItemIcon = (item) => {
+  const getIcon = (item, type) => {
     if (!item) return '';
     const img = new Image();
-    const itemName = item.name?.replace(/ /g, '_').replace(/'/g, '').toLowerCase();
-    const imagePath = `/static/items/${itemName}.png`;
+    const cleanName = item.name?.replace(/[^a-zA-Z0-9 ]/g, '').replace(/ /g, '_').toLowerCase();
+    const imagePath = `/static/${type}/${cleanName}.png`;
 
     return new Promise((resolve) => {
       img.onload = () => {
@@ -123,12 +123,12 @@ const App = () => {
     const loadIcons = async () => {
       const icons = {};
 
-      await Object.values(armoryData.tabs).reduce(async (promise, tabContent) => {
+      await Object.entries(armoryData.tabs).reduce(async (promise, [tabType, tabContent]) => {
         await promise;
         await Object.values(tabContent).reduce(async (innerPromise, items) => {
           await innerPromise;
           await Promise.all(items.filter((item) => !icons[item.name]).map(async (item) => {
-            icons[item.name] = await getItemIcon(item);
+            icons[item.name] = await getIcon(item, tabType === 'powers' ? 'powers' : 'items');
           }));
         }, Promise.resolve());
       }, Promise.resolve());

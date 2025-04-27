@@ -14,19 +14,48 @@
   
   p {
     margin: 0;
+    text-align: left;
   }
   
   b {
     color: $color-white;
   }
-  
+
   &--title {
     font-weight: bold;
-    margin: .5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap; // Prevents wrapping
+    width: 100%;
+    margin: .25rem;
     
+    @include media-breakpoint-up(xl) {
+      margin: .5rem;
+    }
+
+    img {
+      width: 64px;
+      object-fit: cover;
+      flex-shrink: 0;
+      padding: 0;
+      
+      @include media-breakpoint-up(md) {
+        width: 48px;
+      }
+      
+      @include media-breakpoint-up(xl) {
+        width: 64px;
+      }
+    }
+
     p {
       color: $color-white;
-      
+      white-space: normal;
+      overflow-wrap: break-word;
+      flex: 1;
+      min-width: 0;
+
+
       @include media-breakpoint-up(xxl) {
         font-size: 1.125rem;
       }
@@ -36,9 +65,13 @@
   &--description {
     background-color: $color-background;
     border-radius: 8px;
-    margin: .5rem;
     padding: .25rem 0;
     height: 100%;
+    margin: .25rem;
+
+    @include media-breakpoint-up(xl) {
+      margin: .5rem;
+    }
   }
   
   &:hover {

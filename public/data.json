@@ -1646,6 +1646,56 @@
           "name": "PARTY PROTECTOR",
           "description": "When you use <b>[Self-Destruct]</b>, allies within <b>[Self-Destruct]</b> radius gain <b class=\"stat-ap\">250</b> <b>Overhealth</b> for <b>8s</b>."
         }
+      ],
+      "Junker Queen": [
+        {
+          "name": "THRILL OF BATTLE",
+          "description": "<b>[Adrenaline Rush]</b> also heals allies within <b>12m</b> for <b>50%</b> of the amount it heals you."
+        },
+        {
+          "name": "ROYAL BULLETS",
+          "description": "<b>[Scattergun]</b> critical hits against targets within <b>12m</b> applies <b>[Wound]</b> for <b class=\"stat-wp\">30</b> damage over <b>3s</b>."
+        },
+        {
+          "name": "TWIST THE KNIFE",
+          "description": "<b>[Scattergun]</b> critical hits extend the duration of all <b>[Wounds]</b> on the target by <b>0.</b><b>5s</b>."
+        },
+        {
+          "name": "BLADE PARADE",
+          "description": "Holding <b>[Jagged Blade]</b> charges it, increasing its damage by up to <b>35%</b> and causing it to knockback."
+        },
+        {
+          "name": "CUT 'EM, GRACIE!",
+          "description": "Each enemy hit by <b>[Jagged Blade]</b> while it returns to you reduces its cooldown by Is."
+        },
+        {
+          "name": "LET'S GO WIN",
+          "description": "Eliminations reset the cooldown of <b>[Commanding Shout]</b>."
+        },
+        {
+          "name": "MERCILESS MAGNETISM",
+          "description": "Using <b>[Commanding Shout]</b> causes your <b>[Jagged Blade]</b> to home to a target."
+        },
+        {
+          "name": "RECKONER'S ROAR",
+          "description": "Using <b>[Commanding Shout]</b> <b>[Wounds]</b> enemies within <b>10m</b> for <b class=\"stat-ap\">30</b> damage over <b>3s</b>."
+        },
+        {
+          "name": "CHOP CHOP",
+          "description": "<b>[Carnage]</b> gains an additional charge but its cooldown reduction per hit is reduced to Is."
+        },
+        {
+          "name": "SOARING STONE",
+          "description": "<b>[Carnage]</b> becomes a leaping strike if you jump during its cast time."
+        },
+        {
+          "name": "BLOODCRAZED",
+          "description": "<b>[Rampage]</b> and <b>[Carnage]</b> gives <b>15%</b> of Max Life as Overhealth per hit."
+        },
+        {
+          "name": "BOW DOWN",
+          "description": "<b>[Rampage]</b> now also knocks down enemies hit for <b>1.</b><b>5s</b>."
+        }
       ]
     }
   }

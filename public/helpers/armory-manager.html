@@ -48,6 +48,8 @@
             padding: 15px;
             border-radius: 4px;
             white-space: pre-wrap;
+            max-height: 400px;
+            overflow: auto;
         }
         .hidden {
             display: none;
@@ -282,7 +284,7 @@
         }
 
         function handleBoldHotkey(event) {
-            if ((event.ctrlKey || event.metaKey) && event.key === 'g') {
+            if ((event.ctrlKey || event.metaKey) && event.key === '1') {
                 event.preventDefault();
                 const textarea = event.target;
                 const start = textarea.selectionStart;
@@ -291,22 +293,43 @@
                 
                 if (start !== end) {
                     const selectedText = text.substring(start, end);
-                    const newText = text.substring(0, start) + 
-                                  `<b class=\"stat-ap\">${selectedText}</b>` + 
-                                  text.substring(end);
-                    textarea.value = newText;
+                    textarea.value = text.substring(0, start) +
+                      `<b class=\"stat-ap\">${selectedText}</b>` +
+                      text.substring(end);
                   
                     textarea.selectionStart = end + 23;
                     textarea.selectionEnd = end + 23;
                 } else {
-                    const newText = text.substring(0, start) + 
-                                  '<b class=\"stat-ap\"></b>' + 
-                                  text.substring(end);
-                    textarea.value = newText;
+                  textarea.value = text.substring(0, start) +
+                      '<b class=\"stat-ap\"></b>' +
+                      text.substring(end);
                     textarea.selectionStart = start + 19;
                     textarea.selectionEnd = start + 19;
                 }
             }
+              if ((event.ctrlKey || event.metaKey) && event.key === '2') {
+                event.preventDefault();
+                const textarea = event.target;
+                const start = textarea.selectionStart;
+                const end = textarea.selectionEnd;
+                const text = textarea.value;
+    
+                if (start !== end) {
+                  const selectedText = text.substring(start, end);
+                  textarea.value = text.substring(0, start) +
+                    `<b class=\"stat-wp\">${selectedText}</b>` +
+                    text.substring(end);
+    
+                  textarea.selectionStart = end + 23;
+                  textarea.selectionEnd = end + 23;
+                } else {
+                  textarea.value = text.substring(0, start) +
+                    '<b class=\"stat-wp\"></b>' +
+                    text.substring(end);
+                  textarea.selectionStart = start + 19;
+                  textarea.selectionEnd = start + 19;
+                }
+              }
             if ((event.ctrlKey || event.metaKey) && event.key === 'b') {
                 event.preventDefault();
                 const textarea = event.target;
@@ -316,18 +339,16 @@
                 
                 if (start !== end) {
                     const selectedText = text.substring(start, end);
-                    const newText = text.substring(0, start) + 
-                                  `<b>${selectedText}</b>` + 
-                                  text.substring(end);
-                    textarea.value = newText;
+                    textarea.value = text.substring(0, start) +
+                      `<b>${selectedText}</b>` +
+                      text.substring(end);
                   
                     textarea.selectionStart = end + 7;
                     textarea.selectionEnd = end + 7;
                 } else {
-                    const newText = text.substring(0, start) + 
-                                  '<b></b>' + 
-                                  text.substring(end);
-                    textarea.value = newText;
+                    textarea.value = text.substring(0, start) +
+                      '<b></b>' +
+                      text.substring(end);
                     textarea.selectionStart = start + 3;
                     textarea.selectionEnd = start + 3;
                 }
