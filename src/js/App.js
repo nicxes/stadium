@@ -179,12 +179,13 @@ const App = () => {
   return armoryData && availableHeroes && (
     <div className="container">
       <div className="row">
-        <div className="col-12 mb-3">
-          <h4>Overwatch 2 Stadium Build Planner</h4>
+        <div className="col-12 my-2">
+          <h2 style={{ fontStyle: 'italic' }}>Overwatch 2 Stadium Build Planner</h2>
+          <h6 style={{ fontStyle: 'italic' }}>By Doomnik - <a href="https://github.com/legovader09/">GitHub</a></h6>
         </div>
       </div>
       <div className="row">
-        <section className="col-12">
+        <section className="col-12 mt-2 mb-3">
           {Object.entries(availableHeroes.reduce((acc, hero) => {
             if (!acc[hero.type]) {
               acc[hero.type] = [];
