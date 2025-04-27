@@ -730,6 +730,21 @@
           ],
           "cost": 4000,
           "character": "D.VA"
+        },
+        {
+          "name": "BIGGER MAGNET",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Jagged Blade]</b>'s pull strength is increased by <b>35%</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Junker Queen"
         }
       ],
       "epic": [
@@ -937,6 +952,44 @@
           ],
           "cost": 12000,
           "character": "D.VA"
+        },
+        {
+          "name": "TINKER TRACKSUIT",
+          "attributes": [
+            {
+              "type": "CR",
+              "value": "5%"
+            },
+            {
+              "type": "ALS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Rampage]</b> and <b>[Carnage]</b> hits grant <b>10%</b> Attack Speed for <b>4s</b>."
+            }
+          ],
+          "cost": 9500,
+          "character": "Junker Queen"
+        },
+        {
+          "name": "BOOMING VOICE",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "25%"
+            },
+            {
+              "type": "[Commanding Shout] Radius",
+              "value": "50%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Commanding Shout]</b> will affect allies that are out of line of sight."
+            }
+          ],
+          "cost": 11000,
+          "character": "Junker Queen"
         }
       ]
     },
@@ -1204,6 +1257,55 @@
           ],
           "cost": 4000,
           "character": "D.VA"
+        },
+        {
+          "name": "DEZ'S DAMAGE DAMPENERS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "Knockback Resist",
+              "value": "50%"
+            },
+            {
+              "type": "description",
+              "value": "When knocked back, gain <b>25%</b> increased Move Speed for <b>3s</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Junker Queen"
+        },
+        {
+          "name": "REBELLIOUS SPIRIT",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "When <b>[Wound]</b> gets removed instead of expiring, gain <b>10%</b> of Max Life as Overhealth, up to <b>150</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Junker Queen"
+        },
+        {
+          "name": "SLICING SPREE",
+          "attributes": [
+            {
+              "type": "MS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "While within 12m of an enemy with a <b>[Wound]</b>, gain <b>10%</b> Move Speed and <b>5%</b> Attack Speed."
+            }
+          ],
+          "cost": 4000,
+          "character": "Junker Queen"
         }
       ],
       "epic": [
@@ -1438,6 +1540,59 @@
           ],
           "cost": 11000,
           "character": "D.VA"
+        },
+        {
+          "name": "SCAV SCRAPS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "CR",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Carnage]</b> and <b>[Jagged Blade]</b> impact damage grants Overhealth equal to <b>40%</b> of damage dealt."
+            }
+          ],
+          "cost": 10000,
+          "character": "Junker Queen"
+        },
+        {
+          "name": "THICK SKULL",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "While casting <b>[Rampage]</b> or <b>[Carnage]</b>, gain <b>50%</b> <b>Damage Reduction</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Junker Queen"
+        },
+        {
+          "name": "UNDYING LOYALTY",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "Commanding Shout Overhealth",
+              "value": "30%"
+            },
+            {
+              "type": "description",
+              "value": "Allies affected by <b>[Commanding Shout]</b> are healed for <b>5%</b> of Junker Queen's life every second."
+            }
+          ],
+          "cost": 10000,
+          "character": "Junker Queen"
         }
       ]
     },

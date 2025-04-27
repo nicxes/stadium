@@ -27,7 +27,7 @@ const App = () => {
   const getItemIcon = (item) => {
     if (!item) return '';
     const img = new Image();
-    const itemName = item.name?.replace(/ /g, '_').replace(/'/g, '');
+    const itemName = item.name?.replace(/ /g, '_').replace(/'/g, '').toLowerCase();
     const imagePath = `/static/items/${itemName}.png`;
 
     return new Promise((resolve) => {
@@ -175,7 +175,7 @@ const App = () => {
                   <section key={slot.round} className={`col-3 build-section--powers ${powerClass}`}>
                     <Power
                       name={power?.name}
-                      src={getItemIcon(power)}
+                      src={itemIcons[power?.name] || ''}
                       onClick={() => handleClick(power, 'powers')}
                     />
                     {power && (
@@ -203,7 +203,7 @@ const App = () => {
                   <section key={`item-${index.toString()}`} className={`col-4 build-section--items ${rarityClass}`}>
                     <Item
                       name={item?.name}
-                      src={getItemIcon(item)}
+                      src={itemIcons[item?.name] || ''}
                       onClick={() => handleClick(item, 'items')}
                     />
                     {item && (
