@@ -55,7 +55,7 @@ const ItemShop = ({
       <div className="container">
         <div className="row">
           {powers.map((power) => {
-            const { character } = context;
+            const { character, powers } = context;
             if (char && char !== character) return null;
             return (
               <div key={power.name} className="col-12 col-md-4 buyable-item">
@@ -63,6 +63,7 @@ const ItemShop = ({
                   name={power.name}
                   description={power.description}
                   onClick={() => contextCallback(power, 'powers')}
+                  selected={powers.find((p) => p.name === power.name)}
                 />
               </div>
             );
@@ -123,6 +124,9 @@ ItemShop.propTypes = {
   context: PropTypes.shape({
     character: PropTypes.string.isRequired,
     items: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string.isRequired,
+    })).isRequired,
+    powers: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string.isRequired,
     })).isRequired,
   }).isRequired,
