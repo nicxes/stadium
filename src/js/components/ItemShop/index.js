@@ -4,6 +4,7 @@ import parse from 'html-react-parser';
 import Item from '../Item';
 import { PowerCard } from './components/PowerCard';
 import { statDescriptions } from './data/statDescriptions';
+import formatCurrency from '../../helpers/formatCurrency';
 
 const ItemShop = ({ data, character = 'D.VA' }) => {
   const [activeTab, setActiveTab] = useState('powers');
@@ -11,10 +12,11 @@ const ItemShop = ({ data, character = 'D.VA' }) => {
   const renderAttributeString = (attr) => {
     if (attr.type === 'description') return attr.value;
     const attrString = statDescriptions[attr.type];
-    return `${attr.value} ${attrString ?? attr.type}`;
+    return `<b>${attr.value}</b> ${attrString ?? attr.type}`;
   };
+
   const renderRaritySection = (items, rarity) => (
-    <div key={rarity} className="col-4 rarity-section px-1">
+    <div key={rarity} className="col-12 col-md-4 rarity-section px-1">
       <h5 className="rarity-section--title ps-2">
         {rarity.toUpperCase()}
       </h5>
@@ -35,7 +37,7 @@ const ItemShop = ({ data, character = 'D.VA' }) => {
                         </li>
                       ))}
                     </ul>
-                    <p>Cost: {item.cost}</p>
+                    <p>Cost: ${formatCurrency(item.cost)}</p>
                   </div>
                 </div>
               </div>
@@ -79,7 +81,7 @@ const ItemShop = ({ data, character = 'D.VA' }) => {
       </div>
 
       <div className="container tab-content">
-        <div className="row">
+        <div className="row justify-content-center">
           {Object.entries(data.tabs[activeTab]).map(([rarity, items], index) => {
             if (activeTab === 'powers') return renderPowerSection(items, index);
             return renderRaritySection(items, rarity);

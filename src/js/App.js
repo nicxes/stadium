@@ -28,11 +28,11 @@ const App = () => {
         </div>
       </div>
       <div className="row armory">
-        <div className="col-4 bordered build-section">
+        <div className="col-12 col-md-4 bordered build-section">
           <p className="build-section--title">Build Cost: ${data.buildCost}</p>
           <section className="container">
             <section className="row">
-              <p className="col text-align-center"><b>Powers</b></p>
+              <p className="col-12 col-md text-align-center"><b>Powers</b></p>
             </section>
             <section className="row">
               <section className="col-3 build-section--powers">
@@ -78,7 +78,7 @@ const App = () => {
             </section>
           </section>
         </div>
-        <div className="ms-4 col bordered px-0">
+        <div className="ms-md-4 col bordered px-0">
           {armoryData && <ItemShop data={armoryData} />}
         </div>
       </div>

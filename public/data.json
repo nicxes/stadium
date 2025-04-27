@@ -551,85 +551,945 @@
     "ability": {
       "common": [
         {
-          "name": "Ability 1",
+          "name": "CHARGED PLATING",
           "attributes": [
             {
-              "type": "WP",
-              "value": "5%"
+              "type": "description",
+              "value": "After you spend your Ultimate Charge, gain <b>25</b> Armor and <b>10%</b> Ability Power for the rest of the round."
             }
           ],
           "cost": 1000
+        },
+        {
+          "name": "POWER PLAYBOOK",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            }
+          ],
+          "cost": 1000
+        },
+        {
+          "name": "SHADY SPECTACLES",
+          "attributes": [
+            {
+              "type": "ALS",
+              "value": "10%"
+            }
+          ],
+          "cost": 1000
+        },
+        {
+          "name": "WINNING ATTITUDE",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "When you die, gain <b>15%</b> Ultimate Charge."
+            }
+          ],
+          "cost": 1500
         }
       ],
       "rare": [
         {
-          "name": "Ability 2",
+          "name": "CUSTOM STOCK",
           "attributes": [
             {
               "type": "WP",
               "value": "5%"
+            },
+            {
+              "type": "AP",
+              "value": "10%"
             }
           ],
-          "cost": 1000
+          "cost": 3750
+        },
+        {
+          "name": "BIOLIGHT OVERFLOW",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "AP",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "When you spend your Ultimate Charge, grant nearby allies <b>50 Overhealth</b> for <b>3s</b>."
+            }
+          ],
+          "cost": 4000
+        },
+        {
+          "name": "ENERGIZED BRACERS",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "ALS",
+              "value": "10%"
+            }
+          ],
+          "cost": 4000
+        },
+        {
+          "name": "JUNKER WHATCHAMAJIG",
+          "attributes": [
+            {
+              "type": "Starting Ultimate Charge",
+              "value": "25%"
+            }
+          ],
+          "cost": 4000
+        },
+        {
+          "name": "WRIST WRAPS",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "5%"
+            },
+            {
+              "type": "AS",
+              "value": "10%"
+            }
+          ],
+          "cost": 4000
+        },
+        {
+          "name": "MULTI-TOOL",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "5%"
+            },
+            {
+              "type": "CR",
+              "value": "10%"
+            }
+          ],
+          "cost": 5000
+        },
+        {
+          "name": "NANO COLA",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "20%"
+            }
+          ],
+          "cost": 5500
+        },
+        {
+          "name": "DAE-HYUN'S DETONATOR",
+          "attributes": [
+            {
+              "type": "ALS",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "If your <b>[Mech]</b> detonates while mid-air, increase <b>[Self-Destruct]</b> explosion damage and range by <b>200%</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "D.VA"
+        },
+        {
+          "name": "MASTERMIND'S MITIGATOR",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "Every <b>300</b> damage you mitigate with <b>[Defense Matrix]</b> reduces <b>[Micro Missiles]</b> cooldown by <b>1s</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "D.VA"
+        },
+        {
+          "name": "VESUVIUS PROTOCOL",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Using <b>[Self-Destruct]</b> drops lava nearby that deals <b class=\"stat-ap\">30</b> damage every <b>1s</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "D.VA"
         }
       ],
       "epic": [
         {
-          "name": "Ability 3",
+          "name": "THREE-TAP TOMMYGUN",
           "attributes": [
             {
-              "type": "WP",
-              "value": "5%"
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "AS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "After using an ability, your next <b>3</b> instances of Weapon Damage deal additional damage equal to <b>3%</b> of the target's Life."
             }
           ],
-          "cost": 1000
+          "cost": 9500
+        },
+        {
+          "name": "BIOTECH MAXIMIZER",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "When you use an ability that heals, reduce its cooldown by <b>5%</b> for each unique ally it heals."
+            }
+          ],
+          "cost": 10000
+        },
+        {
+          "name": "CATAKYTIC CRYSTAL",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15"
+            },
+            {
+              "type": "description",
+              "value": "Ability Damage and Healing grants <b>20%</b> more Ultimate Charge."
+            }
+          ],
+          "cost": 10000
+        },
+        {
+          "name": "LUMÉRICO FUSION DRIVE",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "50"
+            },
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "When you use an ability, restore <b>50</b> Armor or Shields over <b>2s</b>."
+            }
+          ],
+          "cost": 10000
+        },
+        {
+          "name": "SUPERFLEXOR",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "When you deal Weapon Damage or Healing, gain <b>5%</b> Ability Power for <b>3s</b>, stacking up to <b>5 times</b>."
+            }
+          ],
+          "cost": 10000
+        },
+        {
+          "name": "CYBERVENOM",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "CR",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "Dealing Ability Damage applies <b>30%</b> <b>Healing Reduction</b> for <b>2s</b>."
+            }
+          ],
+          "cost": 10500
+        },
+        {
+          "name": "IRIDESCENT IRIS",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "20%"
+            },
+            {
+              "type": "CR",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "After spending your Ultimate Charge, gain <b>100 Overhealth</b> for <b>3s</b>."
+            }
+          ],
+          "cost": 11000
+        },
+        {
+          "name": "LIQUID NITROGEN",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Dealing Ability Damage slows the target's Move Speed by <b>20%</b> for <b>3s</b>."
+            }
+          ],
+          "cost": 11000
+        },
+        {
+          "name": "MARK OF THE KITSUNE",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "When you use an ability, your next instance of Weapon Damage or Healing deals <b class=\"stat-ap\">25</b> bonus damage or healing."
+            }
+          ],
+          "cost": 11000
+        },
+        {
+          "name": "CHAMPION'S KIT",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "40%"
+            }
+          ],
+          "cost": 13500
+        },
+        {
+          "name": "BUSAN BLASTER",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "20%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Light Gun]</b> gains a secondary fire, which charges up to fire a explosive piercing shot that deals <b class=\"stat-ap\">80</b> damage."
+            }
+          ],
+          "cost": 10000,
+          "character": "D.VA"
+        },
+        {
+          "name": "MACRO MISSLE",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "<b>[Micro Missiles]</b> deal <b>25%</b> increased damage and have significantly increased knockback."
+            }
+          ],
+          "cost": 12000,
+          "character": "D.VA"
+        },
+        {
+          "name": "ONSLAUGHT ORDINANCE",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "The quantity and duration of <b>[Micro Missiles]</b> is increased by <b>20%</b>."
+            }
+          ],
+          "cost": 12000,
+          "character": "D.VA"
         }
       ]
     },
     "survival": {
       "common": [
         {
-          "name": "Ability 1",
+          "name": "ADRENALINE SHOT",
           "attributes": [
             {
-              "type": "WP",
-              "value": "5%"
+              "type": "Health",
+              "value": "10"
+            },
+            {
+              "type": "description",
+              "value": "Health Packs grant <b>20%</b> Move Speed for <b>5s</b> and <b>50 Overhealth</b>."
             }
           ],
           "cost": 1000
+        },
+        {
+          "name": "ELECTROLYTES",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "At the start of the round, gain 100 unrecoverable <b>Overhealth</b>."
+            }
+          ],
+          "cost": 1000
+        },
+        {
+          "name": "FIELD RATIONS",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "While on the Objective, restore <b>8</b> Life every Is."
+            }
+          ],
+          "cost": 1000
+        },
+        {
+          "name": "RUNNING SHOES",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "At the start of the round and when you first respawn, gain <b>20%</b> Move Speed for IOS while out of combat."
+            }
+          ],
+          "cost": 1000
+        },
+        {
+          "name": "ARMORED VEST",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "25"
+            }
+          ],
+          "cost": 1500
+        },
+        {
+          "name": "FIRST AID KIT",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Reduce the time before your Life begins regenerating by <b>33%</b>."
+            }
+          ],
+          "cost": 1500
+        },
+        {
+          "name": "HEARTBEAT SENSOR",
+          "attributes": [
+            {
+              "type": "MS",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "Enemies below <b>30%</b> Life are <b>Revealed</b> to you."
+            }
+          ],
+          "cost": 1500
+        },
+        {
+          "name": "SIPHON GLOVES",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Quick Melee]</b> damage heals for <b>25</b> Life."
+            }
+          ],
+          "cost": 1500
         }
       ],
       "rare": [
         {
-          "name": "Ability 2",
+          "name": "REINFORCED TITANIUM",
           "attributes": [
             {
-              "type": "WP",
-              "value": "5%"
+              "type": "Shields",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "While you have Shields, take <b>15%</b> reduced Ability Damage."
             }
           ],
-          "cost": 1000
+          "cost": 3750
+        },
+        {
+          "name": "CUSHIONED PADDING",
+          "attributes": [
+            {
+              "type": "Shield",
+              "value": "25"
+            },
+            {
+              "type": "Incoming Negative Effect Duration",
+              "value": "-40%"
+            },
+            {
+              "type": "description",
+              "value": "When affected by <b>Stun</b>, <b>Sleep</b> , or <b>Hinder</b>, restore <b>10%</b> of your max Life over <b>3s</b>."
+            }
+          ],
+          "cost": 4000
+        },
+        {
+          "name": "IRONCLAD EXHAUST PORTS",
+          "attributes": [
+            {
+              "type": "CR",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "When you use an ability, gain <b>25 Overhealth</b> for <b>3s</b>."
+            }
+          ],
+          "cost": 4000
+        },
+        {
+          "name": "VISHKAR CONDENSOR",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Convert <b>100</b> Health into Shields."
+            }
+          ],
+          "cost": 4000
+        },
+        {
+          "name": "VITAL-E-TEE",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "10"
+            },
+            {
+              "type": "description",
+              "value": "Convert 100 Health into Armor."
+            }
+          ],
+          "cost": 4000
+        },
+        {
+          "name": "CRUSADER HYDRAULICS",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "While you have Armor, take <b>10%</b> reduced Weapon Damage."
+            }
+          ],
+          "cost": 4500
+        },
+        {
+          "name": "IRON EYES",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "You take <b>20%</b> reduced damage from Critical Hits."
+            }
+          ],
+          "cost": 4500
+        },
+        {
+          "name": "MEKA Z-SERIES",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "8%"
+            },
+            {
+              "type": "Armor",
+              "value": "8%"
+            },
+            {
+              "type": "Shields",
+              "value": "8%"
+            }
+          ],
+          "cost": 5000
+        },
+        {
+          "name": "GALVANIZED CORE",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "[Boosters] Duration",
+              "value": "25%"
+            }
+          ],
+          "cost": 4000,
+          "character": "D.VA"
+        },
+        {
+          "name": "PLOT ARMOR",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "While <b>[Defense Matrix]</b> is active, gain <b>65%</b> damage reduction against beams."
+            }
+          ],
+          "cost": 4000,
+          "character": "D.VA"
+        },
+        {
+          "name": "SOLO SPEC",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "When you mitigate damage with <b>[Defense Matrix]</b>, gain Shields equal to <b>10%</b> of the damage mitigated, up to <b>100</b>. Resets when your <b>[Mech]</b> is destroyed."
+            }
+          ],
+          "cost": 4000,
+          "character": "D.VA"
         }
       ],
       "epic": [
         {
-          "name": "Ability 3",
+          "name": "GENETICIST'S VIAL",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "The first time you would die each round, revive instead with <b>200</b> Life after <b>3s</b>."
+            }
+          ],
+          "cost": 9000
+        },
+        {
+          "name": "BLOODBOUND",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "The last enemy to deal a final blow to you is <b>Revealed</b> when nearby. Deal <b>10%</b> more damage to them and take <b>10%</b> reduced damage from them."
+            }
+          ],
+          "cost": 9500
+        },
+        {
+          "name": "DIVINE INTERVENTION",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "When you take more than <b>100</b> damage at once, restore <b>15%</b> of damage taken and start regenerating your Shields."
+            }
+          ],
+          "cost": 9500
+        },
+        {
+          "name": "GLOOMGAUNTLET",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "50"
+            },
+            {
+              "type": "Melee Damage",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Melee]</b> Damage grants <b>10%</b> Move Speed and restores <b>5%</b> of Max Life over <b>2s</b>."
+            }
+          ],
+          "cost": 9500
+        },
+        {
+          "name": "MARTIAN MENDER",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "CR",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Restore <b>3%</b> of your Life every <b>1s</b>."
+            }
+          ],
+          "cost": 10000
+        },
+        {
+          "name": "PHANTASMIC FLUX",
           "attributes": [
             {
               "type": "WP",
-              "value": "5%"
+              "value": "10%"
+            },
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "WPLS",
+              "value": "15%"
+            },
+            {
+              "type": "ALS",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "While at full Life, Lifesteal grants up to <b>100 Overhealth</b>."
             }
           ],
-          "cost": 1000
+          "cost": 10000
+        },
+        {
+          "name": "RÜSTUNG VON WILHELM",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "15%"
+            },
+            {
+              "type": "Armor",
+              "value": "15%"
+            },
+            {
+              "type": "Shields",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "While below <b>30%</b> Life, gain <b>10%</b> <b>Damage Reduction</b>."
+            }
+          ],
+          "cost": 10000
+        },
+        {
+          "name": "VANADIUM INJECTION",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "While at <b>100%</b> <b>Ultimate Charge</b>, gain: <ul><li><b>50</b> Health</li><li><b>10%</b> Weapon Power</li><li><b>10%</b> Ability Power</li><li><b>10%</b> Attack Speed</li><li><b>10%</b> Cooldown Reduction</li><li><b>10%</b> Move Speed</li></ul>"
+            }
+          ],
+          "cost": 10000
+        },
+        {
+          "name": "NEBULA CONDUIT",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Prevent <b>15%</b> of incoming damage and instead take that prevented damage over <b>3s</b>."
+            }
+          ],
+          "cost": 11000
+        },
+        {
+          "name": "OGUNDIMU REDUCTION FIELD",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "When you take damage, gain 0.<b>5%</b> <b>Damage Reduction</b> for Is, stacking up to 20 times."
+            }
+          ],
+          "cost": 11000
+        },
+        {
+          "name": "APM AMP",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "When you use <b>[Boosters]</b>, other allies within <b>16m</b> gain <b>25%</b> Move Speed for <b>2s</b>."
+            }
+          ],
+          "cost": 9000,
+          "character": "D.VA"
+        },
+        {
+          "name": "CHIP-DAMAGE DIVERTER",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "When you deal damage to Barriers while in your <b>[Mech]</b>, gain Shields equal to <b>10%</b> of the damage dealt, up to <b>200</b>. Resets when your <b>[Mech]</b> is destroyed."
+            }
+          ],
+          "cost": 10000,
+          "character": "D.VA"
+        },
+        {
+          "name": "SINGIJEON'S PULSE PLATING",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "Gain <b>5%</b> of damage mitigated by <b>[Defense Matrix]</b> as Ultimate Charge."
+            }
+          ],
+          "cost": 10000,
+          "character": "D.VA"
+        },
+        {
+          "name": "NANO COLA NITROUS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "When you eject from your <b>[Mech]</b>, gain <b>25%</b> increased max Health and gain <b>[Nano Boost]</b> for <b>8s</b>."
+            }
+          ],
+          "cost": 11000,
+          "character": "D.VA"
         }
       ]
     },
     "powers": {
       "D.VA": [
         {
-          "name": "Power 1",
-          "description": "Power description",
-          "cost": 1000
+          "name": "FOCUSED FUSION",
+          "description": "<b>[Fusion Cannon]'s spread is reduced by <b>66%</b> and damage falloff range is <b>20m</b> farther."
+        },
+        {
+          "name": "LEGENDARY LOADOUT",
+          "description": "<b>[Micro Missiles]</b> are replaced with <b>6 Heavy Rockets</b>, which deal <b>350%</b> more explosive damage and have <b>100%</b> increased radius."
+        },
+        {
+          "name": "OVERSTOCKED",
+          "description": "Gain <b>1</b> extra charge of <b>[Micro Missiles]</b>."
+        },
+        {
+          "name": "COUNTERMEASURES",
+          "description": "When you mitigate <b>150</b> damage with <b>[Defense Matrix]</b>, automatically fire <b>2</b> <b>[Micro Missiles]</b>."
+        },
+        {
+          "name": "FACETANKING",
+          "description": "<b>[Defense Matrix]</b> heals you for <b>30%</b> of the damage it blocks."
+        },
+        {
+          "name": "ULTRAWIDE MATRIX",
+          "description": "Increase the size of <b>[Defense Matrix]</b> by <b>50%</b> and its duration by <b>20%</b>."
+        },
+        {
+          "name": "IGNITION BURST",
+          "description": "<b>[Boosters]</b> leave a trail of lava that deals <b class=\"stat-ap\">30</b> damage every <b>1s</b>."
+        },
+        {
+          "name": "MEKA PUNCH",
+          "description": "While using <b>[Boosters]</b>, <b>[Quick Melee]</b> deals <b>75%</b> more damage. MEKA Punch eliminations reset the cooldown of <b>[Boosters]</b>."
+        },
+        {
+          "name": "STAT BOOST",
+          "description": "During the first <b>2s</b> of <b>[Boosters]</b>, <b>[Defense Matrix]</b> recovers <b>100%</b> faster."
+        },
+        {
+          "name": "TOKKI SLAM",
+          "description": "During <b>[Boosters]</b>, use crouch to slam the ground, dealing damage equal to <b>20%</b> of your max Armor and knocking up enemies hit."
+        },
+        {
+          "name": "EXPRESS DETONATION",
+          "description": "<b>[Self-Destruct]</b> explodes <b>15%</b> faster."
+        },
+        {
+          "name": "PARTY PROTECTOR",
+          "description": "When you use <b>[Self-Destruct]</b>, allies within <b>[Self-Destruct]</b> radius gain <b class=\"stat-ap\">250</b> <b>Overhealth</b> for <b>8s</b>."
         }
       ]
     }
