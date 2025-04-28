@@ -3,7 +3,7 @@
     {
       "name": "D.VA",
       "type": "tank",
-      "src": "/static/heroes/dva.png",
+      "safe_name": "dva",
       "base_stats": [
         {
           "type": "Health",
@@ -94,7 +94,7 @@
     {
       "name": "Junker Queen",
       "type": "tank",
-      "src": "/static/heroes/jq.png",
+      "safe_name": "jq",
       "base_stats": [
         {
           "type": "Health",
@@ -160,7 +160,7 @@
     {
       "name": "Orisa",
       "type": "tank",
-      "src": "/static/heroes/orisa.png",
+      "safe_name": "orisa",
       "base_stats": [
         {
           "type": "Health",
@@ -226,7 +226,7 @@
     {
       "name": "Reinhardt",
       "type": "tank",
-      "src": "/static/heroes/rein.png",
+      "safe_name": "rein",
       "base_stats": [
         {
           "type": "Health",
@@ -292,7 +292,7 @@
     {
       "name": "Zarya",
       "type": "tank",
-      "src": "/static/heroes/zarya.png",
+      "safe_name": "zarya",
       "base_stats": [
         {
           "type": "Health",
@@ -358,7 +358,7 @@
     {
       "name": "Ashe",
       "type": "dps",
-      "src": "/static/heroes/ashe.png",
+      "safe_name": "ashe",
       "base_stats": [
         {
           "type": "Health",
@@ -424,7 +424,7 @@
     {
       "name": "Cassidy",
       "type": "dps",
-      "src": "/static/heroes/cas.png",
+      "safe_name": "cas",
       "base_stats": [
         {
           "type": "Health",
@@ -490,7 +490,7 @@
     {
       "name": "Genji",
       "type": "dps",
-      "src": "/static/heroes/genji.png",
+      "safe_name": "genji",
       "base_stats": [
         {
           "type": "Health",
@@ -556,7 +556,7 @@
     {
       "name": "Mei",
       "type": "dps",
-      "src": "/static/heroes/mei.png",
+      "safe_name": "mei",
       "base_stats": [
         {
           "type": "Health",
@@ -622,7 +622,7 @@
     {
       "name": "Reaper",
       "type": "dps",
-      "src": "/static/heroes/reaper.png",
+      "safe_name": "reaper",
       "base_stats": [
         {
           "type": "Health",
@@ -688,7 +688,7 @@
     {
       "name": "Soldier: 76",
       "type": "dps",
-      "src": "/static/heroes/sold76.png",
+      "safe_name": "sold76",
       "base_stats": [
         {
           "type": "Health",
@@ -754,7 +754,7 @@
     {
       "name": "Ana",
       "type": "support",
-      "src": "/static/heroes/ana.png",
+      "safe_name": "ana",
       "base_stats": [
         {
           "type": "Health",
@@ -820,7 +820,7 @@
     {
       "name": "Juno",
       "type": "support",
-      "src": "/static/heroes/juno.png",
+      "safe_name": "juno",
       "base_stats": [
         {
           "type": "Health",
@@ -886,7 +886,7 @@
     {
       "name": "Kiriko",
       "type": "support",
-      "src": "/static/heroes/kiriko.png",
+      "safe_name": "kiriko",
       "base_stats": [
         {
           "type": "Health",
@@ -952,7 +952,7 @@
     {
       "name": "Lúcio",
       "type": "support",
-      "src": "/static/heroes/lucio.png",
+      "safe_name": "lucio",
       "base_stats": [
         {
           "type": "Health",
@@ -1018,7 +1018,7 @@
     {
       "name": "Mercy",
       "type": "support",
-      "src": "/static/heroes/mercy.png",
+      "safe_name": "mercy",
       "base_stats": [
         {
           "type": "Health",
@@ -1084,7 +1084,7 @@
     {
       "name": "Moira",
       "type": "support",
-      "src": "/static/heroes/moira.png",
+      "safe_name": "moira",
       "base_stats": [
         {
           "type": "Health",

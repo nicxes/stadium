@@ -1,65 +1,35 @@
 import React, { useEffect, useState } from 'react';
 import parse from 'html-react-parser';
+
 import Power from './components/Power';
 import Item from './components/Item';
 import { initialValues } from './initialValues';
 import ItemShop from './components/ItemShop';
-import { decodeBase64ToString, encodeStringToBase64 } from './helpers/base64Helper';
 import formatCurrency from './helpers/formatCurrency';
 import HeroStats from './components/HeroStats';
 import RenderAttributeString from './components/RenderAttributeString';
+import { updateUrl, loadBuildFromUrl } from './utils/urlBuilder';
+import { useAssets } from './utils/AssetProvider';
 
-const BATCH_SIZE = 6; // Smaller batch for network requests
-const BATCH_DELAY = 250; // Longer delay between batches to prevent overwhelming
+const ITEM_SLOTS = Array(6).fill(null);
+const POWER_SLOTS = [
+  { round: 'Round 1' },
+  { round: 'Round 3' },
+  { round: 'Round 5' },
+  { round: 'Round 7' },
+];
 
 const App = () => {
+  const { getAsset, isLoading, error } = useAssets();
+
   const [data, setData] = useState(initialValues);
   const [armoryData, setArmoryData] = useState(null);
-  const [itemIcons, setItemIcons] = useState({});
   const [availableHeroes, setAvailableHeroes] = useState([]);
 
-  const POWER_SLOTS = [
-    { round: 'Round 1' },
-    { round: 'Round 3' },
-    { round: 'Round 5' },
-    { round: 'Round 7' },
-  ];
-
-  const ITEM_SLOTS = Array(6).fill(null);
-
-  const getIcon = (item, type) => {
-    if (!item) return '';
-    const cleanName = item.name?.replace(/[^a-zA-Z0-9ÁÉÍÓÚŌ ]/g, '').replace(/ /g, '_').toLowerCase();
-    const imagePath = `/static/${type}/${cleanName}.png`;
-
-    return new Promise((resolve) => {
-      fetch(imagePath)
-        .then((response) => {
-          if (!response.ok) throw new Error('Image not found');
-          return resolve(imagePath);
-        })
-        .catch(() => resolve('')); // Return empty string for failed loads
-    });
-  };
-
-  const updateUrl = (data) => {
-    const minimalData = {
-      h: data.character,
-      p: data.powers.map((p) => p.id || p.name),
-      i: data.items.map((i) => ({
-        id: i.id || i.name,
-        r: i.rarity || '',
-      })),
-    };
-
-    // Convert to JSON and encode to base64
-    const encoded = encodeStringToBase64(JSON.stringify(minimalData));
-
-    window.history.replaceState(
-      null,
-      '',
-      `${window.location.pathname}?b=${encoded}`,
-    );
+  const getIcon = (name) => {
+    if (!name || isLoading || error) return '';
+    const cleanName = name.replace(/[^a-zA-Z0-9ÁÉÍÓÚŌ\- ]/g, '').replace(/ /g, '_').toLowerCase();
+    return getAsset(`${cleanName}.png`)?.url;
   };
 
   const handleClick = (item, type, rarity = '') => {
@@ -119,98 +89,9 @@ const App = () => {
 
   useEffect(() => {
     if (!armoryData) return;
-    const loadIcons = async () => {
-      const icons = {};
-
-      try {
-        // Flatten all items into a single array first
-        const allItems = [];
-        Object.entries(armoryData.tabs).forEach(([tabType, tabContent]) => {
-          Object.values(tabContent).forEach((items) => {
-            items.forEach((item) => {
-              if (!icons[item.name]) {
-                allItems.push({
-                  item,
-                  type: tabType === 'powers' ? 'powers' : 'items',
-                });
-              }
-            });
-          });
-        });
-
-        // Create batches
-        const batches = [];
-        for (let i = 0; i < allItems.length; i += BATCH_SIZE) {
-          batches.push(allItems.slice(i, i + BATCH_SIZE));
-        }
-
-        // Process all batches
-        const processBatch = async (batch, index) => {
-          if (index > 0) {
-            await new Promise((resolve) => {
-              setTimeout(resolve, BATCH_DELAY);
-            });
-          }
-
-          const batchResults = await Promise.all(
-            batch.map(({ item, type }) => getIcon(item, type)
-              .then((path) => ({
-                name: item.name,
-                path,
-              }))),
-          );
-
-          batchResults.forEach(({ name, path }) => {
-            if (path) icons[name] = path;
-          });
-
-          setItemIcons({ ...icons });
-        };
-
-        await Promise.all(batches.map((batch, index) => processBatch(batch, index)));
-      } catch (error) {
-        console.error('Error in loadIcons:', error);
-      }
-    };
-
-    loadIcons();
-
-    const loadBuildFromUrl = () => {
-      const searchParams = new URLSearchParams(window.location.search);
-      const encoded = searchParams.get('b');
-
-      if (encoded && armoryData) {
-        try {
-          const minimalData = JSON.parse(decodeBase64ToString(encoded));
-
-          const findItemInTabs = (itemId) => Object.values(armoryData.tabs).reduce((found, tab) => {
-            if (found) return found;
-            return Object.values(tab).reduce((innerFound, items) => {
-              if (innerFound) return innerFound;
-              return items.find((item) => item.id === itemId || item.name === itemId) || null;
-            }, null);
-          }, null);
-
-          const parsed = {
-            character: minimalData.h,
-            powers: minimalData.p.map((pId) => findItemInTabs(pId)).filter(Boolean),
-            items: minimalData.i.map((item) => {
-              const fullItem = findItemInTabs(item.id);
-              return fullItem ? { ...fullItem, rarity: item.r } : null;
-            }).filter(Boolean),
-            buildCost: 0,
-          };
-
-          parsed.buildCost = parsed.items.reduce((total, item) => total + (item?.cost || 0), 0);
-
-          setData(parsed);
-        } catch (error) {
-          console.error('Failed to decode build data:', error);
-        }
-      }
-    };
-
-    loadBuildFromUrl();
+    const searchParams = new URLSearchParams(window.location.search);
+    const encoded = searchParams.get('b');
+    if (encoded) loadBuildFromUrl(encoded, armoryData, (data) => setData(data));
   }, [armoryData]);
 
   return armoryData && availableHeroes && (
@@ -239,7 +120,7 @@ const App = () => {
                   className={`hero-button ${data.character === hero.name ? 'active' : ''}`}
                   onClick={() => handleHeroChange(hero)}
                 >
-                  <img src={hero.src} alt={hero.name} />
+                  <img src={getIcon(hero.safe_name)} alt={hero.name} />
                 </button>
               ))}
             </React.Fragment>
@@ -255,7 +136,7 @@ const App = () => {
                 <>
                   <img
                     className="hero-icon"
-                    src={hero.src}
+                    src={getIcon(hero.safe_name)}
                     alt={data.character}
                   />
                   <span style={{ marginLeft: '16px' }}>{data.character}</span>
@@ -264,7 +145,7 @@ const App = () => {
             })()}
           </p>
           <p className="build-section--title">
-            Build Cost: <img className="currency" src="/static/icons/currency.png" alt="Currency" /><span>{formatCurrency(data.buildCost)}</span>
+            Build Cost: <img className="currency" src={getIcon('currency')} alt="Currency" /><span>{formatCurrency(data.buildCost)}</span>
           </p>
           <section className="container">
             <section className="row">
@@ -278,7 +159,7 @@ const App = () => {
                   <section key={slot.round} className={`col-3 build-section--powers ${powerClass}`}>
                     <Power
                       name={power?.name}
-                      src={itemIcons[power?.name] || ''}
+                      src={getIcon(power?.name) || ''}
                       onClick={() => handleClick(power, 'powers')}
                     />
                     {power && (
@@ -306,7 +187,7 @@ const App = () => {
                   <section key={`item-${index.toString()}`} className={`col-4 build-section--items ${rarityClass}`}>
                     <Item
                       name={item?.name}
-                      src={itemIcons[item?.name] || ''}
+                      src={getIcon(item?.name) || ''}
                       onClick={() => handleClick(item, 'items')}
                     />
                     {item && (
@@ -318,12 +199,12 @@ const App = () => {
                           <ul>
                             {item.attributes.map((attr, index) => (
                               <li key={`${attr.type}_${index.toString()}`} className={`${attr.type !== 'description' ? 'tooltip-content--attribute' : ''}`}>
-                                <RenderAttributeString attr={attr} />
+                                <RenderAttributeString getIcon={getIcon} attr={attr} />
                               </li>
                             ))}
                           </ul>
                           <hr />
-                          <p><img className="currency currency--small" src="/static/icons/currency.png" alt="Currency" /><span>{formatCurrency(item.cost)}</span></p>
+                          <p><img className="currency currency--small" src={getIcon('currency')} alt="Currency" /><span>{formatCurrency(item.cost)}</span></p>
                         </div>
                       </div>
                     )}
@@ -338,7 +219,7 @@ const App = () => {
           </section>
         </div>
         <div className="ms-md-4 col bordered px-0">
-          {armoryData && <ItemShop data={armoryData} iconData={itemIcons} context={data} contextCallback={handleClick} />}
+          {armoryData && <ItemShop data={armoryData} getIcon={getIcon} context={data} contextCallback={handleClick} />}
         </div>
       </div>
     </div>

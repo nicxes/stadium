@@ -6,7 +6,7 @@ import formatCurrency from '../../helpers/formatCurrency';
 import RenderAttributeString from '../RenderAttributeString';
 
 const ItemShop = ({
-  data, iconData, context, contextCallback,
+  data, getIcon, context, contextCallback,
 }) => {
   const [activeTab, setActiveTab] = useState('weapon');
 
@@ -24,7 +24,7 @@ const ItemShop = ({
               <div key={item.name} className={`col-4 buyable-item item-${rarity}`}>
                 <Item
                   item={item}
-                  src={iconData[item.name] || ''}
+                  src={getIcon(item.name) || ''}
                   onClick={() => contextCallback(item, 'items', rarity)}
                   selected={items.find((i) => i.name === item.name)}
                   isHeroItem={item.character !== undefined}
@@ -37,12 +37,12 @@ const ItemShop = ({
                     <ul>
                       {item.attributes.map((attr, index) => (
                         <li key={`${attr.type}_${index.toString()}`} className={`${attr.type !== 'description' ? 'tooltip-content--attribute' : ''}`}>
-                          <RenderAttributeString attr={attr} />
+                          <RenderAttributeString getIcon={getIcon} attr={attr} />
                         </li>
                       ))}
                     </ul>
                     <hr />
-                    <p><img className="currency currency--small" src="/static/icons/currency.png" alt="Currency" /><span>{formatCurrency(item.cost)}</span></p>
+                    <p><img className="currency currency--small" src={getIcon('currency')} alt="Currency" /><span>{formatCurrency(item.cost)}</span></p>
                   </div>
                 </div>
               </div>
@@ -65,7 +65,7 @@ const ItemShop = ({
                 <PowerCard
                   name={power.name}
                   description={power.description}
-                  src={iconData[power.name] || ''}
+                  src={getIcon(power.name) || ''}
                   onClick={() => contextCallback(power, 'powers')}
                   selected={powers.find((p) => p.name === power.name)}
                 />
@@ -124,7 +124,7 @@ ItemShop.propTypes = {
       ),
     ).isRequired,
   }).isRequired,
-  iconData: PropTypes.objectOf(PropTypes.string).isRequired,
+  getIcon: PropTypes.func.isRequired,
   context: PropTypes.shape({
     character: PropTypes.string.isRequired,
     items: PropTypes.arrayOf(PropTypes.shape({
