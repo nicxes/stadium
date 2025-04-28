@@ -47,15 +47,31 @@
     .item-block {
       width: 64px;
       height: 64px;
+      padding: 0;
+      
+      img {
+        width: 62px;
+        height: 62px;
+      }
       
       @include media-breakpoint-up(md) {
         width: 32px;
         height: 32px;
+
+        img {
+          width: 30px;
+          height: 30px;
+        }
       }
       
       @include media-breakpoint-up(lg) {
         width: 54px;
         height: 54px;
+
+        img {
+          width: 52px;
+          height: 52px;
+        }
       }
     }
   }

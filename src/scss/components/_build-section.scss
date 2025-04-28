@@ -1,4 +1,8 @@
 .build-section {
+  > * {
+    user-select: none;
+  }
+  
   &--title {
     font-weight: bold;
     font-size: 1.25rem;
@@ -6,8 +10,12 @@
     margin: 1.5rem 0;
   }
   
-  &--items {
+  &--items,
+  &--powers {
     position: relative;
+  }
+  
+  &--items {
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
@@ -15,6 +23,34 @@
     .item-block:hover ~ .tooltip-container {
       opacity: 1;
       visibility: visible;
+    }
+    
+    .item-block {
+      padding: 0;
+      
+      img {
+        width: 58px;
+        height: 58px;
+      }
+    }
+    
+    // For items near the right edge
+    &:nth-child(3n) .tooltip-container {
+      right: 0;
+      left: auto;
+      transform: none;
+    }
+
+    // For middle items
+    &:nth-child(3n-1) .tooltip-container {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    // For items near the left edge
+    &:nth-child(3n-2) .tooltip-container {
+      left: 0;
+      transform: none;
     }
   }
   
@@ -45,6 +81,31 @@
           border: 1px solid rgba($color-warning, 1);
         }
       }
+    }
+
+    // For items near the right edge
+    &:nth-child(4n) .tooltip-container {
+      right: 0;
+      left: auto;
+      transform: none;
+    }
+
+    &:nth-child(4n-1) .tooltip-container {
+      right: 0;
+      left: auto;
+      transform: none;
+    }
+
+    // For middle items
+    &:nth-child(4n-2) .tooltip-container {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    // For items near the left edge
+    &:nth-child(4n-3) .tooltip-container {
+      left: 0;
+      transform: none;
     }
   }
 }

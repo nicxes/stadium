@@ -185,7 +185,7 @@ const App = () => {
         </div>
       </div>
       <div className="row">
-        <section className="col-12 mt-2 mb-3">
+        <section className="col-12 mt-2 mb-3 hero-button--wrapper">
           {Object.entries(availableHeroes.reduce((acc, hero) => {
             if (!acc[hero.type]) {
               acc[hero.type] = [];
