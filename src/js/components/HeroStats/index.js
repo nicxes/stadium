@@ -10,7 +10,6 @@ const HeroStats = ({ data, heroes }) => {
   const currentHero = heroes.find((hero) => hero.name === data.character);
   if (!currentHero) return null;
   const stats = calculateStats(data.items, currentHero);
-  console.log('stats', stats);
   const healthStats = Object.entries(stats)
     .filter(([key]) => HEALTH_TYPES.includes(key))
     .reduce((acc, [key, value]) => ({

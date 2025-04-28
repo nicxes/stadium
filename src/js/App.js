@@ -194,7 +194,7 @@ const App = () => {
             return acc;
           }, {})).map(([type, heroes]) => (
             <React.Fragment key={type}>
-              <img className="hero-button--category" src={`/static/icon-${type}.png`} alt={type} />
+              <img className="hero-button--category" src={`/static/icons/icon-${type}.png`} alt={type} />
               {heroes.map((hero) => (
                 <button
                   type="button"
@@ -211,6 +211,21 @@ const App = () => {
       </div>
       <div className="row armory">
         <div className="col-12 col-md-4 col-xl-3 bordered build-section">
+          <p className="build-section--title">
+            {data.character && (() => {
+              const hero = availableHeroes.find((hero) => hero.name === data.character);
+              return hero ? (
+                <>
+                  <img
+                    className="hero-icon"
+                    src={hero.src}
+                    alt={data.character}
+                  />
+                  <span style={{ marginLeft: '16px' }}>{data.character}</span>
+                </>
+              ) : null;
+            })()}
+          </p>
           <p className="build-section--title">
             Build Cost: <img className="currency" src="/static/currency.png" alt="Currency" /><span>{formatCurrency(data.buildCost)}</span>
           </p>

@@ -13,7 +13,7 @@ const CombinedHealthBar = ({ stats }) => {
 
   return (
     <div className="stat-bar-container">
-      <span style={{ minWidth: '50px' }}>HP</span>
+      <img src="/static/icons/stat-hp.png" height={24} alt="HP" />
       <div className="stat-bar combined-bar">
         <div
           className="bar-segment health"
