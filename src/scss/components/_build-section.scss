@@ -1,7 +1,7 @@
 .build-section {
   &--title {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     text-align: center;
     margin: 1.5rem 0;
   }
@@ -36,6 +36,10 @@
     &.power-active {
       .power-block {
         border: 1px solid transparent;
+        
+        &.no-img {
+          border: 1px solid rgba($color-warning, 1);
+        }
         
         &:hover {
           border: 1px solid rgba($color-warning, 1);

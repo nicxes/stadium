@@ -211,7 +211,9 @@ const App = () => {
       </div>
       <div className="row armory">
         <div className="col-12 col-md-4 col-xl-3 bordered build-section">
-          <p className="build-section--title">Build Cost: ${formatCurrency(data.buildCost)}</p>
+          <p className="build-section--title">
+            Build Cost: <img className="currency" src="/static/currency.png" alt="Currency" /><span>{formatCurrency(data.buildCost)}</span>
+          </p>
           <section className="container">
             <section className="row">
               <p className="col-12 col-md text-align-center"><b>Powers</b></p>
@@ -259,14 +261,17 @@ const App = () => {
                       <div className="tooltip-container bordered bordered-side">
                         <div className="tooltip-content">
                           <p className="tooltip-content--title">{item.name}</p>
+                          {item.character && <p className="tooltip-content--subtitle">HERO ITEM</p>}
+                          <hr />
                           <ul>
                             {item.attributes.map((attr, index) => (
-                              <li key={`${attr.type}_${index.toString()}`}>
+                              <li key={`${attr.type}_${index.toString()}`} className={`${attr.type !== 'description' ? 'tooltip-content--attribute' : ''}`}>
                                 {parse(renderAttributeString(attr))}
                               </li>
                             ))}
                           </ul>
-                          <p>Cost: ${formatCurrency(item.cost)}</p>
+                          <hr />
+                          <p><img className="currency currency--small" src="/static/currency.png" alt="Currency" /><span>{formatCurrency(item.cost)}</span></p>
                         </div>
                       </div>
                     )}

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Power = ({ name = '', src = '', onClick = () => {} }) => (
-  <button type="button" className="power-block" onClick={onClick}>
+  <button type="button" className={`power-block ${src === '' ? 'no-img' : ''}`} onClick={onClick}>
     {src !== '' && <img src={src} alt={name} />}
   </button>
 );

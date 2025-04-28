@@ -11,6 +11,10 @@
     object-fit: cover;
   }
   
+  &.no-img {
+    outline: 2px solid rgba($color-warning, 1) !important;
+  }
+  
   &.active {
     opacity: .6;
     

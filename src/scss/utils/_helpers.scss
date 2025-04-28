@@ -50,3 +50,20 @@
     color: $color-ap !important;
   }
 }
+
+.currency {
+  width: 1.25rem;
+  object-fit: cover;
+  margin-bottom: 4px;
+  margin-right: 4px;
+  
+  &--small {
+    width: 1rem;
+    margin-bottom: 2px;
+    margin-right: 2px;
+  }
+
+  + span {
+    color: $color-white;
+  }
+}

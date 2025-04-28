@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { calculateStats } from '../../helpers/statCalculator';
 import StatBar from './components/StatBar';
 
 const HeroStats = ({ data, heroes }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
   const currentHero = heroes.find((hero) => hero.name === data.character);
   if (!currentHero) return null;
   const stats = calculateStats(data.items, currentHero);
@@ -14,20 +15,34 @@ const HeroStats = ({ data, heroes }) => {
   const otherStats = statsArray.filter((stat) => !healthTypes.includes(stat.type));
 
   return (
-    <div>
-      {healthStats.length > 0 && (
-        <StatBar
-          key="health-combined"
-          stat={healthStats[0]}
-          stats={healthStats}
-        />
+    <div className="stats-wrapper">
+      <div className={`stats-content ${isExpanded ? 'expanded' : ''}`}>
+        {healthStats.length > 0 && (
+          <StatBar
+            key="health-combined"
+            stat={healthStats[0]}
+            stats={healthStats}
+          />
+        )}
+        {otherStats.map((stat) => (
+          <StatBar key={stat.type} stat={stat} stats={statsArray} />
+        ))}
+      </div>
+      {otherStats.length > 4 && (
+        <button
+          type="button"
+          className={`expand-toggle ${isExpanded ? 'expanded' : ''}`}
+          onClick={() => setIsExpanded(!isExpanded)}
+        >
+          <span>{isExpanded ? 'Show Less' : 'Show More'}</span>
+          <span className="arrow" />
+        </button>
       )}
-      {otherStats.map((stat) => (
-        <StatBar key={stat.type} stat={stat} stats={statsArray} />
-      ))}
     </div>
   );
 };
+
+export default HeroStats;
 
 HeroStats.propTypes = {
   data: PropTypes.shape({
@@ -54,5 +69,3 @@ HeroStats.propTypes = {
     }),
   ).isRequired,
 };
-
-export default HeroStats;

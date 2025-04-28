@@ -745,6 +745,77 @@
           ],
           "cost": 4000,
           "character": "Junker Queen"
+        },
+        {
+          "name": "ARCFINDER",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "<b>[Energy Javelin]</b> deals <b>25%</b> increased damage to enemies farther than <b>12m</b> away."
+            }
+          ],
+          "cost": 4000,
+          "character": "Orisa"
+        },
+        {
+          "name": "ELITE ROTATOR CUFF",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "[Javelin Spin] Duration",
+              "value": "35%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Orisa"
+        },
+        {
+          "name": "BOOST RECYCLER",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "If <b>[Charge]</b> is interrupted by the enemy, refund <b>50%</b> of <b>[Charge]</b> cooldown."
+            }
+          ],
+          "cost": 4000,
+          "character": "Reinhardt"
+        },
+        {
+          "name": "CHIMERA'S MAW",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "[Fire Strike] Radius",
+              "value": "50%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Reinhardt"
+        },
+        {
+          "name": "BEYOND BARRIER",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "[Projected Barrier] Range",
+              "value": "20%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Zarya"
         }
       ],
       "epic": [
@@ -990,6 +1061,119 @@
           ],
           "cost": 11000,
           "character": "Junker Queen"
+        },
+        {
+          "name": "EFI'S THEOREM",
+          "attributes": [
+            {
+              "type": "ALS",
+              "value": "20%"
+            },
+            {
+              "type": "[Fortify] Duration",
+              "value": "50%"
+            }
+          ],
+          "cost": 10000,
+          "character": "Orisa"
+        },
+        {
+          "name": "3D-PRINTED LANCE",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Energy Javelin]</b> cooldown is reduced by <b>15%</b>, but each use generates <b>25</b> <b>[Heat]</b>."
+            }
+          ],
+          "cost": 11000,
+          "character": "Orisa"
+        },
+        {
+          "name": "OLADELE-COPTER BLADES",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "While using <b>[Javelin Spin]</b>, gain free flight and <b>20%</b> Move Speed."
+            }
+          ],
+          "cost": 12000,
+          "character": "Orisa"
+        },
+        {
+          "name": "GRYPHON GLIDER",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "ALS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "You can now fly during <b>[Charge]</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Reinhardt"
+        },
+        {
+          "name": "ROCKET STRIKE",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "20%"
+            },
+            {
+              "type": "Fire Strike Projectile Speed",
+              "value": "50%"
+            }
+          ],
+          "cost": 10000,
+          "character": "Reinhardt"
+        },
+        {
+          "name": "SUPERCONDUCTOR",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "[Barrier] Duration",
+              "value": "40%"
+            }
+          ],
+          "cost": 10000,
+          "character": "Zarya"
+        },
+        {
+          "name": "LYNX'S DATADRIVE",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Casting <b>[Projected Barrier]</b> on an ally refunds <b>20%</b> of <b>[Barrier]</b> Cooldown"
+            }
+          ],
+          "cost": 10000,
+          "character": "Zarya"
         }
       ]
     },
@@ -1306,6 +1490,153 @@
           ],
           "cost": 4000,
           "character": "Junker Queen"
+        },
+        {
+          "name": "CHARGED CHASSIS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Fortify]</b> grants additional <b>Overhealth</b> equal to <b>10%</b> of your max Life."
+            }
+          ],
+          "cost": 4000,
+          "character": "Orisa"
+        },
+        {
+          "name": "SIPHONIC SPEAR",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "When you deal damage with <b>[Energy Javelin]</b>, heal <b>10%</b> of your max Life over <b>3s</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Orisa"
+        },
+        {
+          "name": "SOLAR REGENERGY",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "After using an ability, restore Armor equal to <b>5%</b> of your max Life."
+            }
+          ],
+          "cost": 4000,
+          "character": "Orisa"
+        },
+        {
+          "name": "CRUSADER'S CURE",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Using <b>[Charge]</b> cleanses all negative effects."
+            }
+          ],
+          "cost": 3750,
+          "character": "Reinhardt"
+        },
+        {
+          "name": "OVERCLOCKED BARRIER",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "[Barrier Field] Health",
+              "value": "20%"
+            },
+            {
+              "type": "[Barrier Field] Size",
+              "value": "20%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Reinhardt"
+        },
+        {
+          "name": "ROCKET BOOTS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Holding <b>crouch</b> increases the height of your next jump by up to <b>200%</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Reinhardt"
+        },
+        {
+          "name": "BLASTPROOF BOOTS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "MS",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Particle Cannon]</b>'s secondary fire self knockback is increased by <b>100%</b> and no longer damages yourself."
+            }
+          ],
+          "cost": 3750,
+          "character": "Zarya"
+        },
+        {
+          "name": "JUMPER CABLES",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "25"
+            },
+            {
+              "type": "AP",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "After using a <b>[Barrier]</b>, start regenerating Shields instantly."
+            }
+          ],
+          "cost": 4000,
+          "character": "Zarya"
+        },
+        {
+          "name": "PROTEIN SHAKE",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "MD",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "While <b>[Particle Barrier]</b> is active, become unstoppable and <b>[Quick Melee]</b> knocks back enemies."
+            }
+          ],
+          "cost": 4000,
+          "character": "Zarya"
         }
       ],
       "epic": [
@@ -1593,6 +1924,51 @@
           ],
           "cost": 10000,
           "character": "Junker Queen"
+        },
+        {
+          "name": "HOLLAGRAM HELMET",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "When you use <b>[Fortify]</b>, allies within line of sight gain <b>Unstoppable</b> for <b>2s</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Orisa"
+        },
+        {
+          "name": "INFUSION GENERATOR",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Increase <b>[Barrier Field]</b> Health by <b>100%</b> of your max Life."
+            }
+          ],
+          "cost": 10000,
+          "character": "Reinhardt"
+        },
+        {
+          "name": "PHOENIX PROTOCOL",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Barrier Field]</b> regenerates <b>50%</b> faster and begins regenerating <b>50%</b> sooner after being destroyed."
+            }
+          ],
+          "cost": 10000,
+          "character": "Reinhardt"
         }
       ]
     },
@@ -1695,6 +2071,156 @@
         {
           "name": "BOW DOWN",
           "description": "<b>[Rampage]</b> now also knocks down enemies hit for <b>1.</b><b>5s</b>."
+        }
+      ],
+      "Orisa": [
+        {
+          "name": "SCORCHED EARTH",
+          "description": "When you <b>[Overheat]</b>, apply <b>Burning</b> to enemies within <b>6m</b>, dealing damage equal to <b>10%</b> of your max Life over <b>5s</b>."
+        },
+        {
+          "name": "SHIELD DIVERGENCE",
+          "description": "When you <b>[Overheat]</b>, deploy a <b>Barrier</b> with <b class=\"stat-ap\">600</b> Health in front."
+        },
+        {
+          "name": "ADVANCED THROWBOTICS",
+          "description": "When you use <b>[Javelin Spin]</b>, launch an <b>[Energy Javelin]</b> with <b>50%</b> less damage."
+        },
+        {
+          "name": "HOT ROTATE-O",
+          "description": "<b>[Javelin Spin]</b> gains <b>35%</b> Cooldown Reduction but now generates <b>[Heat]</b>."
+        },
+        {
+          "name": "SPYNSTEM UPDATE",
+          "description": "<b>[Javelin Spin]</b> now deflects projectiles and grants <b>20%</b> of damage dealt from deflecting as Ultimate Charge."
+        },
+        {
+          "name": "FACTORY RESET",
+          "description": "While <b>[Fortify]</b> is active, <b>[Javelin Spin]</b> and <b>[Energy Javelin]</b> gain <b>25%</b> Cooldown Reduction."
+        },
+        {
+          "name": "HOOVES OF STEEL",
+          "description": "After <b>[Fortify]</b> ends, gain Shields equal to <b>50%</b> of the damage received during <b>[Fortify]</b>.\n<br />\nResets when you next use <b>[Fortify]</b>."
+        },
+        {
+          "name": "RESTORTIFY",
+          "description": "While <b>[Fortify]</b> is active, heal for <b>10%</b> of your max Life every <b>1s</b>."
+        },
+        {
+          "name": "RIDE WITH ME",
+          "description": "While <b>[Fortify]</b> is active, grant allies in line of sight <b>30%</b> Move Speed and <b>Overhealth</b> equal to <b>10%</b> of your max Life."
+        },
+        {
+          "name": "LASSOED",
+          "description": "On impact, <b>[Energy Javelin]</b> will pull enemies within <b>4m</b> towards itself."
+        },
+        {
+          "name": "CENTRIPETAL CHARGE",
+          "description": "<b>25%</b> Ultimate Cost Reduction.\n<br/>\nAfter using <b>[Terra Surge]</b>, reset your ability cooldowns."
+        },
+        {
+          "name": "SUPERCHARGER",
+          "description": "When you use <b>[Terra Surge]</b>, drop a <b>[Supercharger]</b> that increases the damage of nearby allies by <b>25%</b> for <b>15s</b>."
+        }
+      ],
+      "Reinhardt": [
+        {
+          "name": "AMPLIFICATION BARRIER",
+          "description": "Friendly projectiles that pass through your <b>[Barrier Field]</b> deal <b>15%</b> more damage."
+        },
+        {
+          "name": "BARRIER RECONSTRUCTION",
+          "description": "When you deal damage with <b>[Rocket Hammer]</b> or <b>[Fire Strike]</b>, restore health to <b>[Barrier Field]</b> equal to <b>10%</b> of its max Health."
+        },
+        {
+          "name": "TO ME, MY FRIENDS!",
+          "description": "While <b>[Barrier Field]</b> is active, allies within <b>5m</b> are healed equal to <b>3%</b> of your max Life every <b>1s</b>."
+        },
+        {
+          "name": "WILHELMWAGEN",
+          "description": "While <b>[Barrier Field]</b> is deployed, you heal for <b>15%</b> of the damage it mitigates and gain <b>30%</b> Move Speed."
+        },
+        {
+          "name": "SHIELD STAMPEDE",
+          "description": "<b>+</b><b>50%</b> <b>[Charge]</b> Knockback Power.\nDuring <b>[Charge]</b>, automatically deploy <b>[Barrier Field]</b>."
+        },
+        {
+          "name": "VANGUARD",
+          "description": "<b>[Charge]</b> grants nearby allies <b>Overhealth</b> equal to <b>10%</b> of your max Life and <b>20%</b> Move Speed for <b>3s</b>."
+        },
+        {
+          "name": "VROOM BOOM BOOM",
+          "description": "During <b>[Charge]</b>, colliding with a wall triggers an explosion that deals <b>30%</b> of <b>[Charge]</b>'s pin damage."
+        },
+        {
+          "name": "BLAZING BLITZ",
+          "description": "After using <b>[Earthshatter]</b>, every <b>[Rocket Hammer]</b> swing launches a <b>[Fire Strike]</b> for <b>4s</b>."
+        },
+        {
+          "name": "IMPACT BURST",
+          "description": "<b>[Fire Strike]</b> triggers an explosion the first time it hits an enemy, dealing <b>20%</b> of its damage in a <b>3m</b> radius."
+        },
+        {
+          "name": "MAGMA STRIKE",
+          "description": "If <b>[Fire Strike]</b> is cast twice within <b>2s</b>, the second strike leaves a trail of lava that Burns enemies for <b>50%</b> of <b>[Fire Strike]</b> damage."
+        },
+        {
+          "name": "FEELING THE BURN",
+          "description": "Every 3rd <b>[Rocket Hammer]</b> swing applies Burn, dealing <b>30%</b> <b>[Rocket Hammer]</b> damage over <b>2s</b>."
+        },
+        {
+          "name": "SMASHING!",
+          "description": "When you deal damage with <b>[Rocket Hammer]</b>, gain <b>5%</b> Move Speed and <b>4%</b> Weapon Lifesteal for <b>3s</b>, stacking up to <b>5 times</b>."
+        }
+      ],
+      "Zarya": [
+        {
+          "name": "NO LIMITS",
+          "description": "Maximum <b>[Energy]</b> increased to <b>150</b>. <b>[Energy]</b> always decays above <b>100</b> <b>[Energy]</b> at a <b>150%</b> faster rate."
+        },
+        {
+          "name": "PARTICLE ACCELERATOR",
+          "description": "Gain <b>15%</b> Attack Speed for <b>[Particle Cannon]</b>'s secondary fire. After using an ability, <b>quadruple</b> this bonus for <b>5s</b>."
+        },
+        {
+          "name": "PIERCING BEAM",
+          "description": "Above <b>80</b> <b>[Energy]</b>, <b>[Particle Cannon]</b>'s Primary Fire will pierce enemies."
+        },
+        {
+          "name": "PRE-WORKOUT",
+          "description": "Gain Weapon Lifesteal and Ability Lifesteal equal to <b>20%</b> of <b>[Energy]</b>."
+        },
+        {
+          "name": "BARRIER BENEFITS",
+          "description": "When <b>[Barriers]</b> expire, grant <b>Overhealth</b> equal to <b>50%</b> of remaining Barrier Health to the target for <b>3s</b>"
+        },
+        {
+          "name": "CONTAINMENT SHIELD",
+          "description": "<b>[Barrier]</b> heals <b class=\"stat-ap\">25</b> Life, increased by <b>[Energy]</b>, and grants <b>20%</b> Move Speed while active."
+        },
+        {
+          "name": "FISSION FIELD",
+          "description": "<b>[Projected Barrier]</b> also applies to <b>1</b> additional ally within <b>10m</b>, but has <b>20%</b> reduced duration."
+        },
+        {
+          "name": "HERE TO SPOT YOU",
+          "description": "<b>[Projected Barrier]</b> pulls you to the targeted ally and heals you for <b>15%</b> of Max Life over <b>3s</b>."
+        },
+        {
+          "name": "LIFELIFT",
+          "description": "<b>+</b><b>50%</b> <b>[Particle Barrier]</b> Size.\n<br/>\nIncrease <b>[Particle Barrier]</b> Health by <b>100%</b> of Bonus Max Life."
+        },
+        {
+          "name": "MAJOR FLEX",
+          "description": "<b>[Barrier]</b> knocks back and deals <b class=\"stat-ap\">25</b> damage, increased by <b>[Energy]</b>, to enemies within <b>5m</b> every <b>1s</b>."
+        },
+        {
+          "name": "VOLSKAYA VORTEX",
+          "description": "After a <b>[Barrier]</b> is cast, <b>[Particle Cannon]</b>'s next secondary fire spawns a slowing vortex that deals <b class=\"stat-ap\">100</b> damage over <b>2s</b>."
+        },
+        {
+          "name": "GRAVITON ANOMALY",
+          "description": "<b>25%</b> Ultimate Cost Reduction.\n<br/>\n<b>[Graviton Surge]</b> base damage is increased to <b>30</b> and increased by <b>[Energy]</b>, but has <b>50%</b> reduced duration."
         }
       ]
     }

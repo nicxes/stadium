@@ -1,19 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Power = ({
-  onClick = () => {}, name = '', src = '', selected = false,
+const Item = ({
+  onClick = () => {}, name = '', src = '', selected = false, isHeroItem = false,
 }) => (
-  <button type="button" className={`item-block ${selected ? 'active' : ''}`} onClick={onClick}>
+  <button type="button" className={`item-block ${selected ? 'active' : ''} ${src === '' && isHeroItem ? 'no-img' : ''}`} onClick={onClick}>
     {src !== '' && <img src={src} alt={name} />}
   </button>
 );
 
-Power.propTypes = {
+Item.propTypes = {
   name: PropTypes.string,
   src: PropTypes.string,
   onClick: PropTypes.func,
   selected: PropTypes.bool,
+  isHeroItem: PropTypes.bool,
 };
 
-export default Power;
+export default Item;

@@ -28,18 +28,22 @@ const ItemShop = ({
                   src={iconData[item.name] || ''}
                   onClick={() => contextCallback(item, 'items', rarity)}
                   selected={items.find((i) => i.name === item.name)}
+                  isHeroItem={item.character !== undefined}
                 />
                 <div className="tooltip-container bordered bordered-side">
                   <div className="tooltip-content">
                     <p className="tooltip-content--title">{item.name}</p>
+                    {item.character && <p className="tooltip-content--subtitle">HERO ITEM</p>}
+                    <hr />
                     <ul>
                       {item.attributes.map((attr, index) => (
-                        <li key={`${attr.type}_${index.toString()}`}>
+                        <li key={`${attr.type}_${index.toString()}`} className={`${attr.type !== 'description' ? 'tooltip-content--attribute' : ''}`}>
                           {parse(renderAttributeString(attr))}
                         </li>
                       ))}
                     </ul>
-                    <p>Cost: ${formatCurrency(item.cost)}</p>
+                    <hr />
+                    <p><img className="currency currency--small" src="/static/currency.png" alt="Currency" /><span>{formatCurrency(item.cost)}</span></p>
                   </div>
                 </div>
               </div>
