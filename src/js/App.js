@@ -194,7 +194,7 @@ const App = () => {
             return acc;
           }, {})).map(([type, heroes]) => (
             <React.Fragment key={type}>
-              <span style={{ margin: '16px' }}>{type}:</span>
+              <img className="hero-button--category" src={`/static/icon-${type}.png`} alt={type} />
               {heroes.map((hero) => (
                 <button
                   type="button"

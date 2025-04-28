@@ -164,3 +164,16 @@ export const calculateStats = (items, hero) => {
 // - Final health = 230 + 23 = 253
 //
 // The key point was that the protected bonus needs to be calculated from the original base health, not the modified health value
+
+// powers that modify stat values
+// 
+// sleep regimen: 50 health
+// permafrost: max health by 50% of AP
+//
+// powers that add regular extra stats
+//
+// shield stampede: +50 [Charge] Knockback Power
+// lifelift: +50% [Particle Barrier] Size
+// graviton anomaly: 25% Ultimate Cost Reduction
+// megaphone: +20% [Amp It Up] Duration
+// beat drop: 20% Ultimate Cost Reduction

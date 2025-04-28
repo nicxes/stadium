@@ -4262,6 +4262,552 @@
           "name": "PARTNERS IN CRIME",
           "description": "You are healed for <b>100%</b> of <b>[B.O.B.]</b>'s damage dealt and <b>[B.O.B.]</b> is healed for <b>100%</b> of your damage dealt."
         }
+      ],
+      "Cassidy": [
+        {
+          "name": "BULLSEYE",
+          "description": "Critical hit reduces <b>[Combat Roll]</b>'s cooldown by <b>2s</b>."
+        },
+        {
+          "name": "DEAD MAN WALKING",
+          "description": "Eliminating an enemy you've recently critically hit grants <b>1</b> Max Ammo for the round."
+        },
+        {
+          "name": "FULL HOUSE",
+          "description": "For each Ammo available, <b>[Peacekeeper]</b> 's primary fire gains 1 % increased damage, up to <b>25%</b>."
+        },
+        {
+          "name": "QUICK DRAW",
+          "description": "After using <b>[Combat Roll]</b>, <b>[Peacekeeper]</b>'s next primary fire can auto-aim within <b>9m</b> while under cooldown."
+        },
+        {
+          "name": "THINK FLASHT",
+          "description": "When you start a <b>[Combat Roll]</b>, leave a <b>[Flashbang]</b> behind."
+        },
+        {
+          "name": "BARREL ROLL",
+          "description": "<b>[Combat Roll]</b> takes you <b>50%</b> further and deals <b class=\"stat-ap\">65</b> damage to enemies."
+        },
+        {
+          "name": "JUST ROLL WITH IT",
+          "description": "During <b>[Combat Roll]</b>, prevent all incoming damage.\nAfter <b>[Combat Roll]</b> ends, heal <b>30%</b> of your Life over <b>3s</b>."
+        },
+        {
+          "name": "FLASH IN THE PAIN",
+          "description": "Eliminating an enemy recently damaged by <b>[Flashbang]</b> grants <b>15%</b> Ultimate Charge."
+        },
+        {
+          "name": "HOT POTATO",
+          "description": "<b>[Flashbang]</b> adds <b>3</b> extra Ammo on hit until <b>[Peacekeeper]</b> is reloaded."
+        },
+        {
+          "name": "EASY RIDER",
+          "description": "While using <b>[Deadeye]</b>, gain <b class=\"stat-ap\">100</b> <b>Overhealth</b> and <b>25%</b> Move Speed."
+        },
+        {
+          "name": "SUNRISE",
+          "description": "Using <b>[Deadeye]</b> slows all visible enemies by <b>35%</b> for 1.<b>5s</b>."
+        },
+        {
+          "name": "SUNSET",
+          "description": "<b>[Deadeye]</b> eliminations grant <b>15%</b> Ultimate Charge each."
+        }
+      ],
+      "Genji": [
+        {
+          "name": "CYBERNETIC SPEED",
+          "description": "Dealing damage with <b>[Shuriken]</b> grants <b>2%</b> <b>[Shuriken]</b> Attack Speed for <b>3s</b>, stacking up to <b>15 times</b>."
+        },
+        {
+          "name": "HASHIMOTO'S BANE",
+          "description": "After using an ability, your next secondary fire throws <b>2</b> extra <b>[Shuriken]</b> that seek enemies but deal <b>50%</b> less damage."
+        },
+        {
+          "name": "SACRED SHURIKEN",
+          "description": "<b>[Shuriken]</b>'s primary fire throws <b>2</b> additional <b>[Shuriken]</b> that don't consume any ammo."
+        },
+        {
+          "name": "HANAMURA HEALING",
+          "description": "Critical hits and <b>[Swift Strike]</b> grant <b>Overhealth</b> equal to <b>25%</b> of their damage dealt for <b>5s</b>."
+        },
+        {
+          "name": "HIDDEN BLADE",
+          "description": "Gain <b>50%</b> Melee Lifesteal and increase <b>[Quick Melee]</b> damage by 25."
+        },
+        {
+          "name": "LACERATION",
+          "description": "<b>[Swift Strike]</b> deals <b>25%</b> additional damage over <b>3s</b> to enemies hit."
+        },
+        {
+          "name": "WYRM'S MAW",
+          "description": "Targets hit by <b>[Shuriken]</b> take <b>10%</b> more damage from <b>[Swift Strike]</b> for <b>4s</b>, stacking up to <b>5 times</b>."
+        },
+        {
+          "name": "FORGED UNDER FIRE",
+          "description": "While <b>[Deflect]</b> is active, heal for <b>60%</b> of the damage it prevents."
+        },
+        {
+          "name": "IAIDO STRIKE",
+          "description": "After <b>[Deflect]</b> ends, quickly swing your <b>[Dragonblade]</b> once."
+        },
+        {
+          "name": "SPIRIT OF SOJIRO",
+          "description": "When <b>[Deflect]</b> stops incoming damage, reduce the cooldown of <b>[Swift Strike]</b> by Is, up to <b>5s</b>."
+        },
+        {
+          "name": "DRAGON'S BREATH",
+          "description": "<b>[Dragonblade]</b> swings launch a large piercing projectile that deals <b>50%</b> of <b>[Dragonblade]</b>'s damage."
+        }
+      ],
+      "Mei": [
+        {
+          "name": "EXTENDOTHERMICS",
+          "description": "<b>[Endothermic Blaster]</b>'s primary fire range is increased by <b>6m</b>."
+        },
+        {
+          "name": "FROST ARMOR",
+          "description": "Gain Armor equal to <b>5%</b> of the primary fire damage you deal, up to <b>100</b>, until the end of the round."
+        },
+        {
+          "name": "PERMAFROST",
+          "description": "Increase your max health by <b>50%</b> of your ability power."
+        },
+        {
+          "name": "SLOWBALL",
+          "description": "<b>[Endothermic Blaster]</b>'s secondary fire now shoots a snowball that applies <b>30%</b> slow for Is on critical hit."
+        },
+        {
+          "name": "ICEBERG",
+          "description": "<b>[Ice Wall]</b> spawns a mini <b>[Blizzard]</b> that slows enemies."
+        },
+        {
+          "name": "SNOWBALL FLIGHT",
+          "description": "Jumping while mid-air creates a large <b>[Ice Wall]</b> pillar under you.\n(<b>12s</b> Cooldown)"
+        },
+        {
+          "name": "TWICE AS ICE",
+          "description": "When you use <b>[Cryo-Freeze]</b>, reset the next cooldown of <b>[Ice Wall]</b>."
+        },
+        {
+          "name": "COULDER",
+          "description": "<b>[Cryo-Freeze]</b> now encases you in a rolling iceball that can knock back enemies and deal <b class=\"stat-ap\">10</b> damage."
+        },
+        {
+          "name": "CRYCLONE",
+          "description": "<b>[Cryo-Freeze]</b> spawns a mini <b>[Blizzard]</b> that slows enemies."
+        },
+        {
+          "name": "FROST NOVA",
+          "description": "When <b>[Cryo-Freeze]</b> ends, knock back nearby enemies, dealing <b class=\"stat-ap\">60</b> damage."
+        },
+        {
+          "name": "AVALANCHE",
+          "description": "Visible enemies within <b>20m</b> of <b>[Blizzard]</b> are slowed by <b>25%</b>."
+        },
+        {
+          "name": "BLIZZNADO",
+          "description": "While within <b>[Blizzard]</b>, heal <b>5%</b> of your life every <b>1s</b>."
+        }
+      ],
+      "Reaper": [
+        {
+          "name": "BACKSTABBER",
+          "description": "After using an ability, your next shot deals <b>50%</b> additional damage over <b>3s</b> to enemies struck from behind."
+        },
+        {
+          "name": "HARVEST FEST",
+          "description": "<b>[Hellfire Shotgun]</b> hits have a <b>10%</b> chance to spawn a Soul Globe. When picked up, restore <b>25%</b> Life, <b>25%</b>\nAmmo, and gain <b>25%</b> Move Speed for <b>3s</b>."
+        },
+        {
+          "name": "REVOLVING RUIN",
+          "description": "Close-range (7m) <b>[Hellfire Shotgun]</b> hits grant <b>5%</b> Attack Speed for Is, stacking up to <b>8 times</b>."
+        },
+        {
+          "name": "SHARED SIPHON",
+          "description": "<b>[The Reaping]</b> also heals the nearest ally within 10m for <b>30%</b> of Reaper's damage dealt."
+        },
+        {
+          "name": "SHROUDED SHRAPNEL",
+          "description": "Using <b>[Wraith Form]</b> increases the number of pellets per shot in your next magazine by <b>25%</b> and its spread by <b>50%</b>."
+        },
+        {
+          "name": "SPIRITED TO SLAY",
+          "description": "Eliminations reset your cooldowns."
+        },
+        {
+          "name": "VAMPIRIC TOUCH",
+          "description": "Hits with <b>[Quick Melee]</b> mark enemies for <b>5s</b>. Allies gain <b>20%</b> Lifesteal against marked enemies."
+        },
+        {
+          "name": "DEATH STEP",
+          "description": "After using <b>[Shadow Step]</b>, cast <b>[Death Blossom]</b> for 1.<b>5s</b> with <b>50%</b> reduced damage."
+        },
+        {
+          "name": "SILENT AS THE GRAVE",
+          "description": "Your footsteps and <b>[Shadow Step]</b> are significantly quieter."
+        },
+        {
+          "name": "STRANGLE STEP",
+          "description": "After using <b>[Shadow Step]</b>, <b>double</b> your Lifesteal for <b>3s</b>."
+        },
+        {
+          "name": "GHOSTED",
+          "description": "While in <b>[Wraith Form]</b>, passing through enemies slows their Move Speed and Attack Speed by <b>30%</b> for <b>3s</b>."
+        },
+        {
+          "name": "WRAITH RENEWAL",
+          "description": "While in <b>[Wraith Form]</b>, restore <b>10%</b> of your Life every Is. Double this while below <b>50%</b> Life."
+        }
+      ],
+      "Soldier: 76": [
+        {
+          "name": "PERIPHERAL PULSE",
+          "description": "During <b>[Tactical Visor]</b>, <b>[Pulse Rifle]</b> shoots at <b>1</b> additional enemy, dealing <b>50%</b> damage."
+        },
+        {
+          "name": "SUPER VISOR",
+          "description": "After using <b>[Helix Rocket]</b>, activate <b>[Tactical Visor]</b> for 0.<b>75s</b>."
+        },
+        {
+          "name": "CHAINGUN",
+          "description": "While continuously shooting <b>[Pulse Rifle]</b>, each shot grants 0.<b>5%</b> Weapon Power, stacking up to <b>100</b> times."
+        },
+        {
+          "name": "MAN ON THE RUN",
+          "description": "During <b>[Sprint]</b>, restore <b>10%</b> of your Ammo every Is and increase your Max Ammo by <b>10%</b> until you reload, stacking up to <b>10 times</b>."
+        },
+        {
+          "name": "CRATERED",
+          "description": "Increase <b>[Helix Rocket]</b> explosion radius by <b>40%</b> and explosion damage by <b>25%</b>."
+        },
+        {
+          "name": "DOUBLE HELIX",
+          "description": "<b>[Helix Rocket]</b> fires a second homing <b>[Helix Rocket]</b> that deals <b>70%</b> <b>reduced</b> damage."
+        },
+        {
+          "name": "HUNKER DOWN",
+          "description": "When <b>[Helix Rocket]</b> deals damage, create a <b>[Biotic Field]</b> with a <b>reduced</b> duration at your position."
+        },
+        {
+          "name": "BACK OFF",
+          "description": "Enemies within your <b>[Biotic Field]</b> take damage equal to <b>100%</b> of its healing output."
+        },
+        {
+          "name": "BIOTIC BULLSEYE",
+          "description": "While in <b>[Biotic Field]</b>, critical hits restore <b>5%</b> Max Ammo and extend the duration of <b>[Biotic Field]</b> by 0.<b>5s</b>, up to <b>5s</b>."
+        },
+        {
+          "name": "FRONTLINERS",
+          "description": "Allies in range of your <b>[Biotic Field]</b> when it spawns gain <b>Overhealth</b> equal to <b>30%</b> of your max Life for <b>3s</b>."
+        },
+        {
+          "name": "ON ME!",
+          "description": "<b>[Biotic Field]</b> moves with you and grants you <b>20%</b> increased Max Life while active."
+        },
+        {
+          "name": "TRACK AND FIELD",
+          "description": "During <b>[Sprint]</b>, <b>[Biotic Field]</b> cooldown refreshes <b>150%</b> faster."
+        }
+      ],
+      "Ana": [
+        {
+          "name": "NO SCOPE NEEDED",
+          "description": "Landing unscoped shots with <b>[Biotic Rifle]</b> grants <b>10%</b> Attack Speed for <b>2s</b>, stacking up to <b>3 times</b>."
+        },
+        {
+          "name": "PINPOINT PRESCRIPTION",
+          "description": "<b>[Biotic Rifle]</b> can now critically hit both allies and enemies."
+        },
+        {
+          "name": "TACTICAL RIFLE",
+          "description": "While scoped, <b>[Biotic Rifle]</b> will lock-on to allies for guaranteed hits."
+        },
+        {
+          "name": "COMFY CLOUD",
+          "description": "<b>[Sleep Dart]</b> explodes on contact, hitting targets within <b>3m</b>, but <b>Sleep</b> has a <b>50%</b> reduced duration."
+        },
+        {
+          "name": "DREAMY",
+          "description": "[Sleep Dartl can hit allies, healing <b>100%</b> of their max Life over <b>8s</b> instead of putting them to sleep."
+        },
+        {
+          "name": "SLEEP REGIMEN",
+          "description": "Gain 50 Health.\nWhen you apply Sleep to an enemy, gain 10 Health, up to 150."
+        },
+        {
+          "name": "HOME REMEDY",
+          "description": "<b>[Biotic Grenade]</b> grants <b>Overhealth</b> equal to <b>100%</b> of its healing."
+        },
+        {
+          "name": "TIME OUT",
+          "description": "<b>[Biotic Grenade]</b> now knocks enemies back and reduces their Move Speed by for 1.<b>5s</b>."
+        },
+        {
+          "name": "VENOMOUS",
+          "description": "<b>[Biotic Grenade]</b> deals an additional <b class=\"stat-ap\">30</b> damage over its duration to enemies affected."
+        },
+        {
+          "name": "MY TURN",
+          "description": "<b>[Nano Boost]</b> also applies to yourself for <b>50%</b> of its duration."
+        },
+        {
+          "name": "OUR TURN",
+          "description": "<b>[Nano Boost]</b> also affects other allies in your line of sight, but it has a <b>50%</b> reduced duration on them."
+        },
+        {
+          "name": "YOUR FULL POTENTIAL",
+          "description": "<b>[Nano Boost]</b> also grants the target <b>20%</b> Ultimate Charge and <b class=\"stat-ap\">200</b> <b>Overhealth</b>."
+        }
+      ],
+      "Juno": [
+        {
+          "name": "MEDIMASTER",
+          "description": "<b>[Mediblaster]</b> can now critically hit both allies and enemies."
+        },
+        {
+          "name": "STINGER",
+          "description": "<b>[Mediblaster]</b> deals an additional <b class=\"stat-ap\">10</b> damage to enemies over <b>1s</b>.\n(Does not stack)."
+        },
+        {
+          "name": "COSMIC COOLANT",
+          "description": "<b>[Pulsar Torpedoes]</b> cooldown is reduced by <b>1s</b> for each target it hits."
+        },
+        {
+          "name": "MEDICINAL MISSILES",
+          "description": "<b>[Pulsar Torpedoes]</b> heal for an extra <b class=\"stat-ap\">30</b> life and causes allies hit to receive <b>50%</b> more healing for <b>3s</b>."
+        },
+        {
+          "name": "PULSAR PLUS",
+          "description": "<b>[Pulsar Torpedoes]</b> gains <b>1</b> additional charge."
+        },
+        {
+          "name": "BLINK BOOSTS",
+          "description": "<b>[Glide Boost]</b> gains <b>2</b> additional charges and has a <b>65%</b> reduced cooldown, but has <b>75%</b> <b>reduced</b> duration."
+        },
+        {
+          "name": "TORPEDO GLIDE",
+          "description": "During <b>[Glide Boost]</b>, every <b>50</b> damage you deal reduces the cooldown of <b>[Pulsar Torpedoes]</b> by <b>1s</b>."
+        },
+        {
+          "name": "BLACK HOLE",
+          "description": "<b>[Hyper Ring]</b> slows the Move Speed of enemies who pass through it by <b>35%</b> for <b>1s</b>."
+        },
+        {
+          "name": "HYPER HEALER",
+          "description": "Allies affected by <b>[Hyper Ring]</b> gain <b class=\"stat-ap\">50</b> <b>Overhealth</b>."
+        },
+        {
+          "name": "RALLY RING",
+          "description": "Reduce <b>[Hyper Ring]</b>'s cooldown by <b>1s</b> when an ally passes through it."
+        },
+        {
+          "name": "ORBITAL ALIGNMENT",
+          "description": "Enemies inside of <b>[Orbital Ray]</b> lose <b>35%</b> Move Speed. Allies inside of it gain <b>25%</b> Move Speed."
+        },
+        {
+          "name": "STELLAR FOCUS",
+          "description": "<b>[Orbital Ray]</b> now follows you and its duration is increased by <b>35%</b>."
+        }
+      ],
+      "Kiriko": [
+        {
+          "name": "FOXY FIREWORKS",
+          "description": "After reloading, your next <b>3</b> thrown <b>[Kunai]</b> explode on contact, dealing <b class=\"stat-wp\">20</b> damage to nearby enemies."
+        },
+        {
+          "name": "KEEN KUNAI",
+          "description": "<b>[Kunai]</b> critical hits decrease active ability cooldowns by <b>15%</b> and refund <b>3</b> ammo."
+        },
+        {
+          "name": "TRIPLE THREAT",
+          "description": "After using <b>[Swift Step]</b>, for <b>4s</b>, your secondary fire throws <b>2</b> additional <b>[Kunai]</b> in a spread that deal <b>50%</b> less damage."
+        },
+        {
+          "name": "LEAF ON THE WIND",
+          "description": "<b>[Healing Ofuda]</b> bounces to another ally up to <b>2</b> times, healing for <b>30%</b> of the normal amount."
+        },
+        {
+          "name": "SELF-CARE",
+          "description": "When you use <b>[Healing Ofuda]</b>, heal yourself for <b>5%</b> of your max Life."
+        },
+        {
+          "name": "SUPPORTED SHOOTING",
+          "description": "When <b>[Healing Ofuda]</b> heals allies, grant them <b>20%</b> increased Attack Speed for <b>3s</b>."
+        },
+        {
+          "name": "CLONE CONJURATION",
+          "description": "After using <b>[Swift Step]</b>, create a clone of yourself that lasts for <b>5s</b>."
+        },
+        {
+          "name": "FLEET FOOT",
+          "description": "<b>[Swift Step]</b> can be used directionally without a target."
+        },
+        {
+          "name": "CLEANSING CHARGE",
+          "description": "When you cleanse negative effects with <b>[Protection Suzu]</b>, gain <b>5%</b> Ultimate Charge for each hero cleansed."
+        },
+        {
+          "name": "TWO-ZU",
+          "description": "<b>[Protection Suzu]</b> gains an additional charge."
+        },
+        {
+          "name": "CROSSING GUARD",
+          "description": "<b>[Kitsune Rush]</b> now also reduces enemies Move Speed by <b>50%</b> for <b>2s</b>."
+        },
+        {
+          "name": "SPIRIT VEIL",
+          "description": "Using <b>[Kitsune Rush]</b> cleanses Kiriko of negative effects, and makes her <b>Invulnerable</b> for <b>4s</b>."
+        }
+      ],
+      "Lúcio": [
+        {
+          "name": "FAST FORWARD",
+          "description": "While above <b>50%</b> Move Speed, increase damage by <b>25%</b>."
+        },
+        {
+          "name": "SIGNATURE SHIFT",
+          "description": "After using an ability, your next <b>[Sonic Amplifier]</b> shot shoots a volley of <b>6</b> ammo with <b>20%</b> increased projectile size."
+        },
+        {
+          "name": "SONIC BOOM",
+          "description": "<b>[Sonic Amplifier]</b> Damage heals all allies affected by <b>[Crossfade]</b> equal to <b>20%</b> of damage dealt."
+        },
+        {
+          "name": "MIXTAPE",
+          "description": "When switching to <b>[Healing Boost]</b>, <b>[Crossfade]</b> heals for <b>50%</b> of <b>[Crossfade]</b> healing for every <b>1s</b> <b>[Speed Boost]</b> was active."
+        },
+        {
+          "name": "MEGAPHONE",
+          "description": "+<b>20%</b> <b>[Amp It Up]</b> Duration\nWhile <b>[Amp It Up]</b> is active, <b>[Crossfade]</b> radius is increased by <b>150%</b>."
+        },
+        {
+          "name": "RADIO EDIT",
+          "description": "After using <b>[Amp It Up]</b>, trigger a <b>[Sound Barrier]</b> with <b>85%</b> <b>reduced</b> <b>Overhealth</b>."
+        },
+        {
+          "name": "VIVACE",
+          "description": "While <b>[Wallriding]</b> or airborne, <b>[Soundwave]</b> cooldown refreshes <b>25%</b> faster and adds <b>1</b> Max Ammo per <b>1s</b> until you reload."
+        },
+        {
+          "name": "WALLVIBING",
+          "description": "While <b>[Wallriding]</b> or airborne, gain temporary <b>Overhealth</b> equal to <b>3%</b> of your life every <b>1s</b>, up to <b>30%</b>."
+        },
+        {
+          "name": "CROWD PLEASER",
+          "description": "After using <b>[Soundwave]</b>, heal all allies affected by <b>[Crossfade]</b> for <b>200%</b> of <b>[Crossfade]</b> healing."
+        },
+        {
+          "name": "LET'S BOUNCE",
+          "description": "<b>[Soundwave]</b> has <b>30%</b> increased knockback and deals <b class=\"stat-ap\">40</b> bonus damage if the target hits a wall."
+        },
+        {
+          "name": "REVERB",
+          "description": "Gain <b>1</b> extra charge of <b>[Soundwave]</b>."
+        },
+        {
+          "name": "BEAT DROP",
+          "description": "<b>20%</b> Ultimate Cost Reduction.\nLanding on an enemy with <b>[Sound Barrier]</b> deals up to <b class=\"stat-ap\">200</b> damage."
+        }
+      ],
+      "Mercy": [
+        {
+          "name": "DISTORTION",
+          "description": "Allies boosted by <b>[Caduceus Staff]</b> gain Lifesteal."
+        },
+        {
+          "name": "GLASS EXTRA FULL",
+          "description": "Healing from <b>[Caduceus Staff]</b> targeting full health allies is converted to <b>Overhealth</b>, up to 50."
+        },
+        {
+          "name": "PROTECTIVE BEAM",
+          "description": "<b>[Caduceus Staff]</b> targets above <b>80%</b> Life gain <b>10%</b> <b>Damage Reduction</b>."
+        },
+        {
+          "name": "SERENITY",
+          "description": "<b>[Sympathetic Recovery]</b> heals for <b>20%</b> more and heals you even while you are healing a full health ally."
+        },
+        {
+          "name": "THREADS OF FATE",
+          "description": "<b>[Caduceus Staff]</b> chains to your previous target for <b>3s</b>, at <b>50%</b> effectiveness."
+        },
+        {
+          "name": "BATTLE MEDIC",
+          "description": "Every <b>1s</b> your Staff is attached, <b>[Caduceus Blaster]</b> gains <b>4%</b> Attack Speed (stacks <b>10 times</b>) until you reload or swap to your Staff."
+        },
+        {
+          "name": "EQUIVALENT EXCHANGE",
+          "description": "You have <b>3 charges</b> of <b>[Resurrect]</b> with <b>33%</b> reduced cast time, but their cooldowns only reset at the start of a round."
+        },
+        {
+          "name": "FIRST RESPONDER",
+          "description": "When you <b>[Resurrect]</b> an ally, you both gain <b class=\"stat-ap\">250</b> <b>Overhealth</b> for <b>6s</b>."
+        },
+        {
+          "name": "RENAISSANCE",
+          "description": "After succesfully using <b>[Resurrect]</b>, activate <b>[Valkyrie]</b> for <b>5s</b>."
+        },
+        {
+          "name": "THE WHAMBULANCE",
+          "description": "When <b>[Guardian Angel]</b> ends, heal your target for <b class=\"stat-ap\">4</b> Life for every <b>1m</b> you traveled."
+        },
+        {
+          "name": "TRIAGE UNIT",
+          "description": "When using <b>[Guardian Angel]</b> on allies below <b>50%</b> Life, <b>[Caduceus Staff]</b> heals them <b>30%</b> more for <b>3s</b>."
+        },
+        {
+          "name": "CREPUSCULAR CIRCLE",
+          "description": "While <b>[Valkyrie]</b> is active, the healing and damage boost of <b>[Caduceus Staff]</b> are automatically applied to nearby allies."
+        }
+      ],
+      "Moira": [
+        {
+          "name": "CHAIN GRASP",
+          "description": "After using <b>[Biotic Orb]</b>, <b>[Biotic Grasp]</b>'s secondary fire chains to <b>2</b> additional targets within <b>10m</b> for <b>3s</b>."
+        },
+        {
+          "name": "DECONSTRUCTION",
+          "description": "After you spend 50 <b>[Biotic Energy]</b>, deal <b>20%</b> increased damage for <b>6s</b>."
+        },
+        {
+          "name": "EMPOWERING YOU",
+          "description": "<b>[Biotic Grasp]</b>'s secondary fire can target allies, increasing their damage by <b>15%</b>."
+        },
+        {
+          "name": "ETHEREAL EXCISION",
+          "description": "While aiming at an enemy's head with <b>[Biotic Grasp]</b>'s secondary fire, gain <b>30%</b> Move Speed, <b>30%</b> Lifesteal, and restore <b>100%</b> more Biotic Energy."
+        },
+        {
+          "name": "OPTIMAL OVERFLOW",
+          "description": "After you spend 50 <b>[Biotic Energy]</b>, launch the last selected <b>[Biotic Orb]</b> with <b>75%</b> reduced duration."
+        },
+        {
+          "name": "PRECARIOUS POTENCY",
+          "description": "Allies healed by your <b>[Biotic Grasp]</b> are healed for an additional <b>20%</b> of <b>[Biotic Grasp]</b>'s healing over <b>5s</b>."
+        },
+        {
+          "name": "CROSS-ORBAL",
+          "description": "<b>[Biotic Orb]</b> launches an additional <b>[Biotic Orb]</b> of the other type with <b>50%</b> reduced capacity."
+        },
+        {
+          "name": "MULTIBALL",
+          "description": "<b>[Biotic Orb]</b> launches <b>2</b> additional orbs of the chosen type with <b>85%</b> <b>reduced</b> effectiveness."
+        },
+        {
+          "name": "PHANTASM",
+          "description": "When you use <b>[Fade]</b>, spawn a stationary copy of the last selected <b>[Biotic Orb]</b> with <b>50%</b> <b>reduced</b> duration."
+        },
+        {
+          "name": "SCIENTIFIC DEATHOD",
+          "description": "While using <b>[Fade]</b>, passing through enemies grants <b>5%</b> Ultimate Charge and <b>Overhealth</b> equal to <b>15%</b> of your max Life."
+        },
+        {
+          "name": "VOIDHOPPERS",
+          "description": "<b>[Fade]</b> also phases other allies within <b>8m</b> for 0.<b>25s</b> and grants them <b>Overhealth</b> equal to <b>20%</b> of your max Life."
+        },
+        {
+          "name": "DESTRUCTION'S DIVIDE",
+          "description": "<b>[Coalescence]</b> can be toggled between pure healing or pure damage, with <b>25%</b> greater effect."
+        }
       ]
     }
   }
