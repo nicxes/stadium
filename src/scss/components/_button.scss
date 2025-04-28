@@ -1,0 +1,19 @@
+.btn {
+  padding: 8px 12px;
+  border-radius: 0;
+  border: 1px solid transparent;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  
+  &--primary {
+    background-color: $color-warning;
+    color: $color-white;
+    
+    &:hover {
+      background-color: $color-armor;
+      transform: scale(1.05);
+      border: 1px solid $color-text;
+    }
+  }
+}

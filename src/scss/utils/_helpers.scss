@@ -67,3 +67,15 @@
     color: $color-white;
   }
 }
+
+.build-copied {
+  display: none;
+  font-weight: bold;
+  margin-left: 1rem;
+  color: $color-success;
+  filter: drop-shadow(0 0 1px $color-black);
+  
+  &.show {
+    display: inline;
+  }
+}

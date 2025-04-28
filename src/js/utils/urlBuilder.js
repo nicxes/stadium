@@ -41,3 +41,16 @@ export const loadBuildFromUrl = (params, armoryData, callback = () => {}) => {
     console.error('Failed to decode build data:', error);
   }
 };
+
+export const copyUrlToClipboard = () => {
+  const currentUrl = window.location.href;
+
+  navigator.clipboard.writeText(currentUrl)
+    .then(() => {
+      console.log('URL copied to clipboard');
+      // You could add some user feedback here, like a toast notification
+    })
+    .catch((err) => {
+      console.error('Failed to copy URL:', err);
+    });
+};

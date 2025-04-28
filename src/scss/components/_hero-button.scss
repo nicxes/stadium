@@ -21,6 +21,16 @@
     }
   }
   
+  @include media-breakpoint-between(xl, xxl) {
+    width: 56px;
+    height: 56px;
+
+    img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+  
   &--category {
     display: block;
     margin: .5rem;

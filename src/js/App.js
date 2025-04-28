@@ -8,7 +8,7 @@ import ItemShop from './components/ItemShop';
 import formatCurrency from './helpers/formatCurrency';
 import HeroStats from './components/HeroStats';
 import RenderAttributeString from './components/RenderAttributeString';
-import { updateUrl, loadBuildFromUrl } from './utils/urlBuilder';
+import { updateUrl, loadBuildFromUrl, copyUrlToClipboard } from './utils/urlBuilder';
 import { useAssets } from './utils/AssetProvider';
 
 const ITEM_SLOTS = Array(6).fill(null);
@@ -25,6 +25,7 @@ const App = () => {
   const [data, setData] = useState(initialValues);
   const [armoryData, setArmoryData] = useState(null);
   const [availableHeroes, setAvailableHeroes] = useState([]);
+  const [buildCopied, setBuildCopied] = useState(false);
 
   const getIcon = (name) => {
     if (!name || isLoading || error) return '';
@@ -99,7 +100,22 @@ const App = () => {
       <div className="row">
         <div className="col-12 my-2">
           <h2 style={{ fontStyle: 'italic' }}>Overwatch 2 Stadium Build Planner</h2>
-          <h6 style={{ fontStyle: 'italic' }}>By Doomnik - <a href="https://github.com/legovader09/">GitHub</a></h6>
+          <p className="mt-0 mb-3">
+            This is a tool to help you plan your Overwatch 2 Stadium build. Select your heroes, items, and powers, and it will calculate the build cost.
+          </p>
+          <button
+            type="button"
+            className="btn btn--primary"
+            onClick={() => {
+              copyUrlToClipboard();
+              setBuildCopied(true);
+            }}
+          >
+            Share Build
+          </button>
+          <span className={`build-copied ${buildCopied ? 'show' : ''}`}>
+            ✔ Build copied to clipboard!
+          </span>
         </div>
       </div>
       <div className="row">
@@ -222,6 +238,7 @@ const App = () => {
           {armoryData && <ItemShop data={armoryData} getIcon={getIcon} context={data} contextCallback={handleClick} />}
         </div>
       </div>
+      <h6 style={{ fontStyle: 'italic', margin: '16px 0' }}>Made by Doomnik - <a href="https://github.com/legovader09/">GitHub</a></h6>
     </div>
   );
 };

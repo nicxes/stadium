@@ -1,3 +1,12 @@
-# Work in Progress
+# Create and share your Overwatch 2 Stadium Builds!
 
 ## Visit here: [https://owbuildplanner.netlify.app](https://owbuildplanner.netlify.app)
+
+## Credits
+
+Website, and text content ripped by myself.
+Assets ripped by [Leafcyn](https://leafycn.carrd.co/) (BIG THANKS, WOULDNT HAVE DONE IT WITHOUT YOUR HELP)
+
+## Asset Usage
+
+Since it took an awful lot of time and effort to rip these assets from the stadium game mode, it would be wonderful if you credit myself and/or [Leafcyn](https://leafycn.carrd.co/) in your project! :)
