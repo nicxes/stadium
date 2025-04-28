@@ -9,6 +9,9 @@ import formatCurrency from './helpers/formatCurrency';
 import HeroStats from './components/HeroStats';
 import RenderAttributeString from './components/RenderAttributeString';
 
+const BATCH_SIZE = 6; // Smaller batch for network requests
+const BATCH_DELAY = 250; // Longer delay between batches to prevent overwhelming
+
 const App = () => {
   const [data, setData] = useState(initialValues);
   const [armoryData, setArmoryData] = useState(null);
@@ -26,20 +29,16 @@ const App = () => {
 
   const getIcon = (item, type) => {
     if (!item) return '';
-    const img = new Image();
     const cleanName = item.name?.replace(/[^a-zA-Z0-9ÁÉÍÓÚŌ ]/g, '').replace(/ /g, '_').toLowerCase();
     const imagePath = `/static/${type}/${cleanName}.png`;
 
     return new Promise((resolve) => {
-      img.onload = () => {
-        resolve(imagePath);
-      };
-
-      img.onerror = () => {
-        resolve('');
-      };
-
-      img.src = imagePath;
+      fetch(imagePath)
+        .then((response) => {
+          if (!response.ok) throw new Error('Image not found');
+          return resolve(imagePath);
+        })
+        .catch(() => resolve('')); // Return empty string for failed loads
     });
   };
 
@@ -123,17 +122,55 @@ const App = () => {
     const loadIcons = async () => {
       const icons = {};
 
-      await Object.entries(armoryData.tabs).reduce(async (promise, [tabType, tabContent]) => {
-        await promise;
-        await Object.values(tabContent).reduce(async (innerPromise, items) => {
-          await innerPromise;
-          await Promise.all(items.filter((item) => !icons[item.name]).map(async (item) => {
-            icons[item.name] = await getIcon(item, tabType === 'powers' ? 'powers' : 'items');
-          }));
-        }, Promise.resolve());
-      }, Promise.resolve());
+      try {
+        // Flatten all items into a single array first
+        const allItems = [];
+        Object.entries(armoryData.tabs).forEach(([tabType, tabContent]) => {
+          Object.values(tabContent).forEach((items) => {
+            items.forEach((item) => {
+              if (!icons[item.name]) {
+                allItems.push({
+                  item,
+                  type: tabType === 'powers' ? 'powers' : 'items',
+                });
+              }
+            });
+          });
+        });
 
-      setItemIcons(icons);
+        // Create batches
+        const batches = [];
+        for (let i = 0; i < allItems.length; i += BATCH_SIZE) {
+          batches.push(allItems.slice(i, i + BATCH_SIZE));
+        }
+
+        // Process all batches
+        const processBatch = async (batch, index) => {
+          if (index > 0) {
+            await new Promise((resolve) => {
+              setTimeout(resolve, BATCH_DELAY);
+            });
+          }
+
+          const batchResults = await Promise.all(
+            batch.map(({ item, type }) => getIcon(item, type)
+              .then((path) => ({
+                name: item.name,
+                path,
+              }))),
+          );
+
+          batchResults.forEach(({ name, path }) => {
+            if (path) icons[name] = path;
+          });
+
+          setItemIcons({ ...icons });
+        };
+
+        await Promise.all(batches.map((batch, index) => processBatch(batch, index)));
+      } catch (error) {
+        console.error('Error in loadIcons:', error);
+      }
     };
 
     loadIcons();
