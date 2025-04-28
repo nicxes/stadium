@@ -5,9 +5,9 @@ import Item from './components/Item';
 import { initialValues } from './initialValues';
 import ItemShop from './components/ItemShop';
 import { decodeBase64ToString, encodeStringToBase64 } from './helpers/base64Helper';
-import renderAttributeString from './helpers/renderAttributeString';
 import formatCurrency from './helpers/formatCurrency';
 import HeroStats from './components/HeroStats';
+import RenderAttributeString from './components/RenderAttributeString';
 
 const App = () => {
   const [data, setData] = useState(initialValues);
@@ -227,7 +227,7 @@ const App = () => {
             })()}
           </p>
           <p className="build-section--title">
-            Build Cost: <img className="currency" src="/static/currency.png" alt="Currency" /><span>{formatCurrency(data.buildCost)}</span>
+            Build Cost: <img className="currency" src="/static/icons/currency.png" alt="Currency" /><span>{formatCurrency(data.buildCost)}</span>
           </p>
           <section className="container">
             <section className="row">
@@ -281,12 +281,12 @@ const App = () => {
                           <ul>
                             {item.attributes.map((attr, index) => (
                               <li key={`${attr.type}_${index.toString()}`} className={`${attr.type !== 'description' ? 'tooltip-content--attribute' : ''}`}>
-                                {parse(renderAttributeString(attr))}
+                                <RenderAttributeString attr={attr} />
                               </li>
                             ))}
                           </ul>
                           <hr />
-                          <p><img className="currency currency--small" src="/static/currency.png" alt="Currency" /><span>{formatCurrency(item.cost)}</span></p>
+                          <p><img className="currency currency--small" src="/static/icons/currency.png" alt="Currency" /><span>{formatCurrency(item.cost)}</span></p>
                         </div>
                       </div>
                     )}

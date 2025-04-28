@@ -22,6 +22,11 @@
     margin: 0;
   }
   
+  .tooltip-stat {
+    margin: 2px 8px 4px -1rem;
+    align-self: baseline;
+  }
+  
   .tooltip-content {
     margin-top: 8px;
     margin-left: -16px;
@@ -42,6 +47,11 @@
     &--attribute {
       margin-left: 1.125rem;
       margin-bottom: .125rem;
+      display: flex;
+      
+      b {
+        color: $color-white;
+      }
     }
     
     hr {

@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import parse from 'html-react-parser';
 import Item from '../Item';
 import { PowerCard } from './components/PowerCard';
 import formatCurrency from '../../helpers/formatCurrency';
-import renderAttributeString from '../../helpers/renderAttributeString';
+import RenderAttributeString from '../RenderAttributeString';
 
 const ItemShop = ({
   data, iconData, context, contextCallback,
@@ -38,12 +37,12 @@ const ItemShop = ({
                     <ul>
                       {item.attributes.map((attr, index) => (
                         <li key={`${attr.type}_${index.toString()}`} className={`${attr.type !== 'description' ? 'tooltip-content--attribute' : ''}`}>
-                          {parse(renderAttributeString(attr))}
+                          <RenderAttributeString attr={attr} />
                         </li>
                       ))}
                     </ul>
                     <hr />
-                    <p><img className="currency currency--small" src="/static/currency.png" alt="Currency" /><span>{formatCurrency(item.cost)}</span></p>
+                    <p><img className="currency currency--small" src="/static/icons/currency.png" alt="Currency" /><span>{formatCurrency(item.cost)}</span></p>
                   </div>
                 </div>
               </div>
