@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {statDescriptions} from './statDescriptions';
 
-const HEALTH_CONVERT_ITEMS = ['VISHKAR CONDENSOR', 'VITAL-E-TEE'];
+const HEALTH_CONVERT_ITEMS = ['VISHKAR CONDENSOR', 'VITAL-E-TEE', 'TRANSFERENCE DELTA'];
 const PERCENTAGE_STAT_ITEMS = ['MEKA Z-SERIES', 'RÜSTUNG VON WILHELM'];
 const FLAT_STATS = ['Health', 'Armor', 'Shields'];
 

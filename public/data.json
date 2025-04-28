@@ -252,6 +252,269 @@
           ],
           "cost": 4000,
           "character": "Zarya"
+        },
+        {
+          "name": "MAXED MAG",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "Gain <b>3%</b> Attack Speed for each remaining Ammo above <b>50%</b> of your Max Ammo."
+            }
+          ],
+          "cost": 4000,
+          "character": "Ashe"
+        },
+        {
+          "name": "TRIPOD",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[The Viper]</b>, <b>[Coach Gun]</b>, and <b>[Dynamite]</b> deal <b>10%</b> more damage to enemies that are below you."
+            }
+          ],
+          "cost": 4000,
+          "character": "Ashe"
+        },
+        {
+          "name": "GREASED LOADER",
+          "attributes": [
+            {
+              "type": "MA",
+              "value": "25%"
+            },
+            {
+              "type": "RS",
+              "value": "15%"
+            }
+          ],
+          "cost": 5000,
+          "character": "Ashe"
+        },
+        {
+          "name": "QUICKLOAD CHAMBER",
+          "attributes": [
+            {
+              "type": "RS",
+              "value": "20%"
+            },
+            {
+              "type": "description",
+              "value": "Reloading within <b>6m</b> of an enemy adds <b>20%</b> of Max Ammo as extra Ammo."
+            }
+          ],
+          "cost": 4000,
+          "character": "Cassidy"
+        },
+        {
+          "name": "SPIKED GRIP",
+          "attributes": [
+            {
+              "type": "MA",
+              "value": "30%"
+            },
+            {
+              "type": "description",
+              "value": "While climbing, restore <b>20%</b> of your ammo every Is."
+            }
+          ],
+          "cost": 3750,
+          "character": "Genji"
+        },
+        {
+          "name": "SPECTRAL SLUGS",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "5%"
+            },
+            {
+              "type": "MA",
+              "value": "25%"
+            },
+            {
+              "type": "description",
+              "value": "Using <b>[Shadow Step]</b> restores <b>100%</b> of your ammo."
+            }
+          ],
+          "cost": 4000,
+          "character": "Reaper"
+        },
+        {
+          "name": "PULSE CONVERTER",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "5%"
+            },
+            {
+              "type": "CR",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "When you use <b>[Helix Rocket]</b>, restore <b>20%</b> of your ammo."
+            }
+          ],
+          "cost": 4000,
+          "character": "Soldier: 76"
+        },
+        {
+          "name": "TARGET TRACKER",
+          "attributes": [
+            {
+              "type": "Biotic Grenade Duration",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "For each enemy or ally affected by <b>[Biotic Grenade]</b>, gain <b>5%</b> Attack Speed, up to <b>25%</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Ana"
+        },
+        {
+          "name": "POTENT PROJECTILES",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Unscoped <b>[Biotic Rifle]</b> projectiles are <b>100%</b> larger."
+            }
+          ],
+          "cost": 5000,
+          "character": "Ana"
+        },
+        {
+          "name": "QUICK SCOPE",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "Faster Scope Speed",
+              "value": "200%"
+            },
+            {
+              "type": "description",
+              "value": "Deal <b>20%</b> more damage to airborne enemies."
+            }
+          ],
+          "cost": 5000,
+          "character": "Ana"
+        },
+        {
+          "name": "VANTAGE SHOT",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "While airborne, <b>[Mediblaster]</b> deals <b>15%</b> more damage."
+            }
+          ],
+          "cost": 4000,
+          "character": "Juno"
+        },
+        {
+          "name": "ASA'S ARMAMENTS",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Kunai]</b> bounce off surfaces <b>1 time</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Kiriko"
+        },
+        {
+          "name": "FARSIGHT FOCUS SASH",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "When you deal damage, gain <b>200%</b> <b>[Healing Ofuda]</b> Projectile Speed for <b>5s</b>."
+            }
+          ],
+          "cost": 5000,
+          "character": "Kiriko"
+        },
+        {
+          "name": "TEAMWORK TOOLKIT",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "When you heal an ally, grant them <b>10%</b> Move Speed for <b>3s</b>."
+            }
+          ],
+          "cost": 5000,
+          "character": "Kiriko"
+        },
+        {
+          "name": "MID-AIR MOBILIZER",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "While airborne gain: <ul><li><b>5%</b> Weapon Power</li><li><b>10%</b> Attack Speed</li></ul>"
+            }
+          ],
+          "cost": 4000,
+          "character": "Mercy"
+        },
+        {
+          "name": "BIO-NEEDLES",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Biotic Grasp]</b>'s secondary fire restores <b>50%</b> more <b>[Biotic Energy]</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Moira"
+        },
+        {
+          "name": "HIGH CAPACITY TUBING",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "Max [Biotic Energy]",
+              "value": "50"
+            }
+          ],
+          "cost": 4000,
+          "character": "Moira"
         }
       ],
       "epic": [
@@ -545,6 +808,341 @@
           ],
           "cost": 11000,
           "character": "Zarya"
+        },
+        {
+          "name": "IRONSIGHTS",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "When the target is further than <b>10m</b>, scoped shot gains <b>1%</b> damage for each meter."
+            }
+          ],
+          "cost": 11000,
+          "character": "Ashe"
+        },
+        {
+          "name": "SIDEWINDER",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "When the target is within <b>10m</b>, unscoped shot gains <b>15%</b> increased damage."
+            }
+          ],
+          "cost": 11000,
+          "character": "Ashe"
+        },
+        {
+          "name": "COMPETITIVE ANALYSIS",
+          "attributes": [
+            {
+              "type": "WPLS",
+              "value": "20%"
+            },
+            {
+              "type": "description",
+              "value": "Deal <b>15%</b> increased primary fire damage to enemies in the <b>Damage role</b>."
+            }
+          ],
+          "cost": 11000,
+          "character": "Cassidy"
+        },
+        {
+          "name": "AMBUSHER OPTICS",
+          "attributes": [
+            {
+              "type": "MD",
+              "value": "25%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Quick Melee]</b> can critically hit when striking enemies from behind, dealing <b>50%</b> increased damage."
+            }
+          ],
+          "cost": 10000,
+          "character": "Genji"
+        },
+        {
+          "name": "ENDURING EDGE",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "[Dragonblade] Duration",
+              "value": "+4s"
+            }
+          ],
+          "cost": 10000,
+          "character": "Genji"
+        },
+        {
+          "name": "SWIFT-LOADER",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "10%"
+            },
+            {
+              "type": "MA",
+              "value": "30%"
+            },
+            {
+              "type": "description",
+              "value": "Damaging an enemy with <b>[Swift Strike]</b> restores <b>20%</b> of your ammo."
+            }
+          ],
+          "cost": 10000,
+          "character": "Genji"
+        },
+        {
+          "name": "FOCUSED FLURRIES",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Max Ammo is increased by <b>75%</b> but reloading takes <b>50%</b> longer."
+            }
+          ],
+          "cost": 10000,
+          "character": "Mei"
+        },
+        {
+          "name": "SNOWBOOT",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Frozen ground increases Mei's Movement Speed by <b>35%</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Mei"
+        },
+        {
+          "name": "HIMALAYAN HAT",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "While within <b>[Blizzard]</b>, gain <b>10%</b> Attack Speed."
+            }
+          ],
+          "cost": 10000,
+          "character": "Mei"
+        },
+        {
+          "name": "ONSLAUGHT",
+          "attributes": [
+            {
+              "type": "MA",
+              "value": "25%"
+            },
+            {
+              "type": "description",
+              "value": "Every <b>3rd</b> shot fires both of your <b>[Hellfire Shotguns]</b>. The extra shot does not consume ammo but deals <b>80%</b> <b>reduced</b> damage."
+            }
+          ],
+          "cost": 10000,
+          "character": "Reaper"
+        },
+        {
+          "name": "PULSE SPIKE",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "10%"
+            },
+            {
+              "type": "[Pulsar Torpedoes] Projectile Speed",
+              "value": "35%"
+            },
+            {
+              "type": "description",
+              "value": "After using <b>[Pulsar Torpedoes]</b>, gain <b>25%</b> Attack Speed for <b>4s</b>."
+            }
+          ],
+          "cost": 11000,
+          "character": "Juno"
+        },
+        {
+          "name": "LONG RANGE BLASTER",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Mediblaster]</b> deals <b>15%</b> increased damage and healing to targets farther than <b>12m</b> away."
+            }
+          ],
+          "cost": 12000,
+          "character": "Juno"
+        },
+        {
+          "name": "GRAVITATIONAL PUSH",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "During <b>[Glide Boost]</b>, gain <b>20%</b> Attack Speed and your <b>[Quick Melee]</b> knocks enemies back."
+            }
+          ],
+          "cost": 10000,
+          "character": "Juno"
+        },
+        {
+          "name": "RYŌTA'S RELOADER",
+          "attributes": [
+            {
+              "type": "RS",
+              "value": "35%"
+            },
+            {
+              "type": "description",
+              "value": "After using an ability, restore <b>100%</b> of your ammo."
+            }
+          ],
+          "cost": 10000,
+          "character": "Kiriko"
+        },
+        {
+          "name": "SPIRITS' GUIDANCE",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "15%"
+            },
+            {
+              "type": "[Healing Ofuda] Projectile Speed",
+              "value": "100%"
+            }
+          ],
+          "cost": 12000,
+          "character": "Kiriko"
+        },
+        {
+          "name": "B-SIDE BOP",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "MD",
+              "value": "25%"
+            },
+            {
+              "type": "description",
+              "value": "After using <b>[Soundwave]</b>, your next <b>[Quick Melee]</b> grants decaying Overhealth equal to <b>200%</b> of damage dealt."
+            }
+          ],
+          "cost": 10000,
+          "character": "Lúcio"
+        },
+        {
+          "name": "RIFF REPEATER",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Sonic Amplifier]</b> projectiles ricochet off walls <b>3</b> times."
+            }
+          ],
+          "cost": 10000,
+          "character": "Lúcio"
+        },
+        {
+          "name": "CADUCEUS EX",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "[Caduceus Staff] Range",
+              "value": "33%"
+            }
+          ],
+          "cost": 10000,
+          "character": "Mercy"
+        },
+        {
+          "name": "CELESTIAL CLIP",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "MA",
+              "value": "33%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Caduceus Blaster]</b> has a <b>10%</b> chance to fire an extra shot that doesn't consume additional ammo."
+            }
+          ],
+          "cost": 10000,
+          "character": "Mercy"
+        },
+        {
+          "name": "ALTERNATIVE ENERGY",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "AS",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "When you use <b>[Fade]</b>, refill your <b>[Biotic Energy]</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Moira"
+        },
+        {
+          "name": "SUBATOMIC SPLITTER",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "[Biotic Grasp] Secondary Fire Range",
+              "value": "15%"
+            }
+          ],
+          "cost": 11000,
+          "character": "Moira"
         }
       ]
     },
@@ -816,6 +1414,299 @@
           ],
           "cost": 4000,
           "character": "Zarya"
+        },
+        {
+          "name": "FURNACE FUEL",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "AP",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "Cleansed Burns grant <b>3%</b> Ultimate Charge."
+            }
+          ],
+          "cost": 4000,
+          "character": "Ashe"
+        },
+        {
+          "name": "SILVER LIGHTER",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Damage dealt to <b>Burning</b> targets grants <b>20%</b> more Ultimate Charge."
+            }
+          ],
+          "cost": 4000,
+          "character": "Ashe"
+        },
+        {
+          "name": "BLACKWATCH TECH",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Deadeye]</b> eliminations reduce <b>[Flashbang]</b> max cooldown by <b>10%</b>, up to <b>40%</b> for the round."
+            }
+          ],
+          "cost": 4000,
+          "character": "Cassidy"
+        },
+        {
+          "name": "STREAMLINED PONCHO",
+          "attributes": [
+            {
+              "type": "CR",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Combat Roll]</b> reduces <b>[Flashbang]</b> cooldown by <b>2s</b>."
+            }
+          ],
+          "cost": 5000,
+          "character": "Cassidy"
+        },
+        {
+          "name": "TRAVERSAL KINETICS",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "<b>[Swift Strike]</b> cooldown is reduced by <b>50%</b> if it deals no damage."
+            }
+          ],
+          "cost": 3750,
+          "character": "Genji"
+        },
+        {
+          "name": "NINJA SOLES",
+          "attributes": [
+            {
+              "type": "CR",
+              "value": "5%"
+            },
+            {
+              "type": "Move Speed during [Deflect]",
+              "value": "15%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Genji"
+        },
+        {
+          "name": "BATTERY PACK",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "Biotic Field Duration",
+              "value": "30%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Soldier: 76"
+        },
+        {
+          "name": "BOMB DIFFUSAL BOOTS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "Reduced [Helix Rocket] Self-Damage",
+              "value": "90%"
+            },
+            {
+              "type": "description",
+              "value": "When you damage yourself with <b>[Helix Rocket]</b>, it knocks you back <b>200%</b> further."
+            }
+          ],
+          "cost": 4000,
+          "character": "Soldier: 76"
+        },
+        {
+          "name": "DOUBLE DOSAGE",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Landing a <b>[Sleep Dart]</b> on target affected by <b>[Biotic Grenade]</b> reduces its cooldown by <b>35%</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Ana"
+        },
+        {
+          "name": "LOCK-ON SHIELD",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "While aiming <b>[Pulsar Torpedoes]</b>, gain Overhealth equal to <b>50%</b> of your max Shields."
+            }
+          ],
+          "cost": 4000,
+          "character": "Juno"
+        },
+        {
+          "name": "LUX LOOP",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "[Hyper Ring] Duration",
+              "value": "25%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Juno"
+        },
+        {
+          "name": "EYE OF THE YOKAI",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "[Kitsune Rush] Duration",
+              "value": "35%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Kiriko"
+        },
+        {
+          "name": "CYCLIST GLOVES",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "When you use an ability, gain <b>20%</b> Attack Speed for <b>3s</b>."
+            }
+          ],
+          "cost": 5000,
+          "character": "Kiriko"
+        },
+        {
+          "name": "#1 SINGLE",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "When allies leave your <b>[Crossfade]</b> area, the effect lingers for <b>2s</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Lúcio"
+        },
+        {
+          "name": "LOFLY BEATS",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "AP",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "While in <b>[Speed Boost]</b>, <b>[Soundwave]</b> also knocks you back."
+            }
+          ],
+          "cost": 4000,
+          "character": "Lúcio"
+        },
+        {
+          "name": "NANO BOOP",
+          "attributes": [
+            {
+              "type": "CR",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "Environmental Kills grant <b>[Nano Boost]</b> for <b>5s</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Lúcio"
+        },
+        {
+          "name": "LONG DISTANCE WINGS",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "Guardian Angel Range",
+              "value": "33%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Mercy"
+        },
+        {
+          "name": "SMART ORBS",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Biotic Orb]</b> moves <b>50%</b> slower while it is healing or dealing damage."
+            }
+          ],
+          "cost": 4000,
+          "character": "Moira"
+        },
+        {
+          "name": "LEVITATION SHAWL",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "During <b>[Coalescence]</b>, gain free flight."
+            }
+          ],
+          "cost": 4500,
+          "character": "Moira"
         }
       ],
       "epic": [
@@ -1174,6 +2065,488 @@
           ],
           "cost": 10000,
           "character": "Zarya"
+        },
+        {
+          "name": "INFRARED LENSES",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Deal <b>25%</b> increased damage to Burning enemies."
+            }
+          ],
+          "cost": 10000,
+          "character": "Ashe"
+        },
+        {
+          "name": "STACKED STICKS",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "[Dynamite] Explosion Radius",
+              "value": "40%"
+            }
+          ],
+          "cost": 10000,
+          "character": "Ashe"
+        },
+        {
+          "name": "BUILD-A-BLAST BUCKSHOT",
+          "attributes": [
+            {
+              "type": "CR",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Coach Gun]</b> has <b>50%</b> increased self knockback."
+            }
+          ],
+          "cost": 10000,
+          "character": "Ashe"
+        },
+        {
+          "name": "IMPROVED DYNAMITE",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "20%"
+            },
+            {
+              "type": "CR",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Flashbang]</b> explosion radius is increased by <b>50%</b>."
+            }
+          ],
+          "cost": 11000,
+          "character": "Cassidy"
+        },
+        {
+          "name": "CLEAN SWEEP",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "ALS",
+              "value": "15%"
+            },
+            {
+              "type": "[Swift Strike] Width",
+              "value": "50%"
+            }
+          ],
+          "cost": 10000,
+          "character": "Genji"
+        },
+        {
+          "name": "DEFLECTING DASH",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "During <b>[Swift Strike]</b>, deflect incoming projectiles toward your reticle."
+            }
+          ],
+          "cost": 10000,
+          "character": "Genji"
+        },
+        {
+          "name": "STURDY SNOWFORT",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Ability Power is increased by <b>5%</b> per each spawned Ice Pillars."
+            }
+          ],
+          "cost": 10000,
+          "character": "Mei"
+        },
+        {
+          "name": "ECOPOINT CRYOBED",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "On near death, go into <b>[Cryo-Freeze]</b> and gain <b>15%</b> Ultimate Charge. Can happen once every round."
+            }
+          ],
+          "cost": 10000,
+          "character": "Mei"
+        },
+        {
+          "name": "ICY VEINS",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Blizzard]</b> deals <b>100%</b> increased base damage."
+            }
+          ],
+          "cost": 10000,
+          "character": "Mei"
+        },
+        {
+          "name": "NIGHTCREEPER",
+          "attributes": [
+            {
+              "type": "MS",
+              "value": "10%"
+            },
+            {
+              "type": "[Shadow Step] Cast Speed",
+              "value": "30%"
+            },
+            {
+              "type": "description",
+              "value": "Using <b>[Wraith Form]</b> reduces the cooldown of <b>[Shadow Step]</b> by <b>2s</b>."
+            }
+          ],
+          "cost": 9500,
+          "character": "Reaper"
+        },
+        {
+          "name": "WREATH OF RUIN",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "20%"
+            },
+            {
+              "type": "[Death Blossom] Radius",
+              "value": "25%"
+            },
+            {
+              "type": "Move Speed during [Death Blossom]",
+              "value": "20%"
+            }
+          ],
+          "cost": 10000,
+          "character": "Reaper"
+        },
+        {
+          "name": "CROWD CONTROL",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Death Blossom]</b> gains <b>5%</b> Ability Power for each enemy within its range."
+            }
+          ],
+          "cost": 11000,
+          "character": "Reaper"
+        },
+        {
+          "name": "ENDGAME EQUALIZER",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "When you spend your Ultimate Charge, reset all cooldowns. While <b>[Tactical Visor]</b> is active, gain <b>20%</b> Cooldown Reduction."
+            }
+          ],
+          "cost": 10000,
+          "character": "Soldier: 76"
+        },
+        {
+          "name": "RAPID RESPONSE RADIUS",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "Biotic Field Radius",
+              "value": "30%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Biotic Field]</b> heals allies below <b>50%</b> Life <b>10%</b> more."
+            }
+          ],
+          "cost": 10000,
+          "character": "Soldier: 76"
+        },
+        {
+          "name": "LETHAL DOSE",
+          "attributes": [
+            {
+              "type": "ALS",
+              "value": "50%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Sleep Dart]</b> direct hit deals <b class=\"stat-ap\">100</b> bonus damage."
+            }
+          ],
+          "cost": 9000,
+          "character": "Ana"
+        },
+        {
+          "name": "CLUSTER CORE",
+          "attributes": [
+            {
+              "type": "ALS",
+              "value": "25%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Biotic Grenade]</b> cooldown is reduced by Is for each target it hits."
+            }
+          ],
+          "cost": 10000,
+          "character": "Ana"
+        },
+        {
+          "name": "TRANQUILIZER",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "<b>[Sleep Dart]</b> gains: <ul><li><b>500%</b> Collision Size</li><li><b>100%</b> Projectile Speed</li><li><b>20%</b> <b>Sleep</b> Duration</li></ul>"
+            }
+          ],
+          "cost": 10000,
+          "character": "Ana"
+        },
+        {
+          "name": "GRENADIUS PIN",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "20%"
+            },
+            {
+              "type": "[Biotic Grenade] Radius",
+              "value": "30%"
+            }
+          ],
+          "cost": 12000,
+          "character": "Ana"
+        },
+        {
+          "name": "PULSTAR DESTROYERS",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Pulsar Torpedoes]</b> explode on hit, dealing <b class=\"stat-ap\">20</b> damage."
+            }
+          ],
+          "cost": 10000,
+          "character": "Juno"
+        },
+        {
+          "name": "SOLAR SHIELDING",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "25%"
+            },
+            {
+              "type": "description",
+              "value": "Allies affected by <b>[Hyper Ring]</b> restore <b>25</b> Shields every Is."
+            }
+          ],
+          "cost": 10000,
+          "character": "Juno"
+        },
+        {
+          "name": "RED PROMISE REGULATOR",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "50"
+            },
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "When you use <b>[Orbital Ray]</b>, reset your cooldowns."
+            }
+          ],
+          "cost": 10000,
+          "character": "Juno"
+        },
+        {
+          "name": "DONUT DELIVERY",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Swift Step]</b> heals nearby allies by <b class=\"stat-ap\">80</b> Life over <b>2s</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Kiriko"
+        },
+        {
+          "name": "OUR BIKES",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Allies affected by <b>[Kitsune Rush]</b> are healed for <b class=\"stat-ap\">80</b> every Is."
+            }
+          ],
+          "cost": 10000,
+          "character": "Kiriko"
+        },
+        {
+          "name": "TALISMAN OF VELOCITY",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Protection Suzu]</b> grants <b>25%</b> Attack Speed and <b>25%</b> Move Speed for <b>4s</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Kiriko"
+        },
+        {
+          "name": "AIRWAVES",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Sound Barrier]</b> effectiveness is increased by <b>25%</b> for every Is <b>[Sound Barrier]</b> is channeled, up to <b>50%</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Lúcio"
+        },
+        {
+          "name": "ALL-OUT AUDITIVA",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "20%"
+            },
+            {
+              "type": "[Ampt It Up] Duration",
+              "value": "33%"
+            }
+          ],
+          "cost": 11000,
+          "character": "Lúcio"
+        },
+        {
+          "name": "RESURRECTION RANGEFINDER",
+          "attributes": [
+            {
+              "type": "CR",
+              "value": "10%"
+            },
+            {
+              "type": "[Resurrection] Range",
+              "value": "75%"
+            }
+          ],
+          "cost": 10000,
+          "character": "Mercy"
+        },
+        {
+          "name": "ANGELIC ACROBATICS",
+          "attributes": [
+            {
+              "type": "Guardian Angel Move Speed",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "[Guardian Angell's cooldown starts as soon as you jump or crouch."
+            }
+          ],
+          "cost": 10000,
+          "character": "Mercy"
+        },
+        {
+          "name": "COALEGION",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Allies healed by <b>[Coalescence]</b> deal <b>15%</b> increased damage."
+            }
+          ],
+          "cost": 10000,
+          "character": "Moira"
+        },
+        {
+          "name": "EXTENDRILS",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "[Biotic Orb] Tendril Range",
+              "value": "30%"
+            }
+          ],
+          "cost": 11000,
+          "character": "Moira"
         }
       ]
     },
@@ -1637,6 +3010,318 @@
           ],
           "cost": 4000,
           "character": "Zarya"
+        },
+        {
+          "name": "SILVER SPURS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "After using <b>[Coach Gun]</b>, gain <b>20%</b> Move Speed for <b>3s</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Ashe"
+        },
+        {
+          "name": "WANTED POSTER",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Deadeye]</b> eliminations reward extra <b>500 Stadium Cash</b> each."
+            }
+          ],
+          "cost": 4000,
+          "character": "Cassidy"
+        },
+        {
+          "name": "ANTI-BEAM COATING",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "25"
+            },
+            {
+              "type": "AS",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Deflect]</b> now blocks <b>Beam</b> attacks."
+            }
+          ],
+          "cost": 4000,
+          "character": "Genji"
+        },
+        {
+          "name": "EQUILIBRIUM GEAR",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "While climbing, heal <b>5%</b> of your Life every <b>1s</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Genji"
+        },
+        {
+          "name": "SPARROWHAWK FEATHER",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Gain an additional jump."
+            }
+          ],
+          "cost": 4000,
+          "character": "Genji"
+        },
+        {
+          "name": "COLDSPOT",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Primary fire and <b>[Blizzard]</b> can remove burn."
+            }
+          ],
+          "cost": 4000,
+          "character": "Mei"
+        },
+        {
+          "name": "MEICICLE",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Cryo-Freeze]</b> duration is increased by <b>25%</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Mei"
+        },
+        {
+          "name": "DEVASTATION",
+          "attributes": [
+            {
+              "type": "ALS",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Each <b>[Death Blossom]</b> elimination increases your Health by <b>25</b> until the end of the round, up to <b>100</b> Health."
+            }
+          ],
+          "cost": 4000,
+          "character": "Reaper"
+        },
+        {
+          "name": "NEVERFROST",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "Reduce effectiveness of enemy slows by <b>50%</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Reaper"
+        },
+        {
+          "name": "POCKET MIST",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "While below <b>50%</b> Life, gain <b>20%</b> Move Speed."
+            }
+          ],
+          "cost": 4000,
+          "character": "Reaper"
+        },
+        {
+          "name": "COMPRESSION FATIGUES",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "AS",
+              "value": "5%"
+            },
+            {
+              "type": "[Sprint] Move Speed",
+              "value": "25%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Soldier: 76"
+        },
+        {
+          "name": "DASH BOOTS",
+          "attributes": [
+            {
+              "type": "MS",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "Jumping in mid-air will dash you a short distance."
+            }
+          ],
+          "cost": 4000,
+          "character": "Ana"
+        },
+        {
+          "name": "PERFECTED FORMULA",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "25"
+            },
+            {
+              "type": "[Nano Boost] Duration",
+              "value": "15%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Ana"
+        },
+        {
+          "name": "I.V. DRIP",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "While affected by <b>[Biotic Grenade]</b>, Ana gains <b class=\"stat-ap\">100</b> <b>Overhealth</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Ana"
+        },
+        {
+          "name": "BOOSTED ROCKETS",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "25"
+            },
+            {
+              "type": "[Glide Boost] Duration",
+              "value": "25%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Juno"
+        },
+        {
+          "name": "KITSUNE KICKS",
+          "attributes": [
+            {
+              "type": "MS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Gain the ability to <b>[Double Jump]</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Kiriko"
+        },
+        {
+          "name": "SPEED SKATES",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "After <b>[Wallriding]</b>, gain <b>30%</b> Move Speed for <b>2s</b>."
+            }
+          ],
+          "cost": 3750,
+          "character": "Lúcio"
+        },
+        {
+          "name": "AERODYNAMIC FEATHERS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "While affected by <b>[Angelic Descent]</b>, continuously gain <b>10%</b> Move Speed every Is up to <b>60%</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Mercy"
+        },
+        {
+          "name": "ANGELEISURE WEAR",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "While affected by <b>[Angelic Descent]</b> or <b>[Guardian Angel]</b>, heal <b>3%</b> of your Life every IS."
+            }
+          ],
+          "cost": 4000,
+          "character": "Mercy"
+        },
+        {
+          "name": "ABYSS BOOTS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "While using <b>[Fade]</b>, you jump <b>30%</b> higher."
+            }
+          ],
+          "cost": 4000,
+          "character": "Moira"
         }
       ],
       "epic": [
@@ -1969,6 +3654,311 @@
           ],
           "cost": 10000,
           "character": "Reinhardt"
+        },
+        {
+          "name": "FIRESTARTER",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "Your <b>Burning</b> effects gain <b>35%</b> Lifesteal."
+            }
+          ],
+          "cost": 10000,
+          "character": "Ashe"
+        },
+        {
+          "name": "B.O.B WIRE DEFENSE",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "Armor",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "When <b>[B.O.B.]</b> finishes charging, <b>[B.O.B.]</b> gains 300 Armor."
+            }
+          ],
+          "cost": 10000,
+          "character": "Ashe"
+        },
+        {
+          "name": "FRANKIE'S FIXER",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "Heal <b class=\"stat-ap\">10</b> Life for each Ammo loaded using <b>[Combat Roll]</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Cassidy"
+        },
+        {
+          "name": "EAGLE EYE",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "Take <b>25%</b> less damage from enemies farther than <b>12m</b>."
+            }
+          ],
+          "cost": 12000,
+          "character": "Cassidy"
+        },
+        {
+          "name": "SLICY COOLANT",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "50"
+            },
+            {
+              "type": "CR",
+              "value": "5%"
+            },
+            {
+              "type": "[Deflect] Duration",
+              "value": "+1s"
+            }
+          ],
+          "cost": 10000,
+          "character": "Genji"
+        },
+        {
+          "name": "TRANSFERENCE DELTA",
+          "attributes": [
+            {
+              "type": "Ultimate Cost Reduction",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Convert <b>100</b> Health into Armor. Using <b>[Dragonblade]</b> heals your Armor fully."
+            }
+          ],
+          "cost": 10000,
+          "character": "Genji"
+        },
+        {
+          "name": "ICE SHEET",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Ice Wall]</b> Duration is increased by <b>1s</b> and health is increased by <b>100%</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Mei"
+        },
+        {
+          "name": "WRETCHED WINGS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "While using <b>[Wraith Form]</b>, gain the ability to fly and gain <b>20%</b> Move Speed."
+            }
+          ],
+          "cost": 10000,
+          "character": "Reaper"
+        },
+        {
+          "name": "DAUNTLESS DRAUGHT",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "Move Speed during [Wraith Form]",
+              "value": "15%"
+            },
+            {
+              "type": "[Wraith Form] Duration",
+              "value": "33%"
+            }
+          ],
+          "cost": 10000,
+          "character": "Reaper"
+        },
+        {
+          "name": "CRIMSON CLOAK",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Using <b>[Death Blossom]</b> grants you <b>Overhealth</b> equal to <b>15%</b> of your max Life."
+            }
+          ],
+          "cost": 11000,
+          "character": "Reaper"
+        },
+        {
+          "name": "IRON LUNG",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "While using <b>[Sprint]</b>, gain <b>Overhealth</b> equal to <b>5%</b> of your max Life every <b><b>1s</b></b>, up to <b>25%</b>, for <b>5s</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Soldier: 76"
+        },
+        {
+          "name": "EYE OF HORUS",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Nano Boost]</b> can target allies through walls and its range is increased to <b>60m</b>."
+            }
+          ],
+          "cost": 9000,
+          "character": "Ana"
+        },
+        {
+          "name": "FORTI-GLIDE",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "75"
+            },
+            {
+              "type": "description",
+              "value": "During <b>[Glide Boost]</b>, gain <b>10%</b> Damage Reduction."
+            }
+          ],
+          "cost": 10000,
+          "character": "Juno"
+        },
+        {
+          "name": "SUNBURST SERUM",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "75"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Orbital Ray]</b> gains <b>25%</b> increased healing."
+            }
+          ],
+          "cost": 10000,
+          "character": "Juno"
+        },
+        {
+          "name": "GODDESS'S AURA",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "After using <b>[Swift Step]</b>, gain <b class=\"stat-ap\">100</b> <b>Overhealth</b> for <b>4s</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Kiriko"
+        },
+        {
+          "name": "TALISMAN OF LIFE",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "20%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Protection Suzu]</b> grants <b class=\"stat-ap\">100</b> <b>Overhealth</b> for <b>5s</b>."
+            }
+          ],
+          "cost": 11000,
+          "character": "Kiriko"
+        },
+        {
+          "name": "HIP HOP",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "After <b>[Wallriding]</b>, gain an additional jump while airborne."
+            }
+          ],
+          "cost": 9000,
+          "character": "Lúcio"
+        },
+        {
+          "name": "BLESSED BOOSTERS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "Your launch velocity is increased by <b>25%</b> when canceling <b>[Guardian Angel]</b> with crouch or jump."
+            }
+          ],
+          "cost": 9000,
+          "character": "Mercy"
+        },
+        {
+          "name": "CHAIN EVOKER",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "50"
+            },
+            {
+              "type": "[Caduceus Staff] Damage Boost",
+              "value": "5%"
+            },
+            {
+              "type": "Ultimate Charge from Damage Boost",
+              "value": "15%"
+            }
+          ],
+          "cost": 10000,
+          "character": "Mercy"
         }
       ]
     },
@@ -2221,6 +4211,56 @@
         {
           "name": "GRAVITON ANOMALY",
           "description": "<b>25%</b> Ultimate Cost Reduction.\n<br/>\n<b>[Graviton Surge]</b> base damage is increased to <b>30</b> and increased by <b>[Energy]</b>, but has <b>50%</b> reduced duration."
+        }
+      ],
+      "Ashe": [
+        {
+          "name": "HEAD HONCHO",
+          "description": "Each <b>unscoped</b> shot you land increases the damage of the next <b>scoped</b> shot you land by <b>3%</b>, up to <b>30%</b>. Resets on reload."
+        },
+        {
+          "name": "INCENDIARY ROUNDS",
+          "description": "While <b>scoped</b>, hitting the same target without missing deals <b class=\"stat-wp\">30</b> extra damage."
+        },
+        {
+          "name": "MY BUSINESS, MY RULES",
+          "description": "When you deal damage to a <b>Burning</b> enemy with <b>[The Viper]</b>, reduce the cooldown of your abilities by <b>10%</b>."
+        },
+        {
+          "name": "RELOAD THERAPY",
+          "description": "When you reload a shot, heal <b>3%</b> of your Life."
+        },
+        {
+          "name": "CALAMITY",
+          "description": "Using <b>[Coach Gun]</b> reloads <b>2</b> Ammo. <b>[The Viper]</b>'s next <b>2</b> hits deal <b class=\"stat-ap\">40</b> additional damage over <b>3s</b>."
+        },
+        {
+          "name": "DOUBLE BARRELED",
+          "description": "<b>[Coach Gun]</b> gains an additional charge."
+        },
+        {
+          "name": "INCENDIARY BLAST",
+          "description": "<b>[Coach Gun]</b> applies Burning, dealing <b class=\"stat-ap\">100</b> damage over <b>5s</b>. If the target was Burning, deal <b class=\"stat-ap\">75</b> additional damage instantly."
+        },
+        {
+          "name": "EARLY DETONATION",
+          "description": "Shooting <b>[Dynamite]</b> reloads <b>5</b> Ammo and reduces the cooldown of <b>[Dynamite]</b> by <b>3s</b>."
+        },
+        {
+          "name": "MOLTEN MUNITIONS",
+          "description": "When <b>[Dynamite]</b> explodes on the ground, it leaves lava that <b>Burns</b> enemies for <b class=\"stat-ap\">50</b> every Is."
+        },
+        {
+          "name": "OUT WITH A BANG",
+          "description": "When <b>[Dynamite]</b> explodes, it spawns <b>3</b> sticky explosives that deal <b>66%</b> reduced damage."
+        },
+        {
+          "name": "B.O.B JR.",
+          "description": "<b>[B.O.B.]</b> costs <b>50%</b> less Ultimate Charge but has reduced Life, <b>50%</b> <b>reduced</b> Attack Speed, and is significantly smaller."
+        },
+        {
+          "name": "PARTNERS IN CRIME",
+          "description": "You are healed for <b>100%</b> of <b>[B.O.B.]</b>'s damage dealt and <b>[B.O.B.]</b> is healed for <b>100%</b> of your damage dealt."
         }
       ]
     }
