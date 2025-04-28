@@ -27,7 +27,7 @@ const App = () => {
   const getIcon = (item, type) => {
     if (!item) return '';
     const img = new Image();
-    const cleanName = item.name?.replace(/[^a-zA-Z0-9 ]/g, '').replace(/ /g, '_').toLowerCase();
+    const cleanName = item.name?.replace(/[^a-zA-Z0-9ÁÉÍÓÚŌ ]/g, '').replace(/ /g, '_').toLowerCase();
     const imagePath = `/static/${type}/${cleanName}.png`;
 
     return new Promise((resolve) => {

@@ -1747,7 +1747,7 @@
           "cost": 10000
         },
         {
-          "name": "CATAKYTIC CRYSTAL",
+          "name": "CATALYTIC CRYSTAL",
           "attributes": [
             {
               "type": "AP",
@@ -1890,7 +1890,7 @@
           "character": "D.VA"
         },
         {
-          "name": "MACRO MISSLE",
+          "name": "MACRO MISSILE",
           "attributes": [
             {
               "type": "description",
