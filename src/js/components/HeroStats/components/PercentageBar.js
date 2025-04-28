@@ -3,24 +3,21 @@ import PropTypes from 'prop-types';
 
 const PercentageBar = ({ stat }) => (
   <div className="stat-bar-container">
-    <span style={{ minWidth: '50px' }}>{stat.type}</span>
+    <span style={{ minWidth: '50px' }}>{stat.key}</span>
     <div className="stat-bar percentage-bar">
       <div
         className="bar-segment"
-        style={{ width: `${stat.value || 0}%` }}
+        style={{ width: stat.value }}
       />
     </div>
-    <span className="stat-value">{stat.value || 0}%</span>
+    <span className="stat-value">{stat.value}</span>
   </div>
 );
 
 PercentageBar.propTypes = {
   stat: PropTypes.shape({
-    type: PropTypes.string.isRequired,
-    value: PropTypes.oneOfType([
-      PropTypes.number,
-      PropTypes.string,
-    ]).isRequired,
+    key: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
   }).isRequired,
 };
 

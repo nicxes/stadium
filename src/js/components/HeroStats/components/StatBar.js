@@ -3,11 +3,9 @@ import PropTypes from 'prop-types';
 import CombinedHealthBar from './CombinedHealthBar';
 import PercentageBar from './PercentageBar';
 
-const StatBar = ({ stat, stats }) => {
-  const healthTypes = ['Health', 'Armor', 'Shields'];
-
-  if (healthTypes.includes(stat.type)) {
-    return <CombinedHealthBar stats={stats} />;
+const StatBar = ({ stat = null, healthStats = null }) => {
+  if (healthStats) {
+    return <CombinedHealthBar stats={healthStats} />;
   }
 
   return <PercentageBar stat={stat} />;
@@ -15,21 +13,17 @@ const StatBar = ({ stat, stats }) => {
 
 StatBar.propTypes = {
   stat: PropTypes.shape({
-    type: PropTypes.string.isRequired,
+    key: PropTypes.string,
     value: PropTypes.oneOfType([
       PropTypes.number,
       PropTypes.string,
-    ]).isRequired,
-  }).isRequired,
-  stats: PropTypes.arrayOf(
-    PropTypes.shape({
-      type: PropTypes.string.isRequired,
-      value: PropTypes.oneOfType([
-        PropTypes.number,
-        PropTypes.string,
-      ]).isRequired,
-    }),
-  ).isRequired,
+    ]),
+  }),
+  healthStats: PropTypes.shape({
+    Health: PropTypes.number,
+    Armor: PropTypes.number,
+    Shields: PropTypes.number,
+  }),
 };
 
 export default StatBar;

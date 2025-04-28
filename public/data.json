@@ -1208,7 +1208,7 @@
           "attributes": [
             {
               "type": "description",
-              "value": "While on the Objective, restore <b>8</b> Life every Is."
+              "value": "While on the Objective, restore <b>8</b> Life every 1s."
             }
           ],
           "cost": 1000
@@ -1295,7 +1295,7 @@
           "name": "CUSHIONED PADDING",
           "attributes": [
             {
-              "type": "Shield",
+              "type": "Shields",
               "value": "25"
             },
             {
@@ -2042,7 +2042,7 @@
         },
         {
           "name": "CUT 'EM, GRACIE!",
-          "description": "Each enemy hit by <b>[Jagged Blade]</b> while it returns to you reduces its cooldown by Is."
+          "description": "Each enemy hit by <b>[Jagged Blade]</b> while it returns to you reduces its cooldown by 1s."
         },
         {
           "name": "LET'S GO WIN",
@@ -2058,7 +2058,7 @@
         },
         {
           "name": "CHOP CHOP",
-          "description": "<b>[Carnage]</b> gains an additional charge but its cooldown reduction per hit is reduced to Is."
+          "description": "<b>[Carnage]</b> gains an additional charge but its cooldown reduction per hit is reduced to 1s."
         },
         {
           "name": "SOARING STONE",

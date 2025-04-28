@@ -3,32 +3,46 @@ import PropTypes from 'prop-types';
 import { calculateStats } from '../../helpers/statCalculator';
 import StatBar from './components/StatBar';
 
+const HEALTH_TYPES = ['Health', 'Armor', 'Shields'];
+
 const HeroStats = ({ data, heroes }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const currentHero = heroes.find((hero) => hero.name === data.character);
   if (!currentHero) return null;
   const stats = calculateStats(data.items, currentHero);
-  const statsArray = Object.values(stats);
+  console.log('stats', stats);
+  const healthStats = Object.entries(stats)
+    .filter(([key]) => HEALTH_TYPES.includes(key))
+    .reduce((acc, [key, value]) => ({
+      ...acc,
+      [key]: value,
+    }), {});
 
-  const healthTypes = ['Health', 'Armor', 'Shields'];
-  const healthStats = statsArray.filter((stat) => healthTypes.includes(stat.type));
-  const otherStats = statsArray.filter((stat) => !healthTypes.includes(stat.type));
+  const otherStats = Object.entries(stats)
+    .filter(([key]) => !HEALTH_TYPES.includes(key))
+    .reduce((acc, [key, value]) => ({
+      ...acc,
+      [key]: value,
+    }), {});
 
   return (
     <div className="stats-wrapper">
       <div className={`stats-content ${isExpanded ? 'expanded' : ''}`}>
-        {healthStats.length > 0 && (
+        {Object.keys(healthStats).length > 0 && (
           <StatBar
             key="health-combined"
-            stat={healthStats[0]}
-            stats={healthStats}
+            healthStats={healthStats}
           />
         )}
-        {otherStats.map((stat) => (
-          <StatBar key={stat.type} stat={stat} stats={statsArray} />
+        {Object.entries(otherStats).map(([key, value]) => (
+          <StatBar
+            key={key}
+            stat={{ key, value }}
+            isPercentage
+          />
         ))}
       </div>
-      {otherStats.length > 4 && (
+      {Object.keys(otherStats).length > 4 && (
         <button
           type="button"
           className={`expand-toggle ${isExpanded ? 'expanded' : ''}`}

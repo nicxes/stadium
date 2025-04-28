@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const CombinedHealthBar = ({ stats }) => {
-  const healthStat = stats.find((stat) => stat.type === 'Health') || { value: 0 };
-  const armorStat = stats.find((stat) => stat.type === 'Armor') || { value: 0 };
-  const shieldsStat = stats.find((stat) => stat.type === 'Shields') || { value: 0 };
+  const health = stats.Health || 0;
+  const armor = stats.Armor || 0;
+  const shields = stats.Shields || 0;
 
-  const total = healthStat.value + armorStat.value + shieldsStat.value;
-  const healthWidth = (healthStat.value / total) * 100;
-  const armorWidth = (armorStat.value / total) * 100;
-  const shieldsWidth = (shieldsStat.value / total) * 100;
+  const total = health + armor + shields;
+  const healthWidth = (health / total) * 100;
+  const armorWidth = (armor / total) * 100;
+  const shieldsWidth = (shields / total) * 100;
 
   return (
     <div className="stat-bar-container">
@@ -34,15 +34,11 @@ const CombinedHealthBar = ({ stats }) => {
 };
 
 CombinedHealthBar.propTypes = {
-  stats: PropTypes.arrayOf(
-    PropTypes.shape({
-      type: PropTypes.string.isRequired,
-      value: PropTypes.oneOfType([
-        PropTypes.number,
-        PropTypes.string,
-      ]).isRequired,
-    }),
-  ).isRequired,
+  stats: PropTypes.shape({
+    Health: PropTypes.number,
+    Armor: PropTypes.number,
+    Shields: PropTypes.number,
+  }).isRequired,
 };
 
 export default CombinedHealthBar;
