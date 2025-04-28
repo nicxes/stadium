@@ -3,15 +3,16 @@ import PropTypes from 'prop-types';
 import CombinedHealthBar from './CombinedHealthBar';
 import PercentageBar from './PercentageBar';
 
-const StatBar = ({ stat = null, healthStats = null }) => {
+const StatBar = ({ getIcon, stat = null, healthStats = null }) => {
   if (healthStats) {
-    return <CombinedHealthBar stats={healthStats} />;
+    return <CombinedHealthBar getIcon={getIcon} stats={healthStats} />;
   }
 
-  return <PercentageBar stat={stat} />;
+  return <PercentageBar getIcon={getIcon} stat={stat} />;
 };
 
 StatBar.propTypes = {
+  getIcon: PropTypes.func.isRequired,
   stat: PropTypes.shape({
     key: PropTypes.string,
     value: PropTypes.oneOfType([

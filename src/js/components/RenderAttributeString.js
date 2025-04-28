@@ -11,12 +11,9 @@ const RenderAttributeString = ({ getIcon, attr }) => {
     <>
       <img
         className="tooltip-stat"
-        src={getIcon(`stat-${attr.type.toLowerCase()}`)}
+        src={getIcon(`stat_${matchedKey ? attr.type.toLowerCase() : 'special'}`)}
         width="18"
-        alt={wordValue}
-        onError={(e) => {
-          e.target.src = getIcon('stat-special');
-        }}
+        alt={attr.type}
       />
       <p style={{ margin: '0' }}>
         <b>{attr.value}</b> {wordValue}

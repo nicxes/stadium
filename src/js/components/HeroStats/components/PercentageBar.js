@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const PercentageBar = ({ stat }) => {
+const PercentageBar = ({ getIcon, stat }) => {
   const [specialStat, setSpecialStat] = useState(false);
   const handleImageError = (e) => {
-    e.target.src = '/static/icons/stat-special.png';
-    setSpecialStat(true);
+    e.target.src = getIcon('stat_special');
+    setSpecialStat(e.target.src === getIcon('stat_special'));
   };
 
   return (
     <div className="stat-bar-container">
       <img
-        src={`/static/icons/stat-${stat.key.toLowerCase()}.png`}
+        src={getIcon(`stat_${stat.key.toLowerCase()}`)}
         onError={handleImageError}
         height={24}
         alt={stat.key}
@@ -31,6 +31,7 @@ const PercentageBar = ({ stat }) => {
 };
 
 PercentageBar.propTypes = {
+  getIcon: PropTypes.func.isRequired,
   stat: PropTypes.shape({
     key: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,

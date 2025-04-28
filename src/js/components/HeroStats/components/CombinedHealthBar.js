@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CombinedHealthBar = ({ stats }) => {
+const CombinedHealthBar = ({ getIcon, stats }) => {
   const health = stats.Health || 0;
   const armor = stats.Armor || 0;
   const shields = stats.Shields || 0;
@@ -13,7 +13,7 @@ const CombinedHealthBar = ({ stats }) => {
 
   return (
     <div className="stat-bar-container">
-      <img src="/static/icons/stat-hp.png" height={24} alt="HP" />
+      <img src={getIcon('stat_hp')} height={24} alt="HP" />
       <div className="stat-bar combined-bar">
         <div
           className="bar-segment health"
@@ -34,6 +34,7 @@ const CombinedHealthBar = ({ stats }) => {
 };
 
 CombinedHealthBar.propTypes = {
+  getIcon: PropTypes.func.isRequired,
   stats: PropTypes.shape({
     Health: PropTypes.number,
     Armor: PropTypes.number,

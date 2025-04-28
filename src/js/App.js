@@ -28,7 +28,7 @@ const App = () => {
 
   const getIcon = (name) => {
     if (!name || isLoading || error) return '';
-    const cleanName = name.replace(/[^a-zA-Z0-9ÁÉÍÓÚŌ\- ]/g, '').replace(/ /g, '_').toLowerCase();
+    const cleanName = name.replace(/[^a-zA-Z0-9ÁÉÍÓÚŌÜ_ ]/g, '').replace(/ /g, '_').toLowerCase();
     return getAsset(`${cleanName}.png`)?.url;
   };
 
@@ -112,7 +112,7 @@ const App = () => {
             return acc;
           }, {})).map(([type, heroes]) => (
             <React.Fragment key={type}>
-              <img className="hero-button--category" src={`/static/icons/icon-${type}.png`} alt={type} />
+              <img className="hero-button--category" src={`/static/icons/icon_${type}.png`} alt={type} />
               {heroes.map((hero) => (
                 <button
                   type="button"
@@ -214,7 +214,7 @@ const App = () => {
             </section>
             <section className="row mt-3">
               <p className="col text-align-center"><b>Stats</b></p>
-              <HeroStats data={data} heroes={availableHeroes} />
+              <HeroStats data={data} getIcon={getIcon} heroes={availableHeroes} />
             </section>
           </section>
         </div>

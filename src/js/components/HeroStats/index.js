@@ -5,7 +5,7 @@ import StatBar from './components/StatBar';
 
 const HEALTH_TYPES = ['Health', 'Armor', 'Shields'];
 
-const HeroStats = ({ data, heroes }) => {
+const HeroStats = ({ data, getIcon, heroes }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const currentHero = heroes.find((hero) => hero.name === data.character);
   if (!currentHero) return null;
@@ -31,6 +31,7 @@ const HeroStats = ({ data, heroes }) => {
           <StatBar
             key="health-combined"
             healthStats={healthStats}
+            getIcon={getIcon}
           />
         )}
         {Object.entries(otherStats).map(([key, value]) => (
@@ -38,6 +39,7 @@ const HeroStats = ({ data, heroes }) => {
             key={key}
             stat={{ key, value }}
             isPercentage
+            getIcon={getIcon}
           />
         ))}
       </div>
@@ -68,6 +70,7 @@ HeroStats.propTypes = {
       })),
     })).isRequired,
   }).isRequired,
+  getIcon: PropTypes.func.isRequired,
   heroes: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
