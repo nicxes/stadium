@@ -3,8 +3,8 @@ import { compressToBase64, decompressFromBase64 } from '../helpers/base64Helper'
 export const updateUrl = (data) => {
   const minimalData = [
     data.character,
-    data.powers.map((p) => p.name),
-    data.items.map((i) => i.name),
+    data.powers.map((p) => p.id),
+    data.items.map((i) => i.id),
   ];
 
   const encoded = compressToBase64(minimalData);
@@ -17,20 +17,20 @@ export const updateUrl = (data) => {
 
 export const loadBuildFromUrl = (params, armoryData, callback = () => {}) => {
   try {
-    const [character, powers, itemNames] = decompressFromBase64(params);
+    const [character, powers, itemIds] = decompressFromBase64(params);
 
     const findItemWithRarity = (itemId) => Object.values(armoryData.tabs)
       .flatMap((tab) => Object.entries(tab).map(([rarity, items]) => ({ rarity, items })))
       .reduce((found, { rarity, items }) => {
         if (found) return found;
-        const item = items.find((item) => item.name === itemId);
+        const item = items.find((item) => item.id === itemId);
         return item ? { ...item, rarity } : null;
       }, null);
 
     const parsed = {
       character,
       powers: powers.map((pId) => findItemWithRarity(pId)).filter(Boolean),
-      items: itemNames.map((itemName) => findItemWithRarity(itemName)).filter(Boolean),
+      items: itemIds.map((itemId) => findItemWithRarity(itemId)).filter(Boolean),
       buildCost: 0,
     };
 

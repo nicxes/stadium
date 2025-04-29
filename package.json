@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --config webpack.config.dev.js",
     "build": "webpack --config webpack.config.prod.js",
-    "build:assets": "node scripts/create-asset-zip.js"
+    "build:assets": "node scripts/create-asset-zip.js",
+    "build:data": "node scripts/assign-ids.js"
   },
   "author": "Dominik Hauerstein",
   "license": "ISC",

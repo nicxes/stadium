@@ -1,0 +1,5 @@
+[[redirects]]
+    from = "https://animeygocardmaker.netlify.app/*"
+    to = "https://repos.aygocm.co.uk/:splat"
+    status = 301
+    force = true
