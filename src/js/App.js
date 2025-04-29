@@ -10,6 +10,7 @@ import HeroStats from './components/HeroStats';
 import RenderAttributeString from './components/RenderAttributeString';
 import { updateUrl, loadBuildFromUrl, copyUrlToClipboard } from './utils/urlBuilder';
 import { useAssets } from './utils/AssetProvider';
+import Changelog from './components/Changelog';
 
 const ITEM_SLOTS = Array(6).fill(null);
 const POWER_SLOTS = [
@@ -278,7 +279,7 @@ const App = () => {
           {armoryData && <ItemShop data={armoryData} getIcon={getIcon} context={data} contextCallback={handleClick} />}
         </div>
       </div>
-      <h6 style={{ fontStyle: 'italic', margin: '16px 0' }}>Made by Dominik Hauerstein - <a href="https://github.com/legovader09/">GitHub</a></h6>
+      <h6 style={{ fontStyle: 'italic', margin: '16px 0' }}>Made by Dominik Hauerstein - <a href="https://github.com/legovader09/">GitHub</a> - <Changelog /></h6>
       <p className="mb-3 text-small">All graphic assets belong to <b>Blizzard Entertainment</b>. All rights reserved.</p>
     </div>
   );
