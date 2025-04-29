@@ -92,15 +92,17 @@ const loadBuildV2 = (params, armoryData, heroData) => {
     return acc;
   }, {});
 
-  const highestRound = Math.max(...Object.entries(parsedItems)
+  const roundEntries = Object.entries(parsedItems)
     .filter(([, items]) => items.length > 0)
-    .map(([round]) => Number(round)));
+    .map(([round]) => Number(round));
+
+  const highestRound = roundEntries.length > 0 ? Math.max(...roundEntries) : 0;
 
   const parsed = {
     character: characterName,
     powers: powerIds.map((pId) => findItemWithRarity(pId)).filter(Boolean),
     items: parsedItems,
-    round: highestRound,
+    round: highestRound || 0,
     buildCost: 0,
     buildName,
   };
