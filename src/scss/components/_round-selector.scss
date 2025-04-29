@@ -7,16 +7,18 @@
   padding: 12px;
   
   p {
-    margin: 3px 12px 0;
+    margin: 3px 8px 0;
     font-weight: $font-weight-bold;
   }
   
   button {
     background-color: transparent;
-    border: 1px solid $color-white;
-    border-radius: 50%;
-    width: 24px;
+    min-width: 24px;
     height: 24px;
+    
+    &:hover {
+        opacity: 0.8;
+      }
   }
   
   &--options {

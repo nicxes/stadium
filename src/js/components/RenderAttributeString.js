@@ -6,13 +6,9 @@ import { statShorthands } from '../helpers/statDescriptions';
 const RenderAttributeString = ({ getIcon, attr }) => {
   if (attr.type === 'description') return parse(attr.value);
 
-  // Check for health-related types
   const isHealthType = ['Health', 'Armor', 'Shields'].includes(attr.type);
-
-  // Find if type exists in statShorthands
   const matchedKey = Object.entries(statShorthands).find(([, value]) => value === attr.type)?.[0];
 
-  // Determine image source
   let imgSrc;
   if (isHealthType) {
     imgSrc = 'stat_hp';
