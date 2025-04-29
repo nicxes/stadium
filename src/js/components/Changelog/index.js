@@ -31,6 +31,7 @@ const Changelog = () => {
             <h3 className="changelog-title">Changelog</h3>
             <p className="changelog-date">29th April 2025</p>
             <ul className="changelog-list">
+              <li>Added round system, show items per round</li>
               <li>Added reset build button</li>
               <li>Fixed build cost not updating when changing hero, and a hero item is removed</li>
               <li>Added icons for Mei, Reaper, Ana, Mercy, and Moira</li>
