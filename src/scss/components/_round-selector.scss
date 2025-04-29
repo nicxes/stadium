@@ -1,0 +1,36 @@
+.round-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 18px 0 4px;
+  border: 1px solid rgba($color-white, .2);
+  padding: 12px;
+  
+  p {
+    margin: 3px 12px 0;
+    font-weight: $font-weight-bold;
+  }
+  
+  button {
+    background-color: transparent;
+    border: 1px solid $color-white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+  }
+  
+  &--options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .toggle-label {
+      font-size: .8rem;
+      color: $color-white;
+    }
+    
+    input {
+      margin-right: 8px;
+    }
+  }
+}

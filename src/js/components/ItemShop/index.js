@@ -18,15 +18,18 @@ const ItemShop = ({
       <div className="container">
         <div className="row">
           {items.map((item) => {
-            const { character, items } = context;
+            const { character, items, round } = context;
             if (item.character && item.character !== character) return null;
+
+            const currentRoundItems = items[round] || [];
+
             return (
               <div key={item.name} className={`col-4 buyable-item item-${rarity}`}>
                 <Item
                   item={item}
                   src={getIcon(item.name) || ''}
                   onClick={() => contextCallback(item, 'items', rarity)}
-                  selected={items.find((i) => i.name === item.name)}
+                  selected={currentRoundItems.find((i) => i.name === item.name)}
                   isHeroItem={item.character !== undefined}
                 />
                 <div className="tooltip-container bordered bordered-side">
@@ -107,32 +110,31 @@ const ItemShop = ({
 ItemShop.propTypes = {
   data: PropTypes.shape({
     tabs: PropTypes.objectOf(
-      PropTypes.objectOf(
-        PropTypes.arrayOf(
-          PropTypes.shape({
-            name: PropTypes.string.isRequired,
-            attributes: PropTypes.arrayOf(
-              PropTypes.shape({
-                type: PropTypes.string.isRequired,
-                value: PropTypes.string.isRequired,
-              }),
-            ).isRequired,
-            cost: PropTypes.number.isRequired,
-            character: PropTypes.string,
-          }),
-        ),
-      ),
+      PropTypes.objectOf(PropTypes.arrayOf(PropTypes.shape({
+        name: PropTypes.string,
+        cost: PropTypes.number,
+        attributes: PropTypes.arrayOf(PropTypes.shape({
+          type: PropTypes.string.isRequired,
+        })),
+        character: PropTypes.string,
+      }))),
     ).isRequired,
   }).isRequired,
   getIcon: PropTypes.func.isRequired,
   context: PropTypes.shape({
-    character: PropTypes.string.isRequired,
-    items: PropTypes.arrayOf(PropTypes.shape({
-      name: PropTypes.string.isRequired,
-    })).isRequired,
+    character: PropTypes.string,
+    items: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string,
+      cost: PropTypes.number,
+      attributes: PropTypes.arrayOf(PropTypes.shape({
+        type: PropTypes.string,
+      })),
+    }))),
     powers: PropTypes.arrayOf(PropTypes.shape({
-      name: PropTypes.string.isRequired,
-    })).isRequired,
+      name: PropTypes.string,
+      description: PropTypes.string,
+    })),
+    round: PropTypes.number.isRequired,
   }).isRequired,
   contextCallback: PropTypes.func.isRequired,
 };

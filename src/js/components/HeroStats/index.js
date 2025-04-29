@@ -9,7 +9,9 @@ const HeroStats = ({ data, getIcon, heroes }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const currentHero = heroes.find((hero) => hero.name === data.character);
   if (!currentHero) return null;
-  const stats = calculateStats(data.items, currentHero);
+
+  const currentRoundItems = data.items[data.round] || [];
+  const stats = calculateStats(currentRoundItems, currentHero);
   const healthStats = Object.entries(stats)
     .filter(([key]) => HEALTH_TYPES.includes(key))
     .reduce((acc, [key, value]) => ({
@@ -62,13 +64,14 @@ export default HeroStats;
 HeroStats.propTypes = {
   data: PropTypes.shape({
     character: PropTypes.string.isRequired,
-    items: PropTypes.arrayOf(PropTypes.shape({
-      name: PropTypes.string.isRequired,
+    round: PropTypes.number.isRequired,
+    items: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string,
+      cost: PropTypes.number,
       attributes: PropTypes.arrayOf(PropTypes.shape({
         type: PropTypes.string,
-        value: PropTypes.number,
       })),
-    })).isRequired,
+    }))),
   }).isRequired,
   getIcon: PropTypes.func.isRequired,
   heroes: PropTypes.arrayOf(
