@@ -112,7 +112,7 @@ const App = () => {
     if (searchParams.has('b')) {
       loadBuildFromUrl(searchParams, armoryData, availableHeroes, (data) => setData(data));
     }
-  }, [armoryData]);
+  }, [armoryData, availableHeroes]);
 
   return armoryData && availableHeroes && (
     <div className="container">
