@@ -194,7 +194,7 @@ export const generateRandomBuildString = (armoryData, heroData, currentHero) => 
 
   const roundsItems = [];
   const BASE_BUDGET = 3500;
-  const INCREASE_PER_ROUND = 5500;
+  const INCREASE_PER_ROUND = 6000;
 
   for (let round = 0; round < 7; round++) {
     const roundBudget = BASE_BUDGET + (round * INCREASE_PER_ROUND);
