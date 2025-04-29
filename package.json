@@ -1,5 +1,5 @@
 {
-  "name": "aygocm-react",
+  "name": "ow-stadium-build-planner",
   "version": "0.1.0",
   "description": "Overwatch 2 Stadium Builder",
   "main": "./src/js/index.js",
