@@ -21,16 +21,27 @@ const POWER_SLOTS = [
 
 const App = () => {
   const { getAsset, isLoading, error } = useAssets();
+  const searchParams = new URLSearchParams(window.location.search);
 
   const [data, setData] = useState(initialValues);
   const [armoryData, setArmoryData] = useState(null);
   const [availableHeroes, setAvailableHeroes] = useState([]);
   const [buildCopied, setBuildCopied] = useState(false);
+  const [heroesVisible, setHeroesVisible] = useState(!searchParams.has('b'));
 
   const getIcon = (name) => {
     if (!name || isLoading || error) return '';
     const cleanName = name.replace(/[^a-zA-Z0-9ÁÉÍÓÚŌÜ_ ]/g, '').replace(/ /g, '_').toLowerCase();
     return getAsset(`${cleanName}.png`)?.url;
+  };
+
+  const updateUrlWithData = (data, heroId = null) => {
+    let currentHeroId = heroId;
+    if (!heroId) {
+      currentHeroId = availableHeroes.find((hero) => hero.name === data.character).id;
+    }
+
+    updateUrl(data, currentHeroId);
   };
 
   const handleClick = (item, type, rarity = '') => {
@@ -43,8 +54,7 @@ const App = () => {
       if (type === 'items') newData.buildCost -= item.cost;
       currentArray.splice(index, 1);
       setData(newData);
-      const currentHeroId = availableHeroes.find((hero) => hero.name === data.character).id;
-      updateUrl(newData, currentHeroId);
+      updateUrlWithData(newData);
       return;
     }
 
@@ -58,9 +68,7 @@ const App = () => {
     newData[type] = [...currentArray, newItem];
     if (type === 'items') newData.buildCost += item.cost;
     setData(newData);
-
-    const currentHeroId = availableHeroes.find((hero) => hero.name === data.character).id;
-    updateUrl(newData, currentHeroId);
+    updateUrlWithData(newData);
   };
 
   const handleHeroChange = (hero) => {
@@ -72,7 +80,14 @@ const App = () => {
       return item.character === hero.name;
     });
     setData(newData);
-    updateUrl(newData, hero.id);
+    updateUrlWithData(newData, hero.id);
+  };
+
+  const handleBuildNameChange = (e) => {
+    const sanitizedValue = e.target.value.replace(/[^a-zA-Z0-9\-_.!#:" ]/g, '');
+    const newData = { ...data, buildName: sanitizedValue };
+    setData(newData);
+    updateUrlWithData(newData);
   };
 
   useEffect(() => {
@@ -107,23 +122,32 @@ const App = () => {
           <p className="mt-0 mb-3">
             This is a tool to help you plan your Overwatch 2 Stadium build. Select your heroes, items, and powers, and it will calculate the build cost.
           </p>
-          <button
-            type="button"
-            className="btn btn--primary"
-            onClick={() => {
-              copyUrlToClipboard();
-              setBuildCopied(true);
-            }}
-          >
-            Share Build
-          </button>
-          <span className={`build-copied ${buildCopied ? 'show' : ''}`}>
+          <section className="build-section--btn-wrapper">
+            <button
+              type="button"
+              className="btn btn--primary"
+              onClick={() => {
+                copyUrlToClipboard();
+                setBuildCopied(true);
+              }}
+            >
+              Share Build
+            </button>
+            <button
+              type="button"
+              className="btn btn--secondary"
+              onClick={() => { setHeroesVisible(!heroesVisible); }}
+            >
+              {heroesVisible ? 'Hide Heroes' : 'Show Heroes'}
+            </button>
+          </section>
+          <p className={`build-copied ${buildCopied ? 'show' : ''}`}>
             ✔ Build copied to clipboard!
-          </span>
+          </p>
         </div>
       </div>
-      <div className="row">
-        <section className="col-12 mt-2 mb-3 hero-button--wrapper">
+      <div className={`row hero-button--wrapper ${heroesVisible ? 'show' : ''}`}>
+        <section className="col-12 mt-2 mb-3">
           {Object.entries(availableHeroes.reduce((acc, hero) => {
             if (!acc[hero.type]) {
               acc[hero.type] = [];
@@ -159,12 +183,24 @@ const App = () => {
                     src={getIcon(hero.safe_name)}
                     alt={data.character}
                   />
-                  <span style={{ marginLeft: '16px' }}>{data.character}</span>
+                  <section>
+                    <input
+                      type="text"
+                      id="buildName"
+                      name="buildName"
+                      className="hero-build-title"
+                      placeholder="Untitled build"
+                      value={data.buildName}
+                      onChange={handleBuildNameChange}
+                      maxLength={50}
+                    />
+                    <p className="hero-build-name">{data.character}</p>
+                  </section>
                 </>
               ) : null;
             })()}
           </p>
-          <p className="build-section--title">
+          <p className="build-section--cost">
             Build Cost: <img className="currency" src={getIcon('currency')} alt="Currency" /><span>{formatCurrency(data.buildCost)}</span>
           </p>
           <section className="container">

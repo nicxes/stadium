@@ -24,7 +24,7 @@ const loadBuildV0 = (params, armoryData) => {
 };
 
 const loadBuildV1 = (params, armoryData, heroData) => {
-  const [heroId, powers, items] = decodeURIComponent(params).split('-');
+  const [heroId, powers, items, buildName] = decodeURIComponent(params).split(';');
 
   const powerIds = powers.split('.').map((id) => `p${id}`);
   const itemIds = items.split('.').map((id) => `i${id}`);
@@ -45,6 +45,7 @@ const loadBuildV1 = (params, armoryData, heroData) => {
     powers: powerIds.map((pId) => findItemWithRarity(pId)).filter(Boolean),
     items: itemIds.map((itemId) => findItemWithRarity(itemId)).filter(Boolean),
     buildCost: 0,
+    buildName,
   };
 
   parsed.buildCost = parsed.items.reduce((total, item) => total + (item?.cost || 0), 0);
@@ -52,11 +53,15 @@ const loadBuildV1 = (params, armoryData, heroData) => {
 };
 
 export const updateUrl = (data, heroId) => {
-  const minimal = [
+  let minimal = [
     heroId,
     data.powers.map((p) => Number(p.id.replace('p', ''))).join('.'),
     data.items.map((i) => i.id.replace('i', '')).join('.'),
-  ].join('-');
+  ].join(';');
+
+  if (data.buildName) {
+    minimal += `;${encodeURIComponent(data.buildName)}`;
+  }
 
   window.history.replaceState(
     null,

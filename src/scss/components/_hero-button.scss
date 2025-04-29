@@ -7,8 +7,8 @@
     width: 54px;
     height: 54px;
     object-fit: cover;
-    border: 1px solid rgba($color-white, 0.5);
     transition: all 0.2s ease-in-out;
+    border: 1px solid transparent;
   }
   
   @include media-breakpoint-between(md, xl) {
@@ -54,7 +54,6 @@
   &:hover {
     img {
       transform: scale(1.1);
-      border: 1px solid rgba($color-white, 1);
     }
   }
   
@@ -62,6 +61,18 @@
     img {
       transform: scale(1.1);
       border: 1px solid rgba($color-white, 1);
+    }
+  }
+  
+  &--wrapper {
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    
+    &.show {
+      opacity: 1;
+      max-height: 500px;
     }
   }
 }
