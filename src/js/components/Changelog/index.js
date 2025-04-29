@@ -38,6 +38,9 @@ const Changelog = () => {
               <li>Added build name text box</li>
               <li>Added button to toggle hiding characters (hides by default if viewing a shared build)</li>
               <li>Restructured share URL to be shorter and more concise. Old builds are still supported!</li>
+              <li>Removed borders from hero icons unless active hero</li>
+              <li>Minified hero data to save space on network requests</li>
+              <li>Added IDs to heros for url builder</li>
             </ul>
           </div>
         </div>
