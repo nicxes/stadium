@@ -43,7 +43,8 @@ const App = () => {
       if (type === 'items') newData.buildCost -= item.cost;
       currentArray.splice(index, 1);
       setData(newData);
-      updateUrl(newData);
+      const currentHeroId = availableHeroes.find((hero) => hero.name === data.character).id;
+      updateUrl(newData, currentHeroId);
       return;
     }
 
@@ -57,7 +58,9 @@ const App = () => {
     newData[type] = [...currentArray, newItem];
     if (type === 'items') newData.buildCost += item.cost;
     setData(newData);
-    updateUrl(newData);
+
+    const currentHeroId = availableHeroes.find((hero) => hero.name === data.character).id;
+    updateUrl(newData, currentHeroId);
   };
 
   const handleHeroChange = (hero) => {
@@ -69,7 +72,7 @@ const App = () => {
       return item.character === hero.name;
     });
     setData(newData);
-    updateUrl(newData);
+    updateUrl(newData, hero.id);
   };
 
   useEffect(() => {
@@ -89,10 +92,11 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    if (!armoryData) return;
+    if (!armoryData || !availableHeroes) return;
     const searchParams = new URLSearchParams(window.location.search);
-    const encoded = searchParams.get('b');
-    if (encoded) loadBuildFromUrl(encoded, armoryData, (data) => setData(data));
+    if (searchParams.has('b')) {
+      loadBuildFromUrl(searchParams, armoryData, availableHeroes, (data) => setData(data));
+    }
   }, [armoryData]);
 
   return armoryData && availableHeroes && (
