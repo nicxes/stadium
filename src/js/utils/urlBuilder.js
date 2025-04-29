@@ -179,6 +179,72 @@ export const copyUrlToClipboard = () => {
     });
 };
 
+export const generateRandomBuildString = (armoryData, heroData, currentHero) => {
+  if (!armoryData || !heroData) {
+    console.error('Missing or invalid armoryData or heroData');
+    return null;
+  }
+
+  const isItemValidForHero = (item) => {
+    if (!item?.character) return true;
+    return item.character === currentHero;
+  };
+
+  const roundsItems = [];
+  const BASE_BUDGET = 3500;
+  const INCREASE_PER_ROUND = 5500;
+
+  for (let round = 0; round < 7; round++) {
+    const roundBudget = BASE_BUDGET + (round * INCREASE_PER_ROUND);
+    const roundItems = [];
+    let currentCost = 0;
+
+    const validItems = Object.values(armoryData.tabs)
+      .flatMap((tab) => Object.entries(tab)
+        .flatMap(([rarity, items]) => items.map((item) => ({ ...item, rarity }))))
+      .filter((item) => item.cost
+        && isItemValidForHero(item)
+        && item.cost <= (roundBudget - currentCost))
+      .sort((a, b) => a.cost - b.cost);
+
+    while (currentCost < roundBudget && validItems.length > 0) {
+      const remainingBudget = roundBudget - currentCost;
+      const possibleItems = validItems.filter((item) => item.cost <= remainingBudget);
+
+      if (possibleItems.length === 0) break;
+
+      const selectedItem = possibleItems[Math.floor(Math.random() * possibleItems.length)];
+      if (!selectedItem) break;
+
+      roundItems.push(selectedItem.id.replace('i', ''));
+      currentCost += selectedItem.cost;
+
+      const index = validItems.indexOf(selectedItem);
+      if (index > -1) validItems.splice(index, 1);
+    }
+
+    roundsItems.push(roundItems.length > 0 ? roundItems.join('.') : 'e');
+  }
+
+  const heroPowers = armoryData.tabs.powers[currentHero] || [];
+
+  const powers = Array.from({ length: 4 }, () => {
+    const randomPowerIndex = Math.floor(Math.random() * heroPowers.length);
+    return heroPowers[randomPowerIndex].id.replace('p', '');
+  });
+
+  const heroId = heroData.find((hero) => hero.name === currentHero).id;
+
+  const buildString = [
+    heroId,
+    powers.join('.'),
+    roundsItems.join('_'),
+    `Random ${currentHero} Build`,
+  ].join(';');
+
+  return loadBuildV2(encodeURIComponent(buildString), armoryData, heroData);
+};
+
 /// params to test:
 /// V0: ?b=eJyLVvI5vCs5M19JJ1qpwNDMXEkHRFlAKEswZW6gFAuUzSxPNgLyM8uLDMFUMpQygQgaQygTpdhYANcxFvQ=
 /// V1: ?v=1&b=2%3B30.31.32.29%3Bse17.sr16.sr14.ae15.ar6.ar5%3BBuild%201
