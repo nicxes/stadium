@@ -1,11 +1,13 @@
-export const decodeBase64ToString = (value) => {
-  if (!value) return '';
-  const base64String = decodeURIComponent(value);
-  return atob(base64String);
+import pako from 'pako';
+
+export const compressToBase64 = (data) => {
+  const stringified = JSON.stringify(data);
+  const compressed = pako.deflate(stringified);
+  return btoa(String.fromCharCode.apply(null, compressed));
 };
 
-export const encodeStringToBase64 = (value) => {
-  if (!value) return '';
-  const rawString = btoa(value);
-  return encodeURIComponent(rawString);
+export const decompressFromBase64 = (base64String) => {
+  const compressed = Uint8Array.from(atob(base64String), (c) => c.charCodeAt(0));
+  const decompressed = pako.inflate(compressed);
+  return JSON.parse(new TextDecoder().decode(decompressed));
 };

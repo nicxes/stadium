@@ -1,4 +1,4 @@
-import { decodeBase64ToString, encodeStringToBase64 } from '../helpers/base64Helper';
+import { compressToBase64, decompressFromBase64 } from '../helpers/base64Helper';
 
 export const updateUrl = (data) => {
   const minimalData = [
@@ -7,7 +7,7 @@ export const updateUrl = (data) => {
     data.items.map((i) => i.name),
   ];
 
-  const encoded = encodeStringToBase64(JSON.stringify(minimalData));
+  const encoded = compressToBase64(minimalData);
   window.history.replaceState(
     null,
     '',
@@ -17,7 +17,7 @@ export const updateUrl = (data) => {
 
 export const loadBuildFromUrl = (params, armoryData, callback = () => {}) => {
   try {
-    const [character, powers, itemNames] = JSON.parse(decodeBase64ToString(params));
+    const [character, powers, itemNames] = decompressFromBase64(params);
 
     const findItemWithRarity = (itemId) => Object.values(armoryData.tabs)
       .flatMap((tab) => Object.entries(tab).map(([rarity, items]) => ({ rarity, items })))
@@ -35,7 +35,6 @@ export const loadBuildFromUrl = (params, armoryData, callback = () => {}) => {
     };
 
     parsed.buildCost = parsed.items.reduce((total, item) => total + (item?.cost || 0), 0);
-
     callback(parsed);
   } catch (error) {
     console.error('Failed to decode build data:', error);
@@ -48,7 +47,6 @@ export const copyUrlToClipboard = () => {
   navigator.clipboard.writeText(currentUrl)
     .then(() => {
       console.log('URL copied to clipboard');
-      // You could add some user feedback here, like a toast notification
     })
     .catch((err) => {
       console.error('Failed to copy URL:', err);
