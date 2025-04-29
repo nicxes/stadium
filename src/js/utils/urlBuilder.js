@@ -242,7 +242,6 @@ export const generateRandomBuildString = (armoryData, heroData, currentHero) => 
     `Random ${currentHero} Build`,
   ].join(';');
 
-  console.log('buildString', buildString);
   return loadBuildV2(encodeURIComponent(buildString), armoryData, heroData);
 };
 
