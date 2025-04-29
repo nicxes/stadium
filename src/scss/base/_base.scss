@@ -34,3 +34,10 @@ input[type="radio"] {
     opacity: .5;
   }
 }
+
+input {
+  background-color: $color-primary;
+  color: $color-text;
+  border: 1px solid rgba($color-text, .2);
+  padding: 4px 8px;
+}

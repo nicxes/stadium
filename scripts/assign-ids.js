@@ -1,27 +1,25 @@
 const fs = require('fs');
+const armoryData = require('../public/data-original.json');
+const heroData = require('../public/heroes-original.json');
 
 function assignIds(data) {
-  // Initialize counters for each combination of tab and rarity
   const counters = {};
   let powerCounter = 0;
   const result = JSON.parse(JSON.stringify(data));
 
-  // Process all tabs except powers first
   for (const [tabName, tabContent] of Object.entries(result.tabs)) {
     if (tabName === 'powers') continue;
 
-    // Process each rarity level
     for (const [rarity, items] of Object.entries(tabContent)) {
       if (Array.isArray(items)) {
-        // Create counter key if it doesn't exist
         const counterKey = `${tabName}${rarity}`;
         if (!counters[counterKey]) {
           counters[counterKey] = 0;
         }
 
         items.forEach((item) => {
-          const tabPrefix = tabName.charAt(0).toLowerCase(); // first char of tab
-          const rarityPrefix = rarity.charAt(0).toLowerCase(); // first char of rarity
+          const tabPrefix = tabName.charAt(0).toLowerCase();
+          const rarityPrefix = rarity.charAt(0).toLowerCase();
           item.id = `i${tabPrefix}${rarityPrefix}${counters[counterKey]}`;
           counters[counterKey]++;
         });
@@ -29,7 +27,6 @@ function assignIds(data) {
     }
   }
 
-  // Process powers tab separately
   if (result.tabs.powers) {
     for (const [character, powers] of Object.entries(result.tabs.powers)) {
       if (Array.isArray(powers)) {
@@ -44,10 +41,19 @@ function assignIds(data) {
   return result;
 }
 
-const inputData = require('../public/data-original.json');
+function assignHeroIds(data) {
+  const counters = {};
+  let heroCounter = 0;
+  const result = JSON.parse(JSON.stringify(data));
+  for (const [hero, heroData] of Object.entries(result.heroes)) {
+    heroData.id = heroCounter;
+    heroCounter++;
+  }
+  return result;
+}
 
-const processedData = assignIds(inputData);
+fs.writeFileSync('public/data.json', JSON.stringify(assignIds(armoryData)));
+console.log('Armory Data has been saved to data.json');
 
-// Save the processed data to data.json
-fs.writeFileSync('public/data.json', JSON.stringify(processedData));
-console.log('Data has been saved to data.json');
+fs.writeFileSync('public/heroes.json', JSON.stringify(assignHeroIds(heroData)));
+console.log('Armory Data has been saved to data.json');

@@ -1,40 +1,87 @@
-import { compressToBase64, decompressFromBase64 } from '../helpers/base64Helper';
+import { decompressFromBase64 } from '../helpers/base64Helper';
 
-export const updateUrl = (data) => {
-  const minimalData = [
-    data.character,
-    data.powers.map((p) => p.id),
-    data.items.map((i) => i.id),
-  ];
+const loadBuildV0 = (params, armoryData) => {
+  const [character, powers, itemIds] = decompressFromBase64(params);
 
-  const encoded = compressToBase64(minimalData);
+  const findItemWithRarity = (itemId) => Object.values(armoryData.tabs)
+    .flatMap((tab) => Object.entries(tab).map(([rarity, items]) => ({ rarity, items })))
+    .reduce((found, { rarity, items }) => {
+      if (found) return found;
+      const item = items.find((item) => item.id === itemId);
+      return item ? { ...item, rarity } : null;
+    }, null);
+
+  const parsed = {
+    character,
+    powers: powers.map((pId) => findItemWithRarity(pId)).filter(Boolean),
+    items: itemIds.map((itemId) => findItemWithRarity(itemId)).filter(Boolean),
+    buildCost: 0,
+  };
+
+  parsed.buildCost = parsed.items.reduce((total, item) => total + (item?.cost || 0), 0);
+
+  return parsed;
+};
+
+const loadBuildV1 = (params, armoryData, heroData) => {
+  const [heroId, powers, items, buildName] = decodeURIComponent(params).split(';');
+
+  const powerIds = powers.split('.').map((id) => `p${id}`);
+  const itemIds = items.split('.').map((id) => `i${id}`);
+
+  const findItemWithRarity = (itemId) => Object.values(armoryData.tabs)
+    .flatMap((tab) => Object.entries(tab).map(([rarity, items]) => ({ rarity, items })))
+    .reduce((found, { rarity, items }) => {
+      if (found) return found;
+      const item = items.find((item) => item.id === itemId);
+      return item ? { ...item, rarity } : null;
+    }, null);
+
+  const hero = heroData.find((h) => h.id === Number(heroId));
+  const characterName = hero?.name || 'D.VA';
+
+  const parsed = {
+    character: characterName,
+    powers: powerIds.map((pId) => findItemWithRarity(pId)).filter(Boolean),
+    items: itemIds.map((itemId) => findItemWithRarity(itemId)).filter(Boolean),
+    buildCost: 0,
+    buildName,
+  };
+
+  parsed.buildCost = parsed.items.reduce((total, item) => total + (item?.cost || 0), 0);
+  return parsed;
+};
+
+export const updateUrl = (data, heroId) => {
+  let minimal = [
+    heroId,
+    data.powers.map((p) => Number(p.id.replace('p', ''))).join('.'),
+    data.items.map((i) => i.id.replace('i', '')).join('.'),
+  ].join(';');
+
+  if (data.buildName) {
+    minimal += `;${encodeURIComponent(data.buildName)}`;
+  }
+
   window.history.replaceState(
     null,
     '',
-    `${window.location.pathname}?b=${encoded}`,
+    `${window.location.pathname}?v=1&b=${encodeURIComponent(minimal)}`,
   );
 };
 
-export const loadBuildFromUrl = (params, armoryData, callback = () => {}) => {
+export const loadBuildFromUrl = (params, armoryData, heroData, callback = () => {}) => {
   try {
-    const [character, powers, itemIds] = decompressFromBase64(params);
+    let parsed = {};
+    const version = params.get('v');
+    const encodedData = params.get('b');
 
-    const findItemWithRarity = (itemId) => Object.values(armoryData.tabs)
-      .flatMap((tab) => Object.entries(tab).map(([rarity, items]) => ({ rarity, items })))
-      .reduce((found, { rarity, items }) => {
-        if (found) return found;
-        const item = items.find((item) => item.id === itemId);
-        return item ? { ...item, rarity } : null;
-      }, null);
+    if (!version) {
+      parsed = loadBuildV0(encodedData, armoryData);
+    } else if (version === '1') {
+      parsed = loadBuildV1(encodedData, armoryData, heroData);
+    }
 
-    const parsed = {
-      character,
-      powers: powers.map((pId) => findItemWithRarity(pId)).filter(Boolean),
-      items: itemIds.map((itemId) => findItemWithRarity(itemId)).filter(Boolean),
-      buildCost: 0,
-    };
-
-    parsed.buildCost = parsed.items.reduce((total, item) => total + (item?.cost || 0), 0);
     callback(parsed);
   } catch (error) {
     console.error('Failed to decode build data:', error);

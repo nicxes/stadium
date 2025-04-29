@@ -11,6 +11,10 @@
     object-fit: cover;
   }
   
+  &:hover {
+    transform: scale(1.05);
+  }
+  
   &.no-img {
     outline: 2px solid rgba($color-warning, 1) !important;
   }
@@ -39,7 +43,7 @@
     border: 1px solid rgba($color-black, 0.3);
     
     &:hover {
-      outline: 3px solid $color-common;
+      outline: 1px solid $color-common;
     }
   }
   
@@ -50,7 +54,7 @@
     border: 1px solid rgba($color-black, 0.3);
 
     &:hover {
-      outline: 3px solid $color-rare;
+      outline: 1px solid $color-rare;
     }
   }
   
@@ -61,7 +65,7 @@
     border: 1px solid rgba($color-black, 0.3);
 
     &:hover {
-      outline: 3px solid $color-epic;
+      outline: 1px solid $color-epic;
     }
   }
 }

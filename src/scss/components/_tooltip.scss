@@ -28,10 +28,10 @@
   }
   
   .tooltip-content {
-    margin-top: 8px;
     margin-left: -16px;
     
     &--title {
+      margin-top: 2px;
       color: $color-white;
       font-size: 1.125rem;
       font-weight: bold;
@@ -61,6 +61,18 @@
   
   p {
     margin: .5rem 0 0;
+  }
+
+  &--fixed {
+    position: fixed;
+    pointer-events: none;
+    transform: translateZ(0);
+    top: auto;
+    left: auto;
+
+    &.tooltip-container:not(.buyable-item *) {
+      transform: translateZ(0);
+    }
   }
 }
 
