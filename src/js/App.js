@@ -30,7 +30,6 @@ const App = () => {
   const searchParams = new URLSearchParams(window.location.search);
 
   const [data, setData] = useState(initialValues);
-  // eslint-disable-next-line no-unused-vars
   const [options, setOptions] = useState(initialOptions);
 
   const [armoryData, setArmoryData] = useState(null);
@@ -117,9 +116,7 @@ const App = () => {
         return item.character === hero.name;
       });
 
-      if (parseInt(round, 10) <= highestNonEmptyRound) {
-        filteredItems[round] = filteredRoundItems;
-      }
+      filteredItems[round] = filteredRoundItems;
 
       if (filteredRoundItems.length > 0) {
         highestNonEmptyRound = Math.max(highestNonEmptyRound, parseInt(round, 10));
@@ -127,7 +124,7 @@ const App = () => {
     });
 
     newData.items = filteredItems;
-    newData.currentRound = highestNonEmptyRound;
+    newData.round = highestNonEmptyRound;
     newData.buildCost = calculateBuildCost(filteredItems, highestNonEmptyRound);
 
     setData(newData);
