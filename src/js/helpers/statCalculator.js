@@ -1,5 +1,5 @@
 /* eslint-disable */
-import {statDescriptions} from './statDescriptions';
+import { statShorthands } from './statDescriptions';
 
 const HEALTH_CONVERT_ITEMS = ['VISHKAR CONDENSOR', 'VITAL-E-TEE', 'TRANSFERENCE DELTA'];
 const PERCENTAGE_STAT_ITEMS = ['MEKA Z-SERIES', 'RÜSTUNG VON WILHELM'];
@@ -17,7 +17,7 @@ const createStatsCollection = (heroData) => {
   });
 
   heroData.attributes.forEach(attr => {
-    const transformedKey = statDescriptions[attr.type] || attr.type;
+    const transformedKey = statShorthands[attr.type] || attr.type;
     const value = attr.value.toString();
     if (!FLAT_STATS.includes(transformedKey) && value.endsWith('%')) {
       stats[transformedKey] = parseInt(value.replace('%', ''), 10);

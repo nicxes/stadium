@@ -1,17 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import parse from 'html-react-parser';
-import { statDescriptions } from '../helpers/statDescriptions';
+import { statShorthands } from '../helpers/statDescriptions';
 
 const RenderAttributeString = ({ getIcon, attr }) => {
   if (attr.type === 'description') return parse(attr.value);
-  const matchedKey = Object.entries(statDescriptions).find((entry) => entry[1] === attr.type)?.[0];
+
+  // Check for health-related types
+  const isHealthType = ['Health', 'Armor', 'Shields'].includes(attr.type);
+
+  // Find if type exists in statShorthands
+  const matchedKey = Object.entries(statShorthands).find(([, value]) => value === attr.type)?.[0];
+
+  // Determine image source
+  let imgSrc;
+  if (isHealthType) {
+    imgSrc = 'stat_hp';
+  } else if (matchedKey) {
+    imgSrc = `stat_${attr.type.toLowerCase()}`;
+  } else {
+    imgSrc = 'stat_special';
+  }
+
   const wordValue = matchedKey ?? attr.type;
+
   return (
     <>
       <img
         className="tooltip-stat"
-        src={getIcon(`stat_${matchedKey ? attr.type.toLowerCase() : 'special'}`)}
+        src={getIcon(imgSrc)}
         width="18"
         alt={attr.type}
       />
