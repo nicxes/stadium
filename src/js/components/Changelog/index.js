@@ -31,6 +31,7 @@ const Changelog = () => {
             <h3 className="changelog-title">Changelog</h3>
             <p className="changelog-date">29th April 2025</p>
             <ul className="changelog-list">
+              <li>Added Ashe, Cassidy, Genji, and remaining Mei and Reaper item icons</li>
               <li>Added &apos;Extremely Random Build&apos; button</li>
               <li>Added round system, show items per round</li>
               <li>Added reset build button</li>
