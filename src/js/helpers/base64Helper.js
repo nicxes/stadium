@@ -7,7 +7,21 @@ export const compressToBase64 = (data) => {
 };
 
 export const decompressFromBase64 = (base64String) => {
-  const compressed = Uint8Array.from(atob(base64String), (c) => c.charCodeAt(0));
-  const decompressed = pako.inflate(compressed);
-  return JSON.parse(new TextDecoder().decode(decompressed));
+  try {
+    let standardBase64 = base64String
+      .replace(/\s/g, '+')
+      .replace(/-/g, '+')
+      .replace(/_/g, '/');
+
+    while (standardBase64.length % 4) {
+      standardBase64 += '=';
+    }
+
+    const compressed = Uint8Array.from(atob(standardBase64), (c) => c.charCodeAt(0));
+    const decompressed = pako.inflate(compressed);
+    return JSON.parse(new TextDecoder().decode(decompressed));
+  } catch (error) {
+    console.error('Decompression error:', error);
+    throw error;
+  }
 };
