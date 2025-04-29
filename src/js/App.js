@@ -8,10 +8,15 @@ import ItemShop from './components/ItemShop';
 import formatCurrency from './helpers/formatCurrency';
 import HeroStats from './components/HeroStats';
 import RenderAttributeString from './components/RenderAttributeString';
-import { updateUrl, loadBuildFromUrl, copyUrlToClipboard } from './utils/urlBuilder';
+import { copyUrlToClipboard, loadBuildFromUrl, updateUrl } from './utils/urlBuilder';
 import { useAssets } from './utils/AssetProvider';
 import Changelog from './components/Changelog';
+import RoundSelector from './components/RoundSelector';
+import { calculateBuildCost } from './helpers/buildCostCalculator';
+import { initialOptions } from './initialOptions';
 
+const MIN_ROUNDS = 0;
+const MAX_ROUNDS = 6;
 const ITEM_SLOTS = Array(6).fill(null);
 const POWER_SLOTS = [
   { round: 'Round 1' },
@@ -25,6 +30,8 @@ const App = () => {
   const searchParams = new URLSearchParams(window.location.search);
 
   const [data, setData] = useState(initialValues);
+  const [options, setOptions] = useState(initialOptions);
+
   const [armoryData, setArmoryData] = useState(null);
   const [availableHeroes, setAvailableHeroes] = useState([]);
   const [buildCopied, setBuildCopied] = useState(false);
@@ -48,40 +55,78 @@ const App = () => {
   const handleClick = (item, type, rarity = '') => {
     if (!item) return;
     const newData = { ...data };
-    const currentArray = newData[type];
-    const index = currentArray.findIndex((i) => i?.name === item.name);
 
-    if (index > -1) {
-      if (type === 'items') newData.buildCost -= item.cost;
-      currentArray.splice(index, 1);
+    if (type === 'powers') {
+      const currentArray = newData.powers;
+      const index = currentArray.findIndex((i) => i?.name === item.name);
+
+      if (index > -1) {
+        currentArray.splice(index, 1);
+        setData(newData);
+        updateUrlWithData(newData);
+        return;
+      }
+
+      if (currentArray.length >= 4) return;
+      newData.powers = [...currentArray, item];
       setData(newData);
       updateUrlWithData(newData);
       return;
     }
 
-    if (type === 'powers' && currentArray.length >= 4) return;
-    if (type === 'items' && currentArray.length >= 6) return;
+    if (type === 'items') {
+      if (!newData.items[newData.round]) {
+        newData.items[newData.round] = [];
+      }
 
-    const newItem = type === 'items'
-      ? { ...item, rarity }
-      : item;
+      const currentArray = [...newData.items[newData.round]];
+      const index = currentArray.findIndex((i) => i?.name === item.name);
 
-    newData[type] = [...currentArray, newItem];
-    if (type === 'items') newData.buildCost += item.cost;
-    setData(newData);
-    updateUrlWithData(newData);
+      if (index > -1) {
+        currentArray.splice(index, 1);
+        newData.items[newData.round] = currentArray;
+        newData.buildCost = calculateBuildCost(newData.items, newData.round);
+        setData(newData);
+        updateUrlWithData(newData);
+        return;
+      }
+
+      if (currentArray.length >= 6) return;
+
+      const newItem = { ...item, rarity };
+      newData.items[newData.round] = [...currentArray, newItem];
+      newData.buildCost = calculateBuildCost(newData.items, newData.round);
+      setData(newData);
+      updateUrlWithData(newData);
+    }
   };
 
   const handleHeroChange = (hero) => {
     const newData = { ...data };
     newData.character = hero.name;
     newData.powers = [];
-    newData.items = newData.items.filter((item) => {
-      if (!item.character) return true;
-      return item.character === hero.name;
+
+    const filteredItems = {};
+    const rounds = Object.keys(newData.items).sort((a, b) => a - b);
+    let highestNonEmptyRound = 0;
+
+    rounds.forEach((round) => {
+      const filteredRoundItems = newData.items[round].filter((item) => {
+        if (!item.character) return true;
+        return item.character === hero.name;
+      });
+
+      filteredItems[round] = filteredRoundItems;
+
+      if (filteredRoundItems.length > 0) {
+        highestNonEmptyRound = Math.max(highestNonEmptyRound, parseInt(round, 10));
+      }
     });
 
-    newData.buildCost = newData.items.reduce((acc, item) => acc + item.cost, 0);
+    newData.items = filteredItems;
+    newData.round = highestNonEmptyRound;
+    newData.buildCost = calculateBuildCost(filteredItems, highestNonEmptyRound);
+
     setData(newData);
     updateUrlWithData(newData, hero.id);
   };
@@ -89,6 +134,36 @@ const App = () => {
   const handleBuildNameChange = (e) => {
     const sanitizedValue = e.target.value.replace(/[^a-zA-Z0-9\-_.!#:" ]/g, '');
     const newData = { ...data, buildName: sanitizedValue };
+    setData(newData);
+    updateUrlWithData(newData);
+  };
+
+  const handleRoundChange = (newRound) => {
+    if (newRound < MIN_ROUNDS || newRound > MAX_ROUNDS) return;
+    const newData = { ...data };
+
+    if (options.autoCarryItemsToNextRound && newRound > data.round) {
+      const previousRound = data.round;
+      const previousItems = newData.items[previousRound] || [];
+
+      const isNewRoundEmpty = !newData.items[newRound] || newData.items[newRound].length === 0;
+      const isLatestRound = !Object.keys(newData.items).some((round) => Number(round) > newRound);
+
+      if (isNewRoundEmpty && isLatestRound && previousItems.length > 0) {
+        newData.items[newRound] = [...previousItems];
+      }
+    }
+
+    newData.round = newRound;
+
+    for (let i = 0; i <= newRound; i++) {
+      if (!newData.items[i]) {
+        newData.items[i] = [];
+      }
+    }
+
+    newData.buildCost = calculateBuildCost(newData.items, newRound);
+
     setData(newData);
     updateUrlWithData(newData);
   };
@@ -210,6 +285,17 @@ const App = () => {
               ) : null;
             })()}
           </p>
+          <RoundSelector data={data} handleClick={handleRoundChange} />
+          <div className="round-selector--options">
+            <label className="toggle-label">
+              <input
+                type="checkbox"
+                checked={options.autoCarryItemsToNextRound}
+                onChange={() => setOptions({ ...options, autoCarryItemsToNextRound: !options.autoCarryItemsToNextRound })}
+              />
+              Carry Items to Next Round
+            </label>
+          </div>
           <p className="build-section--cost">
             Build Cost: <img className="currency" src={getIcon('currency')} alt="Currency" /><span>{formatCurrency(data.buildCost)}</span>
           </p>
@@ -247,8 +333,10 @@ const App = () => {
             </section>
             <section className="row justify-content-center">
               {ITEM_SLOTS.map((_, index) => {
-                const item = data.items[index];
+                const roundItems = data.items[data.round] || [];
+                const item = roundItems[index];
                 const rarityClass = item?.rarity ? `item-${item.rarity}` : '';
+
                 return (
                   <section key={`item-${index.toString()}`} className={`col-4 build-section--items ${rarityClass}`}>
                     <Item
