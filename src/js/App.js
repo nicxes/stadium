@@ -8,7 +8,9 @@ import ItemShop from './components/ItemShop';
 import formatCurrency from './helpers/formatCurrency';
 import HeroStats from './components/HeroStats';
 import RenderAttributeString from './components/RenderAttributeString';
-import { copyUrlToClipboard, loadBuildFromUrl, updateUrl } from './utils/urlBuilder';
+import {
+  copyUrlToClipboard, generateRandomBuildString, loadBuildFromUrl, updateUrl,
+} from './utils/urlBuilder';
 import { useAssets } from './utils/AssetProvider';
 import Changelog from './components/Changelog';
 import RoundSelector from './components/RoundSelector';
@@ -168,6 +170,13 @@ const App = () => {
     updateUrlWithData(newData);
   };
 
+  const generateExtremelyRandomBuild = () => {
+    if (!armoryData || !availableHeroes) return;
+    const randomBuild = generateRandomBuildString(armoryData, availableHeroes, data.character);
+    setData(randomBuild);
+    updateUrlWithData(randomBuild);
+  };
+
   useEffect(() => {
     const getData = async () => {
       const response = await fetch('data.json');
@@ -224,6 +233,13 @@ const App = () => {
               onClick={() => { setData({ ...initialValues, character: data.character }); updateUrlWithData({ ...initialValues, character: data.character }); }}
             >
               Reset Build
+            </button>
+            <button
+              type="button"
+              className="btn btn--tertiary"
+              onClick={generateExtremelyRandomBuild}
+            >
+              Extremely Random Build
             </button>
           </section>
           <p className={`build-copied ${buildCopied ? 'show' : ''}`}>

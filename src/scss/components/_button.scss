@@ -19,10 +19,19 @@
       border: 1px solid $color-text;
     }
   }
-  
+
   &--secondary {
     background-color: $color-white;
     color: $color-black;
+
+    &:hover {
+      border: 1px solid $color-text;
+    }
+  }
+
+  &--tertiary {
+    background-color: $color-rare;
+    color: $color-white;
 
     &:hover {
       border: 1px solid $color-text;
