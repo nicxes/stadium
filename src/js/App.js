@@ -238,7 +238,8 @@ const App = () => {
           {armoryData && <ItemShop data={armoryData} getIcon={getIcon} context={data} contextCallback={handleClick} />}
         </div>
       </div>
-      <h6 style={{ fontStyle: 'italic', margin: '16px 0' }}>Made by Doomnik - <a href="https://github.com/legovader09/">GitHub</a></h6>
+      <h6 style={{ fontStyle: 'italic', margin: '16px 0' }}>Made by Dominik Hauerstein - <a href="https://github.com/legovader09/">GitHub</a></h6>
+      <p className="mb-3 text-small">All graphic assets belong to <b>Blizzard Entertainment</b>. All rights reserved.</p>
     </div>
   );
 };
