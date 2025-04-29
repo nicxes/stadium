@@ -1,3 +1,3 @@
 export const initialOptions = {
-  autoCarryItemsToNextRound: true,
+  autoCarryItemsToNextRound: false,
 };
