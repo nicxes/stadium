@@ -80,6 +80,8 @@ const App = () => {
       if (!item.character) return true;
       return item.character === hero.name;
     });
+
+    newData.buildCost = newData.items.reduce((acc, item) => acc + item.cost, 0);
     setData(newData);
     updateUrlWithData(newData, hero.id);
   };
@@ -140,6 +142,13 @@ const App = () => {
               onClick={() => { setHeroesVisible(!heroesVisible); }}
             >
               {heroesVisible ? 'Hide Heroes' : 'Show Heroes'}
+            </button>
+            <button
+              type="button"
+              className="btn btn--secondary"
+              onClick={() => { setData(initialValues); updateUrlWithData(initialValues); }}
+            >
+              Reset Build
             </button>
           </section>
           <p className={`build-copied ${buildCopied ? 'show' : ''}`}>
