@@ -12,8 +12,8 @@ const CombinedHealthBar = ({ getIcon, stats }) => {
   const shieldsWidth = (shields / total) * 100;
 
   return (
-    <div className="stat-bar-container">
-      <img src={getIcon('stat_hp')} height={24} alt="HP" />
+    <>
+      <img src={getIcon('stat_hp')} height={24} alt="Life" />
       <div className="stat-bar combined-bar">
         <div
           className="bar-segment health"
@@ -29,7 +29,7 @@ const CombinedHealthBar = ({ getIcon, stats }) => {
         />
       </div>
       <span className="stat-value">{total}</span>
-    </div>
+    </>
   );
 };
 

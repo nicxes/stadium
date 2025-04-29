@@ -63,6 +63,23 @@
   }
 }
 
+.stat-bar-wrapper {
+  position: relative;
+
+  .tooltip-container {
+    top: 70%;
+    
+    .tooltip-content {
+      margin-top: 0;
+    }
+  }
+
+  .stat-bar-container:hover ~ .tooltip-container {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 .stats-wrapper {
   .stats-content {
     max-height: 120px;

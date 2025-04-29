@@ -9,7 +9,7 @@ const PercentageBar = ({ getIcon, stat }) => {
   };
 
   return (
-    <div className="stat-bar-container">
+    <>
       <img
         src={getIcon(`stat_${stat.key.toLowerCase()}`)}
         onError={handleImageError}
@@ -26,7 +26,7 @@ const PercentageBar = ({ getIcon, stat }) => {
         </div>
       ) : <span style={{ flex: '1', marginLeft: '4px' }}>{stat.key}</span>}
       <span className="stat-value">{stat.value}</span>
-    </div>
+    </>
   );
 };
 
