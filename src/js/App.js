@@ -230,7 +230,11 @@ const App = () => {
             <button
               type="button"
               className="btn btn--secondary"
-              onClick={() => { setData({ ...initialValues, character: data.character }); updateUrlWithData({ ...initialValues, character: data.character }); }}
+              onClick={() => {
+                const resetData = { ...initialValues, character: data.character, items: {} };
+                setData(resetData);
+                updateUrlWithData(resetData);
+              }}
             >
               Reset Build
             </button>
