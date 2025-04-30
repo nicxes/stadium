@@ -1,6 +1,7 @@
+/* eslint-disable */
 const fs = require('fs');
-const armoryData = require('../public/data-original.json');
-const heroData = require('../public/heroes-original.json');
+const armoryData = require('../public/static/data/data-original.json');
+const heroData = require('../public/static/data/heroes-original.json');
 
 function assignIds(data) {
   const counters = {};
@@ -52,8 +53,8 @@ function assignHeroIds(data) {
   return result;
 }
 
-fs.writeFileSync('public/data.json', JSON.stringify(assignIds(armoryData)));
+fs.writeFileSync('public/static/data/data.json', JSON.stringify(assignIds(armoryData)));
 console.log('Armory Data has been saved to data.json');
 
-fs.writeFileSync('public/heroes.json', JSON.stringify(assignHeroIds(heroData)));
+fs.writeFileSync('public/static/data/heroes.json', JSON.stringify(assignHeroIds(heroData)));
 console.log('Armory Data has been saved to data.json');

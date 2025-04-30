@@ -66,6 +66,10 @@
     li {
       margin-bottom: 8px;
     }
+    
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
   }
 }
 
