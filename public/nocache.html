@@ -11,9 +11,9 @@
     <meta property="og:site_name" content="OW2 Stadium Build Planner" data-react-helmet="true" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_GB" />
-<!--    <link rel="icon" href="./favicon.ico" />-->
-<!--    <link rel="apple-touch-icon" href="./logo192.png" />-->
-<!--    <link rel="manifest" href="./manifest.json" />-->
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="apple-touch-icon" href="./logo192.png" />
+    <link rel="manifest" href="./manifest.json" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400..1000;1,6..12,400..1000&display=swap">
@@ -24,8 +24,9 @@
     <title>Overwatch 2 Stadium Build Planner</title>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <script class="script-loader">
+      // THIS IS USED TO HELP DEBUG THE WEBSITE ON SAFARI, WHICH CACHES THE SITE BY DEFAULT - THE TIMESTAMP HELPS PREVENT CACHING.
+      // SIMPLY COPY ALL CONTENT FROM THIS FILE TO index.html TO USE IT - JUST BE SURE TO NOT COMMIT IT BY ACCIDENT ;)
       const timestamp = Date.now();
-      // const timestamp = "prod"
       document.write(`
             <link rel="preload" href="./js/bundle.js?t=${timestamp}" as="script">
             <link rel="preload" href="./css/bundle.css?t=${timestamp}" as="style">

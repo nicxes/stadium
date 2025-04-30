@@ -4,12 +4,12 @@
   left: 10%;
   background-color: $color-background;
   color: #fff;
-  padding: 8px;
+  padding: 12px 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   white-space: normal;
   text-transform: none;
   width: max-content;
-  max-width: 270px;
+  max-width: 290px;
   word-wrap: break-word;
   opacity: 0;
   visibility: hidden;
@@ -27,9 +27,11 @@
     align-self: baseline;
   }
   
-  .tooltip-content {
-    margin-left: -16px;
-    
+  .tooltip-item-type {
+    color: $color-white;
+  }
+  
+  .tooltip-content {    
     &--title {
       margin-top: 2px;
       color: $color-white;

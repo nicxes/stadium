@@ -337,6 +337,10 @@ const App = () => {
                 const roundItems = data.items[data.round] || [];
                 const item = roundItems[index];
                 const rarityClass = item?.rarity ? `item-${item.rarity}` : '';
+                const itemCategory = Object.keys(armoryData.tabs)
+                  .find((tabKey) => Object.keys(armoryData.tabs[tabKey])
+                    .some((rarity) => Array.isArray(armoryData.tabs[tabKey][rarity])
+                      && armoryData.tabs[tabKey][rarity].some((tabItem) => tabItem.name === item?.name)));
 
                 return (
                   <section key={`item-${index.toString()}`} className={`col-4 build-section--items ${rarityClass}`}>
@@ -359,7 +363,10 @@ const App = () => {
                             ))}
                           </ul>
                           <hr />
-                          <p><img className="currency currency--small" src={getIcon('currency')} alt="Currency" /><span>{formatCurrency(item.cost)}</span></p>
+                          <section className="row px-0 mx-0 justify-content-between">
+                            <p className="col-auto my-0"><img className="currency currency--small" src={getIcon('currency')} alt="Currency" /><span>{formatCurrency(item.cost)}</span></p>
+                            <p className="col-auto my-0 tooltip-item-type">{itemCategory.substring(0, 1).toUpperCase() + itemCategory.substring(1)}</p>
+                          </section>
                         </div>
                       </div>
                     )}
