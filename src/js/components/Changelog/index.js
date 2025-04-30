@@ -31,8 +31,9 @@ const Changelog = () => {
             <h3 className="changelog-title">Changelog</h3>
             <p className="changelog-date">30th April 2025</p>
             <ul className="changelog-list">
-              <li>Fix special stat not rendering icon in stat bar</li>
+              <li>Added remaining hero power assets</li>
               <li>Improved tooltip styling to allow for slightly more content per line</li>
+              <li>Fix special stat not rendering icon in stat bar</li>
             </ul>
             <p className="changelog-date">29th April 2025</p>
             <ul className="changelog-list">

@@ -36,8 +36,8 @@ async function optimizeAndZipImages() {
         const filename = path.basename(file);
 
         const imageBuffer = await sharp(file)
-          .png({ quality: 80, compressionLevel: 9 })
-          .resize(90, 90, {
+          .png({ quality: 70, compressionLevel: 9 })
+          .resize(68, 68, {
             fit: 'inside',
             withoutEnlargement: true,
           })
