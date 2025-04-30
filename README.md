@@ -34,7 +34,8 @@ Since it took an awful lot of time and effort to rip these assets from the stadi
     3. Commit and push both the new asset and the generated `assets.zip` file
 
 ### Branch Management
-- The [playground branch](https://github.com/legovader09/OW-Stadium-Build-Planner/tree/playground) is designated for experimental development and proof-of-concept testing
+- The [playground branch](https://github.com/legovader09/OW-Stadium-Build-Planner/tree/playground) is designated for experimental development and proof-of-concept testing.
+  - The playground can be accessed here: [playground.owbuildplanner.com](https://playground.owbuildplanner.com)
 - The staging branch is reserved for production-ready code changes and should be used for all official pull requests
 
 ## TODO:
