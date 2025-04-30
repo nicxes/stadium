@@ -1,0 +1,54 @@
+.search-bar {
+  position: relative;
+  padding: 8px;
+  
+  input {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 4px;
+    background: $color-background;
+    border: 1px solid rgba($color-white, .2);
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 100%;
+    z-index: 1000;
+    
+    @include media-breakpoint-up(md) {
+      min-width: 300px;
+      width: max-content;
+    }
+    
+    @include media-breakpoint-up(xl) {
+      left: auto;
+      right: 0;
+      min-width: 300px;
+      width: max-content;
+    }
+
+    &-item {
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      background-color: transparent;
+
+      &:hover {
+        background-color: $color-primary;
+      }
+    }
+
+    &-icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+}

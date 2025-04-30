@@ -83,3 +83,7 @@
   font-size: .75rem;
   color: $color-white;
 }
+
+.highlighted {
+  @include animation($name: highlight, $duration: 4s, $timing: ease-out);
+}

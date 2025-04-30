@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import Item from './components/Item';
@@ -6,11 +6,26 @@ import RenderAttributeString from './components/RenderAttributeString';
 import { PowerCard } from './components/PowerCard';
 
 import formatCurrency from '../../helpers/formatCurrency';
+import SearchBar from './components/SearchBar';
 
 const ItemShop = ({
   data, getIcon, context, contextCallback,
 }) => {
   const [activeTab, setActiveTab] = useState('weapon');
+  const [highlightedItem, setHighlightedItem] = useState(null);
+  const isSearchResultTab = useRef(false);
+
+  useEffect(() => {
+    if (!isSearchResultTab.current) {
+      setHighlightedItem(null);
+    }
+    isSearchResultTab.current = false;
+  }, [activeTab]);
+
+  const handleSearchTabChange = (newTab) => {
+    isSearchResultTab.current = true;
+    setActiveTab(newTab);
+  };
 
   const renderRaritySection = (items, rarity) => (
     <div key={rarity} className="col-12 col-md-4 rarity-section px-1">
@@ -32,6 +47,7 @@ const ItemShop = ({
                   onClick={() => contextCallback(item, 'items', rarity)}
                   selected={currentRoundItems.find((i) => i.name === item.name)}
                   isHeroItem={item.character !== undefined}
+                  isHighlighted={highlightedItem === item.name}
                 />
                 <div className="tooltip-container bordered bordered-side">
                   <div className="tooltip-content">
@@ -72,6 +88,7 @@ const ItemShop = ({
                   src={getIcon(power.name) || ''}
                   onClick={() => contextCallback(power, 'powers')}
                   selected={powers.find((p) => p.name === power.name)}
+                  isHighlighted={highlightedItem === power.name}
                 />
               </div>
             );
@@ -83,17 +100,26 @@ const ItemShop = ({
 
   return (
     <div className="item-shop">
-      <div className="tabs">
-        {Object.keys(data.tabs).map((tabName) => (
-          <button
-            key={tabName}
-            type="button"
-            className={`tab-button ${activeTab === tabName ? 'active' : ''}`}
-            onClick={() => setActiveTab(tabName)}
-          >
-            {tabName.toUpperCase()}
-          </button>
-        ))}
+      <div className="row px-0 mx-0 tabs">
+        <section className="col-auto px-0 mx-0 tabs-headers">
+          {Object.keys(data.tabs).map((tabName) => (
+            <button
+              key={tabName}
+              type="button"
+              className={`col col-md-auto tab-button ${activeTab === tabName ? 'active' : ''}`}
+              onClick={() => setActiveTab(tabName)}
+            >
+              {tabName.toUpperCase()}
+            </button>
+          ))}
+        </section>
+        <SearchBar
+          data={data}
+          getIcon={getIcon}
+          onTabChange={handleSearchTabChange}
+          onHighlight={setHighlightedItem}
+          character={context.character}
+        />
       </div>
 
       <div className="container tab-content">

@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import parse from 'html-react-parser';
 
 export const PowerCard = ({
-  name, description, src = '', onClick = () => {}, selected = false,
+  name, description, src = '', onClick = () => {}, selected = false, isHighlighted = false,
 }) => (
-  <button type="button" className={`power-card ${selected ? 'active' : ''}`} onClick={onClick}>
+  <button type="button" className={`power-card ${selected ? 'active' : ''} ${isHighlighted ? 'highlighted' : ''}`} onClick={onClick}>
     <section className="row power-card--title">
       {src !== '' && <img src={src} alt={name} />}
       <p>{name}</p>
@@ -22,4 +22,5 @@ PowerCard.propTypes = {
   src: PropTypes.string,
   onClick: PropTypes.func,
   selected: PropTypes.bool,
+  isHighlighted: PropTypes.bool,
 };
