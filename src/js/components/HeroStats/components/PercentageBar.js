@@ -1,23 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 const PercentageBar = ({ getIcon, stat }) => {
-  const [specialStat, setSpecialStat] = useState(false);
-  const handleImageError = (e) => {
-    e.target.src = getIcon('stat_special');
-    setSpecialStat(e.target.src === getIcon('stat_special'));
-  };
+  const imgSrc = getIcon(`stat_${stat.key.toLowerCase()}`) || getIcon('stat_special');
+  const isSpecial = imgSrc === getIcon('stat_special');
 
   return (
     <>
       <img
-        src={getIcon(`stat_${stat.key.toLowerCase()}`)}
-        onError={handleImageError}
+        src={imgSrc}
         height={24}
         alt={stat.key}
-        className={specialStat ? 'special' : ''}
+        className={isSpecial ? 'special' : ''}
       />
-      {!specialStat ? (
+      {!isSpecial ? (
         <div className="stat-bar percentage-bar">
           <div
             className="bar-segment"
