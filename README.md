@@ -39,11 +39,5 @@ Since it took an awful lot of time and effort to rip these assets from the stadi
 - The staging branch is reserved for production-ready code changes and should be used for all official pull requests
 
 ## TODO:
-
-### High Priority
-- [ ] Fix health calculation inconsistency with in-game results (% health, armor, shield items)
-- [ ] Complete remaining HERO item and power images
+- [ ] Fix health calculation inconsistency with in-game results (% health, armor, shield items have a strange way of calculating)
 - [ ] Implement stat boosts from powers
-
-### Features
-- [ ] Add item search tool/filter functionality
