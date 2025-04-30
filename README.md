@@ -40,4 +40,4 @@ Since it took an awful lot of time and effort to rip these assets from the stadi
 
 ## TODO:
 - [ ] Fix health calculation inconsistency with in-game results (% health, armor, shield items have a strange way of calculating)
-- [ ] Implement stat boosts from powers
+- [ ] Implement stat boosts from powers (like Sleep Regimen and Permafrost)
