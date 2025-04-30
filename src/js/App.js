@@ -207,12 +207,12 @@ const App = () => {
         <div className="col-12 my-2">
           <h2 style={{ fontStyle: 'italic' }}>Overwatch 2 Stadium Build Planner</h2>
           <p className="mt-0 mb-3">
-            This is a tool to help you plan your Overwatch 2 Stadium build. Select your heroes, items, and powers, and it will calculate the build cost.
+            Select your heroes, items, and powers, to create your perfect 7-round build!
           </p>
-          <section className="build-section--btn-wrapper">
+          <section className="row build-section--btn-wrapper">
             <button
               type="button"
-              className="btn btn--primary"
+              className="col col-md-auto btn btn--primary"
               onClick={() => {
                 copyUrlToClipboard();
                 setBuildCopied(true);
@@ -222,14 +222,14 @@ const App = () => {
             </button>
             <button
               type="button"
-              className="btn btn--secondary"
+              className="col col-md-auto btn btn--secondary"
               onClick={() => { setHeroesVisible(!heroesVisible); }}
             >
               {heroesVisible ? 'Hide Heroes' : 'Show Heroes'}
             </button>
             <button
               type="button"
-              className="btn btn--secondary"
+              className="col col-md-auto btn btn--secondary"
               onClick={() => {
                 const resetData = { ...initialValues, character: data.character, items: {} };
                 setData(resetData);
@@ -240,7 +240,7 @@ const App = () => {
             </button>
             <button
               type="button"
-              className="btn btn--tertiary"
+              className="col-12 col-md-auto btn btn--tertiary"
               onClick={generateExtremelyRandomBuild}
             >
               Extremely Random Build
