@@ -61,11 +61,8 @@
   }
 }
 
-@include keyframes(highlight-flash) {
-  0% {
-    background-color: $color-warning;
-  }
-  100% {
-    background-color: transparent;
-  }
+@include keyframes(highlight) {
+  0% { outline: 4px solid $color-warning; }
+  15% { outline: 4px solid $color-warning; }
+  100% { outline: 4px solid transparent; }
 }

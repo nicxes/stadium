@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Item = ({
-  onClick = () => {}, name = '', src = '', selected = false, isHeroItem = false,
+  onClick = () => {}, name = '', src = '', selected = false, isHeroItem = false, isHighlighted = false,
 }) => (
-  <button type="button" className={`item-block ${selected ? 'active' : ''} ${src === '' && isHeroItem ? 'no-img' : ''}`} onClick={onClick}>
+  <button type="button" className={`item-block ${selected ? 'active' : ''} ${isHighlighted ? 'highlighted' : ''} ${src === '' && isHeroItem ? 'no-img' : ''}`} onClick={onClick}>
     {src !== '' && <img src={src} alt={name} />}
   </button>
 );
@@ -15,6 +15,7 @@ Item.propTypes = {
   onClick: PropTypes.func,
   selected: PropTypes.bool,
   isHeroItem: PropTypes.bool,
+  isHighlighted: PropTypes.bool,
 };
 
 export default Item;

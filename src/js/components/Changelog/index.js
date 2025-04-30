@@ -31,7 +31,9 @@ const Changelog = () => {
             <h3 className="changelog-title">Changelog</h3>
             <p className="changelog-date">30th April 2025</p>
             <ul className="changelog-list">
-              <li>Added remaining hero power assets</li>
+              <li>Fixed item Gloomgaunlet not applying 15% to Melee Damage stat bar</li>
+              <li>Added search bar for item and power searching on your current hero</li>
+              <li>Added remaining hero items and power assets</li>
               <li>Improved tooltip styling to allow for slightly more content per line</li>
               <li>Fix special stat not rendering icon in stat bar</li>
             </ul>
