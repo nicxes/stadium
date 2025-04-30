@@ -128,7 +128,7 @@ const loadBuildV3 = (params, armoryData, heroData) => {
     items: parsedItems,
     round: highestRound || 0,
     buildCost: 0,
-    buildName: decodeURIComponent(buildName),
+    buildName: buildName ? decodeURIComponent(buildName) : '',
   };
 
   parsed.buildCost = (parsed.items[highestRound] || [])
