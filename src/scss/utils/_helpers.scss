@@ -85,5 +85,5 @@
 }
 
 .highlighted {
-  @include animation($name: highlight, $duration: 4s, $timing: ease-out);
+  @include animation($name: highlight, $duration: 6s, $timing: ease-out);
 }
