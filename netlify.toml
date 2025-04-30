@@ -1,5 +1,5 @@
 [[redirects]]
-    from = "https://animeygocardmaker.netlify.app/*"
-    to = "https://repos.aygocm.co.uk/:splat"
+    from = "https://owbuildplanner.netlify.app/*"
+    to = "https://www.owbuildplanner.com/:splat"
     status = 301
     force = true
