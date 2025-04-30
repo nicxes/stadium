@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import parse from 'html-react-parser';
-import { statShorthands } from '../helpers/statDescriptions';
+import { statShorthands } from '../../../helpers/statDescriptions';
 
 const RenderAttributeString = ({ getIcon, attr }) => {
   if (attr.type === 'description') return parse(attr.value);

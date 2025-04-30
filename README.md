@@ -5,6 +5,7 @@
 ## Credits
 
 Website, and text content ripped by myself.
+
 Assets ripped by [Leafcyn](https://leafycn.carrd.co/) (BIG THANKS, WOULDNT HAVE DONE IT WITHOUT YOUR HELP)
 
 ## Asset Usage
@@ -16,5 +17,12 @@ Since it took an awful lot of time and effort to rip these assets from the stadi
 - Add remaining HERO item and power images
 - Add stat boosts from powers
 - Item search tool/filter
-- Fix slight inconsistency of health calculation vs results in game
-- 
+- Fix slight inconsistency of health calculation vs results in game when it comes to % health, armor, shield items
+
+## Installation & Important Info
+
+Uses Node 18
+
+### Important Info
+
+- When updating

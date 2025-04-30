@@ -1,21 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import parse from 'html-react-parser';
 
-import Power from './components/Power';
-import Item from './components/Item';
-import { initialValues } from './initialValues';
+import Power from './components/ItemShop/components/Power';
+import Item from './components/ItemShop/components/Item';
 import ItemShop from './components/ItemShop';
-import formatCurrency from './helpers/formatCurrency';
 import HeroStats from './components/HeroStats';
-import RenderAttributeString from './components/RenderAttributeString';
+import Changelog from './components/Changelog';
+import RoundSelector from './components/RoundSelector';
+import RenderAttributeString from './components/ItemShop/components/RenderAttributeString';
+
+import formatCurrency from './helpers/formatCurrency';
+import { calculateBuildCost } from './helpers/buildCostCalculator';
+import { useAssets } from './utils/AssetProvider';
 import {
   copyUrlToClipboard, generateRandomBuildString, loadBuildFromUrl, updateUrl,
 } from './utils/urlBuilder';
-import { useAssets } from './utils/AssetProvider';
-import Changelog from './components/Changelog';
-import RoundSelector from './components/RoundSelector';
-import { calculateBuildCost } from './helpers/buildCostCalculator';
+
 import { initialOptions } from './initialOptions';
+import { initialValues } from './initialValues';
 
 const MIN_ROUNDS = 0;
 const MAX_ROUNDS = 6;
@@ -28,15 +30,14 @@ const POWER_SLOTS = [
 ];
 
 const App = () => {
-  const { getAsset, isLoading, error } = useAssets();
-  const searchParams = new URLSearchParams(window.location.search);
-
   const [data, setData] = useState(initialValues);
   const [options, setOptions] = useState(initialOptions);
-
   const [armoryData, setArmoryData] = useState(null);
   const [availableHeroes, setAvailableHeroes] = useState([]);
   const [buildCopied, setBuildCopied] = useState(false);
+  const { getAsset, isLoading, error } = useAssets();
+
+  const searchParams = new URLSearchParams(window.location.search);
   const [heroesVisible, setHeroesVisible] = useState(!searchParams.has('b'));
 
   const getIcon = (name) => {
@@ -45,12 +46,10 @@ const App = () => {
     return getAsset(`${cleanName}.png`)?.url;
   };
 
-  const updateUrlWithData = (data, heroId = null) => {
+  const setDataAndUpdateUrl = (data, heroId = null) => {
     let currentHeroId = heroId;
-    if (!heroId) {
-      currentHeroId = availableHeroes.find((hero) => hero.name === data.character).id;
-    }
-
+    if (!heroId) currentHeroId = availableHeroes.find((hero) => hero.name === data.character).id;
+    setData(data);
     updateUrl(data, currentHeroId);
   };
 
@@ -64,22 +63,18 @@ const App = () => {
 
       if (index > -1) {
         currentArray.splice(index, 1);
-        setData(newData);
-        updateUrlWithData(newData);
+        setDataAndUpdateUrl(newData);
         return;
       }
 
       if (currentArray.length >= 4) return;
       newData.powers = [...currentArray, item];
-      setData(newData);
-      updateUrlWithData(newData);
+      setDataAndUpdateUrl(newData);
       return;
     }
 
     if (type === 'items') {
-      if (!newData.items[newData.round]) {
-        newData.items[newData.round] = [];
-      }
+      if (!newData.items[newData.round]) newData.items[newData.round] = [];
 
       const currentArray = [...newData.items[newData.round]];
       const index = currentArray.findIndex((i) => i?.name === item.name);
@@ -88,8 +83,7 @@ const App = () => {
         currentArray.splice(index, 1);
         newData.items[newData.round] = currentArray;
         newData.buildCost = calculateBuildCost(newData.items, newData.round);
-        setData(newData);
-        updateUrlWithData(newData);
+        setDataAndUpdateUrl(newData);
         return;
       }
 
@@ -98,8 +92,7 @@ const App = () => {
       const newItem = { ...item, rarity };
       newData.items[newData.round] = [...currentArray, newItem];
       newData.buildCost = calculateBuildCost(newData.items, newData.round);
-      setData(newData);
-      updateUrlWithData(newData);
+      setDataAndUpdateUrl(newData);
     }
   };
 
@@ -113,31 +106,25 @@ const App = () => {
     let highestNonEmptyRound = 0;
 
     rounds.forEach((round) => {
-      const filteredRoundItems = newData.items[round].filter((item) => {
-        if (!item.character) return true;
-        return item.character === hero.name;
-      });
+      const filteredRoundItems = newData.items[round]
+        .filter((item) => (!item.character ? true : item.character === hero.name));
 
       filteredItems[round] = filteredRoundItems;
 
-      if (filteredRoundItems.length > 0) {
-        highestNonEmptyRound = Math.max(highestNonEmptyRound, parseInt(round, 10));
-      }
+      if (filteredRoundItems.length <= 0) return;
+      highestNonEmptyRound = Math.max(highestNonEmptyRound, parseInt(round, 10));
     });
 
     newData.items = filteredItems;
     newData.round = highestNonEmptyRound;
     newData.buildCost = calculateBuildCost(filteredItems, highestNonEmptyRound);
-
-    setData(newData);
-    updateUrlWithData(newData, hero.id);
+    setDataAndUpdateUrl(newData, hero.id);
   };
 
   const handleBuildNameChange = (e) => {
     const sanitizedValue = e.target.value.replace(/[^a-zA-Z0-9\-_.!#:" ]/g, '');
     const newData = { ...data, buildName: sanitizedValue };
-    setData(newData);
-    updateUrlWithData(newData);
+    setDataAndUpdateUrl(newData);
   };
 
   const handleRoundChange = (newRound) => {
@@ -159,34 +146,29 @@ const App = () => {
     newData.round = newRound;
 
     for (let i = 0; i <= newRound; i++) {
-      if (!newData.items[i]) {
-        newData.items[i] = [];
-      }
+      newData.items[i] ??= [];
     }
 
     newData.buildCost = calculateBuildCost(newData.items, newRound);
-
-    setData(newData);
-    updateUrlWithData(newData);
+    setDataAndUpdateUrl(newData);
   };
 
   const generateExtremelyRandomBuild = () => {
     if (!armoryData || !availableHeroes) return;
     const randomBuild = generateRandomBuildString(armoryData, availableHeroes, data.character);
-    setData(randomBuild);
-    updateUrlWithData(randomBuild);
+    setDataAndUpdateUrl(randomBuild);
   };
 
   useEffect(() => {
     const getData = async () => {
-      const response = await fetch('data.json');
+      const response = await fetch('/static/data/data.json');
       const data = await response.json();
       setArmoryData(data);
     };
     getData();
 
     const getHeroes = async () => {
-      const response = await fetch('heroes.json');
+      const response = await fetch('/static/data/heroes.json');
       const data = await response.json();
       setAvailableHeroes(data.heroes);
     };
@@ -232,8 +214,7 @@ const App = () => {
               className="col col-md-auto btn btn--secondary"
               onClick={() => {
                 const resetData = { ...initialValues, character: data.character, items: {} };
-                setData(resetData);
-                updateUrlWithData(resetData);
+                setDataAndUpdateUrl(resetData);
               }}
             >
               Reset Build

@@ -29,6 +29,10 @@ const Changelog = () => {
               ×
             </button>
             <h3 className="changelog-title">Changelog</h3>
+            <p className="changelog-date">30th April 2025</p>
+            <ul className="changelog-list">
+              <li>Fix special stat not rendering icon in stat bar</li>
+            </ul>
             <p className="changelog-date">29th April 2025</p>
             <ul className="changelog-list">
               <li>Added Ashe, Cassidy, Genji, and remaining Mei and Reaper item icons</li>

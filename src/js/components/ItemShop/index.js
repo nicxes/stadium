@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Item from '../Item';
+
+import Item from './components/Item';
+import RenderAttributeString from './components/RenderAttributeString';
 import { PowerCard } from './components/PowerCard';
+
 import formatCurrency from '../../helpers/formatCurrency';
-import RenderAttributeString from '../RenderAttributeString';
 
 const ItemShop = ({
   data, getIcon, context, contextCallback,
@@ -20,7 +22,6 @@ const ItemShop = ({
           {items.map((item) => {
             const { character, items, round } = context;
             if (item.character && item.character !== character) return null;
-
             const currentRoundItems = items[round] || [];
 
             return (
@@ -97,10 +98,8 @@ const ItemShop = ({
 
       <div className="container tab-content">
         <div className="row justify-content-center">
-          {Object.entries(data.tabs[activeTab]).map(([rarity, items]) => {
-            if (activeTab === 'powers') return renderPowerSection(items, rarity);
-            return renderRaritySection(items, rarity);
-          })}
+          {Object.entries(data.tabs[activeTab]).map(([rarity, items]) => (
+            activeTab === 'powers' ? renderPowerSection(items, rarity) : renderRaritySection(items, rarity)))}
         </div>
       </div>
     </div>

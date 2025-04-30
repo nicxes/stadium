@@ -33,10 +33,8 @@ async function optimizeAndZipImages() {
       files.forEach(file => console.log(` - ${file}`));
 
       for (const file of files) {
-        // Just use the basename instead of the relative path
         const filename = path.basename(file);
 
-        // Optimize image
         const imageBuffer = await sharp(file)
           .png({ quality: 80, compressionLevel: 9 })
           .resize(90, 90, {
@@ -50,11 +48,9 @@ async function optimizeAndZipImages() {
       }
     }
 
-    // Create output directory if it doesn't exist
     const outputDir = path.dirname(outputZip);
     await fs.mkdir(outputDir, { recursive: true });
 
-    // Generate zip file
     console.log('Creating zip file...');
     const zipContent = await zip.generateAsync({
       type: 'nodebuffer',
