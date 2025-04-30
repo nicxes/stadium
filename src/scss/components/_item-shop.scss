@@ -50,8 +50,8 @@
       padding: 0;
       
       img {
-        width: 62px;
-        height: 62px;
+        width: 58px;
+        height: 58px;
       }
       
       @include media-breakpoint-up(md) {
@@ -59,18 +59,28 @@
         height: 32px;
 
         img {
-          width: 30px;
-          height: 30px;
+          width: 28px;
+          height: 28px;
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        width: 52px;
+        height: 52px;
+
+        img {
+          width: 46px;
+          height: 46px;
         }
       }
       
-      @include media-breakpoint-up(lg) {
+      @include media-breakpoint-up(xl) {
         width: 66px;
         height: 66px;
 
         img {
-          width: 58px;
-          height: 58px;
+          width: 60px;
+          height: 60px;
         }
       }
     }
