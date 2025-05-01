@@ -8,13 +8,13 @@ import HeroStats from './components/HeroStats';
 import Changelog from './components/Changelog';
 import RoundSelector from './components/RoundSelector';
 import RenderAttributeString from './components/ItemShop/components/RenderAttributeString';
+import ShareBuild from './components/ShareBuild';
 
 import formatCurrency from './helpers/formatCurrency';
 import { calculateBuildCost } from './helpers/buildCostCalculator';
 import { useAssets } from './utils/AssetProvider';
-import {
-  copyUrlToClipboard, generateRandomBuildString, loadBuildFromUrl, updateUrl,
-} from './utils/urlBuilder';
+import { generateRandomBuildString, loadBuildFromUrl, updateUrl } from './utils/urlBuilder';
+import gtagHelper from './utils/gtagHelper';
 
 import { initialOptions } from './initialOptions';
 import { initialValues } from './initialValues';
@@ -34,9 +34,9 @@ const App = () => {
   const [options, setOptions] = useState(initialOptions);
   const [armoryData, setArmoryData] = useState(null);
   const [availableHeroes, setAvailableHeroes] = useState([]);
-  const [buildCopied, setBuildCopied] = useState(false);
   const [isRoundChanging, setIsRoundChanging] = useState(false);
   const [hideTitle, setHideTitle] = useState(false);
+  const [hasUsedRandomButton, setHasUsedRandomButton] = useState(false);
   const { getAsset, isLoading, error } = useAssets();
 
   const searchParams = new URLSearchParams(window.location.search);
@@ -152,6 +152,7 @@ const App = () => {
 
     newData.buildCost = calculateBuildCost(newData.items, newRound);
     setDataAndUpdateUrl(newData);
+
     setIsRoundChanging(true);
     setTimeout(() => {
       setIsRoundChanging(false);
@@ -161,6 +162,10 @@ const App = () => {
   const generateExtremelyRandomBuild = () => {
     if (!armoryData || !availableHeroes) return;
     const randomBuild = generateRandomBuildString(armoryData, availableHeroes, data.character);
+    if (!hasUsedRandomButton) {
+      setHasUsedRandomButton(true);
+      gtagHelper('extremely_random_build', {});
+    }
     setDataAndUpdateUrl(randomBuild);
   };
 
@@ -202,16 +207,7 @@ const App = () => {
             </p>
           </section>
           <section className="row build-section--btn-wrapper">
-            <button
-              type="button"
-              className="col col-md-auto btn btn--primary"
-              onClick={() => {
-                copyUrlToClipboard();
-                setBuildCopied(true);
-              }}
-            >
-              Share Build
-            </button>
+            <ShareBuild character={data.character} buildName={data.buildName} />
             <button
               type="button"
               className="col col-md-auto btn btn--secondary"
@@ -237,9 +233,6 @@ const App = () => {
               Extremely Random Build
             </button>
           </section>
-          <p className={`build-copied ${buildCopied ? 'show' : ''}`}>
-            ✔ Build copied to clipboard!
-          </p>
         </div>
       </div>
       <div className={`row hero-button--wrapper ${heroesVisible ? 'show' : ''}`}>

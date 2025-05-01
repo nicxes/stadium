@@ -5,7 +5,7 @@ const Changelog = () => {
 
   const toggleOverlay = () => {
     setIsOpen(!isOpen);
-    document.querySelector('body').classList.toggle('overlay');
+    document.querySelector('body').classList.toggle('overlay-open');
   };
 
   return (
@@ -19,18 +19,19 @@ const Changelog = () => {
       </button>
 
       {isOpen && (
-        <div className="changelog-overlay">
+        <div className="changelog overlay">
           <div className="changelog-content">
             <button
               type="button"
               onClick={toggleOverlay}
-              className="changelog-close"
+              className="overlay-close"
             >
               ×
             </button>
             <h3 className="changelog-title">Changelog</h3>
             <p className="changelog-date">1st May 2025</p>
             <ul className="changelog-list">
+              <li>Added a share modal instead of directly copying the link for a more honest user experience.</li>
               <li>Added Orisa&apos;s missing Refraction Tiles item</li>
               <li>Fixed auto copy build copying to last round when skipping to it</li>
               <li>Visual feedback when changing rounds</li>
