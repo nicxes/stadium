@@ -114,3 +114,36 @@
     max-height: 1000px;
   }
 }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  
+  &-close {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    border: none;
+    background: none;
+    font-size: 2rem;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+body {
+  &.overlay-open {
+    overflow: hidden;
+  }
+}
