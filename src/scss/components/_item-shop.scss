@@ -72,6 +72,10 @@
       height: 64px;
       padding: 0;
       
+      &~.tooltip-container {
+        top: 85%;
+      }
+      
       img {
         width: 58px;
         height: 58px;
