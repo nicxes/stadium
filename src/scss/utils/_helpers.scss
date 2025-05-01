@@ -87,3 +87,30 @@
 .highlighted {
   @include animation($name: highlight, $duration: 6s, $timing: ease-out);
 }
+
+.hide-button {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 1rem;
+  font-size: 1rem;
+  color: $color-white;
+  transition: all 0.2s ease-in-out;
+  vertical-align: middle;
+  
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.page-info {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  
+  &.show {
+    max-height: 1000px;
+  }
+}

@@ -35,6 +35,8 @@ const App = () => {
   const [armoryData, setArmoryData] = useState(null);
   const [availableHeroes, setAvailableHeroes] = useState([]);
   const [buildCopied, setBuildCopied] = useState(false);
+  const [isRoundChanging, setIsRoundChanging] = useState(false);
+  const [hideTitle, setHideTitle] = useState(false);
   const { getAsset, isLoading, error } = useAssets();
 
   const searchParams = new URLSearchParams(window.location.search);
@@ -127,18 +129,17 @@ const App = () => {
     setDataAndUpdateUrl(newData);
   };
 
-  const handleRoundChange = (newRound) => {
+  const handleRoundChange = (newRound, shouldCopy = false) => {
     if (newRound < MIN_ROUNDS || newRound > MAX_ROUNDS) return;
     const newData = { ...data };
 
-    if (options.autoCarryItemsToNextRound && newRound > data.round) {
+    if (options.autoCarryItemsToNextRound && shouldCopy) {
       const previousRound = data.round;
       const previousItems = newData.items[previousRound] || [];
 
       const isNewRoundEmpty = !newData.items[newRound] || newData.items[newRound].length === 0;
-      const isLatestRound = !Object.keys(newData.items).some((round) => Number(round) > newRound);
 
-      if (isNewRoundEmpty && isLatestRound && previousItems.length > 0) {
+      if (isNewRoundEmpty && previousItems.length > 0) {
         newData.items[newRound] = [...previousItems];
       }
     }
@@ -151,6 +152,10 @@ const App = () => {
 
     newData.buildCost = calculateBuildCost(newData.items, newRound);
     setDataAndUpdateUrl(newData);
+    setIsRoundChanging(true);
+    setTimeout(() => {
+      setIsRoundChanging(false);
+    }, 200);
   };
 
   const generateExtremelyRandomBuild = () => {
@@ -187,10 +192,15 @@ const App = () => {
     <div className="container">
       <div className="row">
         <div className="col-12 my-2">
-          <h2 style={{ fontStyle: 'italic' }}>Overwatch 2 Stadium Build Planner</h2>
-          <p className="mt-0 mb-3">
-            Select your heroes, items, and powers, to create your perfect 7-round build!
-          </p>
+          <section className={`page-info ${!hideTitle ? 'show' : ''}`}>
+            <h2 style={{ fontStyle: 'italic' }}>
+              Overwatch 2 Stadium Build Planner
+              <button type="button" className="hide-button" onClick={() => setHideTitle(true)}>Hide this</button>
+            </h2>
+            <p className="mt-0 mb-3">
+              Select your heroes, items, and powers, to create your perfect 7-round build! Share your builds easily and hassle-free with the share buttons below, or by copying the link in your browser.
+            </p>
+          </section>
           <section className="row build-section--btn-wrapper">
             <button
               type="button"
@@ -343,7 +353,7 @@ const App = () => {
                       && armoryData.tabs[tabKey][rarity].some((tabItem) => tabItem.name === item?.name)));
 
                 return (
-                  <section key={`item-${index.toString()}`} className={`col-4 build-section--items ${rarityClass}`}>
+                  <section key={`item-${index.toString()}`} className={`col-4 build-section--items ${rarityClass} ${isRoundChanging ? 'round-change' : ''} `}>
                     <Item
                       name={item?.name}
                       src={getIcon(item?.name) || ''}

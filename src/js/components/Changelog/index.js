@@ -29,6 +29,15 @@ const Changelog = () => {
               ×
             </button>
             <h3 className="changelog-title">Changelog</h3>
+            <p className="changelog-date">1st May 2025</p>
+            <ul className="changelog-list">
+              <li>Added Orisa&apos;s missing Refraction Tiles item</li>
+              <li>Fixed auto copy build copying to last round when skipping to it</li>
+              <li>Visual feedback when changing rounds</li>
+              <li>Improved visual feedback for when an item in the shop has been bought</li>
+              <li>Added cost underneath each item to easily gauge prices</li>
+              <li>Option to hide page title and description for less visual clutter</li>
+            </ul>
             <p className="changelog-date">30th April 2025</p>
             <ul className="changelog-list">
               <li>Hotfix: Made search result highlight more apparent</li>
