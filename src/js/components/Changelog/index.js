@@ -31,6 +31,7 @@ const Changelog = () => {
             <h3 className="changelog-title">Changelog</h3>
             <p className="changelog-date">1st May 2025</p>
             <ul className="changelog-list">
+              <li>Fixed Orisa&apos;s Spynstem Update and Restortify power icons being swapped around</li>
               <li>Added a share modal instead of directly copying the link for a more honest user experience.</li>
               <li>Added Orisa&apos;s missing Refraction Tiles item</li>
               <li>Fixed auto copy build copying to last round when skipping to it</li>
