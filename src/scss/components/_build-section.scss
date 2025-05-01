@@ -57,7 +57,7 @@
   }
   
   &--btn-wrapper {
-    margin: 1rem 0 .5rem;
+    margin: .5rem 0;
     gap: 1rem;
   }
   
@@ -77,6 +77,13 @@
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
+    transition: all 0.3s ease-in-out;
+    
+    &.round-change {
+      .item-block {
+        @include animation($name: pulse, $duration: .2s, $timing: ease-in-out)
+      }
+    }
     
     .item-block:hover ~ .tooltip-container {
       opacity: 1;
@@ -128,6 +135,8 @@
     }
     
     &.power-active {
+      @include animation($name: pulse, $duration: .2s, $timing: ease-in-out);
+      
       .power-block {
         border: 1px solid transparent;
         

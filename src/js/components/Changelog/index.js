@@ -5,7 +5,7 @@ const Changelog = () => {
 
   const toggleOverlay = () => {
     setIsOpen(!isOpen);
-    document.querySelector('body').classList.toggle('overlay');
+    document.querySelector('body').classList.toggle('overlay-open');
   };
 
   return (
@@ -19,18 +19,29 @@ const Changelog = () => {
       </button>
 
       {isOpen && (
-        <div className="changelog-overlay">
+        <div className="changelog overlay">
           <div className="changelog-content">
             <button
               type="button"
               onClick={toggleOverlay}
-              className="changelog-close"
+              className="overlay-close"
             >
               ×
             </button>
             <h3 className="changelog-title">Changelog</h3>
+            <p className="changelog-date">1st May 2025</p>
+            <ul className="changelog-list">
+              <li>Added a share modal instead of directly copying the link for a more honest user experience.</li>
+              <li>Added Orisa&apos;s missing Refraction Tiles item</li>
+              <li>Fixed auto copy build copying to last round when skipping to it</li>
+              <li>Visual feedback when changing rounds</li>
+              <li>Improved visual feedback for when an item in the shop has been bought</li>
+              <li>Added cost underneath each item to easily gauge prices</li>
+              <li>Option to hide page title and description for less visual clutter</li>
+            </ul>
             <p className="changelog-date">30th April 2025</p>
             <ul className="changelog-list">
+              <li>Hotfix: Made search result highlight more apparent</li>
               <li>Fixed item Gloomgaunlet not applying 15% to Melee Damage stat bar</li>
               <li>Added search bar for item and power searching on your current hero</li>
               <li>Added remaining hero items and power assets</li>

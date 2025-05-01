@@ -6,7 +6,7 @@ const RoundSelector = ({ data, handleClick }) => (
     <button type="button" onClick={() => handleClick(0)}> {'<<'} </button>
     <button type="button" onClick={() => handleClick(data.round - 1)}> {'<'} </button>
     <p>Round {data.round + 1}</p>
-    <button type="button" onClick={() => handleClick(data.round + 1)}> {'>'} </button>
+    <button type="button" onClick={() => handleClick(data.round + 1, true)}> {'>'} </button>
     <button type="button" onClick={() => handleClick(6)}> {'>>'} </button>
   </div>
 );

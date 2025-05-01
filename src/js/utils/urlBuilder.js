@@ -86,10 +86,12 @@ export const generateRandomBuildString = (armoryData, heroData, currentHero) => 
   const roundsItems = [];
   const BASE_BUDGET = 3500;
   const INCREASE_PER_ROUND = 6000;
+  const MAX_ITEMS_PER_ROUND = 6;
+  const MAX_POWERS = 4;
 
   for (let round = 0; round < 7; round++) {
     const roundBudget = BASE_BUDGET + (round * INCREASE_PER_ROUND);
-    const roundItems = [];
+    const roundItems = new Set();
     let currentCost = 0;
 
     const validItems = Object.values(armoryData.tabs)
@@ -100,7 +102,7 @@ export const generateRandomBuildString = (armoryData, heroData, currentHero) => 
         && item.cost <= (roundBudget - currentCost))
       .sort((a, b) => a.cost - b.cost);
 
-    while (currentCost < roundBudget && validItems.length > 0) {
+    while (currentCost < roundBudget && validItems.length > 0 && roundItems.size < MAX_ITEMS_PER_ROUND) {
       const remainingBudget = roundBudget - currentCost;
       const possibleItems = validItems.filter((item) => item.cost <= remainingBudget);
 
@@ -109,22 +111,31 @@ export const generateRandomBuildString = (armoryData, heroData, currentHero) => 
       const selectedItem = possibleItems[Math.floor(Math.random() * possibleItems.length)];
       if (!selectedItem) break;
 
-      roundItems.push(selectedItem.id.replace('i', ''));
+      roundItems.add(selectedItem.id.replace('i', ''));
       currentCost += selectedItem.cost;
 
-      const index = validItems.indexOf(selectedItem);
+      const index = validItems.findIndex((item) => item.id === selectedItem.id);
       if (index > -1) validItems.splice(index, 1);
     }
 
-    roundsItems.push(roundItems.length > 0 ? roundItems.join('.') : 'e');
+    roundsItems.push(roundItems.size > 0 ? Array.from(roundItems).join('.') : 'e');
   }
 
   const heroPowers = armoryData.tabs.powers[currentHero] || [];
+  const usedPowerIndices = new Set();
+  const powers = [];
 
-  const powers = Array.from({ length: 4 }, () => {
+  while (powers.length < MAX_POWERS && usedPowerIndices.size < heroPowers.length) {
     const randomPowerIndex = Math.floor(Math.random() * heroPowers.length);
-    return heroPowers[randomPowerIndex].id.replace('p', '');
-  });
+    if (!usedPowerIndices.has(randomPowerIndex)) {
+      usedPowerIndices.add(randomPowerIndex);
+      powers.push(heroPowers[randomPowerIndex].id.replace('p', ''));
+    }
+  }
+
+  while (powers.length < 4 && heroPowers.length > 0) {
+    powers.push(heroPowers[0].id.replace('p', ''));
+  }
 
   const heroId = heroData.find((hero) => hero.name === currentHero).id;
 

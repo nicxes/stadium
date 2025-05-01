@@ -8,13 +8,13 @@ import HeroStats from './components/HeroStats';
 import Changelog from './components/Changelog';
 import RoundSelector from './components/RoundSelector';
 import RenderAttributeString from './components/ItemShop/components/RenderAttributeString';
+import ShareBuild from './components/ShareBuild';
 
 import formatCurrency from './helpers/formatCurrency';
 import { calculateBuildCost } from './helpers/buildCostCalculator';
 import { useAssets } from './utils/AssetProvider';
-import {
-  copyUrlToClipboard, generateRandomBuildString, loadBuildFromUrl, updateUrl,
-} from './utils/urlBuilder';
+import { generateRandomBuildString, loadBuildFromUrl, updateUrl } from './utils/urlBuilder';
+import gtagHelper from './utils/gtagHelper';
 
 import { initialOptions } from './initialOptions';
 import { initialValues } from './initialValues';
@@ -34,7 +34,9 @@ const App = () => {
   const [options, setOptions] = useState(initialOptions);
   const [armoryData, setArmoryData] = useState(null);
   const [availableHeroes, setAvailableHeroes] = useState([]);
-  const [buildCopied, setBuildCopied] = useState(false);
+  const [isRoundChanging, setIsRoundChanging] = useState(false);
+  const [hideTitle, setHideTitle] = useState(false);
+  const [hasUsedRandomButton, setHasUsedRandomButton] = useState(false);
   const { getAsset, isLoading, error } = useAssets();
 
   const searchParams = new URLSearchParams(window.location.search);
@@ -127,18 +129,17 @@ const App = () => {
     setDataAndUpdateUrl(newData);
   };
 
-  const handleRoundChange = (newRound) => {
+  const handleRoundChange = (newRound, shouldCopy = false) => {
     if (newRound < MIN_ROUNDS || newRound > MAX_ROUNDS) return;
     const newData = { ...data };
 
-    if (options.autoCarryItemsToNextRound && newRound > data.round) {
+    if (options.autoCarryItemsToNextRound && shouldCopy) {
       const previousRound = data.round;
       const previousItems = newData.items[previousRound] || [];
 
       const isNewRoundEmpty = !newData.items[newRound] || newData.items[newRound].length === 0;
-      const isLatestRound = !Object.keys(newData.items).some((round) => Number(round) > newRound);
 
-      if (isNewRoundEmpty && isLatestRound && previousItems.length > 0) {
+      if (isNewRoundEmpty && previousItems.length > 0) {
         newData.items[newRound] = [...previousItems];
       }
     }
@@ -151,11 +152,20 @@ const App = () => {
 
     newData.buildCost = calculateBuildCost(newData.items, newRound);
     setDataAndUpdateUrl(newData);
+
+    setIsRoundChanging(true);
+    setTimeout(() => {
+      setIsRoundChanging(false);
+    }, 200);
   };
 
   const generateExtremelyRandomBuild = () => {
     if (!armoryData || !availableHeroes) return;
     const randomBuild = generateRandomBuildString(armoryData, availableHeroes, data.character);
+    if (!hasUsedRandomButton) {
+      setHasUsedRandomButton(true);
+      gtagHelper('extremely_random_build', {});
+    }
     setDataAndUpdateUrl(randomBuild);
   };
 
@@ -187,21 +197,17 @@ const App = () => {
     <div className="container">
       <div className="row">
         <div className="col-12 my-2">
-          <h2 style={{ fontStyle: 'italic' }}>Overwatch 2 Stadium Build Planner</h2>
-          <p className="mt-0 mb-3">
-            Select your heroes, items, and powers, to create your perfect 7-round build!
-          </p>
+          <section className={`page-info ${!hideTitle ? 'show' : ''}`}>
+            <h2 style={{ fontStyle: 'italic' }}>
+              Overwatch 2 Stadium Build Planner
+              <button type="button" className="hide-button" onClick={() => setHideTitle(true)}>Hide this</button>
+            </h2>
+            <p className="mt-0 mb-3">
+              Select your heroes, items, and powers, to create your perfect 7-round build! Share your builds easily and hassle-free with the share buttons below, or by copying the link in your browser.
+            </p>
+          </section>
           <section className="row build-section--btn-wrapper">
-            <button
-              type="button"
-              className="col col-md-auto btn btn--primary"
-              onClick={() => {
-                copyUrlToClipboard();
-                setBuildCopied(true);
-              }}
-            >
-              Share Build
-            </button>
+            <ShareBuild character={data.character} buildName={data.buildName} />
             <button
               type="button"
               className="col col-md-auto btn btn--secondary"
@@ -227,9 +233,6 @@ const App = () => {
               Extremely Random Build
             </button>
           </section>
-          <p className={`build-copied ${buildCopied ? 'show' : ''}`}>
-            ✔ Build copied to clipboard!
-          </p>
         </div>
       </div>
       <div className={`row hero-button--wrapper ${heroesVisible ? 'show' : ''}`}>
@@ -343,7 +346,7 @@ const App = () => {
                       && armoryData.tabs[tabKey][rarity].some((tabItem) => tabItem.name === item?.name)));
 
                 return (
-                  <section key={`item-${index.toString()}`} className={`col-4 build-section--items ${rarityClass}`}>
+                  <section key={`item-${index.toString()}`} className={`col-4 build-section--items ${rarityClass} ${isRoundChanging ? 'round-change' : ''} `}>
                     <Item
                       name={item?.name}
                       src={getIcon(item?.name) || ''}
