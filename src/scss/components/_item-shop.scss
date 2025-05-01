@@ -57,6 +57,16 @@
     justify-content: center;
     margin-bottom: 1rem;
     
+    &:not(.buyable-item--power) {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    &--cost {
+      margin-bottom: 0;
+      margin-top: .5rem;
+    }
+    
     .item-block {
       width: 64px;
       height: 64px;

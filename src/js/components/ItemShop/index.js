@@ -49,6 +49,7 @@ const ItemShop = ({
                   isHeroItem={item.character !== undefined}
                   isHighlighted={highlightedItem === item.name}
                 />
+                <p className="buyable-item--cost"><img className="currency currency--small" src={getIcon('currency')} alt="Currency" /><span>{formatCurrency(item.cost)}</span></p>
                 <div className="tooltip-container bordered bordered-side">
                   <div className="tooltip-content">
                     <p className="tooltip-content--title">{item.name}</p>
@@ -81,7 +82,7 @@ const ItemShop = ({
             const { character, powers } = context;
             if (char && char !== character) return null;
             return (
-              <div key={power.name} className="col-12 col-md-4 buyable-item">
+              <div key={power.name} className="col-12 col-md-4 buyable-item buyable-item--power">
                 <PowerCard
                   name={power.name}
                   description={power.description}
