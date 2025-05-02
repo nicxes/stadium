@@ -98,6 +98,13 @@
       span {
         color: $color-white;
         
+        svg {
+          height: min-content;
+          fill: $color-white;
+          width: 16px;
+          margin-bottom: 4px;
+        }
+        
         &.cash-exceeded {
           color: $color-warning;
         }
