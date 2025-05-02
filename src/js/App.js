@@ -12,6 +12,7 @@ import ShareBuild from './components/ShareBuild';
 
 import formatCurrency from './helpers/formatCurrency';
 import { calculateBuildCost } from './helpers/buildCostCalculator';
+import { calculateMinimumCashPerRound, MVP_BONUS } from './helpers/cashCalculator';
 import { useAssets } from './utils/AssetProvider';
 import { generateRandomBuildString, loadBuildFromUrl, updateUrl } from './utils/urlBuilder';
 import gtagHelper from './utils/gtagHelper';
@@ -37,6 +38,7 @@ const App = () => {
   const [isRoundChanging, setIsRoundChanging] = useState(false);
   const [hideTitle, setHideTitle] = useState(false);
   const [hasUsedRandomButton, setHasUsedRandomButton] = useState(false);
+  const [hasReachedCashLimits, setHasReachedCashLimits] = useState(false);
   const { getAsset, isLoading, error } = useAssets();
 
   const searchParams = new URLSearchParams(window.location.search);
@@ -52,6 +54,7 @@ const App = () => {
     let currentHeroId = heroId;
     if (!heroId) currentHeroId = availableHeroes.find((hero) => hero.name === data.character).id;
     setData(data);
+    setHasReachedCashLimits(data.buildCost >= calculateMinimumCashPerRound(data.round));
     updateUrl(data, currentHeroId);
   };
 
@@ -189,7 +192,10 @@ const App = () => {
     if (!armoryData || !availableHeroes) return;
     const searchParams = new URLSearchParams(window.location.search);
     if (searchParams.has('b')) {
-      loadBuildFromUrl(searchParams, armoryData, availableHeroes, (data) => setData(data));
+      loadBuildFromUrl(searchParams, armoryData, availableHeroes, (data) => {
+        setHasReachedCashLimits(data.buildCost >= calculateMinimumCashPerRound(data.round));
+        setData(data);
+      });
     }
   }, [armoryData, availableHeroes]);
 
@@ -301,8 +307,25 @@ const App = () => {
             </label>
           </div>
           <p className="build-section--cost">
-            Build Cost: <img className="currency" src={getIcon('currency')} alt="Currency" /><span>{formatCurrency(data.buildCost)}</span>
+            Build Cost: <img className="currency" src={getIcon('currency')} alt="Currency" /><span className={hasReachedCashLimits && data.round === 0 ? 'cash-exceeded' : ''}>{formatCurrency(data.buildCost)}</span>
           </p>
+          <section className="build-section--cash-info">
+            <p className="build-section--cost-small">
+              Minimum Cash: <img className="currency currency--small" src={getIcon('currency')} alt="Currency" /><span className={hasReachedCashLimits && data.round > 0 ? 'cash-exceeded' : ''}>{formatCurrency(calculateMinimumCashPerRound(data.round))}</span><span> 🛈</span>
+            </p>
+            <div className="tooltip-container bordered bordered-side">
+              <div className="tooltip-content">
+                <p className="tooltip-content--title">Minimum Cash</p>
+                <p>
+                  This is the <span>BARE MINIMUM</span> amount of cash available <span>this round</span>, not factoring in other bonuses.
+                  <br /><br />
+                  There is a guaranteed bonus of
+                  <br />
+                  <img className="currency currency--small" src={getIcon('currency')} alt="Currency" /><span>{formatCurrency(MVP_BONUS)}</span> if you are the <span>MVP</span> that round.
+                </p>
+              </div>
+            </div>
+          </section>
           <section className="container">
             <section className="row">
               <p className="col-12 col-md text-align-center"><b>Powers</b></p>
