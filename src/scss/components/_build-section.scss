@@ -94,9 +94,13 @@
         opacity: 1;
         visibility: visible;
       }
-
-      .cash-exceeded {
-        color: $color-warning;
+      
+      span {
+        color: $color-white;
+        
+        &.cash-exceeded {
+          color: $color-warning;
+        }
       }
     }
   }

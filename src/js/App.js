@@ -311,7 +311,7 @@ const App = () => {
           </p>
           <section className="build-section--cash-info">
             <p className="build-section--cost-small">
-              Minimum Cash: <img className="currency currency--small" src={getIcon('currency')} alt="Currency" /><span className={hasReachedCashLimits && data.round > 0 ? 'cash-exceeded' : ''}>{formatCurrency(calculateMinimumCashPerRound(data.round))} 🛈</span>
+              Minimum Cash: <img className="currency currency--small" src={getIcon('currency')} alt="Currency" /><span className={hasReachedCashLimits && data.round > 0 ? 'cash-exceeded' : ''}>{formatCurrency(calculateMinimumCashPerRound(data.round))}</span><span> 🛈</span>
             </p>
             <div className="tooltip-container bordered bordered-side">
               <div className="tooltip-content">
