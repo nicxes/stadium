@@ -29,6 +29,10 @@ const Changelog = () => {
               ×
             </button>
             <h3 className="changelog-title">Changelog</h3>
+            <p className="changelog-date">2nd May 2025</p>
+            <ul className="changelog-list">
+              <li>Updated item stats to match Stadium Patch notes from 1st of May</li>
+            </ul>
             <p className="changelog-date">1st May 2025</p>
             <ul className="changelog-list">
               <li>Fixed Orisa&apos;s Spynstem Update and Restortify power icons being swapped around</li>

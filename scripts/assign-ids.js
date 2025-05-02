@@ -57,4 +57,4 @@ fs.writeFileSync('public/static/data/data.json', JSON.stringify(assignIds(armory
 console.log('Armory Data has been saved to data.json');
 
 fs.writeFileSync('public/static/data/heroes.json', JSON.stringify(assignHeroIds(heroData)));
-console.log('Armory Data has been saved to data.json');
+console.log('Hero data has been saved to heroes.json');

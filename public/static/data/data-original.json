@@ -1116,7 +1116,7 @@
           "attributes": [
             {
               "type": "Health",
-              "value": "25"
+              "value": "50"
             },
             {
               "type": "MD",
@@ -2525,8 +2525,8 @@
           "name": "PULSTAR DESTROYERS",
           "attributes": [
             {
-              "type": "AP",
-              "value": "15%"
+              "type": "ALS",
+              "value": "10%"
             },
             {
               "type": "description",
@@ -2542,7 +2542,7 @@
           "attributes": [
             {
               "type": "AP",
-              "value": "25%"
+              "value": "15%"
             },
             {
               "type": "description",
@@ -3104,7 +3104,7 @@
             },
             {
               "type": "description",
-              "value": "After using an ability, restore Armor equal to <b>5%</b> of your max Life."
+              "value": "After using an ability, restore Armor equal to <b>3%</b> of your max Life."
             }
           ],
           "cost": 4000,
@@ -3792,11 +3792,11 @@
           "attributes": [
             {
               "type": "Health",
-              "value": "50"
+              "value": "25"
             },
             {
               "type": "description",
-              "value": "When you eject from your <b>[Mech]</b>, gain <b>25%</b> increased max Health and gain <b>[Nano Boost]</b> for <b>8s</b>."
+              "value": "When you eject from your <b>[Mech]</b>, gain <b>5%</b> increased max Health and gain <b>[Nano Boost]</b> for <b>4s</b>."
             }
           ],
           "cost": 11000,
@@ -4396,7 +4396,7 @@
         },
         {
           "name": "RESTORTIFY",
-          "description": "While <b>[Fortify]</b> is active, heal for <b>10%</b> of your max Life every <b>1s</b>.",
+          "description": "While <b>[Fortify]</b> is active, heal for <b>5%</b> of your max Life every <b>1s</b>.",
           "id": "p_31"
         },
         {
@@ -4520,12 +4520,12 @@
         },
         {
           "name": "HERE TO SPOT YOU",
-          "description": "<b>[Projected Barrier]</b> pulls you to the targeted ally and heals you for <b>15%</b> of Max Life over <b>3s</b>.",
+          "description": "<b>[Projected Barrier]</b> pulls you to the targeted ally and heals you for <b>20%</b> of Max Life over <b>3s</b>.",
           "id": "p_55"
         },
         {
           "name": "LIFELIFT",
-          "description": "<b>+</b><b>50%</b> <b>[Particle Barrier]</b> Size.\n<br/>\nIncrease <b>[Particle Barrier]</b> Health by <b>100%</b> of Bonus Max Life.",
+          "description": "<b>+</b><b>50%</b> <b>[Particle Barrier]</b> Size.\n<br/>\nIncrease <b>[Particle Barrier]</b> Health by <b>50%</b> of Bonus Max Life.",
           "id": "p_56"
         },
         {
@@ -4763,7 +4763,7 @@
         },
         {
           "name": "COULDER",
-          "description": "<b>[Cryo-Freeze]</b> now encases you in a rolling iceball that can knock back enemies and deal <b class=\"stat-ap\">10</b> damage.",
+          "description": "<b>[Cryo-Freeze]</b> now encases you in a rolling iceball that can knock back enemies and deal <b class=\"stat-ap\">20</b> damage.",
           "id": "p_102"
         },
         {
@@ -4857,7 +4857,7 @@
         },
         {
           "name": "SUPER VISOR",
-          "description": "After using <b>[Helix Rocket]</b>, activate <b>[Tactical Visor]</b> for 0.<b>75s</b>.",
+          "description": "After using <b>[Helix Rocket]</b>, activate <b>[Tactical Visor]</b> for <b>0.5s</b>.",
           "id": "p_120"
         },
         {
@@ -4892,7 +4892,7 @@
         },
         {
           "name": "BIOTIC BULLSEYE",
-          "description": "While in <b>[Biotic Field]</b>, critical hits restore <b>5%</b> Max Ammo and extend the duration of <b>[Biotic Field]</b> by 0.<b>5s</b>, up to <b>5s</b>.",
+          "description": "While in <b>[Biotic Field]</b>, critical hits restore <b>10%</b> Max Ammo and extend the duration of <b>[Biotic Field]</b> by <b>0.5s</b>, up to <b>5s</b>.",
           "id": "p_127"
         },
         {
@@ -4986,7 +4986,7 @@
         },
         {
           "name": "COSMIC COOLANT",
-          "description": "<b>[Pulsar Torpedoes]</b> cooldown is reduced by <b>1s</b> for each target it hits.",
+          "description": "<b>[Pulsar Torpedoes]</b> cooldown is reduced by <b>0.5s</b> for each target it hits.",
           "id": "p_145"
         },
         {
@@ -5105,7 +5105,7 @@
         },
         {
           "name": "SIGNATURE SHIFT",
-          "description": "After using an ability, your next <b>[Sonic Amplifier]</b> shot shoots a volley of <b>6</b> ammo with <b>20%</b> increased projectile size.",
+          "description": "After using an ability, your next <b>[Sonic Amplifier]</b> shot shoots a volley of <b>6</b> ammo with <b>80%</b> increased projectile size.",
           "id": "p_168"
         },
         {
@@ -5120,7 +5120,7 @@
         },
         {
           "name": "MEGAPHONE",
-          "description": "+<b>20%</b> <b>[Amp It Up]</b> Duration\nWhile <b>[Amp It Up]</b> is active, <b>[Crossfade]</b> radius is increased by <b>150%</b>.",
+          "description": "+<b>15%</b> <b>[Amp It Up]</b> Duration\nWhile <b>[Amp It Up]</b> is active, <b>[Crossfade]</b> radius is increased by <b>150%</b>.",
           "id": "p_171"
         },
         {
@@ -5140,7 +5140,7 @@
         },
         {
           "name": "CROWD PLEASER",
-          "description": "After using <b>[Soundwave]</b>, heal all allies affected by <b>[Crossfade]</b> for <b>200%</b> of <b>[Crossfade]</b> healing.",
+          "description": "After using <b>[Soundwave]</b>, heal all allies affected by <b>[Crossfade]</b> for <b>150%</b> of <b>[Crossfade]</b> healing.",
           "id": "p_175"
         },
         {
