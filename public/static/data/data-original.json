@@ -669,7 +669,7 @@
             },
             {
               "type": "description",
-              "value": "When you use an ability, gain <b>20%</b> Move Speed for <b>2s</b>."
+              "value": "When you use an ability, gain <b>10%</b> Move Speed for <b>2s</b>."
             }
           ],
           "cost": 11000,
@@ -748,7 +748,7 @@
           "attributes": [
             {
               "type": "WP",
-              "value": "10%"
+              "value": "20%"
             },
             {
               "type": "description",
@@ -1395,7 +1395,7 @@
           "attributes": [
             {
               "type": "description",
-              "value": "Every <b>300</b> damage you mitigate with <b>[Defense Matrix]</b> reduces <b>[Micro Missiles]</b> cooldown by <b>1s</b>."
+              "value": "Every <b>200</b> damage you mitigate with <b>[Defense Matrix]</b> reduces <b>[Micro Missiles]</b> cooldown by <b>1s</b>."
             }
           ],
           "cost": 4000,
@@ -1727,7 +1727,7 @@
           "attributes": [
             {
               "type": "AP",
-              "value": "10%"
+              "value": "5%"
             },
             {
               "type": "description",
@@ -2082,7 +2082,7 @@
           "attributes": [
             {
               "type": "AP",
-              "value": "25%"
+              "value": "15%"
             },
             {
               "type": "[Commanding Shout] Radius",
@@ -2226,7 +2226,7 @@
             },
             {
               "type": "description",
-              "value": "Deal <b>25%</b> increased damage to Burning enemies."
+              "value": "Deal <b>20%</b> increased damage to Burning enemies."
             }
           ],
           "cost": 10000,
@@ -2650,11 +2650,11 @@
           "attributes": [
             {
               "type": "AP",
-              "value": "20%"
+              "value": "15%"
             },
             {
               "type": "[Ampt It Up] Duration",
-              "value": "33%"
+              "value": "25%"
             }
           ],
           "cost": 11000,
@@ -3056,11 +3056,11 @@
           "attributes": [
             {
               "type": "MS",
-              "value": "10%"
+              "value": "5%"
             },
             {
               "type": "description",
-              "value": "While within 12m of an enemy with a <b>[Wound]</b>, gain <b>10%</b> Move Speed and <b>5%</b> Attack Speed."
+              "value": "While within 12m of an enemy with a <b>[Wound]</b>, gain <b>5%</b> Move Speed and <b>10%</b> Attack Speed."
             }
           ],
           "cost": 4000,
@@ -3714,7 +3714,7 @@
             },
             {
               "type": "WP",
-              "value": "10%"
+              "value": "5%"
             },
             {
               "type": "description",
@@ -3780,7 +3780,7 @@
             },
             {
               "type": "description",
-              "value": "Gain <b>5%</b> of damage mitigated by <b>[Defense Matrix]</b> as Ultimate Charge."
+              "value": "Gain <b>10%</b> of damage mitigated by <b>[Defense Matrix]</b> as Ultimate Charge."
             }
           ],
           "cost": 10000,
@@ -4252,7 +4252,7 @@
         },
         {
           "name": "COUNTERMEASURES",
-          "description": "When you mitigate <b>150</b> damage with <b>[Defense Matrix]</b>, automatically fire <b>2</b> <b>[Micro Missiles]</b>.",
+          "description": "When you mitigate <b>100</b> damage with <b>[Defense Matrix]</b>, automatically fire <b>2</b> <b>[Micro Missiles]</b>.",
           "id": "p_3"
         },
         {
@@ -4262,7 +4262,7 @@
         },
         {
           "name": "ULTRAWIDE MATRIX",
-          "description": "Increase the size of <b>[Defense Matrix]</b> by <b>50%</b> and its duration by <b>20%</b>.",
+          "description": "Increase the size of <b>[Defense Matrix]</b> by <b>50%</b> and its duration by <b>25%</b>.",
           "id": "p_5"
         },
         {
@@ -4277,7 +4277,7 @@
         },
         {
           "name": "STAT BOOST",
-          "description": "During the first <b>2s</b> of <b>[Boosters]</b>, <b>[Defense Matrix]</b> recovers <b>100%</b> faster.",
+          "description": "During the first <b>2s</b> of <b>[Boosters]</b>, <b>[Defense Matrix]</b> recovers <b>125%</b> faster.",
           "id": "p_8"
         },
         {
@@ -4463,7 +4463,7 @@
         },
         {
           "name": "IMPACT BURST",
-          "description": "<b>[Fire Strike]</b> triggers an explosion the first time it hits an enemy, dealing <b>20%</b> of its damage in a <b>3m</b> radius.",
+          "description": "<b>[Fire Strike]</b> triggers an explosion the first time it hits an enemy, dealing <b>15%</b> of its damage in a <b>3m</b> radius.",
           "id": "p_44"
         },
         {
@@ -4478,7 +4478,7 @@
         },
         {
           "name": "SMASHING!",
-          "description": "When you deal damage with <b>[Rocket Hammer]</b>, gain <b>5%</b> Move Speed and <b>4%</b> Weapon Lifesteal for <b>3s</b>, stacking up to <b>5 times</b>.",
+          "description": "When you deal damage with <b>[Rocket Hammer]</b>, gain <b>2%</b> Move Speed and <b>4%</b> Weapon Lifesteal for <b>3s</b>, stacking up to <b>5 times</b>.",
           "id": "p_47"
         }
       ],
@@ -4500,7 +4500,7 @@
         },
         {
           "name": "PRE-WORKOUT",
-          "description": "Gain Weapon Lifesteal and Ability Lifesteal equal to <b>20%</b> of <b>[Energy]</b>.",
+          "description": "Gain Weapon Lifesteal and Ability Lifesteal equal to <b>15%</b> of <b>[Energy]</b>.",
           "id": "p_51"
         },
         {
@@ -4525,7 +4525,7 @@
         },
         {
           "name": "LIFELIFT",
-          "description": "<b>+</b><b>50%</b> <b>[Particle Barrier]</b> Size.\n<br/>\nIncrease <b>[Particle Barrier]</b> Health by <b>50%</b> of Bonus Max Life.",
+          "description": "<b>+</b><b>50%</b> <b>[Particle Barrier]</b> Size.\n<br/>\nIncrease <b>[Particle Barrier]</b> Health by <b>25%</b> of Bonus Max Life.",
           "id": "p_56"
         },
         {
@@ -4547,7 +4547,7 @@
       "Ashe": [
         {
           "name": "HEAD HONCHO",
-          "description": "Each <b>unscoped</b> shot you land increases the damage of the next <b>scoped</b> shot you land by <b>3%</b>, up to <b>30%</b>. Resets on reload.",
+          "description": "Each <b>unscoped</b> shot you land increases the damage of the next <b>scoped</b> shot you land by <b>5%</b>, up to <b>30%</b>. Resets on reload.",
           "id": "p_60"
         },
         {
@@ -4597,7 +4597,7 @@
         },
         {
           "name": "B.O.B JR.",
-          "description": "<b>[B.O.B.]</b> costs <b>50%</b> less Ultimate Charge but has reduced Life, <b>50%</b> <b>reduced</b> Attack Speed, and is significantly smaller.",
+          "description": "<b>[B.O.B.]</b> costs <b>50%</b> less Ultimate Charge but has reduced Life, <b>20%</b> <b>reduced</b> Attack Speed, and is significantly smaller.",
           "id": "p_70"
         },
         {
@@ -5100,7 +5100,7 @@
       "Lúcio": [
         {
           "name": "FAST FORWARD",
-          "description": "While above <b>50%</b> Move Speed, increase damage by <b>25%</b>.",
+          "description": "While above <b>50%</b> Move Speed, increase damage by <b>30%</b>.",
           "id": "p_167"
         },
         {
@@ -5110,7 +5110,7 @@
         },
         {
           "name": "SONIC BOOM",
-          "description": "<b>[Sonic Amplifier]</b> Damage heals all allies affected by <b>[Crossfade]</b> equal to <b>20%</b> of damage dealt.",
+          "description": "<b>[Sonic Amplifier]</b> Damage heals all allies affected by <b>[Crossfade]</b> equal to <b>30%</b> of damage dealt.",
           "id": "p_169"
         },
         {
@@ -5140,12 +5140,12 @@
         },
         {
           "name": "CROWD PLEASER",
-          "description": "After using <b>[Soundwave]</b>, heal all allies affected by <b>[Crossfade]</b> for <b>150%</b> of <b>[Crossfade]</b> healing.",
+          "description": "After using <b>[Soundwave]</b>, heal all allies affected by <b>[Crossfade]</b> for <b>100%</b> of <b>[Crossfade]</b> healing.",
           "id": "p_175"
         },
         {
           "name": "LET'S BOUNCE",
-          "description": "<b>[Soundwave]</b> has <b>30%</b> increased knockback and deals <b class=\"stat-ap\">40</b> bonus damage if the target hits a wall.",
+          "description": "<b>[Soundwave]</b> has <b>25%</b> increased knockback and deals <b class=\"stat-ap\">25</b> bonus damage if the target hits a wall.",
           "id": "p_176"
         },
         {
@@ -5249,7 +5249,7 @@
         },
         {
           "name": "PRECARIOUS POTENCY",
-          "description": "Allies healed by your <b>[Biotic Grasp]</b> are healed for an additional <b>20%</b> of <b>[Biotic Grasp]</b>'s healing over <b>5s</b>.",
+          "description": "Allies healed by your <b>[Biotic Grasp]</b> are healed for an additional <b>25%</b> of <b>[Biotic Grasp]</b>'s healing over <b>5s</b>.",
           "id": "p_196"
         },
         {
@@ -5279,7 +5279,7 @@
         },
         {
           "name": "DESTRUCTION'S DIVIDE",
-          "description": "<b>[Coalescence]</b> can be toggled between pure healing or pure damage, with <b>25%</b> greater effect.",
+          "description": "<b>[Coalescence]</b> can be toggled between pure healing or pure damage, with <b>30%</b> greater effect.",
           "id": "p_202"
         }
       ]
