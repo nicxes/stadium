@@ -429,7 +429,7 @@
           "attributes": [
             {
               "type": "WP",
-              "value": "5%"
+              "value": "10%"
             },
             {
               "type": "Faster Scope Speed",
@@ -3452,7 +3452,7 @@
             },
             {
               "type": "description",
-              "value": "While affected by <b>[Biotic Grenade]</b>, Ana gains <b class=\"stat-ap\">100</b> <b>Overhealth</b>."
+              "value": "While affected by <b>[Biotic Grenade]</b>, Ana gains <b class=\"stat-ap\">150</b> <b>Overhealth</b>."
             }
           ],
           "cost": 4000,
@@ -4800,7 +4800,7 @@
         },
         {
           "name": "REVOLVING RUIN",
-          "description": "Close-range (7m) <b>[Hellfire Shotgun]</b> hits grant <b>5%</b> Attack Speed for Is, stacking up to <b>8 times</b>.",
+          "description": "Close-range (7m) <b>[Hellfire Shotgun]</b> hits grant <b>4%</b> Attack Speed for Is, stacking up to <b>10 times</b>.",
           "id": "p_109"
         },
         {
@@ -4934,7 +4934,7 @@
         },
         {
           "name": "DREAMY",
-          "description": "[Sleep Dartl can hit allies, healing <b>100%</b> of their max Life over <b>8s</b> instead of putting them to sleep.",
+          "description": "<b>[Sleep Dart]</b> can hit allies, healing <b>80%</b> of their max Life over <b>4s</b> instead of putting them to sleep.",
           "id": "p_135"
         },
         {
@@ -4944,7 +4944,7 @@
         },
         {
           "name": "HOME REMEDY",
-          "description": "<b>[Biotic Grenade]</b> grants <b>Overhealth</b> equal to <b>100%</b> of its healing.",
+          "description": "<b>[Biotic Grenade]</b> grants <b>Overhealth</b> equal to <b>200%</b> of its healing.",
           "id": "p_137"
         },
         {
@@ -4954,7 +4954,7 @@
         },
         {
           "name": "VENOMOUS",
-          "description": "<b>[Biotic Grenade]</b> deals an additional <b class=\"stat-ap\">30</b> damage over its duration to enemies affected.",
+          "description": "<b>[Biotic Grenade]</b> deals an additional <b class=\"stat-ap\">50</b> damage over its duration to enemies affected.",
           "id": "p_139"
         },
         {
