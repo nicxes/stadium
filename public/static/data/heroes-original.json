@@ -4,6 +4,7 @@
       "name": "D.VA",
       "type": "tank",
       "safe_name": "dva",
+      "visual_order": 0,
       "base_stats": [
         {
           "type": "Health",
@@ -95,6 +96,7 @@
       "name": "Junker Queen",
       "type": "tank",
       "safe_name": "jq",
+      "visual_order": 1,
       "base_stats": [
         {
           "type": "Health",
@@ -161,6 +163,7 @@
       "name": "Orisa",
       "type": "tank",
       "safe_name": "orisa",
+      "visual_order": 2,
       "base_stats": [
         {
           "type": "Health",
@@ -227,6 +230,7 @@
       "name": "Reinhardt",
       "type": "tank",
       "safe_name": "rein",
+      "visual_order": 3,
       "base_stats": [
         {
           "type": "Health",
@@ -293,6 +297,7 @@
       "name": "Zarya",
       "type": "tank",
       "safe_name": "zarya",
+      "visual_order": 4,
       "base_stats": [
         {
           "type": "Health",
@@ -359,6 +364,7 @@
       "name": "Ashe",
       "type": "dps",
       "safe_name": "ashe",
+      "visual_order": 0,
       "base_stats": [
         {
           "type": "Health",
@@ -425,6 +431,7 @@
       "name": "Cassidy",
       "type": "dps",
       "safe_name": "cas",
+      "visual_order": 1,
       "base_stats": [
         {
           "type": "Health",
@@ -491,6 +498,7 @@
       "name": "Genji",
       "type": "dps",
       "safe_name": "genji",
+      "visual_order": 3,
       "base_stats": [
         {
           "type": "Health",
@@ -557,6 +565,7 @@
       "name": "Mei",
       "type": "dps",
       "safe_name": "mei",
+      "visual_order": 4,
       "base_stats": [
         {
           "type": "Health",
@@ -623,6 +632,7 @@
       "name": "Reaper",
       "type": "dps",
       "safe_name": "reaper",
+      "visual_order": 5,
       "base_stats": [
         {
           "type": "Health",
@@ -689,6 +699,7 @@
       "name": "Soldier: 76",
       "type": "dps",
       "safe_name": "sold76",
+      "visual_order": 6,
       "base_stats": [
         {
           "type": "Health",
@@ -755,6 +766,7 @@
       "name": "Ana",
       "type": "support",
       "safe_name": "ana",
+      "visual_order": 0,
       "base_stats": [
         {
           "type": "Health",
@@ -821,6 +833,7 @@
       "name": "Juno",
       "type": "support",
       "safe_name": "juno",
+      "visual_order": 1,
       "base_stats": [
         {
           "type": "Health",
@@ -887,6 +900,7 @@
       "name": "Kiriko",
       "type": "support",
       "safe_name": "kiriko",
+      "visual_order": 2,
       "base_stats": [
         {
           "type": "Health",
@@ -953,6 +967,7 @@
       "name": "Lúcio",
       "type": "support",
       "safe_name": "lucio",
+      "visual_order": 3,
       "base_stats": [
         {
           "type": "Health",
@@ -1019,6 +1034,7 @@
       "name": "Mercy",
       "type": "support",
       "safe_name": "mercy",
+      "visual_order": 4,
       "base_stats": [
         {
           "type": "Health",
@@ -1085,6 +1101,74 @@
       "name": "Moira",
       "type": "support",
       "safe_name": "moira",
+      "visual_order": 5,
+      "base_stats": [
+        {
+          "type": "Health",
+          "value": 225
+        },
+        {
+          "type": "Armor",
+          "value": 0
+        },
+        {
+          "type": "Shields",
+          "value": 0
+        }
+      ],
+      "attributes": [
+        {
+          "type": "Weapon Power",
+          "value": "0%"
+        },
+        {
+          "type": "Ability Power",
+          "value": "0%"
+        },
+        {
+          "type": "Attack Speed",
+          "value": "0%"
+        },
+        {
+          "type": "Cooldown Reduction",
+          "value": "0%"
+        },
+        {
+          "type": "Max Ammo",
+          "value": "0%"
+        },
+        {
+          "type": "Weapon Lifesteal",
+          "value": "0%"
+        },
+        {
+          "type": "Ability Lifesteal",
+          "value": "0%"
+        },
+        {
+          "type": "Movement Speed",
+          "value": "0%"
+        },
+        {
+          "type": "Reload Speed",
+          "value": "0%"
+        },
+        {
+          "type": "Melee Damage",
+          "value": "0%"
+        },
+        {
+          "type": "Critical Damage",
+          "value": "0%"
+        }
+      ],
+      "abilities": []
+    },
+    {
+      "name": "Freja",
+      "type": "dps",
+      "safe_name": "freja",
+      "visual_order": 2,
       "base_stats": [
         {
           "type": "Health",
