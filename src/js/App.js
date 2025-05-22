@@ -46,7 +46,7 @@ const App = () => {
 
   const getIcon = (name) => {
     if (!name || isLoading || error) return '';
-    const cleanName = name.replace(/[^a-zA-Z0-9ÁÉÍÓÚŌÜ_ ]/g, '').replace(/ /g, '_').toLowerCase();
+    const cleanName = name.replace(/[^a-zA-Z0-9ÁÉÍÓÚŌÜÆÀ_ ]/g, '').replace(/ /g, '_').toLowerCase();
     return getAsset(`${cleanName}.png`)?.url;
   };
 
@@ -249,21 +249,22 @@ const App = () => {
             }
             acc[hero.type].push(hero);
             return acc;
-          }, {})).map(([type, heroes]) => (
-            <React.Fragment key={type}>
-              <img className="hero-button--category" src={`/static/icons/icon_${type}.png`} alt={type} />
-              {heroes.map((hero) => (
-                <button
-                  type="button"
-                  key={hero.name}
-                  className={`hero-button ${data.character === hero.name ? 'active' : ''}`}
-                  onClick={() => handleHeroChange(hero)}
-                >
-                  <img src={getIcon(hero.safe_name)} alt={hero.name} />
-                </button>
-              ))}
-            </React.Fragment>
-          ))}
+          }, {})).map(([type, heroes]) => [type, heroes.sort((a, b) => a.visual_order - b.visual_order)])
+            .map(([type, heroes]) => (
+              <React.Fragment key={type}>
+                <img className="hero-button--category" src={`/static/icons/icon_${type}.png`} alt={type} />
+                {heroes.map((hero) => (
+                  <button
+                    type="button"
+                    key={hero.name}
+                    className={`hero-button ${data.character === hero.name ? 'active' : ''}`}
+                    onClick={() => handleHeroChange(hero)}
+                  >
+                    <img src={getIcon(hero.safe_name)} alt={hero.name} />
+                  </button>
+                ))}
+              </React.Fragment>
+            ))}
         </section>
       </div>
       <div className="row armory">
