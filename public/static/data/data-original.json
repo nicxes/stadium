@@ -146,7 +146,7 @@
               "value": "5%"
             }
           ],
-          "cost": 5000,
+          "cost": 5500,
           "id": "i_10"
         },
         {
@@ -157,7 +157,7 @@
               "value": "15%"
             }
           ],
-          "cost": 5500,
+          "cost": 6000,
           "id": "i_11"
         },
         {
@@ -551,6 +551,40 @@
           "cost": 4000,
           "character": "Moira",
           "id": "i_35"
+        },
+        {
+          "name": "SLIPSTREAM SCARF",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "[Quick Dash] Distance",
+              "value": "25%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Freja"
+        },
+        {
+          "name": "TRACKER TAG",
+          "attributes": [
+            {
+              "type": "MA",
+              "value": "30%"
+            },
+            {
+              "type": "description",
+              "value": "When <b>[Take Aim]</b> bolt sticks an enemy, increase your Attack Speed by <b>20%</b> for <b>3s</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Freja"
         }
       ],
       "epic": [
@@ -725,7 +759,7 @@
               "value": "Critical Hits reveal the target for <b>3s</b>."
             }
           ],
-          "cost": 13000,
+          "cost": 14500,
           "id": "i_45"
         },
         {
@@ -740,7 +774,7 @@
               "value": "Deal <b>10%</b> increased damage to enemies below <b>30%</b> Life."
             }
           ],
-          "cost": 13500,
+          "cost": 14000,
           "id": "i_46"
         },
         {
@@ -1218,6 +1252,21 @@
           "cost": 11000,
           "character": "Moira",
           "id": "i_74"
+        },
+        {
+          "name": "PORTABLE ZIPLINE",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Eliminations reset both charges of <b>[Quick Dash]</b> Cooldown."
+            }
+          ],
+          "cost": 10000,
+          "character": "Freja"
         }
       ]
     },
@@ -1353,14 +1402,14 @@
           "attributes": [
             {
               "type": "AP",
-              "value": "5%"
+              "value": "10%"
             },
             {
               "type": "CR",
-              "value": "10%"
+              "value": "5%"
             }
           ],
-          "cost": 5000,
+          "cost": 4500,
           "id": "i_84"
         },
         {
@@ -1371,7 +1420,7 @@
               "value": "20%"
             }
           ],
-          "cost": 5500,
+          "cost": 6000,
           "id": "i_85"
         },
         {
@@ -1483,7 +1532,7 @@
           "attributes": [
             {
               "type": "AP",
-              "value": "10%"
+              "value": "5%"
             },
             {
               "type": "[Fire Strike] Radius",
@@ -1836,6 +1885,25 @@
           ],
           "cost": 4000,
           "character": "Orisa"
+        },
+        {
+          "name": "WINDWALKER BOOTS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "CR",
+              "value": "5%"
+            },
+            {
+              "type": "[Updraft] Height",
+              "value": "20%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Freja"
         }
       ],
       "epic": [
@@ -2007,10 +2075,10 @@
           "attributes": [
             {
               "type": "AP",
-              "value": "40%"
+              "value": "35%"
             }
           ],
-          "cost": 13500,
+          "cost": 14000,
           "id": "i_123"
         },
         {
@@ -2170,11 +2238,11 @@
           "attributes": [
             {
               "type": "AP",
-              "value": "20%"
+              "value": "10%"
             },
             {
               "type": "Fire Strike Projectile Speed",
-              "value": "50%"
+              "value": "25%"
             }
           ],
           "cost": 10000,
@@ -2728,6 +2796,21 @@
           "cost": 11000,
           "character": "Moira",
           "id": "i_165"
+        },
+        {
+          "name": "MAGNETIC MAELSTROM",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Bola Shot]</b> pulls in nearby enemies even when it misses with <b>50%</b> <b>reduced</b> pull strength."
+            }
+          ],
+          "cost": 10000,
+          "character": "Freja"
         }
       ]
     },
@@ -2738,14 +2821,14 @@
           "attributes": [
             {
               "type": "Health",
-              "value": "10"
+              "value": "25"
             },
             {
               "type": "description",
               "value": "Health Packs grant <b>20%</b> Move Speed for <b>5s</b> and <b>50 Overhealth</b>."
             }
           ],
-          "cost": 1000,
+          "cost": 1500,
           "id": "i_166"
         },
         {
@@ -2753,10 +2836,10 @@
           "attributes": [
             {
               "type": "description",
-              "value": "At the start of the round, gain 100 unrecoverable <b>Overhealth</b>."
+              "value": "At the start of the round and every time you respawn, gain 100 unrecoverable <b>Overhealth</b>."
             }
           ],
-          "cost": 1000,
+          "cost": 1500,
           "id": "i_167"
         },
         {
@@ -3554,6 +3637,55 @@
           "cost": 4000,
           "character": "Moira",
           "id": "i_216"
+        },
+        {
+          "name": "AEROWEAVE CLOAK",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "[Take Aim] Slowed Momentum Duration",
+              "value": "100%"
+            },
+            {
+              "type": "description",
+              "value": "While momentum is slowed by <b>[Take Aim]</b>, restore <b>5%</b> Max Life every <b>1s</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Freja"
+        },
+        {
+          "name": "HUNTER'S MARK",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Enemies with a Bounty of <b>750</b> or more are revealed to you within 40m. Eliminating them grants <b>250</b> additional <b>Stadium Cash</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Freja"
+        },
+        {
+          "name": "TOURNIQUET",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "After using <b>[Updraft]</b>, reset <b>[Quick Dash]</b> and gain <b>50 Overhealth</b> for <b>5s</b>."
+            }
+          ],
+          "cost": 4500,
+          "character": "Freja"
         }
       ],
       "epic": [
@@ -3566,7 +3698,7 @@
             },
             {
               "type": "description",
-              "value": "The first time you would die each round, revive instead with <b>200</b> Life after <b>3s</b>."
+              "value": "The first time you would die each round, revive instead with <b>250</b> Life after <b>3s</b>."
             }
           ],
           "cost": 9000,
@@ -3584,7 +3716,7 @@
               "value": "The last enemy to deal a final blow to you is <b>Revealed</b> when nearby. Deal <b>10%</b> more damage to them and take <b>10%</b> reduced damage from them."
             }
           ],
-          "cost": 9500,
+          "cost": 9000,
           "id": "i_218"
         },
         {
@@ -3618,7 +3750,7 @@
               "value": "<b>[Melee]</b> Damage grants <b>10%</b> Move Speed and restores <b>5%</b> of Max Life over <b>2s</b>."
             }
           ],
-          "cost": 9500,
+          "cost": 10000,
           "id": "i_220"
         },
         {
@@ -4230,6 +4362,21 @@
           "cost": 10000,
           "character": "Mercy",
           "id": "i_255"
+        },
+        {
+          "name": "TOXIN TIPS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Take Aim]</b> bolt sticks and explosions slow enemies by <b>30%</b>, but takes Is longer to explode."
+            }
+          ],
+          "cost": 9000,
+          "character": "Freja"
         }
       ]
     },
@@ -4433,12 +4580,12 @@
         },
         {
           "name": "TO ME, MY FRIENDS!",
-          "description": "While <b>[Barrier Field]</b> is active, allies within <b>5m</b> are healed equal to <b>3%</b> of your max Life every <b>1s</b>.",
+          "description": "While <b>[Barrier Field]</b> is active, allies within <b>5m</b> are healed equal to <b>4%</b> of your max Life every <b>1s</b>.",
           "id": "p_38"
         },
         {
           "name": "WILHELMWAGEN",
-          "description": "While <b>[Barrier Field]</b> is deployed, you heal for <b>15%</b> of the damage it mitigates and gain <b>30%</b> Move Speed.",
+          "description": "While <b>[Barrier Field]</b> is deployed, you heal for <b>5%</b> of the damage it mitigates and gain <b>30%</b> Move Speed.",
           "id": "p_39"
         },
         {
@@ -4478,7 +4625,7 @@
         },
         {
           "name": "SMASHING!",
-          "description": "When you deal damage with <b>[Rocket Hammer]</b>, gain <b>2%</b> Move Speed and <b>4%</b> Weapon Lifesteal for <b>3s</b>, stacking up to <b>5 times</b>.",
+          "description": "When you deal damage with <b>[Rocket Hammer]</b>, gain <b>1%</b> Move Speed and <b>3%</b> Weapon Lifesteal for <b>2s</b>, stacking up to <b>10 times</b>.",
           "id": "p_47"
         }
       ],
@@ -4723,6 +4870,11 @@
           "name": "DRAGON'S BREATH",
           "description": "<b>[Dragonblade]</b> swings launch a large piercing projectile that deals <b>50%</b> of <b>[Dragonblade]</b>'s damage.",
           "id": "p_94"
+        },
+        {
+          "name": "DEFLECT-O-BOT",
+          "description": "<b>+50%</b> Deflected Projectile Speed.\nDuring the first <b>1.5s</b> of <b>[Deflect]</b>, automatically deflect projectiles towards enemies.",
+          "id": "p_95"
         }
       ],
       "Mei": [
@@ -4872,7 +5024,7 @@
         },
         {
           "name": "CRATERED",
-          "description": "Increase <b>[Helix Rocket]</b> explosion radius by <b>40%</b> and explosion damage by <b>25%</b>.",
+          "description": "Increase <b>[Helix Rocket]</b> explosion radius by <b>40%</b> and explosion damage by <b>15%</b>.",
           "id": "p_123"
         },
         {
@@ -5281,6 +5433,56 @@
           "name": "DESTRUCTION'S DIVIDE",
           "description": "<b>[Coalescence]</b> can be toggled between pure healing or pure damage, with <b>30%</b> greater effect.",
           "id": "p_202"
+        }
+      ],
+      "Freja": [
+        {
+          "name": "CYCLONE",
+          "description": "When you use <b>[Updraft]</b>, fire a <b>[Take Aim]</b> bolt at your crosshair."
+        },
+        {
+          "name": "SEEKERPOINT",
+          "description": "When <b>[Take Aim]</b> bolt sticks an enemy, automatically fire <b>3</b> additional crossbow shots at them that deal <b><b>66%</b> reduced </b>damage."
+        },
+        {
+          "name": "SEISMIC SHOT",
+          "description": "<b>[Take Aim]</b> explosion radius is increased by <b>33%</b>. Double this if the bolt is stuck to a target."
+        },
+        {
+          "name": "THREAD THE NEEDLE",
+          "description": "<b>[Take Aim]</b> bolts pierce enemies. Additional explosions deal <b>66% reduced</b> damage."
+        },
+        {
+          "name": "DEEP POCKETS",
+          "description": "When you use an ability, restore <b>50%</b> of your Max Ammo."
+        },
+        {
+          "name": "FORAGER",
+          "description": "For <b>2s</b> after using <b>[Quick Dash]</b>, <b>[Revdraw Crossbow]</b> hits heal you for <b>3%</b> of your Max Life."
+        },
+        {
+          "name": "PEAK PERFORMANCE",
+          "description": "While firing <b>[Revdraw Crossbow]</b>, your fall speed is decreased by <b>80%</b>."
+        },
+        {
+          "name": "REDUX",
+          "description": "<b>[Revdraw Crossbow]</b> hits against targets stuck by a <b>[Take Aim]</b> bolt or <b>[Bola Shot]</b> reduce the cooldown of your abilities by <b>5%</b> and refunds <b>1</b> ammo."
+        },
+        {
+          "name": "VOLLEY À DEUX",
+          "description": "Every fifth <b>[Revdraw Crossbow]</b> shot fires an additional <b>2</b> bolts in a spread that deal <b>50%</b> reduced damage."
+        },
+        {
+          "name": "LILLE FÆLDE",
+          "description": "After using <b>[Updraft]</b>, your next <b>[Take Aim]</b> while airborne fires a <b>[Bola Shot]</b> that deals <b>60%</b> <b>reduced</b> damage instead of an explosive bolt."
+        },
+        {
+          "name": "SO COOKED",
+          "description": "<b>[Bola Shot]</b>'s damaging zone deals <b>50%</b> more damage and lingers for <b>3s</b>.\n<b>[Bola Shot]</b> eliminations count towards <b>[Bounty Hunting]</b>."
+        },
+        {
+          "name": "MIGHTY GUST",
+          "description": "<b>[Updraft]</b> launches a wind blast towards your crosshair, knocking back enemies and dealing <b class=\"stat-ap\">40</b> damage."
         }
       ]
     }
