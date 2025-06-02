@@ -29,6 +29,10 @@ const Changelog = () => {
               ×
             </button>
             <h3 className="changelog-title">Changelog</h3>
+            <p className="changelog-date">1st June 2025</p>
+            <ul className="changelog-list">
+              <li>Updated item stats and prices to match Stadium Patch notes from 29th of May</li>
+            </ul>
             <p className="changelog-date">22nd May 2025</p>
             <ul className="changelog-list">
               <li>Updated item stats and prices to match Stadium Patch notes from 20th of May</li>
