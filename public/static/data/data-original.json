@@ -201,7 +201,7 @@
             },
             {
               "type": "description",
-              "value": "Recover from being <b>[Overheated] 25%</b> faster."
+              "value": "Recover from being <b>[Overheated] 50%</b> faster."
             }
           ],
           "cost": 4000,
@@ -834,7 +834,7 @@
           "attributes": [
             {
               "type": "AP",
-              "value": "10%"
+              "value": "15%"
             },
             {
               "type": "AS",
@@ -918,11 +918,11 @@
           "attributes": [
             {
               "type": "AS",
-              "value": "10%"
+              "value": "15%"
             },
             {
               "type": "description",
-              "value": "When the target is within <b>10m</b>, unscoped shot gains <b>15%</b> increased damage."
+              "value": "When the target is within <b>10m</b>, unscoped shot gains <b>25%</b> increased damage."
             }
           ],
           "cost": 11000,
@@ -1258,7 +1258,7 @@
           "attributes": [
             {
               "type": "WP",
-              "value": "15%"
+              "value": "5%"
             },
             {
               "type": "description",
@@ -1460,7 +1460,7 @@
             },
             {
               "type": "description",
-              "value": "Using <b>[Self-Destruct]</b> drops lava nearby that deals <b class=\"stat-ap\">30</b> damage every <b>1s</b>."
+              "value": "Using <b>[Self-Destruct]</b> drops lava nearby that deals <b class=\"stat-ap\">80</b> damage every <b>1s</b>."
             }
           ],
           "cost": 4000,
@@ -1664,7 +1664,7 @@
             },
             {
               "type": "Biotic Field Duration",
-              "value": "30%"
+              "value": "40%"
             }
           ],
           "cost": 4000,
@@ -2518,7 +2518,7 @@
             },
             {
               "type": "Biotic Field Radius",
-              "value": "30%"
+              "value": "40%"
             },
             {
               "type": "description",
@@ -2554,7 +2554,7 @@
             },
             {
               "type": "description",
-              "value": "<b>[Biotic Grenade]</b> cooldown is reduced by Is for each target it hits."
+              "value": "<b>[Biotic Grenade]</b> cooldown is reduced by <b>2s</b> for each target it hits."
             }
           ],
           "cost": 10000,
@@ -3482,7 +3482,7 @@
               "value": "25"
             },
             {
-              "type": "AS",
+              "type": "AP",
               "value": "5%"
             },
             {
@@ -3499,7 +3499,7 @@
           "attributes": [
             {
               "type": "MS",
-              "value": "5%"
+              "value": "10%"
             },
             {
               "type": "description",
@@ -3964,7 +3964,7 @@
             },
             {
               "type": "description",
-              "value": "While casting <b>[Rampage]</b> or <b>[Carnage]</b>, gain <b>50%</b> <b>Damage Reduction</b>."
+              "value": "While casting <b>[Rampage]</b> or <b>[Carnage]</b>, gain <b>75%</b> <b>Damage Reduction</b>."
             }
           ],
           "cost": 10000,
@@ -4384,7 +4384,7 @@
       "D.VA": [
         {
           "name": "FOCUSED FUSION",
-          "description": "<b>[Fusion Cannon]</b>'s spread is reduced by <b>66%</b> and damage falloff range is <b>20m</b> farther.",
+          "description": "<b>[Fusion Cannon]</b>'s spread is reduced by <b>50%</b> and damage falloff range is <b>20m</b> farther.",
           "id": "p_0"
         },
         {
@@ -4414,7 +4414,7 @@
         },
         {
           "name": "IGNITION BURST",
-          "description": "<b>[Boosters]</b> leave a trail of lava that deals <b class=\"stat-ap\">30</b> damage every <b>1s</b>.",
+          "description": "<b>[Boosters]</b> leave a trail of lava that deals <b class=\"stat-ap\">80</b> damage every <b>1s</b>.",
           "id": "p_6"
         },
         {
@@ -4451,17 +4451,17 @@
         },
         {
           "name": "ROYAL BULLETS",
-          "description": "<b>[Scattergun]</b> critical hits against targets within <b>12m</b> applies <b>[Wound]</b> for <b class=\"stat-wp\">30</b> damage over <b>3s</b>.",
+          "description": "<b>[Scattergun]</b> critical hits against targets within <b>15m</b> applies <b>[Wound]</b> for <b class=\"stat-wp\">50</b> damage over <b>3s</b>.",
           "id": "p_13"
         },
         {
           "name": "TWIST THE KNIFE",
-          "description": "<b>[Scattergun]</b> critical hits extend the duration of all <b>[Wounds]</b> on the target by <b>0.</b><b>5s</b>.",
+          "description": "<b>[Scattergun]</b> critical hits extend the duration of all <b>[Wounds]</b> on the target by <b>1s</b>.",
           "id": "p_14"
         },
         {
           "name": "BLADE PARADE",
-          "description": "Holding <b>[Jagged Blade]</b> charges it, increasing its damage by up to <b>35%</b> and causing it to knockback.",
+          "description": "Holding <b>[Jagged Blade]</b> charges it, increasing its damage by up to <b>100%</b> and causing it to knockback.",
           "id": "p_15"
         },
         {
@@ -4508,7 +4508,7 @@
       "Orisa": [
         {
           "name": "SCORCHED EARTH",
-          "description": "When you <b>[Overheat]</b>, apply <b>Burning</b> to enemies within <b>6m</b>, dealing damage equal to <b>10%</b> of your max Life over <b>5s</b>.",
+          "description": "When you <b>[Overheat]</b>, apply <b>Burning</b> to enemies within <b>6m</b>, dealing damage equal to <b>20%</b> of your max Life over <b>5s</b>.",
           "id": "p_24"
         },
         {
@@ -4575,7 +4575,7 @@
         },
         {
           "name": "BARRIER RECONSTRUCTION",
-          "description": "When you deal damage with <b>[Rocket Hammer]</b> or <b>[Fire Strike]</b>, restore health to <b>[Barrier Field]</b> equal to <b>10%</b> of its max Health.",
+          "description": "When you deal damage with <b>[Rocket Hammer]</b> or <b>[Fire Strike]</b>, restore health to <b>[Barrier Field]</b> equal to <b>15%</b> of its max Health.",
           "id": "p_37"
         },
         {
@@ -4709,7 +4709,7 @@
         },
         {
           "name": "RELOAD THERAPY",
-          "description": "When you reload a shot, heal <b>3%</b> of your Life.",
+          "description": "When you reload a shot, heal <b>10%</b> of your Life.",
           "id": "p_63"
         },
         {
@@ -4734,12 +4734,12 @@
         },
         {
           "name": "MOLTEN MUNITIONS",
-          "description": "When <b>[Dynamite]</b> explodes on the ground, it leaves lava that <b>Burns</b> enemies for <b class=\"stat-ap\">50</b> every Is.",
+          "description": "When <b>[Dynamite]</b> explodes on the ground, it leaves lava that <b>Burns</b> enemies for <b class=\"stat-ap\">80</b> every <b>1s</b>.",
           "id": "p_68"
         },
         {
           "name": "OUT WITH A BANG",
-          "description": "When <b>[Dynamite]</b> explodes, it spawns <b>3</b> sticky explosives that deal <b>66%</b> reduced damage.",
+          "description": "When <b>[Dynamite]</b> explodes, it spawns <b>3</b> sticky explosives that deal <b>30%</b> reduced damage.",
           "id": "p_69"
         },
         {
@@ -4935,7 +4935,7 @@
         },
         {
           "name": "BLIZZNADO",
-          "description": "While within <b>[Blizzard]</b>, heal <b>5%</b> of your life every <b>1s</b>.",
+          "description": "While within <b>[Blizzard]</b>, heal <b>15%</b> of your life every <b>1s</b>.",
           "id": "p_106"
         }
       ],
@@ -5014,7 +5014,7 @@
         },
         {
           "name": "CHAINGUN",
-          "description": "While continuously shooting <b>[Pulse Rifle]</b>, each shot grants 0.<b>5%</b> Weapon Power, stacking up to <b>100</b> times.",
+          "description": "While continuously shooting <b>[Pulse Rifle]</b>, each shot grants <b>0.4%</b> Weapon Power, stacking up to <b>100</b> times.",
           "id": "p_121"
         },
         {
@@ -5034,7 +5034,7 @@
         },
         {
           "name": "HUNKER DOWN",
-          "description": "When <b>[Helix Rocket]</b> deals damage, create a <b>[Biotic Field]</b> with a <b>reduced</b> duration at your position.",
+          "description": "When <b>[Helix Rocket]</b> deals damage, create a <b>[Biotic Field]</b> with a <b>50% reduced</b> duration at your position.",
           "id": "p_125"
         },
         {
@@ -5163,12 +5163,12 @@
         },
         {
           "name": "BLACK HOLE",
-          "description": "<b>[Hyper Ring]</b> slows the Move Speed of enemies who pass through it by <b>35%</b> for <b>1s</b>.",
+          "description": "<b>[Hyper Ring]</b> slows the Move Speed of enemies who pass through it by <b>35%</b> for <b>2s</b>.",
           "id": "p_150"
         },
         {
           "name": "HYPER HEALER",
-          "description": "Allies affected by <b>[Hyper Ring]</b> gain <b class=\"stat-ap\">50</b> <b>Overhealth</b>.",
+          "description": "Allies affected by <b>[Hyper Ring]</b> gain <b class=\"stat-ap\">100</b> <b>Overhealth</b>.",
           "id": "p_151"
         },
         {
@@ -5210,7 +5210,7 @@
         },
         {
           "name": "SELF-CARE",
-          "description": "When you use <b>[Healing Ofuda]</b>, heal yourself for <b>5%</b> of your max Life.",
+          "description": "When you use <b>[Healing Ofuda]</b>, heal yourself for <b>15%</b> of your max Life.",
           "id": "p_159"
         },
         {
@@ -5454,11 +5454,11 @@
         },
         {
           "name": "DEEP POCKETS",
-          "description": "When you use an ability, restore <b>50%</b> of your Max Ammo."
+          "description": "When you use an ability, restore <b>25%</b> of your Max Ammo."
         },
         {
           "name": "FORAGER",
-          "description": "For <b>2s</b> after using <b>[Quick Dash]</b>, <b>[Revdraw Crossbow]</b> hits heal you for <b>3%</b> of your Max Life."
+          "description": "For <b>2s</b> after using <b>[Quick Dash]</b>, <b>[Revdraw Crossbow]</b> hits heal you for <b>4%</b> of your Max Life."
         },
         {
           "name": "PEAK PERFORMANCE",
@@ -5470,7 +5470,7 @@
         },
         {
           "name": "VOLLEY À DEUX",
-          "description": "Every fifth <b>[Revdraw Crossbow]</b> shot fires an additional <b>2</b> bolts in a spread that deal <b>50%</b> reduced damage."
+          "description": "Every fifth <b>[Revdraw Crossbow]</b> shot fires an additional <b>2</b> bolts in a spread that deal <b>33%</b> reduced damage."
         },
         {
           "name": "LILLE FÆLDE",
@@ -5478,7 +5478,7 @@
         },
         {
           "name": "SO COOKED",
-          "description": "<b>[Bola Shot]</b>'s damaging zone deals <b>50%</b> more damage and lingers for <b>3s</b>.\n<b>[Bola Shot]</b> eliminations count towards <b>[Bounty Hunting]</b>."
+          "description": "<b>[Bola Shot]</b>'s damaging zone deals <b>30%</b> more damage and lingers for <b>2s</b>.\n<b>[Bola Shot]</b> eliminations count towards <b>[Bounty Hunting]</b>."
         },
         {
           "name": "MIGHTY GUST",
