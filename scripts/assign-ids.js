@@ -1,6 +1,6 @@
 /* eslint-disable */
 const fs = require('fs');
-const armoryData = require('../public/static/data/data-original.json');
+const armoryData = require('../public/static/data/data-original-es.json');
 const heroData = require('../public/static/data/heroes-original.json');
 
 function assignIds(data) {

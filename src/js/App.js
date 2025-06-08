@@ -16,6 +16,7 @@ import { calculateMinimumCashPerRound, MVP_BONUS } from './helpers/cashCalculato
 import { useAssets } from './utils/AssetProvider';
 import { generateRandomBuildString, loadBuildFromUrl, updateUrl } from './utils/urlBuilder';
 import gtagHelper from './utils/gtagHelper';
+import { getDisplayName } from './helpers/displayNameHelper';
 
 import { initialOptions } from './initialOptions';
 import { initialValues } from './initialValues';
@@ -350,7 +351,7 @@ const App = () => {
                     {power && (
                       <div className="tooltip-container bordered bordered-side">
                         <div className="tooltip-content">
-                          <p className="tooltip-content--title">{power.name}</p>
+                          <p className="tooltip-content--title">{getDisplayName(power)}</p>
                           <p>{parse(power.description)}</p>
                         </div>
                       </div>
@@ -384,7 +385,7 @@ const App = () => {
                     {item && (
                       <div className="tooltip-container bordered bordered-side">
                         <div className="tooltip-content">
-                          <p className="tooltip-content--title">{item.name}</p>
+                          <p className="tooltip-content--title">{getDisplayName(item)}</p>
                           {item.character && <p className="tooltip-content--subtitle">HERO ITEM</p>}
                           <hr />
                           <ul>

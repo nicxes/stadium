@@ -1,0 +1,5932 @@
+{
+  "tabs": {
+    "weapon": {
+      "common": [
+        {
+          "name": "COMPENSATOR",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "5%"
+            }
+          ],
+          "cost": 1000,
+          "id": "i_0",
+          "displayName": "COMPENSADOR"
+        },
+        {
+          "name": "PLASMA CONVERTER",
+          "attributes": [
+            {
+              "type": "WPLS",
+              "value": "10%"
+            }
+          ],
+          "cost": 1000,
+          "id": "i_1",
+          "displayName": "CONVERSOR DE PLASMA"
+        },
+        {
+          "name": "WEAPON GREASE",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "5%"
+            }
+          ],
+          "cost": 1000,
+          "id": "i_2",
+          "displayName": "ARMA ENGRASADA"
+        },
+        {
+          "name": "AMMO RESERVES",
+          "attributes": [
+            {
+              "type": "MA",
+              "value": "20%"
+            }
+          ],
+          "cost": 1500,
+          "id": "i_3",
+          "displayName": "RESERVAS DE MUNICIÓN"
+        },
+        {
+          "name": "FRENZY AMPLIFIER",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "Las eliminaciones otorgan <b>10%</b> de velocidad de ataque y <b>15%</b> de velocidad de movimiento durante <b>3s</b>."
+            }
+          ],
+          "cost": 1500,
+          "id": "i_4",
+          "displayName": "AMPLIFICADOR FRENÉTICO"
+        }
+      ],
+      "rare": [
+        {
+          "name": "AFTERMARKET FIRING PIN",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "10%"
+            },
+            {
+              "type": "MS",
+              "value": "5%"
+            }
+          ],
+          "cost": 3750,
+          "id": "i_5",
+          "displayName": "PERCUTOR MECÁNICO"
+        },
+        {
+          "name": "ADVANCED NANOBIOTICS",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "Después de curar a un aliado, obtén <b>10%</b> de velocidad de ataque durante <b>3s</b>."
+            }
+          ],
+          "cost": 4000,
+          "id": "i_6",
+          "displayName": "NANOBIOTECNOLOGÍA AVANZADA"
+        },
+        {
+          "name": "SHIELDBUSTER",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "Después de infligir daño a escudos o armadura, obtén <b>15%</b> de velocidad de ataque durante <b>1s</b>."
+            }
+          ],
+          "cost": 4000,
+          "id": "i_7",
+          "displayName": "ROMPESCUDOS"
+        },
+        {
+          "name": "STOCKPILE",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "5%"
+            },
+            {
+              "type": "MA",
+              "value": "25%"
+            }
+          ],
+          "cost": 4000,
+          "id": "i_8",
+          "displayName": "RESERVA"
+        },
+        {
+          "name": "TECHNOLEECH",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "WPLS",
+              "value": "10%"
+            }
+          ],
+          "cost": 4500,
+          "id": "i_9",
+          "displayName": "TECNOSANGUIJUELA"
+        },
+        {
+          "name": "ICY COOLANT",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "CR",
+              "value": "5%"
+            }
+          ],
+          "cost": 5500,
+          "id": "i_10",
+          "displayName": "REFRIGERANTE GÉLIDO"
+        },
+        {
+          "name": "TALON MODIFICATION MODULE",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "15%"
+            }
+          ],
+          "cost": 6000,
+          "id": "i_11",
+          "displayName": "MÓDULO DE MODIFICACIÓN TALON"
+        },
+        {
+          "name": "GUTPUNCH GAUNTLET",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Mientras no sostienes <b>[Hoja Dentada]</b>, <b>[Melee Rápido]</b> inflige <b>75%</b> más de daño y empuja hacia atrás."
+            }
+          ],
+          "cost": 4000,
+          "character": "Junker Queen",
+          "id": "i_12",
+          "displayName": "GUANTELETE GOLPEADOR"
+        },
+        {
+          "name": "MONARCH'S DECREE",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Grito de Mando]</b> te otorga <b>15%</b> de velocidad de ataque."
+            }
+          ],
+          "cost": 4000,
+          "character": "Junker Queen",
+          "id": "i_13",
+          "displayName": "DECRETO DEL MONARCA"
+        },
+        {
+          "name": "ELECTRO LIGHTS",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Recupérate de estar <b>[Sobrecalentado]</b> un <b>25%</b> más rápido."
+            }
+          ],
+          "cost": 4000,
+          "character": "Orisa",
+          "id": "i_14",
+          "displayName": "LUZ ELECTRO"
+        },
+        {
+          "name": "ENHANCED TARGET SENSORS",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "Inflige <b>25%</b> más de daño a enemigos a más de <b>12m</b> de distancia."
+            }
+          ],
+          "cost": 4000,
+          "character": "Orisa",
+          "id": "i_15",
+          "displayName": "SENSORES DE OBJETIVO MEJORADOS"
+        },
+        {
+          "name": "OPTIMIZED ENERGY",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Los golpes críticos reducen tu <b>[Calor]</b> en <b>5%</b>."
+            }
+          ],
+          "cost": 5000,
+          "character": "Orisa",
+          "id": "i_16",
+          "displayName": "ENERGÍA OPTIMIZADA"
+        },
+        {
+          "name": "IRONCLAD CLEATS",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "25"
+            },
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "Knockback Resist",
+              "value": "40%"
+            }
+          ],
+          "cost": 3750,
+          "character": "Reinhardt",
+          "id": "i_17",
+          "displayName": "BOTAS ACORAZADAS"
+        },
+        {
+          "name": "HYBRID BATTERY",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Energía]</b> no puede reducirse por debajo de <b>20</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Zarya",
+          "id": "i_18",
+          "displayName": "BATERÍA HÍBRIDA"
+        },
+        {
+          "name": "MAXED MAG",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "Obtén <b>3%</b> de velocidad de ataque por cada munición restante por encima del <b>50%</b> de tu munición máxima."
+            }
+          ],
+          "cost": 4000,
+          "character": "Ashe",
+          "id": "i_19",
+          "displayName": "CARGADOR AL MÁXIMO"
+        },
+        {
+          "name": "TRIPOD",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[La Víbora]</b>, <b>[Escopeta de Entrenador]</b> y <b>[Dinamita]</b> infligen <b>10%</b> más de daño a enemigos que estén debajo de ti."
+            }
+          ],
+          "cost": 4000,
+          "character": "Ashe",
+          "id": "i_20",
+          "displayName": "TRÍPODE"
+        },
+        {
+          "name": "GREASED LOADER",
+          "attributes": [
+            {
+              "type": "MA",
+              "value": "25%"
+            },
+            {
+              "type": "RS",
+              "value": "15%"
+            }
+          ],
+          "cost": 5000,
+          "character": "Ashe",
+          "id": "i_21",
+          "displayName": "CARGADOR ENGRASADO"
+        },
+        {
+          "name": "QUICKLOAD CHAMBER",
+          "attributes": [
+            {
+              "type": "RS",
+              "value": "20%"
+            },
+            {
+              "type": "description",
+              "value": "Recargar a menos de <b>6m</b> de un enemigo añade <b>20%</b> de la munición máxima como munición extra."
+            }
+          ],
+          "cost": 4000,
+          "character": "Cassidy",
+          "id": "i_22",
+          "displayName": "CÁMARA DE RECARGA RÁPIDA"
+        },
+        {
+          "name": "SPIKED GRIP",
+          "attributes": [
+            {
+              "type": "MA",
+              "value": "30%"
+            },
+            {
+              "type": "description",
+              "value": "Mientras trepas, restaura <b>20%</b> de tu munición cada 1s."
+            }
+          ],
+          "cost": 3750,
+          "character": "Genji",
+          "id": "i_23",
+          "displayName": "EMPUNADURA CON PINCHOS"
+        },
+        {
+          "name": "SPECTRAL SLUGS",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "5%"
+            },
+            {
+              "type": "MA",
+              "value": "25%"
+            },
+            {
+              "type": "description",
+              "value": "Usar <b>[Paso Sombrío]</b> restaura el <b>100%</b> de tu munición."
+            }
+          ],
+          "cost": 4000,
+          "character": "Reaper",
+          "id": "i_24",
+          "displayName": "BALAS ESPECTRALES"
+        },
+        {
+          "name": "PULSE CONVERTER",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "5%"
+            },
+            {
+              "type": "CR",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "Cuando usas <b>[Cohete Hélice]</b>, restaura el <b>20%</b> de tu munición."
+            }
+          ],
+          "cost": 4000,
+          "character": "Soldier: 76",
+          "id": "i_25",
+          "displayName": "CONVERTIDOR DE PULSO"
+        },
+        {
+          "name": "TARGET TRACKER",
+          "attributes": [
+            {
+              "type": "Biotic Grenade Duration",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Por cada enemigo o aliado afectado por <b>[Granada Biótica]</b>, obtén <b>5%</b> de velocidad de ataque, hasta <b>25%</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Ana",
+          "id": "i_26",
+          "displayName": "RASTREADOR DE OBJETIVOS"
+        },
+        {
+          "name": "POTENT PROJECTILES",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Los proyectiles sin apuntar de <b>[Rifle Biótico]</b> son un <b>100%</b> más grandes."
+            }
+          ],
+          "cost": 5000,
+          "character": "Ana",
+          "id": "i_27",
+          "displayName": "PROYECTILES POTENTES"
+        },
+        {
+          "name": "QUICK SCOPE",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "Faster Scope Speed",
+              "value": "200%"
+            },
+            {
+              "type": "description",
+              "value": "Inflige <b>20%</b> más de daño a enemigos en el aire."
+            }
+          ],
+          "cost": 5000,
+          "character": "Ana",
+          "id": "i_28",
+          "displayName": "APUNTE RÁPIDO"
+        },
+        {
+          "name": "VANTAGE SHOT",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "Mientras estás en el aire, <b>[Medibláster]</b> inflige <b>15%</b> más de daño."
+            }
+          ],
+          "cost": 4000,
+          "character": "Juno",
+          "id": "i_29",
+          "displayName": "DISPARO DE VENTAJA"
+        },
+        {
+          "name": "ASA'S ARMAMENTS",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Kunai]</b> rebota en superficies <b>1 vez</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Kiriko",
+          "id": "i_30",
+          "displayName": "ARMAMENTO DE ASA"
+        },
+        {
+          "name": "FARSIGHT FOCUS SASH",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Cuando infliges daño, obtén <b>200%</b> de velocidad de proyectil de <b>[Ofuda Sanadora]</b> durante <b>5s</b>."
+            }
+          ],
+          "cost": 5000,
+          "character": "Kiriko",
+          "id": "i_31",
+          "displayName": "BANDA DE ENFOQUE DE LARGA VISTA"
+        },
+        {
+          "name": "TEAMWORK TOOLKIT",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Cuando curas a un aliado, le otorgas <b>10%</b> de velocidad de movimiento durante <b>3s</b>."
+            }
+          ],
+          "cost": 5000,
+          "character": "Kiriko",
+          "id": "i_32",
+          "displayName": "KIT DE TRABAJO EN EQUIPO"
+        },
+        {
+          "name": "MID-AIR MOBILIZER",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "Mientras estás en el aire, obtén: <ul><li><b>5%</b> de poder de arma</li><li><b>10%</b> de velocidad de ataque</li></ul>"
+            }
+          ],
+          "cost": 4000,
+          "character": "Mercy",
+          "id": "i_33",
+          "displayName": "MOVILIZADOR AÉREO"
+        },
+        {
+          "name": "BIO-NEEDLES",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "El disparo secundario de <b>[Agarre Biótico]</b> restaura un <b>50%</b> más de <b>[Energía Biótica]</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Moira",
+          "id": "i_34",
+          "displayName": "BIOAGUJAS"
+        },
+        {
+          "name": "HIGH CAPACITY TUBING",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "Max [Biotic Energy]",
+              "value": "50"
+            }
+          ],
+          "cost": 4000,
+          "character": "Moira",
+          "id": "i_35",
+          "displayName": "TUBERÍA DE ALTA CAPACIDAD"
+        },
+        {
+          "name": "SLIPSTREAM SCARF",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "[Quick Dash] Distance",
+              "value": "25%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Freja"
+        },
+        {
+          "name": "TRACKER TAG",
+          "attributes": [
+            {
+              "type": "MA",
+              "value": "30%"
+            },
+            {
+              "type": "description",
+              "value": "When <b>[Take Aim]</b> bolt sticks an enemy, increase your Attack Speed by <b>20%</b> for <b>3s</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Freja"
+        }
+      ],
+      "epic": [
+        {
+          "name": "CODEBREAKER",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Ignora el <b>50%</b> de la reducción de daño de la armadura."
+            }
+          ],
+          "cost": 9000,
+          "id": "i_36",
+          "displayName": "ROMPECÓDIGOS"
+        },
+        {
+          "name": "SALVAGED SLUGS",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "10%"
+            },
+            {
+              "type": "Increased Damage to Barriers",
+              "value": "30%"
+            },
+            {
+              "type": "description",
+              "value": "Infligir daño de arma a barreras tiene un <b>50%</b> de probabilidad de restaurar <b>1</b> munición."
+            }
+          ],
+          "cost": 9500,
+          "id": "i_37",
+          "displayName": "CARTUCHOS RECUPERADOS"
+        },
+        {
+          "name": "VOLSKAYA ORDNANCE",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Inflige <b>5%</b> más de daño de arma por cada <b>100</b> de vida máxima que el objetivo tenga más que tú, hasta un <b>20%</b>."
+            }
+          ],
+          "cost": 9500,
+          "id": "i_38",
+          "displayName": "ARTILLERÍA VOLSKAYA"
+        },
+        {
+          "name": "COMMANDER'S CLIP",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "10%"
+            },
+            {
+              "type": "MA",
+              "value": "40%"
+            },
+            {
+              "type": "description",
+              "value": "Cuando usas una habilidad, restaura el <b>10%</b> de tu munición máxima."
+            }
+          ],
+          "cost": 10000,
+          "id": "i_39",
+          "displayName": "CARGADOR DEL COMANDANTE"
+        },
+        {
+          "name": "WEAPON JAMMER",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "25"
+            },
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Infligir daño de arma niega el <b>10%</b> de la velocidad de ataque adicional del objetivo y aumenta tu velocidad de ataque en <b>10%</b> durante <b>2s</b>."
+            }
+          ],
+          "cost": 10000,
+          "id": "i_40",
+          "displayName": "INHIBIDOR DE ARMAS"
+        },
+        {
+          "name": "AMARI'S ANTIDOTE",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "WP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Mientras curas a un aliado por debajo del <b>50%</b> de vida con tu arma, inflige un <b>15%</b> más de curación de arma."
+            }
+          ],
+          "cost": 11000,
+          "id": "i_41",
+          "displayName": "ANTÍDOTO DE AMARI"
+        },
+        {
+          "name": "BOOSTER JETS",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "20%"
+            },
+            {
+              "type": "description",
+              "value": "Cuando usas una habilidad, obtén <b>10%</b> de velocidad de movimiento durante <b>2s</b>."
+            }
+          ],
+          "cost": 11000,
+          "id": "i_42",
+          "displayName": "PROPULSORES POTENCIADOS"
+        },
+        {
+          "name": "EL-SA'KA SUPPRESOR",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Los golpes críticos aplican <b>30% de reducción de curación</b> al objetivo durante <b>2s</b>."
+            }
+          ],
+          "cost": 11000,
+          "id": "i_43",
+          "displayName": "SILENCIADOR EL-SA'KA"
+        },
+        {
+          "name": "HARDLIGHT ACCELERATOR",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "CR",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Cuando usas una habilidad, obtén <b>5%</b> de poder de arma durante <b>3s</b>, acumulable hasta <b>3</b> veces."
+            }
+          ],
+          "cost": 11000,
+          "id": "i_44",
+          "displayName": "ACELERADOR DE LUZ SÓLIDA"
+        },
+        {
+          "name": "THE CLOSER",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "20%"
+            },
+            {
+              "type": "CD",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Los golpes críticos revelan al objetivo durante <b>3s</b>."
+            }
+          ],
+          "cost": 14500,
+          "id": "i_45",
+          "displayName": "PUNTO FINAL"
+        },
+        {
+          "name": "EYE OF THE SPIDER",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "25%"
+            },
+            {
+              "type": "description",
+              "value": "Inflige <b>10%</b> más de daño a enemigos por debajo del <b>30%</b> de vida."
+            }
+          ],
+          "cost": 14000,
+          "id": "i_46",
+          "displayName": "OJO DE LA ARAÑA"
+        },
+        {
+          "name": "MULTI-TASK MOD",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "20%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Cañones de fusión]</b> ahora pueden dispararse mientras usas <b>[Matriz de defensa]</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "D.VA",
+          "id": "i_47",
+          "displayName": "MOD MULTITAREA"
+        },
+        {
+          "name": "SHRED AND LEAD",
+          "attributes": [
+            {
+              "type": "MA",
+              "value": "33%"
+            },
+            {
+              "type": "WPLS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Cuando <b>[Hierves]</b> a un enemigo, obtén <b>10%</b> de velocidad de ataque durante <b>4s</b>, acumulable hasta <b>3 veces</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Junker Queen",
+          "id": "i_48",
+          "displayName": "DESPEDAZA Y LIDERA"
+        },
+        {
+          "name": "BLOODHOUND MASK",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Obtén <b>5%</b> de poder de arma por cada enemigo con una <b>[Herida]</b> dentro de <b>12m</b>."
+            }
+          ],
+          "cost": 12000,
+          "character": "Junker Queen",
+          "id": "i_49",
+          "displayName": "MÁSCARA SABUESO"
+        },
+        {
+          "name": "DAMPENER GRIP",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "AS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Cuando infliges más daño con <b>[Martillo Cohete]</b>, reduce el enfriamiento de tus habilidades en <b>1s</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Reinhardt",
+          "id": "i_50",
+          "displayName": "EMPUNADURA AMORTIGUADA"
+        },
+        {
+          "name": "PLAN Z",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Obtén <b>3%</b> de velocidad de ataque por cada <b>100</b> de vida faltante, hasta un <b>30%</b>."
+            }
+          ],
+          "cost": 11000,
+          "character": "Reinhardt",
+          "id": "i_51"
+        },
+        {
+          "name": "LIGHT LAUNCHER",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Los disparos consecutivos de fuego secundario de <b>[Cañón de partículas]</b> consumen un <b>20%</b> menos de munición, hasta un <b>60%</b>, para tu cargador actual."
+            }
+          ],
+          "cost": 10000,
+          "character": "Zarya",
+          "id": "i_52",
+          "displayName": "LANZADOR LIGERO"
+        },
+        {
+          "name": "BIGGER BEAM",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "El alcance del fuego primario de <b>[Cañón de partículas]</b> aumenta en un <b>20%</b>."
+            }
+          ],
+          "cost": 11000,
+          "character": "Zarya",
+          "id": "i_53",
+          "displayName": "HAZ MÁS GRANDE"
+        },
+        {
+          "name": "IRONSIGHTS",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Cuando el objetivo está a más de <b>10m</b>, el disparo con mira gana un <b>1%</b> de daño por cada metro."
+            }
+          ],
+          "cost": 11000,
+          "character": "Ashe",
+          "id": "i_54",
+          "displayName": "MIRAS DE HIERRO"
+        },
+        {
+          "name": "SIDEWINDER",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Cuando el objetivo está a menos de <b>10m</b>, el disparo sin mira gana un <b>15%</b> de daño aumentado."
+            }
+          ],
+          "cost": 11000,
+          "character": "Ashe",
+          "id": "i_55",
+          "displayName": "SERPIENTE LATERAL"
+        },
+        {
+          "name": "COMPETITIVE ANALYSIS",
+          "attributes": [
+            {
+              "type": "WPLS",
+              "value": "20%"
+            },
+            {
+              "type": "description",
+              "value": "Inflige un <b>15%</b> más de daño de fuego primario a enemigos en el <b>rol de Daño</b>."
+            }
+          ],
+          "cost": 11000,
+          "character": "Cassidy",
+          "id": "i_56",
+          "displayName": "ANÁLISIS COMPETITIVO"
+        },
+        {
+          "name": "AMBUSHER OPTICS",
+          "attributes": [
+            {
+              "type": "MD",
+              "value": "25%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Melee Rápido]</b> puede golpear críticamente al atacar enemigos por la espalda, infligiendo un <b>50%</b> más de daño."
+            }
+          ],
+          "cost": 10000,
+          "character": "Genji",
+          "id": "i_57",
+          "displayName": "ÓPTICAS EMBOSCADA"
+        },
+        {
+          "name": "ENDURING EDGE",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "[Dragonblade] Duration",
+              "value": "+4s"
+            }
+          ],
+          "cost": 10000,
+          "character": "Genji",
+          "id": "i_58",
+          "displayName": "BORDE DURADERO"
+        },
+        {
+          "name": "SWIFT-LOADER",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "10%"
+            },
+            {
+              "type": "MA",
+              "value": "30%"
+            },
+            {
+              "type": "description",
+              "value": "Dañar a un enemigo con <b>[Golpe Rápido]</b> restaura el <b>20%</b> de tu munición."
+            }
+          ],
+          "cost": 10000,
+          "character": "Genji",
+          "id": "i_59",
+          "displayName": "CARGA RÁPIDA"
+        },
+        {
+          "name": "FOCUSED FLURRIES",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "La munición máxima aumenta en un <b>75%</b> pero recargar toma un <b>50%</b> más."
+            }
+          ],
+          "cost": 10000,
+          "character": "Mei",
+          "id": "i_60",
+          "displayName": "RAFAGAS ENFOCADAS"
+        },
+        {
+          "name": "SNOWBOOT",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "El suelo congelado aumenta la velocidad de movimiento de Mei en un <b>35%</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Mei",
+          "id": "i_61",
+          "displayName": "BOTAS DE NIEVE"
+        },
+        {
+          "name": "HIMALAYAN HAT",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Mientras estés dentro de <b>[Ventisca]</b>, obtén un <b>10%</b> de velocidad de ataque."
+            }
+          ],
+          "cost": 10000,
+          "character": "Mei",
+          "id": "i_62",
+          "displayName": "SOMBRERO DEL HIMALAYA"
+        },
+        {
+          "name": "ONSLAUGHT",
+          "attributes": [
+            {
+              "type": "MA",
+              "value": "25%"
+            },
+            {
+              "type": "description",
+              "value": "Cada <b>3er</b> disparo dispara ambas <b>[Escopetas Infierno]</b>. El disparo extra no consume munición pero inflige un <b>80%</b> menos de daño."
+            }
+          ],
+          "cost": 10000,
+          "character": "Reaper",
+          "id": "i_63",
+          "displayName": "EMBESTIDA"
+        },
+        {
+          "name": "PULSE SPIKE",
+          "attributes": [
+            {
+              "type": "AS",
+              "value": "10%"
+            },
+            {
+              "type": "[Pulsar Torpedoes] Projectile Speed",
+              "value": "35%"
+            },
+            {
+              "type": "description",
+              "value": "Después de usar <b>[Torpedos Pulsar]</b>, obtén un <b>25%</b> de velocidad de ataque durante <b>4s</b>."
+            }
+          ],
+          "cost": 11000,
+          "character": "Juno",
+          "id": "i_64",
+          "displayName": "PUNTA DE PULSO"
+        },
+        {
+          "name": "LONG RANGE BLASTER",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Medibláster]</b> inflige un <b>15%</b> más de daño y curación a objetivos a más de <b>12m</b> de distancia."
+            }
+          ],
+          "cost": 12000,
+          "character": "Juno",
+          "id": "i_65",
+          "displayName": "BLÁSTER DE LARGO ALCANCE"
+        },
+        {
+          "name": "GRAVITATIONAL PUSH",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Durante <b>[Impulso Planeador]</b>, obtén un <b>20%</b> de velocidad de ataque y tu <b>[Melee Rápido]</b> empuja a los enemigos."
+            }
+          ],
+          "cost": 10000,
+          "character": "Juno",
+          "id": "i_66",
+          "displayName": "IMPULSO GRAVITACIONAL"
+        },
+        {
+          "name": "RYŌTA'S RELOADER",
+          "attributes": [
+            {
+              "type": "RS",
+              "value": "35%"
+            },
+            {
+              "type": "description",
+              "value": "Después de usar una habilidad, restaura el <b>100%</b> de tu munición."
+            }
+          ],
+          "cost": 10000,
+          "character": "Kiriko",
+          "id": "i_67",
+          "displayName": "RECARGADOR DE RYŌTA"
+        },
+        {
+          "name": "SPIRITS' GUIDANCE",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "15%"
+            },
+            {
+              "type": "[Healing Ofuda] Projectile Speed",
+              "value": "100%"
+            }
+          ],
+          "cost": 12000,
+          "character": "Kiriko",
+          "id": "i_68",
+          "displayName": "GUÍA DE LOS ESPÍRITUS"
+        },
+        {
+          "name": "B-SIDE BOP",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "MD",
+              "value": "25%"
+            },
+            {
+              "type": "description",
+              "value": "Después de usar <b>[Onda Sonora]</b>, tu siguiente <b>[Melee Rápido]</b> otorga sobrevida temporal igual al <b>200%</b> del daño infligido."
+            }
+          ],
+          "cost": 10000,
+          "character": "Lúcio",
+          "id": "i_69"
+        },
+        {
+          "name": "RIFF REPEATER",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Los proyectiles de <b>[Amplificador sónico]</b> rebotan en paredes <b>3</b> veces."
+            }
+          ],
+          "cost": 10000,
+          "character": "Lúcio",
+          "id": "i_70",
+          "displayName": "REPETIDOR DE RITMO"
+        },
+        {
+          "name": "CADUCEUS EX",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "[Caduceus Staff] Range",
+              "value": "33%"
+            }
+          ],
+          "cost": 10000,
+          "character": "Mercy",
+          "id": "i_71",
+          "displayName": "CADUCEO EX"
+        },
+        {
+          "name": "CELESTIAL CLIP",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "MA",
+              "value": "33%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Bláster Caduceo]</b> tiene un <b>10%</b> de probabilidad de disparar un tiro extra que no consume munición adicional."
+            }
+          ],
+          "cost": 10000,
+          "character": "Mercy",
+          "id": "i_72",
+          "displayName": "CARGADOR CELESTIAL"
+        },
+        {
+          "name": "ALTERNATIVE ENERGY",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "AS",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Cuando usas <b>[Desvanecerse]</b>, rellena tu <b>[Energía Biótica]</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Moira",
+          "id": "i_73",
+          "displayName": "ENERGÍA ALTERNATIVA"
+        },
+        {
+          "name": "SUBATOMIC SPLITTER",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "[Biotic Grasp] Secondary Fire Range",
+              "value": "15%"
+            }
+          ],
+          "cost": 11000,
+          "character": "Moira",
+          "id": "i_74",
+          "displayName": "DIVISOR SUBATÓMICO"
+        },
+        {
+          "name": "PORTABLE ZIPLINE",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "Eliminations reset both charges of <b>[Quick Dash]</b> Cooldown."
+            }
+          ],
+          "cost": 10000,
+          "character": "Freja"
+        }
+      ]
+    },
+    "ability": {
+      "common": [
+        {
+          "name": "CHARGED PLATING",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "Después de gastar tu carga de habilidad definitiva, obtén <b>25</b> de armadura y <b>10%</b> de poder de habilidad por el resto de la ronda."
+            }
+          ],
+          "cost": 1000,
+          "id": "i_75",
+          "displayName": "BLINDAJE CARGADO"
+        },
+        {
+          "name": "POWER PLAYBOOK",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            }
+          ],
+          "cost": 1000,
+          "id": "i_76",
+          "displayName": "MANUAL DE PODER"
+        },
+        {
+          "name": "SHADY SPECTACLES",
+          "attributes": [
+            {
+              "type": "ALS",
+              "value": "10%"
+            }
+          ],
+          "cost": 1000,
+          "id": "i_77",
+          "displayName": "GAFAS TINTADAS"
+        },
+        {
+          "name": "WINNING ATTITUDE",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Cuando mueres, obtén <b>15%</b> de carga de habilidad definitiva."
+            }
+          ],
+          "cost": 1500,
+          "id": "i_78",
+          "displayName": "ACTITUD GANADORA"
+        }
+      ],
+      "rare": [
+        {
+          "name": "CUSTOM STOCK",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "AP",
+              "value": "10%"
+            }
+          ],
+          "cost": 3750,
+          "id": "i_79",
+          "displayName": "MATERIAL A MEDIDA"
+        },
+        {
+          "name": "BIOLIGHT OVERFLOW",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "AP",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "Cuando gastas tu carga de habilidad definitiva, otorga a los aliados cercanos <b>50 de sobrevida</b> durante <b>3s</b>."
+            }
+          ],
+          "cost": 4000,
+          "id": "i_80",
+          "displayName": "DESBORDE DE BIOLUZ"
+        },
+        {
+          "name": "ENERGIZED BRACERS",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "ALS",
+              "value": "10%"
+            }
+          ],
+          "cost": 4000,
+          "id": "i_81",
+          "displayName": "BRAZALES DE ENERGÍA"
+        },
+        {
+          "name": "JUNKER WHATCHAMAJIG",
+          "attributes": [
+            {
+              "type": "Starting Ultimate Charge",
+              "value": "25%"
+            }
+          ],
+          "cost": 4000,
+          "id": "i_82",
+          "displayName": "COMOSELLAME DE CHATARRA"
+        },
+        {
+          "name": "WRIST WRAPS",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "5%"
+            },
+            {
+              "type": "AS",
+              "value": "10%"
+            }
+          ],
+          "cost": 4000,
+          "id": "i_83",
+          "displayName": "MUÑEQUERAS"
+        },
+        {
+          "name": "MULTI-TOOL",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "CR",
+              "value": "5%"
+            }
+          ],
+          "cost": 4500,
+          "id": "i_84",
+          "displayName": "HERRAMIENTA MULTIUSOS"
+        },
+        {
+          "name": "NANO COLA",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "20%"
+            }
+          ],
+          "cost": 6000,
+          "id": "i_85"
+        },
+        {
+          "name": "DAE-HYUN'S DETONATOR",
+          "attributes": [
+            {
+              "type": "ALS",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Si tu <b>[Mecha]</b> detona mientras está en el aire, aumenta el daño y el alcance de la explosión de <b>[Autodestrucción]</b> en un <b>200%</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "D.VA",
+          "id": "i_86",
+          "displayName": "DETONADOR DE DAE-HYUN"
+        },
+        {
+          "name": "MASTERMIND'S MITIGATOR",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "Cada <b>200</b> de daño que mitigas con <b>[Matriz de defensa]</b> reduce el enfriamiento de <b>[Misiles Micro]</b> en <b>1s</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "D.VA",
+          "id": "i_87",
+          "displayName": "MITIGADOR DE MENTE MAESTRA"
+        },
+        {
+          "name": "VESUVIUS PROTOCOL",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Usar <b>[Autodestrucción]</b> deja lava cerca que inflige <b class=\"stat-ap\">30</b> de daño cada <b>1s</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "D.VA",
+          "id": "i_88",
+          "displayName": "PROTOCOLO VESUBIANO"
+        },
+        {
+          "name": "BIGGER MAGNET",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "La fuerza de atracción de <b>[Hoja Dentada]</b> aumenta en un <b>35%</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Junker Queen",
+          "id": "i_89",
+          "displayName": "IMÁN MÁS GRANDE"
+        },
+        {
+          "name": "ARCFINDER",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "<b>[Jabalina de Energía]</b> inflige un <b>25%</b> más de daño a enemigos a más de <b>12m</b> de distancia."
+            }
+          ],
+          "cost": 4000,
+          "character": "Orisa",
+          "id": "i_90",
+          "displayName": "BUSCADOR DE ARCOS"
+        },
+        {
+          "name": "ELITE ROTATOR CUFF",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "[Javelin Spin] Duration",
+              "value": "35%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Orisa",
+          "id": "i_91",
+          "displayName": "CUFF ROTADOR ÉLITE"
+        },
+        {
+          "name": "BOOST RECYCLER",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Si <b>[Carga]</b> es interrumpida por el enemigo, reembolsa el <b>50%</b> del enfriamiento de <b>[Carga]</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Reinhardt",
+          "id": "i_92",
+          "displayName": "RECICLADOR DE IMPULSO"
+        },
+        {
+          "name": "CHIMERA'S MAW",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "5%"
+            },
+            {
+              "type": "[Fire Strike] Radius",
+              "value": "50%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Reinhardt",
+          "id": "i_93",
+          "displayName": "FAUCES DE QUIMERA"
+        },
+        {
+          "name": "BEYOND BARRIER",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "[Projected Barrier] Range",
+              "value": "20%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Zarya",
+          "id": "i_94",
+          "displayName": "MÁS ALLÁ DE LA BARRERA"
+        },
+        {
+          "name": "FURNACE FUEL",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "AP",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "Las quemaduras limpiadas otorgan <b>3%</b> de carga de habilidad definitiva."
+            }
+          ],
+          "cost": 4000,
+          "character": "Ashe",
+          "id": "i_95",
+          "displayName": "COMBUSTIBLE DE HORNO"
+        },
+        {
+          "name": "SILVER LIGHTER",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "El daño infligido a objetivos <b>quemados</b> otorga un <b>20%</b> más de carga de habilidad definitiva."
+            }
+          ],
+          "cost": 4000,
+          "character": "Ashe",
+          "id": "i_96",
+          "displayName": "ENCENDEDOR DE PLATA"
+        },
+        {
+          "name": "BLACKWATCH TECH",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Las eliminaciones de <b>[Ojo de Halcón]</b> reducen el enfriamiento máximo de <b>[Granada Aturdidora]</b> en un <b>10%</b>, hasta un <b>40%</b> durante la ronda."
+            }
+          ],
+          "cost": 4000,
+          "character": "Cassidy",
+          "id": "i_97",
+          "displayName": "TECNOLOGÍA BLACKWATCH"
+        },
+        {
+          "name": "STREAMLINED PONCHO",
+          "attributes": [
+            {
+              "type": "CR",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Rodar en Combate]</b> reduce el enfriamiento de <b>[Granada Aturdidora]</b> en <b>2s</b>."
+            }
+          ],
+          "cost": 5000,
+          "character": "Cassidy",
+          "id": "i_98",
+          "displayName": "PONCHO AERODINÁMICO"
+        },
+        {
+          "name": "TRAVERSAL KINETICS",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "El enfriamiento de <b>[Golpe Rápido]</b> se reduce en un <b>50%</b> si no inflige daño."
+            }
+          ],
+          "cost": 3750,
+          "character": "Genji",
+          "id": "i_99",
+          "displayName": "CINETICA DE TRAVESÍA"
+        },
+        {
+          "name": "NINJA SOLES",
+          "attributes": [
+            {
+              "type": "CR",
+              "value": "5%"
+            },
+            {
+              "type": "Move Speed during [Deflect]",
+              "value": "15%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Genji",
+          "id": "i_100",
+          "displayName": "SUELAS NINJA"
+        },
+        {
+          "name": "BATTERY PACK",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "Biotic Field Duration",
+              "value": "40%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Soldier: 76",
+          "id": "i_101",
+          "displayName": "PAQUETE DE BATERÍA"
+        },
+        {
+          "name": "BOMB DIFFUSAL BOOTS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "Reduced [Helix Rocket] Self-Damage",
+              "value": "90%"
+            },
+            {
+              "type": "description",
+              "value": "Cuando te infliges daño con <b>[Cohete Hélice]</b>, te empuja hacia atrás un <b>200%</b> más lejos."
+            }
+          ],
+          "cost": 4000,
+          "character": "Soldier: 76",
+          "id": "i_102",
+          "displayName": "BOTAS DE DESACTIVACIÓN DE BOMBAS"
+        },
+        {
+          "name": "DOUBLE DOSAGE",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Lanzar un <b>[Dardo de Sueño]</b> a un objetivo afectado por <b>[Granada Biótica]</b> reduce su enfriamiento en un <b>35%</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Ana",
+          "id": "i_103",
+          "displayName": "DOSIS DOBLE"
+        },
+        {
+          "name": "LOCK-ON SHIELD",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Mientras apuntas <b>[Torpedos Pulsar]</b>, obtén sobrevida igual al <b>50%</b> de tus escudos máximos."
+            }
+          ],
+          "cost": 4000,
+          "character": "Juno",
+          "id": "i_104",
+          "displayName": "ESCUDO FIJADO"
+        },
+        {
+          "name": "LUX LOOP",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "[Hyper Ring] Duration",
+              "value": "25%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Juno",
+          "id": "i_105",
+          "displayName": "BUCLE LUX"
+        },
+        {
+          "name": "EYE OF THE YOKAI",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "[Kitsune Rush] Duration",
+              "value": "35%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Kiriko",
+          "id": "i_106",
+          "displayName": "OJO DEL YOKAI"
+        },
+        {
+          "name": "CYCLIST GLOVES",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "Cuando usas una habilidad, obtén un <b>20%</b> de velocidad de ataque durante <b>3s</b>."
+            }
+          ],
+          "cost": 5000,
+          "character": "Kiriko",
+          "id": "i_107",
+          "displayName": "GUANTES CICLISTAS"
+        },
+        {
+          "name": "#1 SINGLE",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "Cuando los aliados salen de tu área de <b>[Crossfade]</b>, el efecto persiste durante <b>2s</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Lúcio",
+          "id": "i_108",
+          "displayName": "DISCO DE PLATINO"
+        },
+        {
+          "name": "LOFLY BEATS",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "AP",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "Mientras estás en <b>[Impulso de Velocidad]</b>, <b>[Onda Sonora]</b> también te empuja hacia atrás."
+            }
+          ],
+          "cost": 4000,
+          "character": "Lúcio",
+          "id": "i_109",
+          "displayName": "BEATS LOFLY"
+        },
+        {
+          "name": "NANO BOOP",
+          "attributes": [
+            {
+              "type": "CR",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "Las eliminaciones ambientales otorgan <b>[Nano Boost]</b> durante <b>5s</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Lúcio",
+          "id": "i_110",
+          "displayName": "NANOBUP"
+        },
+        {
+          "name": "LONG DISTANCE WINGS",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "Guardian Angel Range",
+              "value": "33%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Mercy",
+          "id": "i_111",
+          "displayName": "ALAS DE LARGO ALCANCE"
+        },
+        {
+          "name": "SMART ORBS",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Orbe Biótico]</b> se mueve un <b>50%</b> más lento mientras cura o inflige daño."
+            }
+          ],
+          "cost": 4000,
+          "character": "Moira",
+          "id": "i_112",
+          "displayName": "ORBS INTELIGENTES"
+        },
+        {
+          "name": "LEVITATION SHAWL",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Durante <b>[Coalescencia]</b>, obtén vuelo libre."
+            }
+          ],
+          "cost": 4500,
+          "character": "Moira",
+          "id": "i_113",
+          "displayName": "CHAL LEVITADOR"
+        },
+        {
+          "name": "REFRACTION TILES",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Mientras <b>[Giro de Jabalina]</b> está activo, obtén un <b>50%</b> de reducción de daño de rayos."
+            }
+          ],
+          "cost": 4000,
+          "character": "Orisa",
+          "displayName": "BALDOSAS REFRACTARIAS"
+        },
+        {
+          "name": "WINDWALKER BOOTS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "CR",
+              "value": "5%"
+            },
+            {
+              "type": "[Updraft] Height",
+              "value": "20%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Freja"
+        }
+      ],
+      "epic": [
+        {
+          "name": "THREE-TAP TOMMYGUN",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "AS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Después de usar una habilidad, tus siguientes <b>3</b> instancias de daño de arma infligen daño adicional igual al <b>3%</b> de la vida del objetivo."
+            }
+          ],
+          "cost": 9500,
+          "id": "i_114",
+          "displayName": "METRALLETA TRIPLE"
+        },
+        {
+          "name": "BIOTECH MAXIMIZER",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Cuando usas una habilidad que cura, reduce su enfriamiento en un <b>5%</b> por cada aliado único que cure."
+            }
+          ],
+          "cost": 10000,
+          "id": "i_115",
+          "displayName": "MAXIMIZADO BIOTECNOLÓGICO"
+        },
+        {
+          "name": "CATALYTIC CRYSTAL",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15"
+            },
+            {
+              "type": "description",
+              "value": "El daño y la curación de habilidades otorgan un <b>20%</b> más de carga de habilidad definitiva."
+            }
+          ],
+          "cost": 10000,
+          "id": "i_116",
+          "displayName": "CRISTAL CATALÍTICO"
+        },
+        {
+          "name": "LUMÉRICO FUSION DRIVE",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "50"
+            },
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Cuando usas una habilidad, restaura <b>50</b> de armadura o escudos durante <b>2s</b>."
+            }
+          ],
+          "cost": 10000,
+          "id": "i_117",
+          "displayName": "AMETRALLADORA DE FUSIÓN DE LUMÉRICO"
+        },
+        {
+          "name": "SUPERFLEXOR",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Cuando infliges daño o curación con arma, obtén un <b>5%</b> de poder de habilidad durante <b>3s</b>, acumulable hasta <b>5 veces</b>."
+            }
+          ],
+          "cost": 10000,
+          "id": "i_118"
+        },
+        {
+          "name": "CYBERVENOM",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "CR",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "Infligir daño de habilidad aplica un <b>30%</b> de <b>reducción de curación</b> al objetivo durante <b>2s</b>."
+            }
+          ],
+          "cost": 10500,
+          "id": "i_119",
+          "displayName": "VENENO CIBERNÉTICO"
+        },
+        {
+          "name": "IRIDESCENT IRIS",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "20%"
+            },
+            {
+              "type": "CR",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Después de gastar tu carga de habilidad definitiva, obtén <b>100 de sobrevida</b> durante <b>3s</b>."
+            }
+          ],
+          "cost": 11000,
+          "id": "i_120",
+          "displayName": "IRIS IRIDISCENTE"
+        },
+        {
+          "name": "LIQUID NITROGEN",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Infligir daño de habilidad reduce la velocidad de movimiento del objetivo en un <b>20%</b> durante <b>3s</b>."
+            }
+          ],
+          "cost": 11000,
+          "id": "i_121",
+          "displayName": "NITRÓGENO LÍQUIDO"
+        },
+        {
+          "name": "MARK OF THE KITSUNE",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Cuando usas una habilidad, tu siguiente instancia de daño o curación con arma inflige <b class=\"stat-ap\">25</b> de daño o curación adicional."
+            }
+          ],
+          "cost": 11000,
+          "id": "i_122",
+          "displayName": "MARCA DEL KITSUNE"
+        },
+        {
+          "name": "CHAMPION'S KIT",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "35%"
+            }
+          ],
+          "cost": 14000,
+          "id": "i_123",
+          "displayName": "CONJUNTO DE CAMPEÓN"
+        },
+        {
+          "name": "BUSAN BLASTER",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "20%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Pistola Ligera]</b> obtiene un disparo secundario, que se carga para disparar un tiro explosivo que atraviesa y inflige <b class=\"stat-ap\">80</b> de daño."
+            }
+          ],
+          "cost": 10000,
+          "character": "D.VA",
+          "id": "i_124",
+          "displayName": "PISTOLA DE BUSAN"
+        },
+        {
+          "name": "MACRO MISSILE",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "<b>[Misiles Micro]</b> infligen un <b>25%</b> más de daño y tienen un aumento significativo en el retroceso."
+            }
+          ],
+          "cost": 12000,
+          "character": "D.VA",
+          "id": "i_125",
+          "displayName": "MACROMISIL"
+        },
+        {
+          "name": "ONSLAUGHT ORDINANCE",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "La cantidad y duración de <b>[Misiles Micro]</b> aumenta en un <b>20%</b>."
+            }
+          ],
+          "cost": 12000,
+          "character": "D.VA",
+          "id": "i_126",
+          "displayName": "ORDENANZA DE ASALTO"
+        },
+        {
+          "name": "TINKER TRACKSUIT",
+          "attributes": [
+            {
+              "type": "CR",
+              "value": "5%"
+            },
+            {
+              "type": "ALS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Embate]</b> y <b>[Carnicería]</b> otorgan un <b>10%</b> de velocidad de ataque durante <b>4s</b>."
+            }
+          ],
+          "cost": 9500,
+          "character": "Junker Queen",
+          "id": "i_127",
+          "displayName": "TRAJE DE PISTA"
+        },
+        {
+          "name": "BOOMING VOICE",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "[Commanding Shout] Radius",
+              "value": "50%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Grito de Mando]</b> afectará a aliados que estén fuera de la línea de visión."
+            }
+          ],
+          "cost": 11000,
+          "character": "Junker Queen",
+          "id": "i_128",
+          "displayName": "VOZ RESONANTE"
+        },
+        {
+          "name": "EFI'S THEOREM",
+          "attributes": [
+            {
+              "type": "ALS",
+              "value": "20%"
+            },
+            {
+              "type": "[Fortify] Duration",
+              "value": "50%"
+            }
+          ],
+          "cost": 10000,
+          "character": "Orisa",
+          "id": "i_129",
+          "displayName": "TEOREMA DE EFI"
+        },
+        {
+          "name": "3D-PRINTED LANCE",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "El enfriamiento de <b>[Jabalina de Energía]</b> se reduce en un <b>15%</b>, pero cada uso genera <b>25</b> de <b>[Calor]</b>."
+            }
+          ],
+          "cost": 11000,
+          "character": "Orisa",
+          "id": "i_130",
+          "displayName": "LANZA IMPRESA EN 3D"
+        },
+        {
+          "name": "OLADELE-COPTER BLADES",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Mientras usas <b>[Giro de Jabalina]</b>, obtén vuelo libre y un <b>20%</b> de velocidad de movimiento."
+            }
+          ],
+          "cost": 12000,
+          "character": "Orisa",
+          "id": "i_131",
+          "displayName": "ASPAS DEL OLADELECÓPTERO"
+        },
+        {
+          "name": "GRYPHON GLIDER",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "ALS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Ahora puedes volar durante <b>[Carga]</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Reinhardt",
+          "id": "i_132",
+          "displayName": "PLUMAS DE GRYPHON"
+        },
+        {
+          "name": "ROCKET STRIKE",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "Fire Strike Projectile Speed",
+              "value": "25%"
+            }
+          ],
+          "cost": 10000,
+          "character": "Reinhardt",
+          "id": "i_133",
+          "displayName": "GOLPE COHETE"
+        },
+        {
+          "name": "SUPERCONDUCTOR",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "[Barrier] Duration",
+              "value": "40%"
+            }
+          ],
+          "cost": 10000,
+          "character": "Zarya",
+          "id": "i_134"
+        },
+        {
+          "name": "LYNX'S DATADRIVE",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Lanzar <b>[Barrera Proyectada]</b> a un aliado reembolsa el <b>20%</b> del enfriamiento de <b>[Barrera]</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Zarya",
+          "id": "i_135",
+          "displayName": "UNIDAD DE DATOS DE LYNX"
+        },
+        {
+          "name": "INFRARED LENSES",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Inflige un <b>20%</b> más de daño a enemigos <b>quemados</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Ashe",
+          "id": "i_136",
+          "displayName": "LENTES INFRARROJOS"
+        },
+        {
+          "name": "STACKED STICKS",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "[Dynamite] Explosion Radius",
+              "value": "40%"
+            }
+          ],
+          "cost": 10000,
+          "character": "Ashe",
+          "id": "i_137",
+          "displayName": "PALOS APILADOS"
+        },
+        {
+          "name": "BUILD-A-BLAST BUCKSHOT",
+          "attributes": [
+            {
+              "type": "CR",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Escopeta de Entrenador]</b> tiene un <b>50%</b> más de retroceso propio."
+            }
+          ],
+          "cost": 10000,
+          "character": "Ashe",
+          "id": "i_138",
+          "displayName": "PERDIGONES REVENTONES"
+        },
+        {
+          "name": "IMPROVISED DYNAMITE",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "20%"
+            },
+            {
+              "type": "CR",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "El radio de explosión de <b>[Granada Aturdidora]</b> aumenta en un <b>50%</b>."
+            }
+          ],
+          "cost": 11000,
+          "character": "Cassidy",
+          "id": "i_139",
+          "displayName": "DINAMITA IMPROVISADA"
+        },
+        {
+          "name": "CLEAN SWEEP",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "ALS",
+              "value": "15%"
+            },
+            {
+              "type": "[Swift Strike] Width",
+              "value": "50%"
+            }
+          ],
+          "cost": 10000,
+          "character": "Genji",
+          "id": "i_140",
+          "displayName": "BARRIDO LIMPIO"
+        },
+        {
+          "name": "DEFLECTING DASH",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Durante <b>[Golpe Rápido]</b>, desvía los proyectiles entrantes hacia tu retícula."
+            }
+          ],
+          "cost": 10000,
+          "character": "Genji",
+          "id": "i_141",
+          "displayName": "DASH DEFLECTOR"
+        },
+        {
+          "name": "STURDY SNOWFORT",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "El poder de habilidad aumenta en un <b>5%</b> por cada pilar de hielo generado."
+            }
+          ],
+          "cost": 10000,
+          "character": "Mei",
+          "id": "i_142",
+          "displayName": "FORTALEZA DE NIEVE"
+        },
+        {
+          "name": "ECOPOINT CRYOBED",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "Al estar cerca de la muerte, entra en <b>[Congelación Crio]</b> y obtén un <b>15%</b> de carga de habilidad definitiva. Puede ocurrir una vez por ronda."
+            }
+          ],
+          "cost": 10000,
+          "character": "Mei",
+          "id": "i_143",
+          "displayName": "CAMA CRIOGÉNICA ECOPOINT"
+        },
+        {
+          "name": "ICY VEINS",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Ventisca]</b> inflige un <b>100%</b> más de daño base."
+            }
+          ],
+          "cost": 10000,
+          "character": "Mei",
+          "id": "i_144",
+          "displayName": "VENAS HELADAS"
+        },
+        {
+          "name": "NIGHTCREEPER",
+          "attributes": [
+            {
+              "type": "MS",
+              "value": "10%"
+            },
+            {
+              "type": "[Shadow Step] Cast Speed",
+              "value": "30%"
+            },
+            {
+              "type": "description",
+              "value": "Usar <b>[Forma Espectral]</b> reduce el enfriamiento de <b>[Paso Sombrío]</b> en <b>2s</b>."
+            }
+          ],
+          "cost": 9500,
+          "character": "Reaper",
+          "id": "i_145",
+          "displayName": "MERODEADOR NOCTURNO"
+        },
+        {
+          "name": "WREATH OF RUIN",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "20%"
+            },
+            {
+              "type": "[Death Blossom] Radius",
+              "value": "25%"
+            },
+            {
+              "type": "Move Speed during [Death Blossom]",
+              "value": "20%"
+            }
+          ],
+          "cost": 10000,
+          "character": "Reaper",
+          "id": "i_146",
+          "displayName": "CORONA DE RUINA"
+        },
+        {
+          "name": "CROWD CONTROL",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Flor de la Muerte]</b> obtiene un <b>5%</b> de poder de habilidad por cada enemigo dentro de su alcance."
+            }
+          ],
+          "cost": 11000,
+          "character": "Reaper",
+          "id": "i_147",
+          "displayName": "CONTROL DE MULTITUD"
+        },
+        {
+          "name": "ENDGAME EQUALIZER",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Cuando gastas tu carga de habilidad definitiva, reinicia todos los enfriamientos. Mientras <b>[Visor Táctico]</b> está activo, obtén un <b>20%</b> de reducción de enfriamiento."
+            }
+          ],
+          "cost": 10000,
+          "character": "Soldier: 76",
+          "id": "i_148",
+          "displayName": "ECUALIZADOR FINAL"
+        },
+        {
+          "name": "RAPID RESPONSE RADIUS",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "Biotic Field Radius",
+              "value": "40%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Campo Biótico]</b> cura a aliados por debajo del <b>50%</b> de vida un <b>10%</b> más."
+            }
+          ],
+          "cost": 10000,
+          "character": "Soldier: 76",
+          "id": "i_149",
+          "displayName": "RADIO DE RESPUESTA RÁPIDA"
+        },
+        {
+          "name": "LETHAL DOSE",
+          "attributes": [
+            {
+              "type": "ALS",
+              "value": "50%"
+            },
+            {
+              "type": "description",
+              "value": "El impacto directo de <b>[Dardo de Sueño]</b> inflige <b class=\"stat-ap\">100</b> de daño adicional."
+            }
+          ],
+          "cost": 9000,
+          "character": "Ana",
+          "id": "i_150",
+          "displayName": "DOSIS LETAL"
+        },
+        {
+          "name": "CLUSTER CORE",
+          "attributes": [
+            {
+              "type": "ALS",
+              "value": "25%"
+            },
+            {
+              "type": "description",
+              "value": "El enfriamiento de <b>[Granada Biótica]</b> se reduce en <b>1s</b> por cada objetivo que golpee."
+            }
+          ],
+          "cost": 10000,
+          "character": "Ana",
+          "id": "i_151",
+          "displayName": "NÚCLEO DE CLUSTER"
+        },
+        {
+          "name": "TRANQUILIZER",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "<b>[Dardo de Sueño]</b> obtiene: <ul><li><b>500%</b> tamaño de colisión</li><li><b>100%</b> velocidad de proyectil</li><li><b>20%</b> duración de <b>sueño</b></li></ul>"
+            }
+          ],
+          "cost": 10000,
+          "character": "Ana",
+          "id": "i_152",
+          "displayName": "TRANQUILIZANTE"
+        },
+        {
+          "name": "GRENADIUS PIN",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "20%"
+            },
+            {
+              "type": "[Biotic Grenade] Radius",
+              "value": "30%"
+            }
+          ],
+          "cost": 12000,
+          "character": "Ana",
+          "id": "i_153",
+          "displayName": "PIN DE GRANADIUS"
+        },
+        {
+          "name": "PULSTAR DESTROYERS",
+          "attributes": [
+            {
+              "type": "ALS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Torpedos Pulsar]</b> explotan al impactar, infligiendo <b class=\"stat-ap\">20</b> de daño."
+            }
+          ],
+          "cost": 10000,
+          "character": "Juno",
+          "id": "i_154",
+          "displayName": "DESTRUCTORES PULSTAR"
+        },
+        {
+          "name": "SOLAR SHIELDING",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Los aliados afectados por <b>[Anillo Hiper]</b> restauran <b>25</b> de escudos cada <b>1s</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Juno",
+          "id": "i_155",
+          "displayName": "ESCUDO SOLAR"
+        },
+        {
+          "name": "RED PROMISE REGULATOR",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "50"
+            },
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Cuando usas <b>[Rayo Orbital]</b>, reinicia tus enfriamientos."
+            }
+          ],
+          "cost": 10000,
+          "character": "Juno",
+          "id": "i_156",
+          "displayName": "REGULADOR DE PROMESA ROJA"
+        },
+        {
+          "name": "DONUT DELIVERY",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Paso Rápido]</b> cura a los aliados cercanos <b class=\"stat-ap\">80</b> de vida durante <b>2s</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Kiriko",
+          "id": "i_157",
+          "displayName": "ENTREGA DE DONUTS"
+        },
+        {
+          "name": "OUR BIKES",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Los aliados afectados por <b>[Prisa Kitsune]</b> son curados <b class=\"stat-ap\">80</b> cada <b>1s</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Kiriko",
+          "id": "i_158",
+          "displayName": "NUESTRAS BICICLETAS"
+        },
+        {
+          "name": "TALISMAN OF VELOCITY",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Suzu de Protección]</b> otorga un <b>25%</b> de velocidad de ataque y un <b>25%</b> de velocidad de movimiento durante <b>4s</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Kiriko",
+          "id": "i_159",
+          "displayName": "TALISMÁN DE VELOCIDAD"
+        },
+        {
+          "name": "AIRWAVES",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "La efectividad de <b>[Barrera de Sonido]</b> aumenta en un <b>25%</b> por cada <b>1s</b> que <b>[Barrera de Sonido]</b> se canaliza, hasta un <b>50%</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Lúcio",
+          "id": "i_160",
+          "displayName": "ONDAS AÉREAS"
+        },
+        {
+          "name": "ALL-OUT AUDITIVA",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "[Ampt It Up] Duration",
+              "value": "25%"
+            }
+          ],
+          "cost": 11000,
+          "character": "Lúcio",
+          "id": "i_161",
+          "displayName": "MÁXIMO VOLUMEN"
+        },
+        {
+          "name": "RESURRECTION RANGEFINDER",
+          "attributes": [
+            {
+              "type": "CR",
+              "value": "10%"
+            },
+            {
+              "type": "[Resurrection] Range",
+              "value": "75%"
+            }
+          ],
+          "cost": 10000,
+          "character": "Mercy",
+          "id": "i_162",
+          "displayName": "BUSCADOR DE RANGO DE RESURRECCIÓN"
+        },
+        {
+          "name": "ANGELIC ACROBATICS",
+          "attributes": [
+            {
+              "type": "Guardian Angel Move Speed",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "El enfriamiento de [Ángel Guardián] comienza tan pronto como saltas o te agachas."
+            }
+          ],
+          "cost": 10000,
+          "character": "Mercy",
+          "id": "i_163",
+          "displayName": "ACROBACIAS ANGÉLICAS"
+        },
+        {
+          "name": "COALEGION",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Los aliados curados por <b>[Coalescencia]</b> infligen un <b>15%</b> más de daño."
+            }
+          ],
+          "cost": 10000,
+          "character": "Moira",
+          "id": "i_164",
+          "displayName": "COALEGIÓN"
+        },
+        {
+          "name": "EXTENDRILS",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "[Biotic Orb] Tendril Range",
+              "value": "30%"
+            }
+          ],
+          "cost": 11000,
+          "character": "Moira",
+          "id": "i_165"
+        },
+        {
+          "name": "MAGNETIC MAELSTROM",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Bola Shot]</b> pulls in nearby enemies even when it misses with <b>50%</b> <b>reduced</b> pull strength."
+            }
+          ],
+          "cost": 10000,
+          "character": "Freja"
+        }
+      ]
+    },
+    "survival": {
+      "common": [
+        {
+          "name": "ADRENALINE SHOT",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Los paquetes de salud otorgan un <b>20%</b> de velocidad de movimiento durante <b>5s</b> y <b>50 de sobrevida</b>."
+            }
+          ],
+          "cost": 1500,
+          "id": "i_166",
+          "displayName": "CHUTE DE ADRENALINA"
+        },
+        {
+          "name": "ELECTROLYTES",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "Al inicio de la ronda, obtén 100 de <b>sobrevida</b> irrecuperable."
+            }
+          ],
+          "cost": 1500,
+          "id": "i_167",
+          "displayName": "ELECTROLITOS"
+        },
+        {
+          "name": "FIELD RATIONS",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "Mientras estés en el objetivo, restaura <b>8</b> de vida cada 1s."
+            }
+          ],
+          "cost": 1000,
+          "id": "i_168",
+          "displayName": "RACIONES DE COMBATE"
+        },
+        {
+          "name": "RUNNING SHOES",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "Al inicio de la ronda y cuando reapareces por primera vez, obtén un <b>20%</b> de velocidad de movimiento durante <b>10s</b> mientras estás fuera de combate."
+            }
+          ],
+          "cost": 1000,
+          "id": "i_169",
+          "displayName": "ZAPATILLAS DE CORRER"
+        },
+        {
+          "name": "ARMORED VEST",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "25"
+            }
+          ],
+          "cost": 1500,
+          "id": "i_170",
+          "displayName": "CHALECO BLINDADO"
+        },
+        {
+          "name": "FIRST AID KIT",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Reduce el tiempo antes de que tu vida comience a regenerarse en un <b>33%</b>."
+            }
+          ],
+          "cost": 1500,
+          "id": "i_171",
+          "displayName": "BOTIQUÍN"
+        },
+        {
+          "name": "HEARTBEAT SENSOR",
+          "attributes": [
+            {
+              "type": "MS",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "Los enemigos por debajo del <b>30%</b> de vida son <b>revelados</b> para ti."
+            }
+          ],
+          "cost": 1500,
+          "id": "i_172",
+          "displayName": "SENSOR DE LATIDOS"
+        },
+        {
+          "name": "SIPHON GLOVES",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "El daño de <b>[Melee Rápido]</b> cura <b>25</b> de vida."
+            }
+          ],
+          "cost": 1500,
+          "id": "i_173",
+          "displayName": "GUANTES DE SUCCIÓN"
+        }
+      ],
+      "rare": [
+        {
+          "name": "REINFORCED TITANIUM",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Mientras tienes escudos, recibe un <b>15%</b> menos de daño de habilidades."
+            }
+          ],
+          "cost": 3750,
+          "id": "i_174",
+          "displayName": "TITANIO REFORZADO"
+        },
+        {
+          "name": "CUSHIONED PADDING",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "25"
+            },
+            {
+              "type": "Incoming Negative Effect Duration",
+              "value": "-40%"
+            },
+            {
+              "type": "description",
+              "value": "Cuando eres afectado por <b>aturdimiento</b>, <b>sueño</b> o <b>obstaculización</b>, restaura un <b>10%</b> de tu vida máxima durante <b>3s</b>."
+            }
+          ],
+          "cost": 4000,
+          "id": "i_175",
+          "displayName": "ACOLCHADO MULLIDO"
+        },
+        {
+          "name": "IRONCLAD EXHAUST PORTS",
+          "attributes": [
+            {
+              "type": "CR",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "Cuando usas una habilidad, obtén <b>25 de sobrevida</b> durante <b>3s</b>."
+            }
+          ],
+          "cost": 4000,
+          "id": "i_176",
+          "displayName": "TUBOS DE ESCAPE ACORAZADOS"
+        },
+        {
+          "name": "VISHKAR CONDENSOR",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Convierte <b>100</b> de vida en escudos."
+            }
+          ],
+          "cost": 4000,
+          "id": "i_177",
+          "displayName": "CONDENSADOR VISHKAR"
+        },
+        {
+          "name": "VITAL-E-TEE",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "10"
+            },
+            {
+              "type": "description",
+              "value": "Convierte <b>100</b> de vida en armadura."
+            }
+          ],
+          "cost": 4000,
+          "id": "i_178",
+          "displayName": "VITALIDAD"
+        },
+        {
+          "name": "CRUSADER HYDRAULICS",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Mientras tienes armadura, recibe un <b>10%</b> menos de daño de arma."
+            }
+          ],
+          "cost": 4500,
+          "id": "i_179",
+          "displayName": "HIDRÁULICA DE LOS CRUZADOS"
+        },
+        {
+          "name": "IRON EYES",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Recibes un <b>20%</b> menos de daño de golpes críticos."
+            }
+          ],
+          "cost": 4500,
+          "id": "i_180",
+          "displayName": "OJOS FÉRREOS"
+        },
+        {
+          "name": "MEKA Z-SERIES",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "8%"
+            },
+            {
+              "type": "Armor",
+              "value": "8%"
+            },
+            {
+              "type": "Shields",
+              "value": "8%"
+            }
+          ],
+          "cost": 5000,
+          "id": "i_181",
+          "displayName": "MEKA SERIE Z"
+        },
+        {
+          "name": "GALVANIZED CORE",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "[Boosters] Duration",
+              "value": "25%"
+            }
+          ],
+          "cost": 4000,
+          "character": "D.VA",
+          "id": "i_182",
+          "displayName": "NÚCLEO GALVANIZADO"
+        },
+        {
+          "name": "PLOT ARMOR",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Mientras <b>[Matriz de defensa]</b> está activa, obtén un <b>65%</b> de reducción de daño contra rayos."
+            }
+          ],
+          "cost": 4000,
+          "character": "D.VA",
+          "id": "i_183",
+          "displayName": "INTOCABLE"
+        },
+        {
+          "name": "SOLO SPEC",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Cuando mitigas daño con <b>[Matriz de defensa]</b>, obtén escudos igual al <b>10%</b> del daño mitigado, hasta <b>100</b>. Se reinicia cuando tu <b>[Mecha]</b> es destruido."
+            }
+          ],
+          "cost": 4000,
+          "character": "D.VA",
+          "id": "i_184",
+          "displayName": "ESPECIALIZACIÓN SOLITARIA"
+        },
+        {
+          "name": "DEZ'S DAMAGE DAMPENERS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "Knockback Resist",
+              "value": "50%"
+            },
+            {
+              "type": "description",
+              "value": "Cuando eres empujado hacia atrás, obtén un <b>25%</b> más de velocidad de movimiento durante <b>3s</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Junker Queen",
+          "id": "i_185",
+          "displayName": "AMORTIGUADORES DE DAÑO DE DEZ"
+        },
+        {
+          "name": "REBELLIOUS SPIRIT",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Cuando <b>[Herida]</b> es eliminada en lugar de expirar, obtén un <b>10%</b> de vida máxima como sobrevida, hasta <b>150</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Junker Queen",
+          "id": "i_186",
+          "displayName": "ESPÍRITU REBELDE"
+        },
+        {
+          "name": "SLICING SPREE",
+          "attributes": [
+            {
+              "type": "MS",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "Mientras estés dentro de <b>12m</b> de un enemigo con una <b>[Herida]</b>, obtén un <b>5%</b> de velocidad de movimiento y un <b>10%</b> de velocidad de ataque."
+            }
+          ],
+          "cost": 4000,
+          "character": "Junker Queen",
+          "id": "i_187",
+          "displayName": "RACHA CORTANTE"
+        },
+        {
+          "name": "CHARGED CHASSIS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Fortificar]</b> otorga sobrevida adicional igual al <b>10%</b> de tu vida máxima."
+            }
+          ],
+          "cost": 4000,
+          "character": "Orisa",
+          "id": "i_188",
+          "displayName": "CHASIS CARGADO"
+        },
+        {
+          "name": "SIPHONIC SPEAR",
+          "attributes": [
+            {
+              "type": "description",
+              "value": "Cuando infliges daño con <b>[Jabalina de Energía]</b>, cura un <b>10%</b> de tu vida máxima durante <b>3s</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Orisa",
+          "id": "i_189",
+          "displayName": "LANZA SIPHONIC"
+        },
+        {
+          "name": "SOLAR REGENERGY",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Después de usar una habilidad, restaura armadura igual al <b>3%</b> de tu vida máxima."
+            }
+          ],
+          "cost": 4000,
+          "character": "Orisa",
+          "id": "i_190",
+          "displayName": "REGENERACIÓN SOLAR"
+        },
+        {
+          "name": "CRUSADER'S CURE",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Usar <b>[Carga]</b> elimina todos los efectos negativos."
+            }
+          ],
+          "cost": 3750,
+          "character": "Reinhardt",
+          "id": "i_191",
+          "displayName": "CURA DEL CRUZADO"
+        },
+        {
+          "name": "OVERCLOCKED BARRIER",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "[Barrier Field] Health",
+              "value": "20%"
+            },
+            {
+              "type": "[Barrier Field] Size",
+              "value": "20%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Reinhardt",
+          "id": "i_192",
+          "displayName": "BARRERA SOBREACELERADA"
+        },
+        {
+          "name": "ROCKET BOOTS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Mantener <b>agachado</b> aumenta la altura de tu próximo salto hasta un <b>200%</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Reinhardt",
+          "id": "i_193",
+          "displayName": "BOTAS COHETE"
+        },
+        {
+          "name": "BLASTPROOF BOOTS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "MS",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "El retroceso propio del fuego secundario de <b>[Cañón de Partículas]</b> aumenta en un <b>100%</b> y ya no te inflige daño."
+            }
+          ],
+          "cost": 3750,
+          "character": "Zarya",
+          "id": "i_194",
+          "displayName": "BOTAS A PRUEBA DE EXPLOSIONES"
+        },
+        {
+          "name": "JUMPER CABLES",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "25"
+            },
+            {
+              "type": "AP",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "Después de usar una <b>[Barrera]</b>, comienza a regenerar escudos al instante."
+            }
+          ],
+          "cost": 4000,
+          "character": "Zarya",
+          "id": "i_195",
+          "displayName": "CABLES DE ARRANQUE"
+        },
+        {
+          "name": "PROTEIN SHAKE",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "MD",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Mientras <b>[Barrera de Partículas]</b> está activa, se vuelve imparable y <b>[Melee Rápido]</b> empuja a los enemigos."
+            }
+          ],
+          "cost": 4000,
+          "character": "Zarya",
+          "id": "i_196",
+          "displayName": "BATIDO DE PROTEÍNAS"
+        },
+        {
+          "name": "SILVER SPURS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Después de usar <b>[Escopeta de Entrenador]</b>, obtén un <b>20%</b> de velocidad de movimiento durante <b>3s</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Ashe",
+          "id": "i_197",
+          "displayName": "ESPOLONES DE PLATA"
+        },
+        {
+          "name": "WANTED POSTER",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Las eliminaciones de <b>[Ojo de Halcón]</b> otorgan <b>500 de efectivo del estadio</b> extra cada una."
+            }
+          ],
+          "cost": 4000,
+          "character": "Cassidy",
+          "id": "i_198",
+          "displayName": "CARTEL DE SE BUSCA"
+        },
+        {
+          "name": "ANTI-BEAM COATING",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "25"
+            },
+            {
+              "type": "AS",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Desviar]</b> ahora bloquea ataques de <b>rayos</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Genji",
+          "id": "i_199",
+          "displayName": "BLINDAJE ANTIRRAYOS"
+        },
+        {
+          "name": "EQUILIBRIUM GEAR",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Mientras trepas, cura un <b>5%</b> de tu vida cada <b>1s</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Genji",
+          "id": "i_200",
+          "displayName": "EQUIPO DE EQUILIBRIO"
+        },
+        {
+          "name": "SPARROWHAWK FEATHER",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Obtén un salto adicional."
+            }
+          ],
+          "cost": 4000,
+          "character": "Genji",
+          "id": "i_201",
+          "displayName": "PLUMA DE HALCÓN SPARROW"
+        },
+        {
+          "name": "COLDSPOT",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "El fuego primario y <b>[Ventisca]</b> pueden eliminar quemaduras."
+            }
+          ],
+          "cost": 4000,
+          "character": "Mei",
+          "id": "i_202",
+          "displayName": "PUNTO FRÍO"
+        },
+        {
+          "name": "MEICICLE",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "La duración de <b>[Congelación Crio]</b> aumenta en un <b>25%</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Mei",
+          "id": "i_203",
+          "displayName": "CARÁMBAMEI"
+        },
+        {
+          "name": "DEVASTATION",
+          "attributes": [
+            {
+              "type": "ALS",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Cada eliminación de <b>[Flor de la Muerte]</b> aumenta tu vida en <b>25</b> hasta el final de la ronda, hasta <b>100</b> de vida."
+            }
+          ],
+          "cost": 4000,
+          "character": "Reaper",
+          "id": "i_204",
+          "displayName": "DEVASTACIÓN"
+        },
+        {
+          "name": "NEVERFROST",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "Reduce la efectividad de las ralentizaciones enemigas en un <b>50%</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Reaper",
+          "id": "i_205",
+          "displayName": "PIES RÁPIDOS"
+        },
+        {
+          "name": "POCKET MIST",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Mientras estás por debajo del <b>50%</b> de vida, obtén un <b>20%</b> de velocidad de movimiento."
+            }
+          ],
+          "cost": 4000,
+          "character": "Reaper",
+          "id": "i_206",
+          "displayName": "NIEBLA DE BOLSILLO"
+        },
+        {
+          "name": "COMPRESSION FATIGUES",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "AP",
+              "value": "5%"
+            },
+            {
+              "type": "[Sprint] Move Speed",
+              "value": "25%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Soldier: 76",
+          "id": "i_207",
+          "displayName": "BOTAS DE COMPRESIÓN"
+        },
+        {
+          "name": "DASH BOOTS",
+          "attributes": [
+            {
+              "type": "MS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Saltar en el aire te impulsará una corta distancia."
+            }
+          ],
+          "cost": 4000,
+          "character": "Ana",
+          "id": "i_208",
+          "displayName": "BOTAS DE DASH"
+        },
+        {
+          "name": "PERFECTED FORMULA",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "25"
+            },
+            {
+              "type": "[Nano Boost] Duration",
+              "value": "15%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Ana",
+          "id": "i_209",
+          "displayName": "FÓRMULA PERFECTA"
+        },
+        {
+          "name": "I.V. DRIP",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Mientras estás afectado por <b>[Granada Biótica]</b>, Ana obtiene <b class=\"stat-ap\">150</b> de <b>sobrevida</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Ana",
+          "id": "i_210",
+          "displayName": "GOTEO INTRAVENOSO"
+        },
+        {
+          "name": "BOOSTED ROCKETS",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "25"
+            },
+            {
+              "type": "[Glide Boost] Duration",
+              "value": "25%"
+            }
+          ],
+          "cost": 4000,
+          "character": "Juno",
+          "id": "i_211",
+          "displayName": "COHETES IMPULSADOS"
+        },
+        {
+          "name": "KITSUNE KICKS",
+          "attributes": [
+            {
+              "type": "MS",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Obtén la habilidad de <b>[Doble Salto]</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Kiriko",
+          "id": "i_212",
+          "displayName": "PATADAS KITSUNE"
+        },
+        {
+          "name": "SPEED SKATES",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Después de <b>[Montar en la pared]</b>, obtén un <b>30%</b> de velocidad de movimiento durante <b>2s</b>."
+            }
+          ],
+          "cost": 3750,
+          "character": "Lúcio",
+          "id": "i_213",
+          "displayName": "PATINES DE VELOCIDAD"
+        },
+        {
+          "name": "AERODYNAMIC FEATHERS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Mientras estás afectado por <b>[Descenso Angélico]</b>, obtén continuamente un <b>10%</b> de velocidad de movimiento cada <b>1s</b> hasta un <b>60%</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Mercy",
+          "id": "i_214",
+          "displayName": "PLUMAS AERODINÁMICAS"
+        },
+        {
+          "name": "ANGELEISURE WEAR",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Mientras estás afectado por <b>[Descenso Angélico]</b> o <b>[Ángel Guardián]</b>, cura un <b>3%</b> de tu vida cada <b>1s</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Mercy",
+          "id": "i_215",
+          "displayName": "ROPA DE DESCANSO ANGÉLICO"
+        },
+        {
+          "name": "ABYSS BOOTS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Mientras usas <b>[Desvanecerse]</b>, saltas un <b>30%</b> más alto."
+            }
+          ],
+          "cost": 4000,
+          "character": "Moira",
+          "id": "i_216",
+          "displayName": "BOTAS ABISMALES"
+        },
+        {
+          "name": "AEROWEAVE CLOAK",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "[Take Aim] Slowed Momentum Duration",
+              "value": "100%"
+            },
+            {
+              "type": "description",
+              "value": "While momentum is slowed by <b>[Take Aim]</b>, restore <b>5%</b> Max Life every <b>1s</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Freja"
+        },
+        {
+          "name": "HUNTER'S MARK",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Enemies with a Bounty of <b>750</b> or more are revealed to you within 40m. Eliminating them grants <b>250</b> additional <b>Stadium Cash</b>."
+            }
+          ],
+          "cost": 4000,
+          "character": "Freja"
+        },
+        {
+          "name": "TOURNIQUET",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "After using <b>[Updraft]</b>, reset <b>[Quick Dash]</b> and gain <b>50 Overhealth</b> for <b>5s</b>."
+            }
+          ],
+          "cost": 4500,
+          "character": "Freja"
+        }
+      ],
+      "epic": [
+        {
+          "name": "GENETICIST'S VIAL",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "La primera vez que morirías cada ronda, revive con <b>200</b> de vida después de <b>3s</b>."
+            }
+          ],
+          "cost": 9000,
+          "id": "i_217",
+          "displayName": "VIAL DEL GENETISTA"
+        },
+        {
+          "name": "BLOODBOUND",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "El último enemigo que te infligió un golpe final es <b>revelado</b> cuando está cerca. Inflige un <b>10%</b> más de daño a ellos y recibe un <b>10%</b> menos de daño de ellos."
+            }
+          ],
+          "cost": 9000,
+          "id": "i_218",
+          "displayName": "VÍNCULO DE SANGRE"
+        },
+        {
+          "name": "DIVINE INTERVENTION",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "Cuando recibes más de <b>100</b> de daño de una vez, restaura un <b>15%</b> del daño recibido y comienza a regenerar tus escudos."
+            }
+          ],
+          "cost": 9500,
+          "id": "i_219",
+          "displayName": "INTERVENCIÓN DIVINA"
+        },
+        {
+          "name": "GLOOMGAUNTLET",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "50"
+            },
+            {
+              "type": "MD",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "El daño de <b>[Melee]</b> otorga un <b>10%</b> de velocidad de movimiento y restaura un <b>5%</b> de vida máxima durante <b>2s</b>."
+            }
+          ],
+          "cost": 10000,
+          "id": "i_220",
+          "displayName": "GUANTELETE DE LAS TINIEBLAS"
+        },
+        {
+          "name": "MARTIAN MENDER",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "CR",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Restaura un <b>3%</b> de tu vida cada <b>1s</b>."
+            }
+          ],
+          "cost": 10000,
+          "id": "i_221",
+          "displayName": "MEJORÍA MARCIANA"
+        },
+        {
+          "name": "PHANTASMIC FLUX",
+          "attributes": [
+            {
+              "type": "WP",
+              "value": "10%"
+            },
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "WPLS",
+              "value": "15%"
+            },
+            {
+              "type": "ALS",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Mientras estás con vida completa, el robo de vida otorga hasta <b>100 de sobrevida</b>."
+            }
+          ],
+          "cost": 10000,
+          "id": "i_222",
+          "displayName": "FLUJO FANTASMÁTICO"
+        },
+        {
+          "name": "RÜSTUNG VON WILHELM",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "15%"
+            },
+            {
+              "type": "Armor",
+              "value": "15%"
+            },
+            {
+              "type": "Shields",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Mientras estás por debajo del <b>30%</b> de vida, obtén un <b>10%</b> de <b>reducción de daño</b>."
+            }
+          ],
+          "cost": 10000,
+          "id": "i_223",
+          "displayName": "ARMADURA DE WILHELM"
+        },
+        {
+          "name": "VANADIUM INJECTION",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "Mientras estás al <b>100%</b> de <b>carga de habilidad definitiva</b>, obtén: <ul><li><b>50</b> de vida</li><li><b>10%</b> de poder de arma</li><li><b>10%</b> de poder de habilidad</li><li><b>10%</b> de velocidad de ataque</li><li><b>10%</b> de reducción de enfriamiento</li><li><b>10%</b> de velocidad de movimiento</li></ul>"
+            }
+          ],
+          "cost": 10000,
+          "id": "i_224",
+          "displayName": "INYECCIÓN DE VANADIO"
+        },
+        {
+          "name": "NEBULA CONDUIT",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "WP",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "Previene un <b>15%</b> del daño entrante y en su lugar recibe ese daño prevenido durante <b>3s</b>."
+            }
+          ],
+          "cost": 11000,
+          "id": "i_225",
+          "displayName": "CONDUCTO NEBULOSO"
+        },
+        {
+          "name": "OGUNDIMU REDUCTION FIELD",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "Cuando recibes daño, obtén un <b>0.5%</b> de <b>reducción de daño</b> durante <b>1s</b>, acumulable hasta 20 veces."
+            }
+          ],
+          "cost": 11000,
+          "id": "i_226",
+          "displayName": "CAMPO DE REDUCCIÓN DE OGUNDIMU"
+        },
+        {
+          "name": "APM AMP",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "Cuando usas <b>[Impulsores]</b>, otros aliados dentro de <b>16m</b> obtienen un <b>25%</b> de velocidad de movimiento durante <b>2s</b>."
+            }
+          ],
+          "cost": 9000,
+          "character": "D.VA",
+          "id": "i_227",
+          "displayName": "MICRO AMPLIFICADA"
+        },
+        {
+          "name": "CHIP-DAMAGE DIVERTER",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "Cuando infliges daño a barreras mientras estás en tu <b>[Mecha]</b>, obtén escudos igual al <b>10%</b> del daño infligido, hasta <b>200</b>. Se reinicia cuando tu <b>[Mecha]</b> es destruido."
+            }
+          ],
+          "cost": 10000,
+          "character": "D.VA",
+          "id": "i_228",
+          "displayName": "CHIP DE DESVÍO DE DAÑO"
+        },
+        {
+          "name": "SINGIJEON'S PULSE PLATING",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "Obtén un <b>10%</b> del daño mitigado por <b>[Matriz de defensa]</b> como carga de habilidad definitiva."
+            }
+          ],
+          "cost": 10000,
+          "character": "D.VA",
+          "id": "i_229",
+          "displayName": "BLINDAJE DE PULSO DE SINGIJEON"
+        },
+        {
+          "name": "NANO COLA NITROUS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Cuando te expulsas de tu <b>[Mecha]</b>, obtén un <b>5%</b> más de vida máxima y obtén <b>[Nano Boost]</b> durante <b>4s</b>."
+            }
+          ],
+          "cost": 11000,
+          "character": "D.VA",
+          "id": "i_230",
+          "displayName": "NITRO NANO COLA"
+        },
+        {
+          "name": "SCAV SCRAPS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "CR",
+              "value": "5%"
+            },
+            {
+              "type": "description",
+              "value": "El daño de impacto de <b>[Carnicería]</b> y <b>[Hoja Dentada]</b> otorga sobrevida igual al <b>40%</b> del daño infligido."
+            }
+          ],
+          "cost": 10000,
+          "character": "Junker Queen",
+          "id": "i_231",
+          "displayName": "CHATARRA SCAV"
+        },
+        {
+          "name": "THICK SKULL",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "Mientras lanzas <b>[Embate]</b> o <b>[Carnicería]</b>, obtén un <b>50%</b> de <b>reducción de daño</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Junker Queen",
+          "id": "i_232",
+          "displayName": "CRÁNEO GRUESO"
+        },
+        {
+          "name": "UNDYING LOYALTY",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "Commanding Shout Overhealth",
+              "value": "30%"
+            },
+            {
+              "type": "description",
+              "value": "Los aliados afectados por <b>[Grito de Mando]</b> son curados un <b>5%</b> de la vida de Junker Queen cada segundo."
+            }
+          ],
+          "cost": 10000,
+          "character": "Junker Queen",
+          "id": "i_233",
+          "displayName": "LEALTAD INMORTAL"
+        },
+        {
+          "name": "HOLLAGRAM HELMET",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "Cuando usas <b>[Fortificar]</b>, los aliados dentro de la línea de visión obtienen <b>imparable</b> durante <b>2s</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Orisa",
+          "id": "i_234",
+          "displayName": "CASCO HOLLAGRAM"
+        },
+        {
+          "name": "INFUSION GENERATOR",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Aumenta la vida de <b>[Campo de Barrera]</b> en un <b>100%</b> de tu vida máxima."
+            }
+          ],
+          "cost": 10000,
+          "character": "Reinhardt",
+          "id": "i_235",
+          "displayName": "GENERADOR DE INFUSIÓN"
+        },
+        {
+          "name": "PHOENIX PROTOCOL",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Campo de Barrera]</b> se regenera un <b>50%</b> más rápido y comienza a regenerarse un <b>50%</b> antes después de ser destruido."
+            }
+          ],
+          "cost": 10000,
+          "character": "Reinhardt",
+          "id": "i_236",
+          "displayName": "PROTOCOLO FÉNIX"
+        },
+        {
+          "name": "FIRESTARTER",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "Tus efectos <b>quemados</b> obtienen un <b>35%</b> de robo de vida."
+            }
+          ],
+          "cost": 10000,
+          "character": "Ashe",
+          "id": "i_237",
+          "displayName": "INICIADOR DE FUEGO"
+        },
+        {
+          "name": "B.O.B WIRE DEFENSE",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "Armor",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Cuando <b>[B.O.B.]</b> termina de cargar, <b>[B.O.B.]</b> obtiene 300 de armadura."
+            }
+          ],
+          "cost": 10000,
+          "character": "Ashe",
+          "id": "i_238",
+          "displayName": "CABLEADO DEFENSIVO DE BOB"
+        },
+        {
+          "name": "FRANKIE'S FIXER",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "Cura <b class=\"stat-ap\">10</b> de vida por cada munición cargada usando <b>[Rodar en Combate]</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Cassidy",
+          "id": "i_239",
+          "displayName": "REPARADOR DE FRANKIE"
+        },
+        {
+          "name": "EAGLE EYE",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "Recibe un <b>25%</b> menos de daño de enemigos a más de <b>12m</b>."
+            }
+          ],
+          "cost": 12000,
+          "character": "Cassidy",
+          "id": "i_240",
+          "displayName": "OJO DE ÁGUILA"
+        },
+        {
+          "name": "SLICY COOLANT",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "50"
+            },
+            {
+              "type": "CR",
+              "value": "5%"
+            },
+            {
+              "type": "[Deflect] Duration",
+              "value": "+1s"
+            }
+          ],
+          "cost": 10000,
+          "character": "Genji",
+          "id": "i_241",
+          "displayName": "REFRIGERANTE CORTANTE"
+        },
+        {
+          "name": "TRANSFERENCE DELTA",
+          "attributes": [
+            {
+              "type": "Ultimate Cost Reduction",
+              "value": "15%"
+            },
+            {
+              "type": "description",
+              "value": "Convierte <b>100</b> de vida en armadura. Usar <b>[Hoja Dragón]</b> cura tu armadura completamente."
+            }
+          ],
+          "cost": 10000,
+          "character": "Genji",
+          "id": "i_242",
+          "displayName": "DELTA DE TRANSFERENCIA"
+        },
+        {
+          "name": "ICE SHEET",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "La duración de <b>[Muro de Hielo]</b> aumenta en <b>1s</b> y la vida aumenta en un <b>100%</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Mei",
+          "id": "i_243",
+          "displayName": "HOJA DE HIELO"
+        },
+        {
+          "name": "WRETCHED WINGS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Mientras usas <b>[Forma Espectral]</b>, obtén la habilidad de volar y un <b>20%</b> de velocidad de movimiento."
+            }
+          ],
+          "cost": 10000,
+          "character": "Reaper",
+          "id": "i_244",
+          "displayName": "ALAS MALDITAS"
+        },
+        {
+          "name": "DAUNTLESS DRAUGHT",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "Move Speed during [Wraith Form]",
+              "value": "15%"
+            },
+            {
+              "type": "[Wraith Form] Duration",
+              "value": "33%"
+            }
+          ],
+          "cost": 10000,
+          "character": "Reaper",
+          "id": "i_245",
+          "displayName": "PÓCIMA VALIENTE"
+        },
+        {
+          "name": "CRIMSON CLOAK",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "AP",
+              "value": "10%"
+            },
+            {
+              "type": "description",
+              "value": "Usar <b>[Flor de la Muerte]</b> otorga <b>sobrevida</b> igual al <b>15%</b> de tu vida máxima."
+            }
+          ],
+          "cost": 11000,
+          "character": "Reaper",
+          "id": "i_246",
+          "displayName": "CAPA CARMESÍ"
+        },
+        {
+          "name": "IRON LUNG",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Mientras usas <b>[Sprint]</b>, obtén <b>sobrevida</b> igual al <b>5%</b> de tu vida máxima cada <b>1s</b>, hasta un <b>25%</b>, durante <b>5s</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Soldier: 76",
+          "id": "i_247",
+          "displayName": "PULMÓN DE HIERRO"
+        },
+        {
+          "name": "EYE OF HORUS",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Nano Boost]</b> puede apuntar a aliados a través de paredes y su alcance aumenta a <b>60m</b>."
+            }
+          ],
+          "cost": 9000,
+          "character": "Ana",
+          "id": "i_248",
+          "displayName": "OJO DE HORUS"
+        },
+        {
+          "name": "FORTI-GLIDE",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "75"
+            },
+            {
+              "type": "description",
+              "value": "Durante <b>[Impulso Planeador]</b>, obtén un <b>10%</b> de reducción de daño."
+            }
+          ],
+          "cost": 10000,
+          "character": "Juno",
+          "id": "i_249",
+          "displayName": "PLANEO FORTIFICADO"
+        },
+        {
+          "name": "SUNBURST SERUM",
+          "attributes": [
+            {
+              "type": "Shields",
+              "value": "75"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Rayo Orbital]</b> obtiene un <b>25%</b> más de curación."
+            }
+          ],
+          "cost": 10000,
+          "character": "Juno",
+          "id": "i_250",
+          "displayName": "SUERO DE ESTALLIDO SOLAR"
+        },
+        {
+          "name": "GODDESS'S AURA",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Después de usar <b>[Paso Rápido]</b>, obtén <b class=\"stat-ap\">100</b> de <b>sobrevida</b> durante <b>4s</b>."
+            }
+          ],
+          "cost": 10000,
+          "character": "Kiriko",
+          "id": "i_251",
+          "displayName": "AURA DE LA DIOSA"
+        },
+        {
+          "name": "TALISMAN OF LIFE",
+          "attributes": [
+            {
+              "type": "AP",
+              "value": "20%"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Suzu de Protección]</b> otorga <b class=\"stat-ap\">100</b> de <b>sobrevida</b> durante <b>5s</b>."
+            }
+          ],
+          "cost": 11000,
+          "character": "Kiriko",
+          "id": "i_252",
+          "displayName": "TALISMÁN DE VIDA"
+        },
+        {
+          "name": "HIP HOP",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "25"
+            },
+            {
+              "type": "description",
+              "value": "Después de <b>[Montar en la pared]</b>, obtén un salto adicional mientras estás en el aire."
+            }
+          ],
+          "cost": 9000,
+          "character": "Lúcio",
+          "id": "i_253"
+        },
+        {
+          "name": "BLESSED BOOSTERS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "Tu velocidad de lanzamiento aumenta en un <b>25%</b> al cancelar <b>[Ángel Guardián]</b> con agacharse o saltar."
+            }
+          ],
+          "cost": 9000,
+          "character": "Mercy",
+          "id": "i_254",
+          "displayName": "IMPULSORES BENDITOS"
+        },
+        {
+          "name": "CHAIN EVOKER",
+          "attributes": [
+            {
+              "type": "Armor",
+              "value": "50"
+            },
+            {
+              "type": "[Caduceus Staff] Damage Boost",
+              "value": "5%"
+            },
+            {
+              "type": "Ultimate Charge from Damage Boost",
+              "value": "15%"
+            }
+          ],
+          "cost": 10000,
+          "character": "Mercy",
+          "id": "i_255",
+          "displayName": "EVOCADOR DE CADENA"
+        },
+        {
+          "name": "TOXIN TIPS",
+          "attributes": [
+            {
+              "type": "Health",
+              "value": "50"
+            },
+            {
+              "type": "description",
+              "value": "<b>[Take Aim]</b> bolt sticks and explosions slow enemies by <b>30%</b>, but takes Is longer to explode."
+            }
+          ],
+          "cost": 9000,
+          "character": "Freja"
+        }
+      ]
+    },
+    "powers": {
+      "D.VA": [
+        {
+          "name": "FOCUSED FUSION",
+          "description": "La dispersión de <b>[Cañón de Fusión]</b> se reduce en un <b>66%</b> y el rango de caída de daño aumenta <b>20m</b> más.",
+          "id": "p_0",
+          "displayName": "FUSIÓN CONCENTRADA"
+        },
+        {
+          "name": "LEGENDARY LOADOUT",
+          "description": "<b>[Misiles Micro]</b> son reemplazados por <b>6 Cohetes Pesados</b>, que infligen un <b>350%</b> más de daño explosivo y tienen un <b>100%</b> más de radio.",
+          "id": "p_1",
+          "displayName": "EQUIPAMIENTO LEGENDARIO"
+        },
+        {
+          "name": "OVERSTOCKED",
+          "description": "Obtén <b>1</b> carga adicional de <b>[Misiles Micro]</b>.",
+          "id": "p_2",
+          "displayName": "SOBREABASTECIMIENTO"
+        },
+        {
+          "name": "COUNTERMEASURES",
+          "description": "Cuando mitigas <b>100</b> de daño con <b>[Matriz de Defensa]</b>, dispara automáticamente <b>2</b> <b>[Misiles Micro]</b>.",
+          "id": "p_3",
+          "displayName": "CONTRAMEDIDAS"
+        },
+        {
+          "name": "FACETANKING",
+          "description": "<b>[Matriz de Defensa]</b> te cura un <b>30%</b> del daño que bloquea.",
+          "id": "p_4",
+          "displayName": "DE CARA"
+        },
+        {
+          "name": "ULTRAWIDE MATRIX",
+          "description": "Aumenta el tamaño de <b>[Matriz de Defensa]</b> en un <b>50%</b> y su duración en un <b>25%</b>.",
+          "id": "p_5",
+          "displayName": "MATRIZ ULTRAAMPLIA"
+        },
+        {
+          "name": "IGNITION BURST",
+          "description": "<b>[Impulsores]</b> dejan un rastro de lava que inflige <b class=\"stat-ap\">30</b> de daño cada <b>1s</b>.",
+          "id": "p_6",
+          "displayName": "IMPULSO DE ARRANQUE"
+        },
+        {
+          "name": "MEKA PUNCH",
+          "description": "Mientras usas <b>[Impulsores]</b>, <b>[Melee Rápido]</b> inflige un <b>75%</b> más de daño. Las eliminaciones con MEKA Punch reinician el enfriamiento de <b>[Impulsores]</b>.",
+          "id": "p_7",
+          "displayName": "PUÑETAZO MEKA"
+        },
+        {
+          "name": "STAT BOOST",
+          "description": "Durante los primeros <b>2s</b> de <b>[Impulsores]</b>, <b>[Matriz de Defensa]</b> se recupera un <b>125%</b> más rápido.",
+          "id": "p_8",
+          "displayName": "POTENCIADOR DE ESTADÍSTICAS"
+        },
+        {
+          "name": "TOKKI SLAM",
+          "description": "Durante <b>[Impulsores]</b>, usa agacharse para golpear el suelo, infligiendo daño igual al <b>20%</b> de tu armadura máxima y empujando hacia arriba a los enemigos golpeados.",
+          "id": "p_9",
+          "displayName": "PLACAJE TOKKI"
+        },
+        {
+          "name": "EXPRESS DETONATION",
+          "description": "<b>[Autodestrucción]</b> explota un <b>15%</b> más rápido.",
+          "id": "p_10",
+          "displayName": "DETONACIÓN EXPRÉS"
+        },
+        {
+          "name": "PARTY PROTECTOR",
+          "description": "Cuando usas <b>[Autodestrucción]</b>, los aliados dentro del radio de <b>[Autodestrucción]</b> obtienen <b class=\"stat-ap\">250</b> de <b>sobrevida</b> durante <b>8s</b>.",
+          "id": "p_11",
+          "displayName": "PROTECTOR DE PANDILLA"
+        }
+      ],
+      "Junker Queen": [
+        {
+          "name": "THRILL OF BATTLE",
+          "description": "<b>[Adrenaline Rush]</b> también cura a los aliados dentro de <b>12m</b> un <b>50%</b> de la cantidad que te cura a ti.",
+          "id": "p_12",
+          "displayName": "EMOCIÓN DE BATALLA"
+        },
+        {
+          "name": "ROYAL BULLETS",
+          "description": "Los golpes críticos de <b>[Escopeta de Fragmentación]</b> contra objetivos dentro de <b>12m</b> aplican <b>[Herida]</b> por <b class=\"stat-wp\">30</b> de daño durante <b>3s</b>.",
+          "id": "p_13",
+          "displayName": "BALAS REALES"
+        },
+        {
+          "name": "TWIST THE KNIFE",
+          "description": "Los golpes críticos de <b>[Escopeta de Fragmentación]</b> extienden la duración de todas las <b>[Heridas]</b> en el objetivo en <b>0.5s</b>.",
+          "id": "p_14",
+          "displayName": "GIRA EL CUCHILLO"
+        },
+        {
+          "name": "BLADE PARADE",
+          "description": "Mantener <b>[Hoja Dentada]</b> la carga, aumentando su daño hasta un <b>35%</b> y haciendo que empuje hacia atrás.",
+          "id": "p_15",
+          "displayName": "DESFILE DE CUCHILLAS"
+        },
+        {
+          "name": "CUT 'EM, GRACIE!",
+          "description": "Cada enemigo golpeado por <b>[Hoja Dentada]</b> mientras regresa a ti reduce su enfriamiento en <b>1s</b>.",
+          "id": "p_16",
+          "displayName": "¡CÓRTALOS, GRACIE!"
+        },
+        {
+          "name": "LET'S GO WIN",
+          "description": "Las eliminaciones reinician el enfriamiento de <b>[Grito de Mando]</b>.",
+          "id": "p_17",
+          "displayName": "VAMOS A GANAR"
+        },
+        {
+          "name": "MERCILESS MAGNETISM",
+          "description": "Usar <b>[Grito de Mando]</b> hace que tu <b>[Hoja Dentada]</b> se dirija automáticamente a un objetivo.",
+          "id": "p_18",
+          "displayName": "MAGNETISMO IMPLACABLE"
+        },
+        {
+          "name": "RECKONER'S ROAR",
+          "description": "Usar <b>[Grito de Mando]</b> <b>[Hierves]</b> a los enemigos dentro de <b>10m</b> por <b class=\"stat-ap\">30</b> de daño durante <b>3s</b>.",
+          "id": "p_19",
+          "displayName": "RUGIDO DE RECKONER"
+        },
+        {
+          "name": "CHOP CHOP",
+          "description": "<b>[Carnicería]</b> obtiene una carga adicional pero su reducción de enfriamiento por golpe se reduce a <b>1s</b>.",
+          "id": "p_20",
+          "displayName": "CORTA CORTA"
+        },
+        {
+          "name": "SOARING STONE",
+          "description": "<b>[Carnicería]</b> se convierte en un golpe saltador si saltas durante su tiempo de lanzamiento.",
+          "id": "p_21",
+          "displayName": "PIEDRA VOLADORA"
+        },
+        {
+          "name": "BLOODCRAZED",
+          "description": "<b>[Embate]</b> y <b>[Carnicería]</b> otorgan un <b>15%</b> de vida máxima como sobrevida por golpe.",
+          "id": "p_22",
+          "displayName": "SED DE SANGRE"
+        },
+        {
+          "name": "BOW DOWN",
+          "description": "<b>[Embate]</b> ahora también derriba a los enemigos golpeados durante <b>1.5s</b>.",
+          "id": "p_23",
+          "displayName": "¡ARRODÍLLATE!"
+        }
+      ],
+      "Orisa": [
+        {
+          "name": "SCORCHED EARTH",
+          "description": "Cuando estás <b>[Sobrecalentado]</b>, aplica <b>quemadura</b> a los enemigos dentro de <b>6m</b>, infligiendo daño igual al <b>10%</b> de tu vida máxima durante <b>5s</b>.",
+          "id": "p_24",
+          "displayName": "TIERRA QUEMADA"
+        },
+        {
+          "name": "SHIELD DIVERGENCE",
+          "description": "Cuando estás <b>[Sobrecalentado]</b>, despliega una <b>Barrera</b> con <b class=\"stat-ap\">600</b> de vida frente a ti.",
+          "id": "p_25",
+          "displayName": "DIVERGENCIA DE ESCUDO"
+        },
+        {
+          "name": "ADVANCED THROWBOTICS",
+          "description": "Cuando usas <b>[Giro de Jabalina]</b>, lanza una <b>[Jabalina de Energía]</b> con un <b>50%</b> menos de daño.",
+          "id": "p_26",
+          "displayName": "LANZAMIENTO AVANZADO"
+        },
+        {
+          "name": "HOT ROTATE-O",
+          "description": "<b>[Giro de Jabalina]</b> obtiene un <b>35%</b> de reducción de enfriamiento pero ahora genera <b>[Calor]</b>.",
+          "id": "p_27",
+          "displayName": "ROTACIÓN CALIENTE"
+        },
+        {
+          "name": "SPYNSTEM UPDATE",
+          "description": "<b>[Giro de Jabalina]</b> ahora desvía proyectiles y otorga un <b>20%</b> del daño infligido por desviar como carga de habilidad definitiva.",
+          "id": "p_28",
+          "displayName": "ACTUALIZACIÓN DE SPYNSTEM"
+        },
+        {
+          "name": "FACTORY RESET",
+          "description": "Mientras <b>[Fortificar]</b> está activo, <b>[Giro de Jabalina]</b> y <b>[Jabalina de Energía]</b> obtienen un <b>25%</b> de reducción de enfriamiento.",
+          "id": "p_29",
+          "displayName": "REINICIO DE FÁBRICA"
+        },
+        {
+          "name": "HOOVES OF STEEL",
+          "description": "Después de que <b>[Fortificar]</b> termina, obtén escudos igual al <b>50%</b> del daño recibido durante <b>[Fortificar]</b>.\n<br />\nSe reinicia cuando vuelves a usar <b>[Fortificar]</b>.",
+          "id": "p_30",
+          "displayName": "PEZUÑAS DE ACERO"
+        },
+        {
+          "name": "RESTORTIFY",
+          "description": "Mientras <b>[Fortificar]</b> está activo, cura un <b>5%</b> de tu vida máxima cada <b>1s</b>.",
+          "id": "p_31",
+          "displayName": "RE-FORTIFICAR"
+        },
+        {
+          "name": "RIDE WITH ME",
+          "description": "Mientras <b>[Fortificar]</b> está activo, otorga a los aliados en la línea de visión un <b>30%</b> de velocidad de movimiento y sobrevida igual al <b>10%</b> de tu vida máxima.",
+          "id": "p_32",
+          "displayName": "MONTAR CONMIGO"
+        },
+        {
+          "name": "LASSOED",
+          "description": "Al impactar, <b>[Jabalina de Energía]</b> atraerá a los enemigos dentro de <b>4m</b> hacia sí misma.",
+          "id": "p_33",
+          "displayName": "LAZADO"
+        },
+        {
+          "name": "CENTRIPETAL CHARGE",
+          "description": "<b>25%</b> de reducción de costo de habilidad definitiva.\n<br/>\nDespués de usar <b>[Terra Surge]</b>, reinicia los enfriamientos de tus habilidades.",
+          "id": "p_34",
+          "displayName": "CARGA CENTRÍPETA"
+        },
+        {
+          "name": "SUPERCHARGER",
+          "description": "Cuando usas <b>[Terra Surge]</b>, deja un <b>[Sobrealimentador]</b> que aumenta el daño de los aliados cercanos en un <b>25%</b> durante <b>15s</b>.",
+          "id": "p_35",
+          "displayName": "SOBREALIMENTADOR"
+        }
+      ],
+      "Reinhardt": [
+        {
+          "name": "AMPLIFICATION BARRIER",
+          "description": "Los proyectiles amistosos que pasan a través de tu <b>[Campo de Barrera]</b> infligen un <b>15%</b> más de daño.",
+          "id": "p_36",
+          "displayName": "BARRERA DE AMPLIFICACIÓN"
+        },
+        {
+          "name": "BARRIER RECONSTRUCTION",
+          "description": "Cuando infliges daño con <b>[Martillo Cohete]</b> o <b>[Golpe de Fuego]</b>, restaura vida a <b>[Campo de Barrera]</b> igual al <b>10%</b> de su vida máxima.",
+          "id": "p_37",
+          "displayName": "RECONSTRUCCIÓN DE BARRERA"
+        },
+        {
+          "name": "TO ME, MY FRIENDS!",
+          "description": "Mientras <b>[Campo de Barrera]</b> está activo, los aliados dentro de <b>5m</b> son curados igual al <b>3%</b> de tu vida máxima cada <b>1s</b>.",
+          "id": "p_38",
+          "displayName": "¡A MÍ, MIS AMIGOS!"
+        },
+        {
+          "name": "WILHELMWAGEN",
+          "description": "Mientras <b>[Campo de Barrera]</b> está desplegado, te curas un <b>15%</b> del daño que mitiga y obtienes un <b>30%</b> de velocidad de movimiento.",
+          "id": "p_39"
+        },
+        {
+          "name": "SHIELD STAMPEDE",
+          "description": "<b>+</b><b>50%</b> de poder de empuje de <b>[Carga]</b>.\nDurante <b>[Carga]</b>, despliega automáticamente <b>[Campo de Barrera]</b>.",
+          "id": "p_40",
+          "displayName": "ESTAMPEDE DE ESCUDO"
+        },
+        {
+          "name": "VANGUARD",
+          "description": "<b>[Carga]</b> otorga a los aliados cercanos sobrevida igual al <b>10%</b> de tu vida máxima y un <b>20%</b> de velocidad de movimiento durante <b>3s</b>.",
+          "id": "p_41",
+          "displayName": "VANGUARDIA"
+        },
+        {
+          "name": "VROOM BOOM BOOM",
+          "description": "Durante <b>[Carga]</b>, chocar contra una pared desencadena una explosión que inflige un <b>30%</b> del daño de empuje de <b>[Carga]</b>.",
+          "id": "p_42"
+        },
+        {
+          "name": "BLAZING BLITZ",
+          "description": "Después de usar <b>[Terremoto]</b>, cada golpe de <b>[Martillo Cohete]</b> lanza un <b>[Golpe de Fuego]</b> durante <b>4s</b>.",
+          "id": "p_43",
+          "displayName": "BLITZ ARDIENTE"
+        },
+        {
+          "name": "IMPACT BURST",
+          "description": "<b>[Golpe de Fuego]</b> desencadena una explosión la primera vez que golpea a un enemigo, infligiendo un <b>15%</b> de su daño en un radio de <b>3m</b>.",
+          "id": "p_44",
+          "displayName": "ESTALLIDO DE IMPACTO"
+        },
+        {
+          "name": "MAGMA STRIKE",
+          "description": "Si <b>[Golpe de Fuego]</b> se lanza dos veces dentro de <b>2s</b>, el segundo golpe deja un rastro de lava que <b>quema</b> a los enemigos por un <b>50%</b> del daño de <b>[Golpe de Fuego]</b>.",
+          "id": "p_45",
+          "displayName": "GOLPE DE MAGMA"
+        },
+        {
+          "name": "FEELING THE BURN",
+          "description": "Cada tercer golpe de <b>[Martillo Cohete]</b> aplica <b>quemadura</b>, infligiendo un <b>30%</b> del daño de <b>[Martillo Cohete]</b> durante <b>2s</b>.",
+          "id": "p_46",
+          "displayName": "SINTIENDO EL ARDIENTE"
+        },
+        {
+          "name": "SMASHING!",
+          "description": "Cuando infliges daño con <b>[Martillo Cohete]</b>, obtén un <b>2%</b> de velocidad de movimiento y un <b>4%</b> de robo de vida de arma durante <b>3s</b>, acumulable hasta <b>5 veces</b>.",
+          "id": "p_47",
+          "displayName": "¡APLASTANDO!"
+        }
+      ],
+      "Zarya": [
+        {
+          "name": "NO LIMITS",
+          "description": "El máximo de <b>[Energía]</b> aumenta a <b>150</b>. <b>[Energía]</b> siempre decae por encima de <b>100</b> <b>[Energía]</b> a un ritmo <b>150%</b> más rápido.",
+          "id": "p_48",
+          "displayName": "SIN LÍMITES"
+        },
+        {
+          "name": "PARTICLE ACCELERATOR",
+          "description": "Obtén un <b>15%</b> de velocidad de ataque para el fuego secundario de <b>[Cañón de Partículas]</b>. Después de usar una habilidad, <b>cuadruplica</b> este bono durante <b>5s</b>.",
+          "id": "p_49",
+          "displayName": "ACELERADOR DE PARTÍCULAS"
+        },
+        {
+          "name": "PIERCING BEAM",
+          "description": "Por encima de <b>80</b> <b>[Energía]</b>, el fuego primario de <b>[Cañón de Partículas]</b> atravesará a los enemigos.",
+          "id": "p_50",
+          "displayName": "HAZ PERFORANTE"
+        },
+        {
+          "name": "PRE-WORKOUT",
+          "description": "Obtén robo de vida de arma y robo de vida de habilidad igual al <b>15%</b> de <b>[Energía]</b>.",
+          "id": "p_51",
+          "displayName": "PRE-ENTRENAMIENTO"
+        },
+        {
+          "name": "BARRIER BENEFITS",
+          "description": "Cuando las <b>[Barreras]</b> expiran, otorga sobrevida igual al <b>50%</b> de la vida restante de la barrera al objetivo durante <b>3s</b>",
+          "id": "p_52",
+          "displayName": "BENEFICIOS DE BARRERA"
+        },
+        {
+          "name": "CONTAINMENT SHIELD",
+          "description": "<b>[Barrera]</b> cura <b class=\"stat-ap\">25</b> de vida, aumentada por <b>[Energía]</b>, y otorga un <b>20%</b> de velocidad de movimiento mientras está activa.",
+          "id": "p_53",
+          "displayName": "ESCUDO DE CONTENCIÓN"
+        },
+        {
+          "name": "FISSION FIELD",
+          "description": "<b>[Barrera Proyectada]</b> también se aplica a <b>1</b> aliado adicional dentro de <b>10m</b>, pero tiene un <b>20%</b> menos de duración.",
+          "id": "p_54",
+          "displayName": "CAMPO DE FISIÓN"
+        },
+        {
+          "name": "HERE TO SPOT YOU",
+          "description": "<b>[Barrera Proyectada]</b> te atrae al aliado objetivo y te cura un <b>20%</b> de vida máxima durante <b>3s</b>.",
+          "id": "p_55",
+          "displayName": "AQUÍ PARA AYUDARTE"
+        },
+        {
+          "name": "LIFELIFT",
+          "description": "<b>+</b><b>50%</b> de tamaño de <b>[Barrera de Partículas]</b>.\n<br/>\nAumenta la vida de <b>[Barrera de Partículas]</b> en un <b>25%</b> de vida máxima adicional.",
+          "id": "p_56",
+          "displayName": "LEVANTAMIENTO DE VIDA"
+        },
+        {
+          "name": "MAJOR FLEX",
+          "description": "<b>[Barrera]</b> empuja hacia atrás e inflige <b class=\"stat-ap\">25</b> de daño, aumentado por <b>[Energía]</b>, a los enemigos dentro de <b>5m</b> cada <b>1s</b>.",
+          "id": "p_57",
+          "displayName": "FLEXIÓN MAYOR"
+        },
+        {
+          "name": "VOLSKAYA VORTEX",
+          "description": "Después de que se lanza una <b>[Barrera]</b>, el próximo fuego secundario de <b>[Cañón de Partículas]</b> genera un vórtice que ralentiza e inflige <b class=\"stat-ap\">100</b> de daño durante <b>2s</b>.",
+          "id": "p_58",
+          "displayName": "VÓRTICE VOLSKAYA"
+        },
+        {
+          "name": "GRAVITON ANOMALY",
+          "description": "<b>25%</b> de reducción de costo de habilidad definitiva.\n<br/>\nEl daño base de <b>[Surge de Gravitón]</b> aumenta a <b>30</b> y se incrementa por <b>[Energía]</b>, pero tiene un <b>50%</b> menos de duración.",
+          "id": "p_59",
+          "displayName": "ANOMALÍA DE GRAVITÓN"
+        }
+      ],
+      "Ashe": [
+        {
+          "name": "HEAD HONCHO",
+          "description": "Cada disparo <b>sin mira</b> que aciertes aumenta el daño del próximo disparo <b>con mira</b> que aciertes en un <b>5%</b>, hasta un <b>30%</b>. Se reinicia al recargar.",
+          "id": "p_60",
+          "displayName": "JEFE DE CABEZA"
+        },
+        {
+          "name": "INCENDIARY ROUNDS",
+          "description": "Mientras estás <b>con mira</b>, golpear al mismo objetivo sin fallar inflige <b class=\"stat-wp\">30</b> de daño extra.",
+          "id": "p_61",
+          "displayName": "BALAS INCENDIARIAS"
+        },
+        {
+          "name": "MY BUSINESS, MY RULES",
+          "description": "Cuando infliges daño a un enemigo <b>quemado</b> con <b>[La Víbora]</b>, reduce el enfriamiento de tus habilidades en un <b>10%</b>.",
+          "id": "p_62",
+          "displayName": "MI NEGOCIO, MIS REGLAS"
+        },
+        {
+          "name": "RELOAD THERAPY",
+          "description": "Cuando recargas un disparo, cura un <b>3%</b> de tu vida.",
+          "id": "p_63",
+          "displayName": "TERAPIA DE RECARGA"
+        },
+        {
+          "name": "CALAMITY",
+          "description": "Usar <b>[Escopeta de Entrenador]</b> recarga <b>2</b> de munición. Los próximos <b>2</b> golpes de <b>[La Víbora]</b> infligen <b class=\"stat-ap\">40</b> de daño adicional durante <b>3s</b>.",
+          "id": "p_64",
+          "displayName": "CALAMIDAD"
+        },
+        {
+          "name": "DOUBLE BARRELED",
+          "description": "<b>[Escopeta de Entrenador]</b> obtiene una carga adicional.",
+          "id": "p_65",
+          "displayName": "DOBLE CAÑÓN"
+        },
+        {
+          "name": "INCENDIARY BLAST",
+          "description": "<b>[Escopeta de Entrenador]</b> aplica <b>quemadura</b>, infligiendo <b class=\"stat-ap\">100</b> de daño durante <b>5s</b>. Si el objetivo estaba <b>quemado</b>, inflige <b class=\"stat-ap\">75</b> de daño adicional al instante.",
+          "id": "p_66",
+          "displayName": "EXPLOSIÓN INCENDIARIA"
+        },
+        {
+          "name": "EARLY DETONATION",
+          "description": "Disparar a <b>[Dinamita]</b> recarga <b>5</b> de munición y reduce el enfriamiento de <b>[Dinamita]</b> en <b>3s</b>.",
+          "id": "p_67",
+          "displayName": "DETONACIÓN TEMPRANA"
+        },
+        {
+          "name": "MOLTEN MUNITIONS",
+          "description": "Cuando <b>[Dinamita]</b> explota en el suelo, deja lava que <b>quema</b> a los enemigos por <b class=\"stat-ap\">50</b> cada <b>1s</b>.",
+          "id": "p_68",
+          "displayName": "MUNICIONES DERRETIDAS"
+        },
+        {
+          "name": "OUT WITH A BANG",
+          "description": "Cuando <b>[Dinamita]</b> explota, genera <b>3</b> explosivos adhesivos que infligen un <b>66%</b> menos de daño.",
+          "id": "p_69",
+          "displayName": "SALIR CON UNA EXPLOSIÓN"
+        },
+        {
+          "name": "B.O.B JR.",
+          "description": "<b>[B.O.B.]</b> cuesta un <b>50%</b> menos de carga de habilidad definitiva pero tiene menos vida, un <b>20%</b> menos de velocidad de ataque y es significativamente más pequeño.",
+          "id": "p_70"
+        },
+        {
+          "name": "PARTNERS IN CRIME",
+          "description": "Te curas un <b>100%</b> del daño infligido por <b>[B.O.B.]</b> y <b>[B.O.B.]</b> se cura un <b>100%</b> del daño que infliges.",
+          "id": "p_71",
+          "displayName": "SOCIOS EN EL CRIMEN"
+        }
+      ],
+      "Cassidy": [
+        {
+          "name": "BULLSEYE",
+          "description": "El golpe crítico reduce el enfriamiento de <b>[Rodar en Combate]</b> en <b>2s</b>.",
+          "id": "p_72",
+          "displayName": "TIRO CERTERO"
+        },
+        {
+          "name": "DEAD MAN WALKING",
+          "description": "Eliminar a un enemigo que golpeaste críticamente recientemente otorga <b>1</b> de munición máxima para la ronda.",
+          "id": "p_73",
+          "displayName": "HOMBRE MUERTO CAMINANDO"
+        },
+        {
+          "name": "FULL HOUSE",
+          "description": "Por cada munición disponible, el fuego primario de <b>[Pacificador]</b> obtiene un <b>1%</b> más de daño, hasta un <b>25%</b>.",
+          "id": "p_74",
+          "displayName": "CASA LLENA"
+        },
+        {
+          "name": "QUICK DRAW",
+          "description": "Después de usar <b>[Rodar en Combate]</b>, el próximo fuego primario de <b>[Pacificador]</b> puede apuntar automáticamente dentro de <b>9m</b> mientras está en enfriamiento.",
+          "id": "p_75",
+          "displayName": "DESENFUNDADO RÁPIDO"
+        },
+        {
+          "name": "THINK FLASHT",
+          "description": "Cuando comienzas un <b>[Rodar en Combate]</b>, deja una <b>[Granada Aturdidora]</b> detrás.",
+          "id": "p_76",
+          "displayName": "PIENSA EN FLASH"
+        },
+        {
+          "name": "BARREL ROLL",
+          "description": "<b>[Rodar en Combate]</b> te lleva un <b>50%</b> más lejos e inflige <b class=\"stat-ap\">65</b> de daño a los enemigos.",
+          "id": "p_77",
+          "displayName": "RODADO DE BARRIL"
+        },
+        {
+          "name": "JUST ROLL WITH IT",
+          "description": "Durante <b>[Rodar en Combate]</b>, previene todo el daño entrante.\nDespués de que <b>[Rodar en Combate]</b> termina, cura un <b>30%</b> de tu vida durante <b>3s</b>.",
+          "id": "p_78",
+          "displayName": "SÓLO RODAR CON ELLO"
+        },
+        {
+          "name": "FLASH IN THE PAIN",
+          "description": "Eliminar a un enemigo dañado recientemente por <b>[Granada Aturdidora]</b> otorga un <b>15%</b> de carga de habilidad definitiva.",
+          "id": "p_79",
+          "displayName": "FLASH EN EL DOLOR"
+        },
+        {
+          "name": "HOT POTATO",
+          "description": "<b>[Granada Aturdidora]</b> añade <b>3</b> municiones extra al golpear hasta que <b>[Pacificador]</b> se recargue.",
+          "id": "p_80",
+          "displayName": "PATATA CALIENTE"
+        },
+        {
+          "name": "EASY RIDER",
+          "description": "Mientras usas <b>[Ojo de Halcón]</b>, obtén <b class=\"stat-ap\">100</b> de <b>sobrevida</b> y un <b>25%</b> de velocidad de movimiento.",
+          "id": "p_81",
+          "displayName": "JINETE FÁCIL"
+        },
+        {
+          "name": "SUNRISE",
+          "description": "Usar <b>[Ojo de Halcón]</b> ralentiza a todos los enemigos visibles en un <b>35%</b> durante <b>1.5s</b>.",
+          "id": "p_82",
+          "displayName": "AMANECER"
+        },
+        {
+          "name": "SUNSET",
+          "description": "Las eliminaciones de <b>[Ojo de Halcón]</b> otorgan un <b>15%</b> de carga de habilidad definitiva cada una.",
+          "id": "p_83",
+          "displayName": "ATARDECER"
+        }
+      ],
+      "Genji": [
+        {
+          "name": "CYBERNETIC SPEED",
+          "description": "Infligir daño con <b>[Shuriken]</b> otorga un <b>2%</b> de velocidad de ataque de <b>[Shuriken]</b> durante <b>3s</b>, acumulable hasta <b>15 veces</b>.",
+          "id": "p_84",
+          "displayName": "VELOCIDAD CIBERNÉTICA"
+        },
+        {
+          "name": "HASHIMOTO'S BANE",
+          "description": "Después de usar una habilidad, tu próximo fuego secundario lanza <b>2</b> <b>[Shuriken]</b> extra que buscan enemigos pero infligen un <b>50%</b> menos de daño.",
+          "id": "p_85",
+          "displayName": "CASTIGO DE HASHIMOTO"
+        },
+        {
+          "name": "SACRED SHURIKEN",
+          "description": "El fuego primario de <b>[Shuriken]</b> lanza <b>2</b> <b>[Shuriken]</b> adicionales que no consumen munición.",
+          "id": "p_86",
+          "displayName": "SHURIKEN SAGRADO"
+        },
+        {
+          "name": "HANAMURA HEALING",
+          "description": "Los golpes críticos y <b>[Golpe Rápido]</b> otorgan sobrevida igual al <b>25%</b> de su daño infligido durante <b>5s</b>.",
+          "id": "p_87",
+          "displayName": "CURACIÓN HANAMURA"
+        },
+        {
+          "name": "HIDDEN BLADE",
+          "description": "Obtén un <b>50%</b> de robo de vida de melee y aumenta el daño de <b>[Melee Rápido]</b> en <b>25</b>.",
+          "id": "p_88",
+          "displayName": "CUCHILLA OCULTA"
+        },
+        {
+          "name": "LACERATION",
+          "description": "<b>[Golpe Rápido]</b> inflige un <b>25%</b> más de daño durante <b>3s</b> a los enemigos golpeados.",
+          "id": "p_89",
+          "displayName": "LACERACIÓN"
+        },
+        {
+          "name": "WYRM'S MAW",
+          "description": "Los objetivos golpeados por <b>[Shuriken]</b> reciben un <b>10%</b> más de daño de <b>[Golpe Rápido]</b> durante <b>4s</b>, acumulable hasta <b>5 veces</b>.",
+          "id": "p_90",
+          "displayName": "FAUCES DE WYRM"
+        },
+        {
+          "name": "FORGED UNDER FIRE",
+          "description": "Mientras <b>[Desviar]</b> está activo, cura un <b>60%</b> del daño que previene.",
+          "id": "p_91",
+          "displayName": "FORJADO BAJO FUEGO"
+        },
+        {
+          "name": "IAIDO STRIKE",
+          "description": "Después de que <b>[Desviar]</b> termina, rápidamente balancea tu <b>[Hoja Dragón]</b> una vez.",
+          "id": "p_92",
+          "displayName": "GOLPE IAIDO"
+        },
+        {
+          "name": "SPIRIT OF SOJIRO",
+          "description": "Cuando <b>[Desviar]</b> detiene el daño entrante, reduce el enfriamiento de <b>[Golpe Rápido]</b> en <b>1s</b>, hasta <b>5s</b>.",
+          "id": "p_93",
+          "displayName": "ESPÍRITU DE SOJIRO"
+        },
+        {
+          "name": "DRAGON'S BREATH",
+          "description": "Los golpes de <b>[Hoja Dragón]</b> lanzan un gran proyectil que atraviesa y que inflige un <b>50%</b> del daño de <b>[Hoja Dragón]</b>.",
+          "id": "p_94",
+          "displayName": "ALIENTO DE DRAGÓN"
+        },
+        {
+          "name": "DEFLECT-O-BOT",
+          "description": "El rango del fuego primario de <b>[Bláster Endotérmico]</b> aumenta en <b>6m</b>.",
+          "id": "p_95",
+          "displayName": "EXTENDOTÉRMICOS"
+        }
+      ],
+      "Mei": [
+        {
+          "name": "EXTENDOTHERMICS",
+          "description": "El rango del fuego primario de <b>[Bláster Endotérmico]</b> aumenta en <b>6m</b>.",
+          "id": "p_95",
+          "displayName": "EXTENDOTÉRMICOS"
+        },
+        {
+          "name": "FROST ARMOR",
+          "description": "Obtén armadura igual al <b>5%</b> del daño del fuego primario que infliges, hasta <b>100</b>, hasta el final de la ronda.",
+          "id": "p_96",
+          "displayName": "ARMADURA DE ESCARCHA"
+        },
+        {
+          "name": "PERMAFROST",
+          "description": "Aumenta tu vida máxima en un <b>50%</b> de tu poder de habilidad.",
+          "id": "p_97"
+        },
+        {
+          "name": "SLOWBALL",
+          "description": "El fuego secundario de <b>[Bláster Endotérmico]</b> ahora dispara una bola de nieve que aplica un <b>30%</b> de ralentización durante <b>1s</b> en golpes críticos.",
+          "id": "p_98",
+          "displayName": "BOLA DE ESCARCHA"
+        },
+        {
+          "name": "ICEBERG",
+          "description": "<b>[Muro de Hielo]</b> genera una mini <b>[Ventisca]</b> que ralentiza a los enemigos.",
+          "id": "p_99"
+        },
+        {
+          "name": "SNOWBALL FLIGHT",
+          "description": "Saltar mientras estás en el aire crea un gran pilar de <b>[Muro de Hielo]</b> debajo de ti.\n(<b>12s</b> de enfriamiento)",
+          "id": "p_100",
+          "displayName": "VUELO DE BOLA DE NIEVE"
+        },
+        {
+          "name": "TWICE AS ICE",
+          "description": "Cuando usas <b>[Congelación Crio]</b>, reinicia el próximo enfriamiento de <b>[Muro de Hielo]</b>.",
+          "id": "p_101",
+          "displayName": "DOS VECES COMO HIELO"
+        },
+        {
+          "name": "COULDER",
+          "description": "<b>[Congelación Crio]</b> ahora te encierra en una bola de hielo rodante que puede empujar a los enemigos e infligir <b class=\"stat-ap\">20</b> de daño.",
+          "id": "p_102",
+          "displayName": "CRIOLÓN"
+        },
+        {
+          "name": "CRYCLONE",
+          "description": "<b>[Congelación Crio]</b> genera una mini <b>[Ventisca]</b> que ralentiza a los enemigos.",
+          "id": "p_103",
+          "displayName": "CRICLÓN"
+        },
+        {
+          "name": "FROST NOVA",
+          "description": "Cuando <b>[Congelación Crio]</b> termina, empuja hacia atrás a los enemigos cercanos, infligiendo <b class=\"stat-ap\">60</b> de daño.",
+          "id": "p_104",
+          "displayName": "NOVA DE ESCARCHA"
+        },
+        {
+          "name": "AVALANCHE",
+          "description": "Los enemigos visibles dentro de <b>20m</b> de <b>[Ventisca]</b> son ralentizados en un <b>25%</b>.",
+          "id": "p_105",
+          "displayName": "AVALANCHA"
+        },
+        {
+          "name": "BLIZZNADO",
+          "description": "Mientras estás dentro de <b>[Ventisca]</b>, cura un <b>5%</b> de tu vida cada <b>1s</b>.",
+          "id": "p_106"
+        }
+      ],
+      "Reaper": [
+        {
+          "name": "BACKSTABBER",
+          "description": "Después de usar una habilidad, tu próximo disparo inflige un <b>50%</b> más de daño durante <b>3s</b> a los enemigos golpeados por detrás.",
+          "id": "p_107",
+          "displayName": "APUÑALADOR"
+        },
+        {
+          "name": "HARVEST FEST",
+          "description": "Los golpes de <b>[Escopeta Infierno]</b> tienen un <b>10%</b> de probabilidad de generar un Globo de Alma. Al recogerlo, restaura un <b>25%</b> de vida, un <b>25%</b>\nmunición y otorga un <b>25%</b> de velocidad de movimiento durante <b>3s</b>.",
+          "id": "p_108",
+          "displayName": "FESTIVAL DE COSECHA"
+        },
+        {
+          "name": "REVOLVING RUIN",
+          "description": "Los golpes de <b>[Escopeta Infierno]</b> a corta distancia (<b>7m</b>) otorgan un <b>4%</b> de velocidad de ataque durante <b>1s</b>, acumulable hasta <b>10 veces</b>.",
+          "id": "p_109",
+          "displayName": "RUINA REVOLVENTE"
+        },
+        {
+          "name": "SHARED SIPHON",
+          "description": "<b>[La Cosecha]</b> también cura al aliado más cercano dentro de <b>10m</b> un <b>30%</b> del daño infligido por Reaper.",
+          "id": "p_110",
+          "displayName": "SIFÓN COMPARTIDO"
+        },
+        {
+          "name": "SHROUDED SHRAPNEL",
+          "description": "Usar <b>[Forma Espectral]</b> aumenta el número de perdigones por disparo en tu próximo cargador en un <b>25%</b> y su dispersión en un <b>50%</b>.",
+          "id": "p_111",
+          "displayName": "FRAGMENTOS ENVUELTOS"
+        },
+        {
+          "name": "SPIRITED TO SLAY",
+          "description": "Las eliminaciones reinician tus enfriamientos.",
+          "id": "p_112",
+          "displayName": "ESPÍRITU PARA MATAR"
+        },
+        {
+          "name": "VAMPIRIC TOUCH",
+          "description": "Los golpes con <b>[Melee Rápido]</b> marcan a los enemigos durante <b>5s</b>. Los aliados obtienen un <b>20%</b> de robo de vida contra los enemigos marcados.",
+          "id": "p_113",
+          "displayName": "TOQUE VAMPÍRICO"
+        },
+        {
+          "name": "DEATH STEP",
+          "description": "Después de usar <b>[Paso Sombrío]</b>, lanza <b>[Flor de la Muerte]</b> durante <b>1.5s</b> con un <b>50%</b> menos de daño.",
+          "id": "p_114",
+          "displayName": "PASO DE MUERTE"
+        },
+        {
+          "name": "SILENT AS THE GRAVE",
+          "description": "Tus pasos y <b>[Paso Sombrío]</b> son significativamente más silenciosos.",
+          "id": "p_115",
+          "displayName": "SILENCIOSO COMO LA TUMBA"
+        },
+        {
+          "name": "STRANGLE STEP",
+          "description": "Después de usar <b>[Paso Sombrío]</b>, <b>duplica</b> tu robo de vida durante <b>3s</b>.",
+          "id": "p_116",
+          "displayName": "PASO ESTRANGULADOR"
+        },
+        {
+          "name": "GHOSTED",
+          "description": "Mientras estás en <b>[Forma Espectral]</b>, pasar a través de los enemigos reduce su velocidad de movimiento y velocidad de ataque en un <b>30%</b> durante <b>3s</b>.",
+          "id": "p_117",
+          "displayName": "FANTASMA"
+        },
+        {
+          "name": "WRAITH RENEWAL",
+          "description": "Mientras estás en <b>[Forma Espectral]</b>, restaura un <b>10%</b> de tu vida cada <b>1s</b>. Duplica esto mientras estás por debajo del <b>50%</b> de vida.",
+          "id": "p_118",
+          "displayName": "RENOVACIÓN ESPECTRAL"
+        }
+      ],
+      "Soldier: 76": [
+        {
+          "name": "PERIPHERAL PULSE",
+          "description": "Durante <b>[Visor Táctico]</b>, <b>[Rifle de Pulso]</b> dispara a <b>1</b> enemigo adicional, infligiendo un <b>50%</b> de daño.",
+          "id": "p_119",
+          "displayName": "PULSO PERIFÉRICO"
+        },
+        {
+          "name": "SUPER VISOR",
+          "description": "Después de usar <b>[Cohete Hélice]</b>, activa <b>[Visor Táctico]</b> durante <b>0.5s</b>.",
+          "id": "p_120",
+          "displayName": "SUPERVISOR"
+        },
+        {
+          "name": "CHAINGUN",
+          "description": "Mientras disparas continuamente <b>[Rifle de Pulso]</b>, cada disparo otorga un <b>0.5%</b> de poder de arma, acumulable hasta <b>100</b> veces.",
+          "id": "p_121",
+          "displayName": "AMETRALLADORA"
+        },
+        {
+          "name": "MAN ON THE RUN",
+          "description": "Durante <b>[Sprint]</b>, restaura un <b>10%</b> de tu munición cada <b>1s</b> y aumenta tu munición máxima en un <b>10%</b> hasta que recargues, acumulable hasta <b>10 veces</b>.",
+          "id": "p_122",
+          "displayName": "HOMBRE EN FUGA"
+        },
+        {
+          "name": "CRATERED",
+          "description": "Aumenta el radio de explosión de <b>[Cohete Hélice]</b> en un <b>40%</b> y el daño de explosión en un <b>25%</b>.",
+          "id": "p_123",
+          "displayName": "CRATERADO"
+        },
+        {
+          "name": "DOUBLE HELIX",
+          "description": "<b>[Cohete Hélice]</b> dispara un segundo <b>[Cohete Hélice]</b> que busca objetivos y que inflige un <b>70%</b> menos de daño.",
+          "id": "p_124",
+          "displayName": "DOBLE HÉLICE"
+        },
+        {
+          "name": "HUNKER DOWN",
+          "description": "Cuando <b>[Cohete Hélice]</b> inflige daño, crea un <b>[Campo Biótico]</b> con una duración reducida en tu posición.",
+          "id": "p_125",
+          "displayName": "REFUGIO"
+        },
+        {
+          "name": "BACK OFF",
+          "description": "Los enemigos dentro de tu <b>[Campo Biótico]</b> reciben daño igual al <b>100%</b> de su salida de curación.",
+          "id": "p_126",
+          "displayName": "RETROCEDE"
+        },
+        {
+          "name": "BIOTIC BULLSEYE",
+          "description": "Mientras estás en <b>[Campo Biótico]</b>, los golpes críticos restauran un <b>10%</b> de munición máxima y extienden la duración de <b>[Campo Biótico]</b> en <b>0.5s</b>, hasta <b>5s</b>.",
+          "id": "p_127",
+          "displayName": "CAMPO BULLSEYE"
+        },
+        {
+          "name": "FRONTLINERS",
+          "description": "Los aliados dentro del rango de tu <b>[Campo Biótico]</b> cuando aparece obtienen sobrevida igual al <b>30%</b> de tu vida máxima durante <b>3s</b>.",
+          "id": "p_128"
+        },
+        {
+          "name": "ON ME!",
+          "description": "<b>[Campo Biótico]</b> se mueve contigo y te otorga un <b>20%</b> más de vida máxima mientras está activo.",
+          "id": "p_129",
+          "displayName": "¡EN MÍ!"
+        },
+        {
+          "name": "TRACK AND FIELD",
+          "description": "Durante <b>[Sprint]</b>, el enfriamiento de <b>[Campo Biótico]</b> se refresca un <b>150%</b> más rápido.",
+          "id": "p_130",
+          "displayName": "PISTA Y CAMPO"
+        }
+      ],
+      "Ana": [
+        {
+          "name": "NO SCOPE NEEDED",
+          "description": "Aciertar disparos sin apuntar con <b>[Rifle Biótico]</b> otorga un <b>10%</b> de velocidad de ataque durante <b>2s</b>, acumulable hasta <b>3 veces</b>.",
+          "id": "p_131",
+          "displayName": "SIN NECESIDAD DE APUNTAR"
+        },
+        {
+          "name": "PINPOINT PRESCRIPTION",
+          "description": "<b>[Rifle Biótico]</b> ahora puede golpear críticamente tanto a aliados como a enemigos.",
+          "id": "p_132",
+          "displayName": "PRESCRIPCIÓN PRECISA"
+        },
+        {
+          "name": "TACTICAL RIFLE",
+          "description": "Mientras estás apuntando, <b>[Rifle Biótico]</b> se bloqueará en los aliados para golpes garantizados.",
+          "id": "p_133",
+          "displayName": "RIFLE TÁCTICO"
+        },
+        {
+          "name": "COMFY CLOUD",
+          "description": "<b>[Dardo de Sueño]</b> explota al contacto, golpeando a objetivos dentro de <b>3m</b>, pero <b>sueño</b> tiene un <b>50%</b> menos de duración.",
+          "id": "p_134",
+          "displayName": "NUBE CÓMODA"
+        },
+        {
+          "name": "DREAMY",
+          "description": "<b>[Dardo de Sueño]</b> puede golpear a aliados, curando un <b>80%</b> de su vida máxima durante <b>4s</b> en lugar de ponerlos a dormir.",
+          "id": "p_135",
+          "displayName": "SOÑADOR"
+        },
+        {
+          "name": "SLEEP REGIMEN",
+          "description": "Obtén 50 de vida.\nCuando aplicas sueño a un enemigo, obtén 10 de vida, hasta 150.",
+          "id": "p_136",
+          "displayName": "RÉGIMEN DE SUEÑO"
+        },
+        {
+          "name": "HOME REMEDY",
+          "description": "<b>[Granada Biótica]</b> otorga sobrevida igual al <b>200%</b> de su curación.",
+          "id": "p_137",
+          "displayName": "REMEDIO CASERO"
+        },
+        {
+          "name": "TIME OUT",
+          "description": "<b>[Granada Biótica]</b> ahora empuja a los enemigos hacia atrás y reduce su velocidad de movimiento durante <b>1.5s</b>.",
+          "id": "p_138",
+          "displayName": "TIEMPO FUERA"
+        },
+        {
+          "name": "VENOMOUS",
+          "description": "<b>[Granada Biótica]</b> inflige un <b class=\"stat-ap\">50</b> de daño adicional durante su duración a los enemigos afectados.",
+          "id": "p_139",
+          "displayName": "VENENOSO"
+        },
+        {
+          "name": "MY TURN",
+          "description": "<b>[Nano Boost]</b> también se aplica a ti mismo durante un <b>50%</b> de su duración.",
+          "id": "p_140",
+          "displayName": "MI TURNO"
+        },
+        {
+          "name": "OUR TURN",
+          "description": "<b>[Nano Boost]</b> también afecta a otros aliados en tu línea de visión, pero tiene un <b>50%</b> menos de duración en ellos.",
+          "id": "p_141",
+          "displayName": "NUESTRO TURNO"
+        },
+        {
+          "name": "YOUR FULL POTENTIAL",
+          "description": "<b>[Nano Boost]</b> también otorga al objetivo un <b>20%</b> de carga de habilidad definitiva y <b class=\"stat-ap\">200</b> de <b>sobrevida</b>.",
+          "id": "p_142",
+          "displayName": "TU POTENCIAL COMPLETO"
+        }
+      ],
+      "Juno": [
+        {
+          "name": "MEDIMASTER",
+          "description": "<b>[Medibláster]</b> ahora puede golpear críticamente tanto a aliados como a enemigos.",
+          "id": "p_143"
+        },
+        {
+          "name": "STINGER",
+          "description": "<b>[Medibláster]</b> inflige un <b class=\"stat-ap\">10</b> de daño adicional a los enemigos durante <b>1s</b>.\n(No se acumula).",
+          "id": "p_144",
+          "displayName": "AGUIJÓN"
+        },
+        {
+          "name": "COSMIC COOLANT",
+          "description": "El enfriamiento de <b>[Torpedos Pulsar]</b> se reduce en <b>0.5s</b> por cada objetivo que golpee.",
+          "id": "p_145",
+          "displayName": "ENFRIAMIENTO CÓSMICO"
+        },
+        {
+          "name": "MEDICINAL MISSILES",
+          "description": "<b>[Torpedos Pulsar]</b> curan un <b class=\"stat-ap\">30</b> de vida adicional y hacen que los aliados golpeados reciban un <b>50%</b> más de curación durante <b>3s</b>.",
+          "id": "p_146",
+          "displayName": "MISILES MEDICINALES"
+        },
+        {
+          "name": "PULSAR PLUS",
+          "description": "<b>[Torpedos Pulsar]</b> obtiene <b>1</b> carga adicional.",
+          "id": "p_147"
+        },
+        {
+          "name": "BLINK BOOSTS",
+          "description": "<b>[Impulso Planeador]</b> obtiene <b>2</b> cargas adicionales y tiene un <b>65%</b> menos de enfriamiento, pero tiene un <b>75%</b> menos de duración.",
+          "id": "p_148",
+          "displayName": "IMPULSOS PARPADEANTES"
+        },
+        {
+          "name": "TORPEDO GLIDE",
+          "description": "Durante <b>[Impulso Planeador]</b>, cada <b>50</b> de daño que infliges reduce el enfriamiento de <b>[Torpedos Pulsar]</b> en <b>1s</b>.",
+          "id": "p_149",
+          "displayName": "IMPULSO DE TORPEDO"
+        },
+        {
+          "name": "BLACK HOLE",
+          "description": "<b>[Anillo Hiper]</b> reduce la velocidad de movimiento de los enemigos que lo atraviesan en un <b>35%</b> durante <b>1s</b>.",
+          "id": "p_150",
+          "displayName": "AGUJERO NEGRO"
+        },
+        {
+          "name": "HYPER HEALER",
+          "description": "Los aliados afectados por <b>[Anillo Hiper]</b> obtienen <b class=\"stat-ap\">50</b> de <b>sobrevida</b>.",
+          "id": "p_151",
+          "displayName": "CURADOR HIPER"
+        },
+        {
+          "name": "RALLY RING",
+          "description": "Reduce el enfriamiento de <b>[Anillo Hiper]</b> en <b>1s</b> cuando un aliado lo atraviesa.",
+          "id": "p_152",
+          "displayName": "ANILLO DE RALLY"
+        },
+        {
+          "name": "ORBITAL ALIGNMENT",
+          "description": "Los enemigos dentro de <b>[Rayo Orbital]</b> pierden un <b>35%</b> de velocidad de movimiento. Los aliados dentro de él obtienen un <b>25%</b> de velocidad de movimiento.",
+          "id": "p_153",
+          "displayName": "ALINEACIÓN ORBITAL"
+        },
+        {
+          "name": "STELLAR FOCUS",
+          "description": "<b>[Rayo Orbital]</b> ahora te sigue y su duración aumenta en un <b>35%</b>.",
+          "id": "p_154",
+          "displayName": "ENFOQUE ESTELAR"
+        }
+      ],
+      "Kiriko": [
+        {
+          "name": "FOXY FIREWORKS",
+          "description": "Después de recargar, tus próximos <b>3</b> <b>[Kunai]</b> lanzados explotan al contacto, infligiendo <b class=\"stat-wp\">20</b> de daño a los enemigos cercanos.",
+          "id": "p_155",
+          "displayName": "FUEGOS ARTIFICIALES DE ZORRO"
+        },
+        {
+          "name": "KEEN KUNAI",
+          "description": "Los golpes críticos de <b>[Kunai]</b> disminuyen los enfriamientos activos de habilidades en un <b>15%</b> y reembolsan <b>3</b> de munición.",
+          "id": "p_156",
+          "displayName": "KUNAI AGUDO"
+        },
+        {
+          "name": "TRIPLE THREAT",
+          "description": "Después de usar <b>[Paso Rápido]</b>, durante <b>4s</b>, tu fuego secundario lanza <b>2</b> <b>[Kunai]</b> adicionales en una dispersión que infligen un <b>50%</b> menos de daño.",
+          "id": "p_157",
+          "displayName": "AMENAZA TRIPLE"
+        },
+        {
+          "name": "LEAF ON THE WIND",
+          "description": "<b>[Ofuda Sanadora]</b> rebota a otro aliado hasta <b>2</b> veces, curando un <b>30%</b> de la cantidad normal.",
+          "id": "p_158",
+          "displayName": "HOJA EN EL VIENTO"
+        },
+        {
+          "name": "SELF-CARE",
+          "description": "Cuando usas <b>[Ofuda Sanadora]</b>, cúrate un <b>5%</b> de tu vida máxima.",
+          "id": "p_159",
+          "displayName": "AUTOCUIDADO"
+        },
+        {
+          "name": "SUPPORTED SHOOTING",
+          "description": "Cuando <b>[Ofuda Sanadora]</b> cura a los aliados, otórgales un <b>20%</b> más de velocidad de ataque durante <b>3s</b>.",
+          "id": "p_160",
+          "displayName": "DISPARO APOYADO"
+        },
+        {
+          "name": "CLONE CONJURATION",
+          "description": "Después de usar <b>[Paso Rápido]</b>, crea un clon de ti mismo que dura <b>5s</b>.",
+          "id": "p_161",
+          "displayName": "CONJURACIÓN DE CLON"
+        },
+        {
+          "name": "FLEET FOOT",
+          "description": "<b>[Paso Rápido]</b> se puede usar direccionalmente sin un objetivo.",
+          "id": "p_162",
+          "displayName": "PIE LIGERO"
+        },
+        {
+          "name": "CLEANSING CHARGE",
+          "description": "Cuando eliminas efectos negativos con <b>[Suzu de Protección]</b>, obtén un <b>5%</b> de carga de habilidad definitiva por cada héroe eliminado.",
+          "id": "p_163",
+          "displayName": "CARGA LIMPIADORA"
+        },
+        {
+          "name": "TWO-ZU",
+          "description": "<b>[Suzu de Protección]</b> obtiene una carga adicional.",
+          "id": "p_164"
+        },
+        {
+          "name": "CROSSING GUARD",
+          "description": "<b>[Prisa Kitsune]</b> ahora también reduce la velocidad de movimiento de los enemigos en un <b>50%</b> durante <b>2s</b>.",
+          "id": "p_165",
+          "displayName": "GUARDIA CRUZADA"
+        },
+        {
+          "name": "SPIRIT VEIL",
+          "description": "Usar <b>[Prisa Kitsune]</b> elimina los efectos negativos de Kiriko y la hace <b>invulnerable</b> durante <b>4s</b>.",
+          "id": "p_166",
+          "displayName": "VELO ESPIRITUAL"
+        }
+      ],
+      "Lúcio": [
+        {
+          "name": "FAST FORWARD",
+          "description": "Mientras estás por encima del <b>50%</b> de velocidad de movimiento, aumenta el daño en un <b>30%</b>.",
+          "id": "p_167",
+          "displayName": "AVANCE RÁPIDO"
+        },
+        {
+          "name": "SIGNATURE SHIFT",
+          "description": "Después de usar una habilidad, tu próximo disparo de <b>[Amplificador Sónico]</b> dispara una ráfaga de <b>6</b> municiones con un <b>80%</b> más de tamaño de proyectil.",
+          "id": "p_168",
+          "displayName": "CAMBIO DE FIRMA"
+        },
+        {
+          "name": "SONIC BOOM",
+          "description": "El daño de <b>[Amplificador Sónico]</b> cura a todos los aliados afectados por <b>[Crossfade]</b> igual al <b>30%</b> del daño infligido.",
+          "id": "p_169",
+          "displayName": "ESTALLIDO SÓNICO"
+        },
+        {
+          "name": "MIXTAPE",
+          "description": "Cuando cambias a <b>[Impulso de Curación]</b>, <b>[Crossfade]</b> cura un <b>50%</b> de la curación de <b>[Crossfade]</b> por cada <b>1s</b> que <b>[Impulso de Velocidad]</b> estuvo activo.",
+          "id": "p_170"
+        },
+        {
+          "name": "MEGAPHONE",
+          "description": "+<b>15%</b> de duración de <b>[Subidón]</b>\nMientras <b>[Subidón]</b> está activo, el radio de <b>[Crossfade]</b> aumenta en un <b>150%</b>.",
+          "id": "p_171",
+          "displayName": "MEGÁFONO"
+        },
+        {
+          "name": "RADIO EDIT",
+          "description": "Después de usar <b>[Subidón]</b>, activa una <b>[Barrera de Sonido]</b> con un <b>85%</b> menos de <b>sobrevida</b>.",
+          "id": "p_172",
+          "displayName": "EDICIÓN DE RADIO"
+        },
+        {
+          "name": "VIVACE",
+          "description": "Mientras estás <b>[Montar en la pared]</b> o en el aire, el enfriamiento de <b>[Onda Sonora]</b> se refresca un <b>25%</b> más rápido y añade <b>1</b> de munición máxima por cada <b>1s</b> hasta que recargues.",
+          "id": "p_173"
+        },
+        {
+          "name": "WALLVIBING",
+          "description": "Mientras estás <b>[Montar en la pared]</b> o en el aire, obtén temporalmente <b>sobrevida</b> igual al <b>3%</b> de tu vida cada <b>1s</b>, hasta un <b>30%</b>.",
+          "id": "p_174",
+          "displayName": "VIBRANDO EN LA PARED"
+        },
+        {
+          "name": "CROWD PLEASER",
+          "description": "Después de usar <b>[Onda Sonora]</b>, cura a todos los aliados afectados por <b>[Crossfade]</b> un <b>100%</b> de la curación de <b>[Crossfade]</b>.",
+          "id": "p_175",
+          "displayName": "COMPLACER A LA MULTITUD"
+        },
+        {
+          "name": "LET'S BOUNCE",
+          "description": "<b>[Onda Sonora]</b> tiene un <b>25%</b> más de empuje e inflige <b class=\"stat-ap\">25</b> de daño adicional si el objetivo golpea una pared.",
+          "id": "p_176",
+          "displayName": "VAMOS A REBOTAR"
+        },
+        {
+          "name": "REVERB",
+          "description": "Obtén <b>1</b> carga adicional de <b>[Onda Sonora]</b>.",
+          "id": "p_177",
+          "displayName": "REVERBERACIÓN"
+        },
+        {
+          "name": "BEAT DROP",
+          "description": "<b>20%</b> de reducción de costo de habilidad definitiva.\nAterrizar sobre un enemigo con <b>[Barrera de Sonido]</b> inflige hasta <b class=\"stat-ap\">200</b> de daño.",
+          "id": "p_178",
+          "displayName": "CAÍDA DEL BEAT"
+        }
+      ],
+      "Mercy": [
+        {
+          "name": "DISTORTION",
+          "description": "Los aliados potenciados por <b>[Bastón Caduceo]</b> obtienen robo de vida.",
+          "id": "p_179",
+          "displayName": "DISTORSIÓN"
+        },
+        {
+          "name": "GLASS EXTRA FULL",
+          "description": "La curación de <b>[Bastón Caduceo]</b> dirigida a aliados con vida completa se convierte en <b>sobrevida</b>, hasta 50.",
+          "id": "p_180",
+          "displayName": "VIDRIO EXTRA LLENO"
+        },
+        {
+          "name": "PROTECTIVE BEAM",
+          "description": "Los objetivos de <b>[Bastón Caduceo]</b> por encima del <b>80%</b> de vida obtienen un <b>10%</b> de <b>reducción de daño</b>.",
+          "id": "p_181",
+          "displayName": "HAZ PROTECTOR"
+        },
+        {
+          "name": "SERENITY",
+          "description": "<b>[Recuperación Simpática]</b> cura un <b>20%</b> más y te cura incluso mientras estás curando a un aliado con vida completa.",
+          "id": "p_182",
+          "displayName": "SERENIDAD"
+        },
+        {
+          "name": "THREADS OF FATE",
+          "description": "<b>[Bastón Caduceo]</b> se encadena a tu objetivo anterior durante <b>3s</b>, con un <b>50%</b> de efectividad.",
+          "id": "p_183",
+          "displayName": "HILOS DEL DESTINO"
+        },
+        {
+          "name": "BATTLE MEDIC",
+          "description": "Cada <b>1s</b> que tu Bastón está conectado, <b>[Bláster Caduceo]</b> obtiene un <b>4%</b> de velocidad de ataque (se acumula <b>10 veces</b>) hasta que recargues o cambies a tu Bastón.",
+          "id": "p_184",
+          "displayName": "MÉDICO DE BATALLA"
+        },
+        {
+          "name": "EQUIVALENT EXCHANGE",
+          "description": "Tienes <b>3 cargas</b> de <b>[Resurrección]</b> con un <b>33%</b> menos de tiempo de lanzamiento, pero sus enfriamientos solo se reinician al inicio de una ronda.",
+          "id": "p_185",
+          "displayName": "INTERCAMBIO EQUIVALENTE"
+        },
+        {
+          "name": "FIRST RESPONDER",
+          "description": "Cuando <b>[Resurrección]</b> a un aliado, ambos obtienen <b class=\"stat-ap\">250</b> de <b>sobrevida</b> durante <b>6s</b>.",
+          "id": "p_186",
+          "displayName": "PRIMER RESPONDEDOR"
+        },
+        {
+          "name": "RENAISSANCE",
+          "description": "Después de usar exitosamente <b>[Resurrección]</b>, activa <b>[Valkyrie]</b> durante <b>5s</b>.",
+          "id": "p_187",
+          "displayName": "RENACIMIENTO"
+        },
+        {
+          "name": "THE WHAMBULANCE",
+          "description": "Cuando <b>[Ángel Guardián]</b> termina, cura a tu objetivo <b class=\"stat-ap\">4</b> de vida por cada <b>1m</b> que viajaste.",
+          "id": "p_188",
+          "displayName": "LA AMBULANCIA"
+        },
+        {
+          "name": "TRIAGE UNIT",
+          "description": "Cuando usas <b>[Ángel Guardián]</b> en aliados por debajo del <b>50%</b> de vida, <b>[Bastón Caduceo]</b> los cura un <b>30%</b> más durante <b>3s</b>.",
+          "id": "p_189",
+          "displayName": "UNIDAD DE TRIAGE"
+        },
+        {
+          "name": "CREPUSCULAR CIRCLE",
+          "description": "Mientras <b>[Valkyrie]</b> está activa, la curación y el potenciador de daño de <b>[Bastón Caduceo]</b> se aplican automáticamente a los aliados cercanos.",
+          "id": "p_190",
+          "displayName": "CÍRCULO CREPUSCULAR"
+        }
+      ],
+      "Moira": [
+        {
+          "name": "CHAIN GRASP",
+          "description": "Después de usar <b>[Orbe Biótico]</b>, el disparo secundario de <b>[Agarre Biótico]</b> se encadena a <b>2</b> objetivos adicionales dentro de <b>10m</b> durante <b>3s</b>.",
+          "id": "p_191",
+          "displayName": "AGARRE EN CADENA"
+        },
+        {
+          "name": "DECONSTRUCTION",
+          "description": "Después de gastar 50 de <b>[Energía Biótica]</b>, inflige un <b>20%</b> más de daño durante <b>6s</b>.",
+          "id": "p_192",
+          "displayName": "DECONSTRUCCIÓN"
+        },
+        {
+          "name": "EMPOWERING YOU",
+          "description": "El disparo secundario de <b>[Agarre Biótico]</b> puede apuntar a aliados, aumentando su daño en un <b>15%</b>.",
+          "id": "p_193",
+          "displayName": "EMPODERÁNDOTE"
+        },
+        {
+          "name": "ETHEREAL EXCISION",
+          "description": "Mientras apuntas a la cabeza de un enemigo con el disparo secundario de <b>[Agarre Biótico]</b>, obtén un <b>30%</b> de velocidad de movimiento, un <b>30%</b> de robo de vida y restaura un <b>100%</b> más de energía biótica.",
+          "id": "p_194",
+          "displayName": "EXCISIÓN ETÉREA"
+        },
+        {
+          "name": "OPTIMAL OVERFLOW",
+          "description": "Después de gastar 50 de <b>[Energía Biótica]</b>, lanza el último <b>[Orbe Biótico]</b> seleccionado con un <b>75%</b> menos de duración.",
+          "id": "p_195",
+          "displayName": "DESBORDAMIENTO ÓPTIMO"
+        },
+        {
+          "name": "PRECARIOUS POTENCY",
+          "description": "Los aliados curados por tu <b>[Agarre Biótico]</b> son curados un <b>25%</b> adicional de la curación de <b>[Agarre Biótico]</b> durante <b>5s</b>.",
+          "id": "p_196",
+          "displayName": "POTENCIA PRECARIA"
+        },
+        {
+          "name": "CROSS-ORBAL",
+          "description": "<b>[Orbe Biótico]</b> lanza un <b>[Orbe Biótico]</b> adicional del otro tipo con un <b>50%</b> menos de capacidad.",
+          "id": "p_197",
+          "displayName": "ORBE CRUZADO"
+        },
+        {
+          "name": "MULTIBALL",
+          "description": "<b>[Orbe Biótico]</b> lanza <b>2</b> orbes adicionales del tipo elegido con un <b>85%</b> menos de efectividad.",
+          "id": "p_198",
+          "displayName": "MULTIBOLA"
+        },
+        {
+          "name": "PHANTASM",
+          "description": "Cuando usas <b>[Desvanecerse]</b>, genera una copia estacionaria del último <b>[Orbe Biótico]</b> seleccionado con un <b>50%</b> menos de duración.",
+          "id": "p_199",
+          "displayName": "FANTASMA"
+        },
+        {
+          "name": "SCIENTIFIC DEATHOD",
+          "description": "Mientras usas <b>[Desvanecerse]</b>, pasar a través de los enemigos otorga un <b>5%</b> de carga de habilidad definitiva y sobrevida igual al <b>15%</b> de tu vida máxima.",
+          "id": "p_200",
+          "displayName": "MÉTODO CIENTÍFICO"
+        },
+        {
+          "name": "VOIDHOPPERS",
+          "description": "<b>[Desvanecerse]</b> también hace que otros aliados dentro de <b>8m</b> se desfasen durante <b>0.25s</b> y les otorga sobrevida igual al <b>20%</b> de tu vida máxima.",
+          "id": "p_201",
+          "displayName": "SALTOVACUNOS"
+        },
+        {
+          "name": "DESTRUCTION'S DIVIDE",
+          "description": "<b>[Coalescencia]</b> se puede alternar entre curación pura o daño puro, con un <b>30%</b> más de efecto.",
+          "id": "p_202",
+          "displayName": "DIVISIÓN DE DESTRUCCIÓN"
+        }
+      ],
+      "Freja": [
+        {
+          "name": "CYCLONE",
+          "description": "When you use <b>[Updraft]</b>, fire a <b>[Take Aim]</b> bolt at your crosshair."
+        },
+        {
+          "name": "SEEKERPOINT",
+          "description": "When <b>[Take Aim]</b> bolt sticks an enemy, automatically fire <b>3</b> additional crossbow shots at them that deal <b><b>66%</b> reduced </b>damage."
+        },
+        {
+          "name": "SEISMIC SHOT",
+          "description": "<b>[Take Aim]</b> explosion radius is increased by <b>33%</b>. Double this if the bolt is stuck to a target."
+        },
+        {
+          "name": "THREAD THE NEEDLE",
+          "description": "<b>[Take Aim]</b> bolts pierce enemies. Additional explosions deal <b>66% reduced</b> damage."
+        },
+        {
+          "name": "DEEP POCKETS",
+          "description": "When you use an ability, restore <b>25%</b> of your Max Ammo."
+        },
+        {
+          "name": "FORAGER",
+          "description": "For <b>2s</b> after using <b>[Quick Dash]</b>, <b>[Revdraw Crossbow]</b> hits heal you for <b>4%</b> of your Max Life."
+        },
+        {
+          "name": "PEAK PERFORMANCE",
+          "description": "While firing <b>[Revdraw Crossbow]</b>, your fall speed is decreased by <b>80%</b>."
+        },
+        {
+          "name": "REDUX",
+          "description": "<b>[Revdraw Crossbow]</b> hits against targets stuck by a <b>[Take Aim]</b> bolt or <b>[Bola Shot]</b> reduce the cooldown of your abilities by <b>5%</b> and refunds <b>1</b> ammo."
+        },
+        {
+          "name": "VOLLEY À DEUX",
+          "description": "Every fifth <b>[Revdraw Crossbow]</b> shot fires an additional <b>2</b> bolts in a spread that deal <b>33%</b> reduced damage."
+        },
+        {
+          "name": "LILLE FÆLDE",
+          "description": "After using <b>[Updraft]</b>, your next <b>[Take Aim]</b> while airborne fires a <b>[Bola Shot]</b> that deals <b>60%</b> <b>reduced</b> damage instead of an explosive bolt."
+        },
+        {
+          "name": "SO COOKED",
+          "description": "<b>[Bola Shot]</b>'s damaging zone deals <b>30%</b> more damage and lingers for <b>2s</b>.\n<b>[Bola Shot]</b> eliminations count towards <b>[Bounty Hunting]</b>."
+        },
+        {
+          "name": "MIGHTY GUST",
+          "description": "<b>[Updraft]</b> launches a wind blast towards your crosshair, knocking back enemies and dealing <b class=\"stat-ap\">40</b> damage."
+        }
+      ]
+    }
+  }
+}

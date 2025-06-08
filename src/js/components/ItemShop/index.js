@@ -7,6 +7,7 @@ import { PowerCard } from './components/PowerCard';
 
 import formatCurrency from '../../helpers/formatCurrency';
 import SearchBar from './components/SearchBar';
+import { getDisplayName } from '../../helpers/displayNameHelper';
 
 const ItemShop = ({
   data, getIcon, context, contextCallback,
@@ -52,7 +53,7 @@ const ItemShop = ({
                 <p className="buyable-item--cost"><img className="currency currency--small" src={getIcon('currency')} alt="Currency" /><span>{formatCurrency(item.cost)}</span></p>
                 <div className="tooltip-container bordered bordered-side">
                   <div className="tooltip-content">
-                    <p className="tooltip-content--title">{item.name}</p>
+                    <p className="tooltip-content--title">{getDisplayName(item)}</p>
                     {item.character && <p className="tooltip-content--subtitle">HERO ITEM</p>}
                     <hr />
                     <ul>
@@ -90,6 +91,7 @@ const ItemShop = ({
                   onClick={() => contextCallback(power, 'powers')}
                   selected={powers.find((p) => p.name === power.name)}
                   isHighlighted={highlightedItem === power.name}
+                  power={power}
                 />
               </div>
             );

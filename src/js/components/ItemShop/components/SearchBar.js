@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { getDisplayName } from '../../../helpers/displayNameHelper';
 
 const SearchBar = ({
   data, getIcon, onTabChange, onHighlight, character,
@@ -21,10 +22,11 @@ const SearchBar = ({
           if (tabName === 'powers' && rarity !== character) return;
 
           const nameMatch = item.name.toLowerCase().includes(query);
+          const displayNameMatch = item.displayName?.toLowerCase().includes(query);
           const attributeMatch = item.attributes?.some((attr) => attr.type === 'description'
             && attr.value?.toLowerCase().includes(query));
 
-          if (nameMatch || attributeMatch) {
+          if (nameMatch || displayNameMatch || attributeMatch) {
             results.push({
               item,
               tab: tabName,
@@ -74,7 +76,7 @@ const SearchBar = ({
               alt={result.item.name}
               className="search-results-icon"
             />
-            <span>{result.item.name}</span>
+            <span>{getDisplayName(result.item)}</span>
             <small>{result.tab} - {result.rarity}</small>
           </button>
         ))}
